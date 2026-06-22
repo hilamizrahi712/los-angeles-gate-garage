@@ -111,10 +111,21 @@ export default async function CityPage({ params }: Props) {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BUSINESS.domain },
+      { "@type": "ListItem", position: 2, name: "Service Areas", item: `${BUSINESS.domain}/service-areas` },
+      { "@type": "ListItem", position: 3, name: data.name, item: `${BUSINESS.domain}/areas/${city}` },
+    ],
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* HERO */}
       <section className="relative flex flex-col justify-end overflow-hidden" style={{ minHeight: "55vh" }}>

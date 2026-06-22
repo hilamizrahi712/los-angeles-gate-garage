@@ -19,11 +19,16 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+// TODO: Set NEXT_PUBLIC_GSC_VERIFICATION in Cloudflare Pages → Settings → Environment Variables
+// once realgategel.com is connected and verified in Google Search Console.
+const gscVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
+
 export const metadata: Metadata = {
   metadataBase: new URL(BUSINESS.domain),
   title: {
     default: `${BUSINESS.name} — Gate & Garage Door Repair San Fernando Valley`,
-    template: `%s | ${BUSINESS.name}`,
+    // Passthrough — every page title already includes "| Real Gate & Garage Door"
+    template: "%s",
   },
   description:
     "Expert gate repair and garage door repair in San Fernando Valley, CA. Same-day service, 24/7 emergency, free estimates. Call (818) 915-5715.",
@@ -36,7 +41,7 @@ export const metadata: Metadata = {
     images: [{ url: "/images/og/og-default.jpg", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
-  verification: { google: BUSINESS.gscVerification },
+  ...(gscVerification ? { verification: { google: gscVerification } } : {}),
 };
 
 const localBusinessSchema = {
