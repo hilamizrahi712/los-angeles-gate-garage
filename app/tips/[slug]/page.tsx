@@ -1,0 +1,235 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { Phone, Calendar, Clock, ArrowLeft } from "lucide-react";
+import { BLOG_POSTS, getBlogPostBySlug } from "@/lib/blog-data";
+import { BUSINESS } from "@/lib/constants";
+import ContactForm from "@/components/ContactForm";
+
+interface Props {
+  params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  return BLOG_POSTS.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getBlogPostBySlug(slug);
+  if (!post) return {};
+  return {
+    title: post.metaTitle,
+    description: post.metaDescription,
+    alternates: { canonical: `/tips/${slug}` },
+    openGraph: { title: post.metaTitle, description: post.metaDescription, type: "article" },
+  };
+}
+
+function parseBold(text: string): React.ReactNode {
+  const parts = text.split(/\*\*(.+?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? <strong key={i} style={{ fontWeight: 700 }}>{part}</strong> : part
+  );
+}
+
+function renderContent(content: string) {
+  const paragraphs = content.split("\n\n");
+  return paragraphs.map((block, i) => {
+    if (block.startsWith("## ")) {
+      return (
+        <h2
+          key={i}
+          className="font-heading font-bold mt-10 mb-4"
+          style={{ color: "var(--navy)", fontSize: "clamp(1.4rem, 2.5vw, 1.9rem)" }}
+        >
+          {parseBold(block.replace("## ", ""))}
+        </h2>
+      );
+    }
+    if (block.startsWith("### ")) {
+      return (
+        <h3
+          key={i}
+          className="font-heading font-semibold mt-7 mb-3"
+          style={{ color: "var(--text-dark)", fontSize: "1.2rem" }}
+        >
+          {parseBold(block.replace("### ", ""))}
+        </h3>
+      );
+    }
+    if (block.startsWith("| ")) {
+      const rows = block.split("\n").filter((r) => !r.match(/^\|[-\s|]+\|$/));
+      return (
+        <div key={i} className="overflow-x-auto my-5">
+          <table
+            className="w-full text-sm border-collapse"
+            style={{ borderColor: "var(--line)" }}
+          >
+            <tbody>
+              {rows.map((row, ri) => {
+                const cells = row.split("|").filter((c) => c.trim() !== "");
+                const Tag = ri === 0 ? "th" : "td";
+                return (
+                  <tr
+                    key={ri}
+                    style={{
+                      background: ri === 0 ? "var(--bg-muted)" : ri % 2 === 0 ? "var(--bg-card)" : "transparent",
+                    }}
+                  >
+                    {cells.map((cell, ci) => (
+                      <Tag
+                        key={ci}
+                        className="px-3 py-2 text-left"
+                        style={{ border: "1px solid var(--line)", color: "var(--text-mid)" }}
+                      >
+                        {cell.trim()}
+                      </Tag>
+                    ))}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+    if (block.match(/^✅|^❌/)) {
+      const items = block.split("\n").filter(Boolean);
+      return (
+        <ul key={i} className="space-y-2 my-4">
+          {items.map((item, ii) => (
+            <li key={ii} className="flex items-start gap-2" style={{ color: "var(--text-mid)" }}>
+              <span className="text-base mt-0.5">{item.startsWith("✅") ? "✅" : "❌"}</span>
+              <span>{parseBold(item.replace(/^[✅❌]\s*/, ""))}</span>
+            </li>
+          ))}
+        </ul>
+      );
+    }
+    if (block.startsWith("---")) {
+      return <hr key={i} className="my-8" style={{ borderColor: "var(--line)" }} />;
+    }
+    return (
+      <p key={i} className="leading-relaxed mb-4" style={{ color: "var(--text-mid)" }}>
+        {parseBold(block)}
+      </p>
+    );
+  });
+}
+
+export default async function TipsPostPage({ params }: Props) {
+  const { slug } = await params;
+  const post = getBlogPostBySlug(slug);
+  if (!post) notFound();
+
+  const otherPosts = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 4);
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.metaDescription,
+    datePublished: post.publishDate,
+    publisher: { "@type": "Organization", name: BUSINESS.name },
+    author: { "@type": "Organization", name: BUSINESS.name },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
+      {/* Header */}
+      <section className="py-12" style={{ background: "var(--bg-muted)", borderBottom: "1px solid var(--line)" }}>
+        <div className="container-max max-w-4xl">
+          <Link
+            href="/tips"
+            className="inline-flex items-center gap-2 text-sm mb-5 transition-colors"
+            style={{ color: "var(--stone)" }}
+          >
+            <ArrowLeft size={14} /> Back to Tips
+          </Link>
+          <div className="flex items-center gap-3 mb-4 flex-wrap">
+            <span
+              className="text-xs font-bold uppercase tracking-widest px-2.5 py-1 rounded-full"
+              style={{
+                background: post.category === "gate" ? "var(--navy)" : "var(--brown)",
+                color: "var(--text-warm)",
+              }}
+            >
+              {post.category === "gate" ? "Gate Tips" : "Garage Door Tips"}
+            </span>
+            <span className="flex items-center gap-1 text-xs" style={{ color: "var(--stone-light)" }}>
+              <Calendar size={11} /> {post.publishDate}
+            </span>
+            <span className="flex items-center gap-1 text-xs" style={{ color: "var(--stone-light)" }}>
+              <Clock size={11} /> {post.readTime}
+            </span>
+          </div>
+          <h1
+            style={{ color: "var(--navy)", marginBottom: "0.75rem" }}
+          >
+            {post.title}
+          </h1>
+          <p style={{ color: "var(--text-soft)", fontSize: "1.05rem" }}>{post.excerpt}</p>
+        </div>
+      </section>
+
+      {/* Content */}
+      <section className="section-padding" style={{ background: "var(--bg-base)" }}>
+        <div className="container-max">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <article className="lg:col-span-2 max-w-none">
+              {renderContent(post.content)}
+
+              {/* In-content CTA */}
+              <div
+                className="rounded-[var(--radius-lg)] p-6 mt-10"
+                style={{ background: "var(--navy)" }}
+              >
+                <h3 className="font-heading font-bold text-xl mb-2" style={{ color: "var(--text-warm)" }}>
+                  Need Professional Help in San Fernando Valley?
+                </h3>
+                <p className="text-sm mb-4" style={{ color: "rgba(237,234,228,0.7)" }}>
+                  Real Gate &amp; Garage Door provides same-day service throughout the SFV.
+                  Licensed, insured, upfront pricing.
+                </p>
+                <a href={BUSINESS.phoneHref} className="btn-primary">
+                  <Phone size={16} /> Call {BUSINESS.phone}
+                </a>
+              </div>
+            </article>
+
+            {/* Sidebar */}
+            <div className="space-y-6">
+              <ContactForm />
+              <div className="card">
+                <h3
+                  className="font-heading font-semibold mb-4"
+                  style={{ fontSize: "1rem", color: "var(--navy)" }}
+                >
+                  More Tips
+                </h3>
+                <div className="space-y-3">
+                  {otherPosts.map((p) => (
+                    <Link
+                      key={p.slug}
+                      href={`/tips/${p.slug}`}
+                      className="block text-sm leading-snug transition-colors"
+                      style={{ color: "var(--text-soft)" }}
+                    >
+                      → {p.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
