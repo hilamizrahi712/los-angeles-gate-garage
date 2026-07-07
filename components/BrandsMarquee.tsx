@@ -2,26 +2,30 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-
-const LOGOS = [
-  "/images/brands/logo-1.png",
-  "/images/brands/logo-2.png",
-  "/images/brands/logo-3.png",
-  "/images/brands/logo-4.png",
-  "/images/brands/logo-5.png",
-  "/images/brands/logo-6.png",
-  "/images/brands/logo-7.png",
-  "/images/brands/logo-8.png",
-  "/images/brands/logo-9.png",
-  "/images/brands/logo-10.png",
-  "/images/brands/logo-11.png",
-];
+import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { BRANDS } from "@/lib/brands-data";
 
 export default function BrandsMarquee() {
   const trackRef = useRef<HTMLDivElement>(null);
   const offsetRef = useRef(0);
   const halfRef = useRef(0);
   const rafRef = useRef<number | null>(null);
+  const pausedRef = useRef(false);
+  const pauseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const nudge = (dir: -1 | 1) => {
+    pausedRef.current = true;
+    if (pauseTimerRef.current) clearTimeout(pauseTimerRef.current);
+    offsetRef.current = Math.max(0, offsetRef.current + dir * 144);
+    if (halfRef.current > 0 && offsetRef.current >= halfRef.current) {
+      offsetRef.current = offsetRef.current % halfRef.current;
+    }
+    if (trackRef.current) {
+      trackRef.current.style.transform = `translate3d(-${offsetRef.current}px, 0, 0)`;
+    }
+    pauseTimerRef.current = setTimeout(() => { pausedRef.current = false; }, 2500);
+  };
 
   useEffect(() => {
     const track = trackRef.current;
@@ -30,11 +34,13 @@ export default function BrandsMarquee() {
     const getHalf = () => { halfRef.current = track.scrollWidth / 2; };
 
     const tick = () => {
-      offsetRef.current += 0.5;
-      if (halfRef.current > 0 && offsetRef.current >= halfRef.current) {
-        offsetRef.current = 0;
+      if (!pausedRef.current) {
+        offsetRef.current += 0.5;
+        if (halfRef.current > 0 && offsetRef.current >= halfRef.current) {
+          offsetRef.current = 0;
+        }
+        track.style.transform = `translate3d(-${offsetRef.current}px, 0, 0)`;
       }
-      track.style.transform = `translate3d(-${offsetRef.current}px, 0, 0)`;
       rafRef.current = requestAnimationFrame(tick);
     };
 
@@ -53,13 +59,27 @@ export default function BrandsMarquee() {
 
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      if (pauseTimerRef.current) clearTimeout(pauseTimerRef.current);
       window.removeEventListener("resize", getHalf);
       track.removeEventListener("touchstart", onTouchStart);
     };
   }, []);
 
-  // Duplicate the set for seamless infinite loop
-  const items = [...LOGOS, ...LOGOS];
+  const items = [...BRANDS, ...BRANDS];
+
+  const arrowBtn: React.CSSProperties = {
+    background: "var(--bg-card)",
+    border: "1px solid var(--line)",
+    borderRadius: "50%",
+    width: 36,
+    height: 36,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    cursor: "pointer",
+    color: "var(--navy)",
+    flexShrink: 0,
+  };
 
   return (
     <section className="brands-bar">
@@ -67,25 +87,42 @@ export default function BrandsMarquee() {
         <span className="eyebrow">Brands We Service</span>
         <h2>Every Major Manufacturer. <em>Every Model.</em></h2>
         <p>We work on them all — from LiftMaster to Viking, Genie to DoorKing.</p>
+        <div style={{ display: "flex", gap: "0.5rem", justifyContent: "center", marginTop: "1rem" }}>
+          <button onClick={() => nudge(-1)} aria-label="Previous brands" style={arrowBtn}>
+            <ChevronLeft size={18} />
+          </button>
+          <button onClick={() => nudge(1)} aria-label="Next brands" style={arrowBtn}>
+            <ChevronRight size={18} />
+          </button>
+        </div>
       </div>
+
       <div className="brands-marquee-wrap" aria-hidden="true">
         <div className="brands-marquee-track" ref={trackRef}>
-          {items.map((src, i) => (
+          {items.map((brand, i) => (
             <div
               key={i}
               style={{ flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}
             >
-              <Image
-                src={src}
-                alt={`Brand logo ${(i % LOGOS.length) + 1}`}
-                width={120}
-                height={44}
-                style={{ objectFit: "contain", height: 44, width: "auto", maxWidth: 120 }}
-                unoptimized
-              />
+              <Link href={`/brands/${brand.slug}`} tabIndex={-1} style={{ display: "flex", alignItems: "center" }}>
+                <Image
+                  src={brand.logo}
+                  alt={brand.name}
+                  width={120}
+                  height={44}
+                  style={{ objectFit: "contain", height: 44, width: "auto", maxWidth: 120 }}
+                  unoptimized
+                />
+              </Link>
             </div>
           ))}
         </div>
+      </div>
+
+      <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
+        <Link href="/brands" className="btn-secondary" style={{ display: "inline-flex" }}>
+          View All Brands We Service
+        </Link>
       </div>
     </section>
   );

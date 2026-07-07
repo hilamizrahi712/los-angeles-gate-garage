@@ -8,7 +8,7 @@ import { BUSINESS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Gate & Garage Door Tips | Real Gate & Garage Door",
   description:
-    "Expert tips, cost guides, and troubleshooting for gates and garage doors in San Fernando Valley. Real answers from the technicians at Real Gate & Garage Door.",
+    "Expert tips, cost guides, and troubleshooting for gates and garage doors. Real answers from the technicians at Real Gate & Garage Door.",
   alternates: { canonical: "/tips" },
 };
 

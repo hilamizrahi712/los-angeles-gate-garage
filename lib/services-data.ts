@@ -27,20 +27,20 @@ export const SERVICES: ServiceData[] = [
   {
     slug: "gate-repair",
     title: "Gate Repair",
-    metaTitle: "Gate Repair San Fernando Valley — Same Day | Real Gate & Garage Door",
-    metaDescription: "Expert gate repair in San Fernando Valley. Same-day service for broken gates, gate motors, hinges, sensors & more. Licensed & insured. Call (818) 915-5715.",
+    metaTitle: "Gate Repair — Same Day | Real Gate & Garage Door",
+    metaDescription: "Expert gate repair. Same-day service for broken gates, gate motors, hinges, sensors & more. Licensed & insured. Call (818) 915-5715.",
     primaryKeyword: "gate repair near me",
-    heroH1: "Gate Repair in San Fernando Valley — Same-Day Service",
+    heroH1: "Gate Repair — Same-Day Service",
     heroSubtitle: "From broken motors to bent tracks, our certified technicians fix all types of gates fast. Most repairs completed same day.",
     heroImg: "/images/services/gate-repair.jpg",
     isInstallation: false,
-    intro: `When your gate stops working, every hour it's down is a security risk and a frustration. At Real Gate & Garage Door, we specialize in gate repair throughout the San Fernando Valley — and we respond fast. Most of our gate repair calls are handled same-day, with technicians arriving fully stocked with the parts needed for the most common repairs.
+    intro: `When your gate stops working, every hour it's down is a security risk and a frustration. At Real Gate & Garage Door, we specialize in gate repair in our service area — and we respond fast. Most of our gate repair calls are handled same-day, with technicians arriving fully stocked with the parts needed for the most common repairs.
 
 Gates fail for many reasons: worn motors, broken chains, damaged rollers, misaligned sensors, or corrosion on hinges and tracks. Whatever the cause, our technicians are trained to diagnose quickly and fix it right the first time. We work on all gate types — sliding gates, swing gates, driveway gates, iron gates — and all major brands including LiftMaster, Viking, All-O-Matic, DoorKing, Elite, and more.
 
 We believe in upfront pricing. You'll get a clear quote before we touch anything. No surprise charges, no upsells you don't need. If repair isn't the right call — if your gate is truly beyond fixing — we'll give you an honest assessment and a fair quote for a replacement. But most of the time, a skilled repair is all it takes, and it costs a fraction of a new gate.
 
-Our San Fernando Valley gate repair service covers everything from simple adjustments to complex motor replacements. Residential or commercial, manual or automatic — we fix it.
+Our gate repair service covers everything from simple adjustments to complex motor replacements. Residential or commercial, manual or automatic — we fix it.
 
 Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
     features: [
@@ -57,7 +57,7 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     pricingRange: "$150–$400 for most gate repairs",
     pricingNote: "Motor replacement: $300–$600 | Sensor repair: $80–$150 | Hinge/roller replacement: $100–$250 | Chain/belt repair: $150–$350",
     faqs: [
-      { q: "How fast can you get here for a gate repair?", a: "For most San Fernando Valley locations, we can have a technician on-site same day. Emergency calls are handled within 1–2 hours." },
+      { q: "How fast can you get here for a gate repair?", a: "For most locations, we can have a technician on-site same day. Emergency calls are handled within 1–2 hours." },
       { q: "My gate is stuck open — is it a security risk?", a: "Yes. A gate stuck open is a serious security vulnerability. Call us immediately for same-day emergency gate repair." },
       { q: "What brands of gate motors do you repair?", a: "We repair all major brands including LiftMaster, Viking, All-O-Matic, DoorKing, Elite, Linear, and Ramset. If your brand isn't listed, call us — we likely service it." },
       { q: "Can you repair a gate the same day?", a: "Yes. The majority of our gate repair calls are completed same-day. We stock the most common parts on our service vehicles." },
@@ -69,20 +69,20 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "automatic-gate-repair",
     title: "Automatic Gate Repair",
-    metaTitle: "Automatic Gate Repair San Fernando Valley — Fast & Reliable | Real Gate & Garage Door",
-    metaDescription: "Automatic gate not opening? Our technicians fix gate operators, sensors, remotes & circuit boards. Same-day service in San Fernando Valley. Call (818) 915-5715.",
+    metaTitle: "Automatic Gate Repair — Fast & Reliable | Real Gate & Garage Door",
+    metaDescription: "Automatic gate not opening? Our technicians fix gate operators, sensors, remotes & circuit boards. Same-day service. Call (818) 915-5715.",
     primaryKeyword: "automatic gate repair near me",
-    heroH1: "Automatic Gate Repair — San Fernando Valley",
+    heroH1: "Automatic Gate Repair",
     heroSubtitle: "Your automatic gate is supposed to make life easier. When it stops working, we get it running again — usually the same day.",
     heroImg: "/images/services/automatic-gate.jpg",
     isInstallation: false,
-    intro: `Automatic gates add security and convenience to any home or business — until they stop working. An automatic gate that won't open leaves you locked out; one that won't close leaves you exposed. Real Gate & Garage Door provides expert automatic gate repair throughout the San Fernando Valley, with same-day service available for most calls.
+    intro: `Automatic gates add security and convenience to any home or business — until they stop working. An automatic gate that won't open leaves you locked out; one that won't close leaves you exposed. Real Gate & Garage Door provides expert automatic gate repair in our service area, with same-day service available for most calls.
 
 Automatic gate failures have many causes: faulty gate operators (motors), damaged control boards, bad sensors, worn drive systems (chain, belt, or rack), or dead batteries and bad wiring. Our technicians are trained to work on all major automatic gate systems and diagnose the root cause quickly.
 
 We carry the most common replacement parts on our trucks — gate operator circuit boards, drive gears, limit switches, photocell sensors, remote receivers, and more. This means we can often complete your automatic gate repair in a single visit rather than ordering parts and making a return trip.
 
-Whether your automatic gate swings, slides, or folds, whether it runs on AC or solar power, our team has the tools and experience to fix it properly. We serve all of the San Fernando Valley including Woodland Hills, Encino, Sherman Oaks, Calabasas, and surrounding cities.
+Whether your automatic gate swings, slides, or folds, whether it runs on AC or solar power, our team has the tools and experience to fix it properly. We serve all of the including Woodland Hills, Encino, Sherman Oaks, Calabasas, and surrounding cities.
 
 Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
     features: [
@@ -101,7 +101,7 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     faqs: [
       { q: "Why won't my automatic gate open with the remote?", a: "Common causes include dead batteries in the remote, a bad receiver board in the operator, or a power issue. Our technician will diagnose it in minutes." },
       { q: "My gate opens but won't close — what's wrong?", a: "Usually a sensor issue — a photocell or safety loop is triggered and won't let the gate close. We'll check and clear the obstruction or replace the sensor." },
-      { q: "Can you repair automatic gates on weekends?", a: "Yes. We provide service 7 days a week throughout the San Fernando Valley." },
+      { q: "Can you repair automatic gates on weekends?", a: "Yes. We provide service 7 days a week in our service area." },
       { q: "How long does an automatic gate repair take?", a: "Most repairs take 1–2 hours once the technician arrives. Complex motor or board replacements may take up to 3 hours." },
       { q: "What automatic gate brands do you service?", a: "LiftMaster, Viking, FAAC, All-O-Matic, Elite, Linear, DoorKing, Ramset, and many more." },
     ],
@@ -111,14 +111,14 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "driveway-gate-repair",
     title: "Driveway Gate Repair",
-    metaTitle: "Driveway Gate Repair San Fernando Valley | Real Gate & Garage Door",
-    metaDescription: "Driveway gate repair throughout San Fernando Valley. Swing gates, sliding gates, openers & more. Same-day service available. Licensed & insured. (818) 915-5715.",
+    metaTitle: "Driveway Gate Repair | Real Gate & Garage Door",
+    metaDescription: "Driveway gate repair throughout. Swing gates, sliding gates, openers & more. Same-day service available. Licensed & insured. (818) 915-5715.",
     primaryKeyword: "driveway gate repair",
-    heroH1: "Driveway Gate Repair — San Fernando Valley",
+    heroH1: "Driveway Gate Repair",
     heroSubtitle: "Is your driveway gate dragging, misaligned, or refusing to open? We diagnose and repair all driveway gate issues — fast.",
     heroImg: "/images/services/driveway-gate.jpg",
     isInstallation: false,
-    intro: `A broken driveway gate is more than an inconvenience — it's a daily obstacle and a security gap. Real Gate & Garage Door repairs driveway gates of all types throughout the San Fernando Valley: sliding, swing, bi-fold, cantilever, and everything in between.
+    intro: `A broken driveway gate is more than an inconvenience — it's a daily obstacle and a security gap. Real Gate & Garage Door repairs driveway gates of all types in our service area: sliding, swing, bi-fold, cantilever, and everything in between.
 
 Driveway gates face constant stress from weather, vehicle exhaust, soil movement, and daily cycling. Common driveway gate problems we see include: gates that drag on the ground, swing gates with sagging hinges, sliding gates with broken wheels or warped tracks, opener motors that have burned out, and control boards that fail after years of use.
 
@@ -144,7 +144,7 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
       { q: "My driveway gate is scraping the ground — what causes this?", a: "Usually sagging hinges (swing gates) or worn/broken drive wheels (sliding gates). Both are repairable and we see this frequently." },
       { q: "Can you repair old iron driveway gates?", a: "Yes. We repair iron gate frames, hinges, and posts, and can replace or upgrade your gate operator to modernize the system." },
       { q: "How long does a driveway gate repair take?", a: "Most repairs are completed within 1.5–3 hours, depending on the issue." },
-      { q: "What areas do you cover?", a: "We cover the entire San Fernando Valley including Woodland Hills, Calabasas, Encino, Sherman Oaks, Chatsworth, and all surrounding communities." },
+      { q: "What areas do you cover?", a: "We cover the entire including Woodland Hills, Calabasas, Encino, Sherman Oaks, Chatsworth, and all surrounding communities." },
     ],
     relatedSlugs: ["gate-repair", "electric-gate-repair", "iron-gate-repair"],
   },
@@ -152,14 +152,14 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "electric-gate-repair",
     title: "Electric Gate Repair",
-    metaTitle: "Electric Gate Repair San Fernando Valley | Real Gate & Garage Door",
-    metaDescription: "Electric gate repair in San Fernando Valley. Motor failure, control board, wiring, sensors — we fix it all same day. Licensed technicians. (818) 915-5715.",
+    metaTitle: "Electric Gate Repair | Real Gate & Garage Door",
+    metaDescription: "Electric gate repair. Motor failure, control board, wiring, sensors — we fix it all same day. Licensed technicians. (818) 915-5715.",
     primaryKeyword: "electric gate repair",
-    heroH1: "Electric Gate Repair — San Fernando Valley",
+    heroH1: "Electric Gate Repair",
     heroSubtitle: "Electric gate not responding? We diagnose and repair all electric gate systems — motors, wiring, control boards, and sensors.",
     heroImg: "/images/services/gate-repair.jpg",
     isInstallation: false,
-    intro: `Electric gates give your property the ultimate combination of security and convenience. When an electrical fault stops your gate from working, you need a technician who understands both the mechanical and electrical sides of the system. Real Gate & Garage Door provides expert electric gate repair throughout the San Fernando Valley.
+    intro: `Electric gates give your property the ultimate combination of security and convenience. When an electrical fault stops your gate from working, you need a technician who understands both the mechanical and electrical sides of the system. Real Gate & Garage Door provides expert electric gate repair in our service area.
 
 Electric gate faults are often harder to diagnose than mechanical ones because the failure can be anywhere in the chain: the power supply, transformer, control board, motor, wiring harness, sensors, or remote system. Our technicians use professional diagnostic equipment to pinpoint the fault quickly rather than swapping parts at random.
 
@@ -192,14 +192,14 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "gate-opener-repair",
     title: "Gate Opener Repair",
-    metaTitle: "Gate Opener Repair San Fernando Valley — LiftMaster & All Brands | Real Gate & Garage Door",
-    metaDescription: "Gate opener repair in San Fernando Valley. LiftMaster, Viking, All-O-Matic, DoorKing & all brands. Same-day service. Licensed. Call (818) 915-5715.",
+    metaTitle: "Gate Opener Repair — LiftMaster & All Brands | Real Gate & Garage Door",
+    metaDescription: "Gate opener repair. LiftMaster, Viking, All-O-Matic, DoorKing & all brands. Same-day service. Licensed. Call (818) 915-5715.",
     primaryKeyword: "gate opener repair",
     heroH1: "Gate Opener Repair — All Brands, Same Day",
     heroSubtitle: "Your gate opener is the engine of your system. When it fails, we repair or replace it fast with parts on our truck.",
     heroImg: "/images/services/gate-opener-repair.jpg",
     isInstallation: false,
-    intro: `The gate opener — also called a gate operator or gate motor — is the heart of your automatic gate system. When it fails, the whole gate system fails. Real Gate & Garage Door specializes in gate opener repair throughout the San Fernando Valley, with same-day service and a full inventory of common replacement parts.
+    intro: `The gate opener — also called a gate operator or gate motor — is the heart of your automatic gate system. When it fails, the whole gate system fails. Real Gate & Garage Door specializes in gate opener repair in our service area, with same-day service and a full inventory of common replacement parts.
 
 Gate openers fail for various reasons: motor burnout from overuse or power surges, worn drive gears, failed circuit boards, broken limit switches, or simply the end of their service life after years of reliable operation. Our technicians are trained and certified on all major gate opener brands and models.
 
@@ -233,20 +233,20 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "iron-gate-repair",
     title: "Iron Gate Repair",
-    metaTitle: "Iron & Wrought Iron Gate Repair San Fernando Valley | Real Gate & Garage Door",
-    metaDescription: "Iron and wrought iron gate repair in San Fernando Valley. Rust, welding, hinges, panels — same-day service. Licensed & insured. Call (818) 915-5715.",
+    metaTitle: "Iron & Wrought Iron Gate Repair | Real Gate & Garage Door",
+    metaDescription: "Iron and wrought iron gate repair. Rust, welding, hinges, panels — same-day service. Licensed & insured. Call (818) 915-5715.",
     primaryKeyword: "iron gate repair",
-    heroH1: "Iron & Wrought Iron Gate Repair — San Fernando Valley",
+    heroH1: "Iron & Wrought Iron Gate Repair",
     heroSubtitle: "From rust and corrosion to structural damage and broken hinges, we restore iron gates to full function and appearance.",
     heroImg: "/images/services/iron-gate.jpg",
     isInstallation: false,
-    intro: `Iron and wrought iron gates are built to last a lifetime — but they're not immune to the elements. Rust, corrosion, impact damage, sagging hinges, and worn welds are common issues that, left unaddressed, can turn a minor fix into a costly replacement. Real Gate & Garage Door provides expert iron gate repair throughout the San Fernando Valley.
+    intro: `Iron and wrought iron gates are built to last a lifetime — but they're not immune to the elements. Rust, corrosion, impact damage, sagging hinges, and worn welds are common issues that, left unaddressed, can turn a minor fix into a costly replacement. Real Gate & Garage Door provides expert iron gate repair in our service area.
 
 Our technicians are trained in iron gate assessment and repair. We handle rust treatment and spot welding for structural repairs, hinge replacement (including custom fabrication when original parts are discontinued), track and roller repair for sliding iron gates, gate operator upgrades for manual iron gates being converted to automatic, and cosmetic refinishing to restore the gate's appearance.
 
-San Fernando Valley's climate — with its hot summers, occasional heavy rains, and coastal marine air in some neighborhoods — creates ideal conditions for iron corrosion if gates aren't properly maintained. We recommend treating any rust as soon as it appears, before it penetrates the metal's structural layer.
+Our local climate — with its hot summers, occasional heavy rains, and coastal marine air in some neighborhoods — creates ideal conditions for iron corrosion if gates aren't properly maintained. We recommend treating any rust as soon as it appears, before it penetrates the metal's structural layer.
 
-Many iron gates in the SFV are decades old and worth preserving. A skilled repair is almost always cheaper than a new custom iron gate, and a restored original often looks better than a replacement. We'll give you an honest opinion on whether repair or replacement makes more sense for your specific gate.
+Many iron gates in our service area are decades old and worth preserving. A skilled repair is almost always cheaper than a new custom iron gate, and a restored original often looks better than a replacement. We'll give you an honest opinion on whether repair or replacement makes more sense for your specific gate.
 
 Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
     features: [
@@ -273,14 +273,14 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "commercial-gate-repair",
     title: "Commercial Gate Repair",
-    metaTitle: "Commercial Gate Repair San Fernando Valley | Real Gate & Garage Door",
-    metaDescription: "Commercial gate repair in San Fernando Valley. Parking gates, security gates, high-cycle operators — fast response, licensed. Call (818) 915-5715.",
+    metaTitle: "Commercial Gate Repair | Real Gate & Garage Door",
+    metaDescription: "Commercial gate repair. Parking gates, security gates, high-cycle operators — fast response, licensed. Call (818) 915-5715.",
     primaryKeyword: "commercial gate repair",
-    heroH1: "Commercial Gate Repair — San Fernando Valley",
-    heroSubtitle: "Downtime on a commercial gate costs you money and security. We provide priority same-day service for businesses throughout the SFV.",
+    heroH1: "Commercial Gate Repair",
+    heroSubtitle: "Downtime on a commercial gate costs you money and security. We provide priority same-day service for businesses in our area.",
     heroImg: "/images/services/commercial-gate.jpg",
     isInstallation: false,
-    intro: `A broken commercial gate is more than an inconvenience — it's a security breach, a liability issue, and a disruption to your operations. Real Gate & Garage Door provides priority commercial gate repair throughout the San Fernando Valley, with fast response times and technicians equipped for high-cycle commercial gate systems.
+    intro: `A broken commercial gate is more than an inconvenience — it's a security breach, a liability issue, and a disruption to your operations. Real Gate & Garage Door provides priority commercial gate repair in our service area, with fast response times and technicians equipped for high-cycle commercial gate systems.
 
 Commercial gates operate far more frequently than residential gates and are subject to heavier use — delivery trucks, employee traffic, and 24/7 operation in many cases. This puts unique demands on the gate operator, drive system, and structural components. Our commercial gate technicians are trained specifically for this environment.
 
@@ -313,25 +313,25 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "gate-installation",
     title: "Gate Installation",
-    metaTitle: "Gate Installation San Fernando Valley | Real Gate & Garage Door",
-    metaDescription: "Professional gate installation in San Fernando Valley. Automatic, driveway, iron, and security gates. Free estimates. Licensed & insured. (818) 915-5715.",
+    metaTitle: "Gate Installation | Real Gate & Garage Door",
+    metaDescription: "Professional gate installation. Automatic, driveway, iron, and security gates. Free estimates. Licensed & insured. (818) 915-5715.",
     primaryKeyword: "gate installation near me",
-    heroH1: "Gate Installation — San Fernando Valley",
+    heroH1: "Gate Installation",
     heroSubtitle: "Ready for a new gate? We'll help you choose the right system and install it to last.",
     heroImg: "/images/services/gate-installation.jpg",
     isInstallation: true,
-    intro: `Thinking about adding a new gate or replacing an old one? Real Gate & Garage Door installs driveway gates, automatic gates, iron gates, and commercial security gates throughout the San Fernando Valley. We help you choose the right gate type, material, and operator for your property and budget.
+    intro: `Thinking about adding a new gate or replacing an old one? Real Gate & Garage Door installs driveway gates, automatic gates, iron gates, and commercial security gates in our service area. We help you choose the right gate type, material, and operator for your property and budget.
 
 Our installation process starts with a free on-site assessment. We evaluate your driveway width, slope, and surface, discuss your security and aesthetic goals, and recommend options in your price range. We work with iron, aluminum, wood, and vinyl gate materials, and we partner with leading manufacturers for automatic gate operators.
 
-Gate installation in the San Fernando Valley typically requires a permit for new installations. We handle the permit coordination and ensure all work meets California building codes and your HOA requirements where applicable.
+Gate installation typically requires a permit for new installations. We handle the permit coordination and ensure all work meets California building codes and your HOA requirements where applicable.
 
 Not sure if you need repair or a new gate? If your existing gate can be repaired reliably at a reasonable cost, we'll tell you so — honestly. We don't push installations when repair is the better choice.
 
 Link back: If you're experiencing problems with your current gate, visit our [Gate Repair](/services/gate-repair) page — repair is almost always faster and more affordable.`,
     features: [
       { icon: "📐", title: "Free Site Assessment", desc: "We evaluate your property and recommend the right gate type, material, and operator." },
-      { icon: "📋", title: "Permit Handling", desc: "We coordinate permits for new gate installations in San Fernando Valley cities." },
+      { icon: "📋", title: "Permit Handling", desc: "We coordinate permits for new gate installations cities." },
       { icon: "⭐", title: "Quality Installation", desc: "Every installation is backed by a workmanship warranty." },
     ],
     howItWorks: [
@@ -344,7 +344,7 @@ Link back: If you're experiencing problems with your current gate, visit our [Ga
     pricingNote: "Automatic swing gate: $2,000–$5,000 | Automatic sliding gate: $2,500–$6,000 | Iron gate with operator: $3,000–$8,000+ | Pricing varies by material, size, and operator brand.",
     faqs: [
       { q: "How long does gate installation take?", a: "A typical residential automatic gate installation takes 1–2 days depending on the gate type, concrete work required, and operator complexity." },
-      { q: "Do I need a permit for a new gate in the San Fernando Valley?", a: "Generally yes. Permit requirements vary by city within the SFV. We handle the permit process for all our installations." },
+      { q: "Do I need a permit for a new gate?", a: "Generally yes. Permit requirements vary by city within our service area. We handle the permit process for all our installations." },
       { q: "Can I choose my gate material and style?", a: "Absolutely. We work with iron, aluminum, wood, and vinyl gates. We'll show you samples and help you select the style that fits your property." },
     ],
     relatedSlugs: ["gate-repair", "automatic-gate-repair", "iron-gate-repair"],
@@ -353,14 +353,14 @@ Link back: If you're experiencing problems with your current gate, visit our [Ga
   {
     slug: "garage-door-repair",
     title: "Garage Door Repair",
-    metaTitle: "Garage Door Repair San Fernando Valley | Real Gate & Garage Door",
-    metaDescription: "Expert garage door repair in San Fernando Valley. Springs, openers, cables, panels — same-day service. Licensed & insured. Call (818) 915-5715.",
+    metaTitle: "Garage Door Repair | Real Gate & Garage Door",
+    metaDescription: "Expert garage door repair. Springs, openers, cables, panels — same-day service. Licensed & insured. Call (818) 915-5715.",
     primaryKeyword: "garage door repair",
-    heroH1: "Garage Door Repair in San Fernando Valley",
+    heroH1: "Garage Door Repair",
     heroSubtitle: "From broken springs to jammed tracks, our licensed technicians fix garage doors fast — usually same day.",
     heroImg: "/images/hero/hero-garage-door.jpg",
     isInstallation: false,
-    intro: `A broken garage door is a major inconvenience and a security risk. Real Gate & Garage Door provides expert garage door repair throughout the San Fernando Valley, with same-day service available for most repairs. Our technicians arrive fully stocked with the parts needed for the most common issues.
+    intro: `A broken garage door is a major inconvenience and a security risk. Real Gate & Garage Door provides expert garage door repair in our service area, with same-day service available for most repairs. Our technicians arrive fully stocked with the parts needed for the most common issues.
 
 Garage doors fail for many reasons: torsion or extension spring breakage (the most common cause), cable snapping, opener motor failure, sensor misalignment, panel damage from impact, track bending, or roller wear. Whatever the cause, our technicians diagnose quickly and give you an upfront price before touching anything.
 
@@ -383,7 +383,7 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     pricingRange: "$100–$400 for most garage door repairs",
     pricingNote: "Spring replacement: $150–$350 | Cable repair: $100–$200 | Opener repair: $100–$250 | Roller replacement: $80–$180 | Track adjustment: $80–$150",
     faqs: [
-      { q: "How quickly can you get to me for a garage door repair?", a: "Same-day service is available throughout the San Fernando Valley. For emergencies, we aim to arrive within 1–2 hours." },
+      { q: "How quickly can you get to me for a garage door repair?", a: "Same-day service is available in our service area. For emergencies, we aim to arrive within 1–2 hours." },
       { q: "Is it safe to operate my garage door if a spring is broken?", a: "No. A garage door with a broken spring is dangerous and can fall unexpectedly. Don't use the door until the spring is replaced." },
       { q: "My garage door is making a loud bang — what happened?", a: "A loud bang usually means a torsion spring snapped. This is one of the most common garage door failures. Call us for same-day spring replacement." },
       { q: "Do you repair all brands of garage doors?", a: "Yes. We repair all major brands including Clopay, Wayne Dalton, Amarr, Overhead Door, and others." },
@@ -394,10 +394,10 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
   {
     slug: "garage-door-spring-repair",
     title: "Garage Door Spring Repair",
-    metaTitle: "Garage Door Spring Repair & Replacement — SFV | Real Gate & Garage Door",
-    metaDescription: "Broken garage door spring? We replace torsion and extension springs same day in San Fernando Valley. Upfront pricing. Licensed. Call (818) 915-5715.",
+    metaTitle: "Garage Door Spring Repair & Replacement | Real Gate & Garage Door",
+    metaDescription: "Broken garage door spring? We replace torsion and extension springs same day. Upfront pricing. Licensed. Call (818) 915-5715.",
     primaryKeyword: "garage door spring replacement",
-    heroH1: "Garage Door Spring Repair & Replacement — San Fernando Valley",
+    heroH1: "Garage Door Spring Repair & Replacement",
     heroSubtitle: "Broken spring? We carry springs for virtually every garage door on the truck — most replacements done in under 90 minutes.",
     heroImg: "/images/services/garage-door-spring-repair.jpg",
     isInstallation: false,
@@ -428,7 +428,7 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
       { q: "Can I replace a garage door spring myself?", a: "We strongly advise against it. Torsion springs store massive amounts of energy and can cause serious injury if mishandled. Leave spring replacement to licensed technicians." },
       { q: "Why did my spring break?", a: "Springs break due to metal fatigue from repeated cycling. Factors that accelerate wear include lack of lubrication, temperature extremes, and using low-quality springs. High-cycle springs help address this." },
       { q: "Should I replace one spring or both?", a: "If you have a dual-spring torsion system, we recommend replacing both springs at the same time. If one broke, the other is at similar risk. Replacing both now is cheaper than a second service call soon." },
-      { q: "How much does garage door spring replacement cost in San Fernando Valley?", a: "Most spring replacements cost $150–$350. You'll receive an exact quote before work starts." },
+      { q: "How much does garage door spring replacement cost?", a: "Most spring replacements cost $150–$350. You'll receive an exact quote before work starts." },
     ],
     relatedSlugs: ["garage-door-repair", "garage-door-cable-repair", "garage-door-opener-repair"],
   },
@@ -437,19 +437,19 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     slug: "garage-door-opener-repair",
     title: "Garage Door Opener Repair",
     metaTitle: "Garage Door Opener Repair — LiftMaster, Genie & More | Real Gate & Garage Door",
-    metaDescription: "Garage door opener repair in San Fernando Valley. LiftMaster, Genie, Chamberlain, Craftsman — all brands. Same-day service. Call (818) 915-5715.",
+    metaDescription: "Garage door opener repair. LiftMaster, Genie, Chamberlain, Craftsman — all brands. Same-day service. Call (818) 915-5715.",
     primaryKeyword: "garage door opener repair",
-    heroH1: "Garage Door Opener Repair — All Brands, San Fernando Valley",
+    heroH1: "Garage Door Opener Repair — All Brands",
     heroSubtitle: "Is your garage door opener refusing to work? We diagnose and repair all major brands — LiftMaster, Genie, Chamberlain, Craftsman — same day.",
     heroImg: "/images/services/garage-door-opener-repair.jpg",
     isInstallation: false,
-    intro: `A garage door opener that won't respond is more than inconvenient — it can leave your car trapped or your home exposed. Real Gate & Garage Door repairs all major garage door opener brands throughout the San Fernando Valley, with same-day service and parts stocked on our trucks.
+    intro: `A garage door opener that won't respond is more than inconvenient — it can leave your car trapped or your home exposed. Real Gate & Garage Door repairs all major garage door opener brands in our service area, with same-day service and parts stocked on our trucks.
 
 Garage door opener problems range from simple (dead remote batteries, misaligned safety sensors) to complex (circuit board failure, motor burnout, drive gear wear). Our technicians diagnose the root cause before recommending any repair or replacement — because sometimes the fix is a $5 battery, not a $300 motor.
 
 We service and repair LiftMaster, Genie, Chamberlain, Craftsman, Sears, Marantec, and other opener brands. For older openers that are no longer serviceable or have become unsafe (pre-UL 325 compliance), we recommend replacement and can install a new unit same-day in most cases.
 
-If you're upgrading, we install WiFi-enabled smart openers from LiftMaster (myQ technology) that let you control and monitor your garage door from your smartphone — ideal for the tech-savvy San Fernando Valley homeowner who wants complete control.
+If you're upgrading, we install WiFi-enabled smart openers from LiftMaster (myQ technology) that let you control and monitor your garage door from your smartphone — ideal for the tech-savvy homeowner who wants complete control.
 
 Sometimes repair isn't enough — if your opener is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
     features: [
@@ -478,13 +478,13 @@ Sometimes repair isn't enough — if your opener is beyond fixing, we'll give yo
     slug: "garage-door-cable-repair",
     title: "Garage Door Cable Repair",
     metaTitle: "Garage Door Cable Repair & Replacement | Real Gate & Garage Door",
-    metaDescription: "Garage door cable snapped? We repair and replace broken cables same day in San Fernando Valley. Licensed & insured. Call (818) 915-5715.",
+    metaDescription: "Garage door cable snapped? We repair and replace broken cables same day. Licensed & insured. Call (818) 915-5715.",
     primaryKeyword: "garage door cable repair",
-    heroH1: "Garage Door Cable Repair — San Fernando Valley",
+    heroH1: "Garage Door Cable Repair",
     heroSubtitle: "A snapped garage door cable can cause the door to drop suddenly. Don't risk it — call for same-day cable repair.",
     heroImg: "/images/services/garage-door-repair.jpg",
     isInstallation: false,
-    intro: `Garage door cables work in conjunction with the springs to safely control the door as it opens and closes. When a cable snaps or becomes frayed, the door can become dangerous — dropping suddenly, going off-track, or becoming impossible to operate. Real Gate & Garage Door provides fast, same-day garage door cable repair throughout the San Fernando Valley.
+    intro: `Garage door cables work in conjunction with the springs to safely control the door as it opens and closes. When a cable snaps or becomes frayed, the door can become dangerous — dropping suddenly, going off-track, or becoming impossible to operate. Real Gate & Garage Door provides fast, same-day garage door cable repair in our service area.
 
 Cables snap for several reasons: corrosion from moisture, fraying due to age and repeated bending, or failing suddenly when a spring breaks and the cable is forced to handle the full door weight. When a cable snaps on one side, the door often goes off-track, creating additional damage.
 
@@ -518,13 +518,13 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     slug: "garage-door-panel-repair",
     title: "Garage Door Panel Repair",
     metaTitle: "Garage Door Panel Repair & Replacement | Real Gate & Garage Door",
-    metaDescription: "Dented or damaged garage door panel? We repair and replace panels in San Fernando Valley. Matching panels available. (818) 915-5715.",
+    metaDescription: "Dented or damaged garage door panel? We repair and replace panels. Matching panels available. (818) 915-5715.",
     primaryKeyword: "garage door panel repair",
     heroH1: "Garage Door Panel Repair & Replacement",
     heroSubtitle: "Dented or cracked panel making your garage door look bad? We repair and replace panels — matching your door's style and color.",
     heroImg: "/images/services/garage-door-repair.jpg",
     isInstallation: false,
-    intro: `Dented, cracked, or warped garage door panels are more than an eyesore. Structural panel damage can affect the door's balance, cause gaps that reduce insulation, and put stress on the surrounding sections. Real Gate & Garage Door repairs and replaces garage door panels throughout the San Fernando Valley.
+    intro: `Dented, cracked, or warped garage door panels are more than an eyesore. Structural panel damage can affect the door's balance, cause gaps that reduce insulation, and put stress on the surrounding sections. Real Gate & Garage Door repairs and replaces garage door panels in our service area.
 
 Most panel damage comes from vehicle impacts — backing into the door accidentally is more common than you might think. Minor dents can sometimes be repaired without replacement using dent-pulling techniques. Moderate to severe damage typically requires panel replacement to restore proper alignment and function.
 
@@ -558,14 +558,14 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     slug: "emergency-garage-door-repair",
     title: "Emergency Garage Door Repair",
     metaTitle: "Emergency Garage Door Repair — 24/7 Same Day | Real Gate & Garage Door",
-    metaDescription: "24/7 emergency garage door repair in San Fernando Valley. Stuck door, broken spring, snapped cable — we respond in 1-2 hours. (818) 915-5715.",
+    metaDescription: "24/7 emergency garage door repair. Stuck door, broken spring, snapped cable — we respond in 1-2 hours. (818) 915-5715.",
     primaryKeyword: "emergency garage door repair",
-    heroH1: "24/7 Emergency Garage Door Repair — San Fernando Valley",
+    heroH1: "24/7 Emergency Garage Door Repair",
     heroSubtitle: "Garage door stuck? Emergency situation? Call now — we dispatch a technician within the hour.",
     heroImg: "/images/hero/hero-emergency.jpg",
     isInstallation: false,
     isEmergency: true,
-    intro: `Garage door emergencies don't follow business hours. A door stuck in the open position at midnight is a security crisis. A door that traps your car inside when you need to leave for work is a real emergency. Real Gate & Garage Door provides 24/7 emergency garage door repair throughout the San Fernando Valley — with a goal of reaching you within 1–2 hours of your call.
+    intro: `Garage door emergencies don't follow business hours. A door stuck in the open position at midnight is a security crisis. A door that traps your car inside when you need to leave for work is a real emergency. Real Gate & Garage Door provides 24/7 emergency garage door repair in our service area — with a goal of reaching you within 1–2 hours of your call.
 
 Emergency calls are dispatched as priority. When you call our emergency line at (818) 915-5715, you reach a live person — not voicemail. They'll take your information, dispatch the nearest available technician, and give you an accurate ETA.
 
@@ -591,7 +591,7 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     pricingNote: "After-hours fee: $75–$125 applied to calls between 8 PM and 7 AM. You'll be informed before dispatch.",
     faqs: [
       { q: "Is your 24/7 emergency line actually answered by a person?", a: "Yes. When you call (818) 915-5715 after hours, a live dispatcher answers. No voicemail for emergency calls." },
-      { q: "How fast can you reach me in an emergency?", a: "Our target for emergency calls is 1–2 hours. In most San Fernando Valley locations, we achieve this consistently." },
+      { q: "How fast can you reach me in an emergency?", a: "Our target for emergency calls is 1–2 hours. In most locations, we achieve this consistently." },
       { q: "My garage door is stuck open at night — is that a real emergency?", a: "Absolutely. A garage door stuck open overnight is a serious security risk. Call our emergency line immediately." },
       { q: "Do you charge extra for after-hours emergency calls?", a: "Yes — an after-hours fee of $75–$125 applies for calls outside 7 AM–8 PM. You'll be quoted this before we dispatch." },
     ],
@@ -602,13 +602,13 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     slug: "commercial-garage-door",
     title: "Commercial Garage Door Repair",
     metaTitle: "Commercial Garage Door Repair & Installation | Real Gate & Garage Door",
-    metaDescription: "Commercial garage door repair in San Fernando Valley. Roll-up doors, sectional doors, high-cycle systems — same-day service. (818) 915-5715.",
+    metaDescription: "Commercial garage door repair. Roll-up doors, sectional doors, high-cycle systems — same-day service. (818) 915-5715.",
     primaryKeyword: "commercial garage door repair",
-    heroH1: "Commercial Garage Door Repair — San Fernando Valley",
+    heroH1: "Commercial Garage Door Repair",
     heroSubtitle: "Commercial doors work harder. When they fail, downtime costs you money. We prioritize commercial repair calls.",
     heroImg: "/images/services/commercial-garage-door.jpg",
     isInstallation: false,
-    intro: `Commercial garage doors handle far more daily cycles than residential doors — and when they fail, the impact on your operations can be immediate. Real Gate & Garage Door provides priority commercial garage door repair throughout the San Fernando Valley, with technicians equipped for high-cycle commercial door systems.
+    intro: `Commercial garage doors handle far more daily cycles than residential doors — and when they fail, the impact on your operations can be immediate. Real Gate & Garage Door provides priority commercial garage door repair in our service area, with technicians equipped for high-cycle commercial door systems.
 
 We repair all types of commercial garage doors: sectional commercial doors, rolling steel doors (roll-up), fire-rated doors, high-speed doors, and dock leveler systems. We service all major commercial door brands including Wayne Dalton, Clopay, Overhead Door, Cornell, and Cookson.
 
@@ -643,14 +643,14 @@ Sometimes repair isn't enough — if your commercial door is beyond fixing, we'l
   {
     slug: "garage-door-installation",
     title: "Garage Door Installation",
-    metaTitle: "Garage Door Installation San Fernando Valley | Real Gate & Garage Door",
-    metaDescription: "New garage door installation in San Fernando Valley. All brands, all styles, free estimates. Licensed & insured. Call (818) 915-5715.",
+    metaTitle: "Garage Door Installation | Real Gate & Garage Door",
+    metaDescription: "New garage door installation. All brands, all styles, free estimates. Licensed & insured. Call (818) 915-5715.",
     primaryKeyword: "garage door installation",
-    heroH1: "Garage Door Installation — San Fernando Valley",
+    heroH1: "Garage Door Installation",
     heroSubtitle: "Ready for a new garage door? We install all brands and styles — steel, wood, aluminum, glass — with a warranty on every installation.",
     heroImg: "/images/services/garage-door-installation.jpg",
     isInstallation: true,
-    intro: `Sometimes a garage door can't be repaired — it's too old, too damaged, or simply worn out. When that time comes, Real Gate & Garage Door installs high-quality replacement garage doors throughout the San Fernando Valley. We carry doors from Clopay, Wayne Dalton, Amarr, and Overhead Door — a full range of styles, materials, and price points.
+    intro: `Sometimes a garage door can't be repaired — it's too old, too damaged, or simply worn out. When that time comes, Real Gate & Garage Door installs high-quality replacement garage doors in our service area. We carry doors from Clopay, Wayne Dalton, Amarr, and Overhead Door — a full range of styles, materials, and price points.
 
 Our installation process starts with a free in-home estimate. We measure your opening, discuss your style preferences (raised panel, carriage house, contemporary), material options (steel, wood, wood-composite, aluminum, glass), and insulation requirements. We'll help you make the best choice for your budget and your home's curb appeal.
 

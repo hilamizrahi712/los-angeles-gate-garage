@@ -154,6 +154,7 @@ export default function Header() {
               </div>
             </div>
 
+            <Link href="/brands" className="hover:opacity-70 transition-opacity py-2">Brands</Link>
             <Link href="/tips" className="hover:opacity-70 transition-opacity py-2">Tips</Link>
             <Link href="/about" className="hover:opacity-70 transition-opacity py-2">About</Link>
             <Link href="/contact" className="hover:opacity-70 transition-opacity py-2">Contact</Link>
@@ -268,6 +269,7 @@ export default function Header() {
               )}
 
               {[
+                { href: "/brands", label: "Brands" },
                 { href: "/tips", label: "Tips" },
                 { href: "/about", label: "About" },
                 { href: "/contact", label: "Contact" },

@@ -10,9 +10,9 @@ import { BUSINESS, REVIEWS, SFV_CITIES } from "@/lib/constants";
 import { BLOG_POSTS } from "@/lib/blog-data";
 
 export const metadata: Metadata = {
-  title: "Gate & Garage Door Repair San Fernando Valley — Real Gate & Garage Door",
+  title: "Gate & Garage Door Repair — Real Gate & Garage Door",
   description:
-    "Expert gate repair and garage door repair in San Fernando Valley, CA. Same-day service, 24/7 emergency, free estimates. Gates are our #1 specialty. Call (818) 915-5715.",
+    "Expert gate repair and garage door repair in Los Angeles, CA. Same-day service, 24/7 emergency, free estimates. Gates are our #1 specialty. Call (818) 915-5715.",
   alternates: { canonical: "/" },
 };
 
@@ -23,6 +23,7 @@ const gateServices = [
   { href: "/services/electric-gate-repair", name: "Electric Gate Repair", desc: "Wiring, boards, remotes. We trace the fault and fix it.", img: "/images/services/iron-black-gate.jpeg" },
   { href: "/services/gate-opener-repair", name: "Gate Opener Repair", desc: "LiftMaster, Viking, DoorKing, All-O-Matic, and more.", img: "/images/services/outside-gate.jpeg" },
   { href: "/services/iron-gate-repair", name: "Iron Gate Repair", desc: "Structural, hinges, welds, finishes — fully restored.", img: "/images/services/grey-iron-gate.jpeg" },
+  { href: "/services/gate-installation", name: "Gate Installation", desc: "New gate systems, fully installed and programmed.", img: "/images/gallery/gate-3.jpeg" },
 ];
 
 const garageDoorServices = [
@@ -47,7 +48,7 @@ const homepageSchema = {
   "@type": "Service",
   serviceType: "Gate Repair & Garage Door Repair",
   provider: { "@type": "LocalBusiness", name: BUSINESS.name },
-  areaServed: { "@type": "AdministrativeArea", name: "San Fernando Valley, CA" },
+  areaServed: { "@type": "AdministrativeArea", name: "Los Angeles County, CA" },
 };
 
 export default function HomePage() {
@@ -67,7 +68,7 @@ export default function HomePage() {
       >
         <Image
           src="/images/hero/hero-thin-gate.jpeg"
-          alt="Gate and garage door repair San Fernando Valley CA"
+          alt="Gate and garage door repair Los Angeles CA"
           fill
           className="object-cover"
           priority
@@ -86,7 +87,7 @@ export default function HomePage() {
               className="eyebrow"
               style={{ color: "rgba(196,133,90,0.9)" }}
             >
-              San Fernando Valley, CA
+              Los Angeles, CA
             </span>
             <h1 style={{ color: "var(--text-warm)", lineHeight: 1.0, marginBottom: "1.25rem" }}>
               Gate &amp; Garage Door Repair
@@ -147,7 +148,7 @@ export default function HomePage() {
             {[
               { stat: "500+", label: "Gates & Doors Fixed" },
               { stat: "Same-Day", label: "Service Available" },
-              { stat: `${BUSINESS.yearsInBusiness}+`, label: "Years Serving the Valley" },
+              { stat: `${BUSINESS.yearsInBusiness}+`, label: "Years in Business" },
               { stat: "Real Person", label: "Always Answers" },
             ].map(({ stat, label }) => (
               <div key={label}>
@@ -238,7 +239,7 @@ export default function HomePage() {
                 <em>Every Single Time.</em>
               </h2>
               <p style={{ color: "var(--stone)", maxWidth: 520, marginTop: "0.5rem" }}>
-                Gates are our #1 specialty — all types, all brands, same-day across the Valley.
+                Gates are our #1 specialty — all types, all brands, same-day service.
               </p>
             </div>
 
@@ -291,12 +292,6 @@ export default function HomePage() {
                 </Link>
               ))}
             </div>
-            <div className="mb-10">
-              <Link href="/services/gate-installation" className="btn-secondary text-sm">
-                + Gate Installation
-              </Link>
-            </div>
-
             {/* Garage Door section */}
             <p
               className="font-heading font-semibold mb-5"
@@ -413,7 +408,7 @@ export default function HomePage() {
               <em>And Beyond.</em>
             </h2>
             <p style={{ color: "var(--stone)", maxWidth: 520, margin: "0 auto 2.5rem" }}>
-              We serve San Fernando Valley and all cities within 20 miles — from Malibu to
+              We serve cities across greater Los Angeles — from Malibu to
               Pasadena, Beverly Hills to Simi Valley.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
@@ -449,7 +444,7 @@ export default function HomePage() {
                 <span className="eyebrow">From Our Tips</span>
                 <h2>
                   Real Answers for{" "}
-                  <em>Valley Homeowners</em>
+                  <em>Local Homeowners</em>
                 </h2>
               </div>
               <Link href="/tips" className="btn-secondary text-sm">

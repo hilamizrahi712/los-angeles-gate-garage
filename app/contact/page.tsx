@@ -5,7 +5,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us — Free Estimate | Real Gate & Garage Door",
-  description: "Contact Real Gate & Garage Door for same-day gate or garage door repair in San Fernando Valley. Call (818) 915-5715 or fill out our free estimate form.",
+  description: "Contact Real Gate & Garage Door for same-day gate or garage door repair. Call (818) 915-5715 or fill out our free estimate form.",
   alternates: { canonical: "/contact" },
 };
 

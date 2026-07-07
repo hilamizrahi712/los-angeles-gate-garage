@@ -17,7 +17,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "electric-gate-not-opening",
     title: "Why Is My Electric Gate Not Opening? 8 Causes & Fixes",
     metaTitle: "Why Is My Electric Gate Not Opening? 8 Causes & Fixes | Real Gate & Garage Door",
-    metaDescription: "Electric gate won't open? We cover the 8 most common causes and what to do — from dead remote batteries to failed gate motors. San Fernando Valley gate experts.",
+    metaDescription: "Electric gate won't open? We cover the 8 most common causes and what to do — from dead remote batteries to failed gate motors. gate experts.",
     primaryKeyword: "electric gate not opening",
     publishDate: "2025-04-15",
     readTime: "6 min read",
@@ -86,29 +86,29 @@ Limit switches tell the gate operator where "fully open" and "fully closed" are.
 
 If you've checked the battery, confirmed the power is on, cleared all obstructions, and checked the sensors — and your electric gate still won't open — it's time to call a technician. Diagnosing electrical and mechanical gate failures requires proper tools and training.
 
-Real Gate & Garage Door provides same-day electric gate repair throughout the San Fernando Valley. Call **(818) 915-5715** for immediate assistance.`,
+Real Gate & Garage Door provides same-day electric gate repair in our service area. Call **(818) 915-5715** for immediate assistance.`,
   },
 
   {
     slug: "gate-repair-cost",
-    title: "How Much Does Gate Repair Cost in 2025? (SFV Pricing Guide)",
+    title: "How Much Does Gate Repair Cost in 2025? (Local Pricing Guide)",
     metaTitle: "How Much Does Gate Repair Cost in 2025? | Real Gate & Garage Door",
-    metaDescription: "Transparent gate repair pricing for San Fernando Valley homeowners. Learn what gate motor, sensor, hinge, and chain repairs actually cost in 2025.",
+    metaDescription: "Transparent gate repair pricing for homeowners. Learn what gate motor, sensor, hinge, and chain repairs actually cost in 2025.",
     primaryKeyword: "gate repair cost",
     publishDate: "2025-03-20",
     readTime: "7 min read",
     category: "gate",
-    excerpt: "Gate repair costs in San Fernando Valley range from $80 to $700+ depending on the problem. Here's what each type of repair actually costs in 2025.",
+    excerpt: "Gate repair costs range from $80 to $700+ depending on the problem. Here's what each type of repair actually costs in 2025.",
     img: "/images/services/iron-black-gate.jpeg",
-    content: `## Gate Repair Cost in 2025 — San Fernando Valley Price Guide
+    content: `## Gate Repair Cost in 2025 Price Guide
 
 Pricing transparency is one of the things we hear about most from customers who had bad experiences with other companies. They got a quote over the phone, a technician showed up and found "more problems," and suddenly a $150 repair became a $600 bill.
 
-We don't operate that way. This guide lays out what gate repairs actually cost in the San Fernando Valley in 2025 — by specific repair type — so you can approach any service call with realistic expectations.
+We don't operate that way. This guide lays out what gate repairs actually cost in 2025 — by specific repair type — so you can approach any service call with realistic expectations.
 
 ### Diagnostic Fee
 
-Most reputable gate repair companies charge a service or diagnostic fee to visit your property and assess the problem. In the San Fernando Valley, this typically runs **$65–$95** and is usually credited toward the repair if you proceed.
+Most reputable gate repair companies charge a service or diagnostic fee to visit your property and assess the problem. In the, this typically runs **$65–$95** and is usually credited toward the repair if you proceed.
 
 *At Real Gate & Garage Door, our diagnostic fee is $75, credited in full toward any repair we complete.*
 
@@ -187,19 +187,19 @@ Sliding gate wheels and track wear over time, causing the gate to drag or bind:
 
 The only way to get an accurate gate repair estimate is an on-site diagnostic. Photos and descriptions help, but the exact cause of a gate failure — and therefore the exact cost — can only be determined by examining the system in person.
 
-Call Real Gate & Garage Door at **(818) 915-5715** for a same-day appointment throughout the San Fernando Valley. Our $75 diagnostic fee is credited toward your repair.`,
+Call Real Gate & Garage Door at **(818) 915-5715** for a same-day appointment in our service area. Our $75 diagnostic fee is credited toward your repair.`,
   },
 
   {
     slug: "automatic-gate-installation-cost",
     title: "How Much Does Automatic Gate Installation Cost? (2025 Guide)",
-    metaTitle: "Automatic Gate Installation Cost 2025 — SFV Guide | Real Gate & Garage Door",
-    metaDescription: "How much does automatic gate installation cost? We break down pricing for swing gates, sliding gates, and operators for San Fernando Valley homeowners.",
+    metaTitle: "Automatic Gate Installation Cost 2025 — Guide | Real Gate & Garage Door",
+    metaDescription: "How much does automatic gate installation cost? We break down pricing for swing gates, sliding gates, and operators for homeowners.",
     primaryKeyword: "automatic gate installation cost",
     publishDate: "2025-02-10",
     readTime: "8 min read",
     category: "gate",
-    excerpt: "Automatic gate installation in San Fernando Valley costs $2,000–$8,000 depending on gate type, material, and operator. Here's the full breakdown.",
+    excerpt: "Automatic gate installation costs $2,000–$8,000 depending on gate type, material, and operator. Here's the full breakdown.",
     img: "/images/gallery/gate-1.jpeg",
     content: `## Automatic Gate Installation Cost in 2025
 
@@ -241,7 +241,7 @@ Gate operators range from basic residential units to commercial-grade systems:
 
 ### Complete Installed System Cost
 
-Here's what you'll pay all-in for a typical residential automatic gate installation in San Fernando Valley:
+Here's what you'll pay all-in for a typical residential automatic gate installation:
 
 | Gate System | Total Installed Cost |
 |-------------|---------------------|
@@ -253,7 +253,7 @@ Here's what you'll pay all-in for a typical residential automatic gate installat
 
 ### Additional Costs to Budget For
 
-**Permit:** Automatic gate installations typically require a permit in San Fernando Valley cities. Budget $150–$500 for permit fees (we handle the application).
+**Permit:** Automatic gate installations typically require a permit cities. Budget $150–$500 for permit fees (we handle the application).
 
 **Electrical:** If there's no 110V outlet near the gate location, an electrician will need to run power. Budget $300–$800 for a simple circuit extension.
 
@@ -265,7 +265,7 @@ Here's what you'll pay all-in for a typical residential automatic gate installat
 
 ## Is an Automatic Gate Worth the Cost?
 
-For most San Fernando Valley homeowners, yes. An automatic gate:
+For most homeowners, yes. An automatic gate:
 
 - Adds real security by controlling access to your property
 - Increases home value (a study by the California Association of Realtors shows gated properties sell faster and at higher prices)
@@ -281,7 +281,7 @@ The key is buying quality. A cheap gate operator installed on a poor-quality gat
     slug: "how-long-do-gates-last",
     title: "How Long Do Automatic Gates Last? (And When to Repair vs Replace)",
     metaTitle: "How Long Do Automatic Gates Last? Repair vs Replace Guide | Real Gate & Garage Door",
-    metaDescription: "Automatic gates last 10–20+ years with proper maintenance. Learn the signs that your gate needs repair vs. replacement — from San Fernando Valley gate experts.",
+    metaDescription: "Automatic gates last 10–20+ years with proper maintenance. Learn the signs that your gate needs repair vs. replacement — from gate experts.",
     primaryKeyword: "gate repair vs replace",
     publishDate: "2025-01-15",
     readTime: "5 min read",
@@ -355,25 +355,25 @@ A $150 annual maintenance visit routinely catches problems before they become $5
 
 Real Gate & Garage Door will give you an honest assessment. We don't push replacement if repair is the better call, and we don't push repair if the gate or operator is genuinely at end of life.
 
-Call **(818) 915-5715** for a same-day diagnostic throughout the San Fernando Valley.`,
+Call **(818) 915-5715** for a same-day diagnostic in our service area.`,
   },
 
   {
     slug: "garage-door-spring-repair-cost",
-    title: "How Much Does Garage Door Spring Repair Cost in 2025? (SFV Guide)",
-    metaTitle: "Garage Door Spring Replacement Cost 2025 — SFV | Real Gate & Garage Door",
-    metaDescription: "Garage door spring replacement costs $150–$350 in San Fernando Valley. Learn what affects the price and how to avoid overpaying. (818) 915-5715.",
+    title: "How Much Does Garage Door Spring Repair Cost in 2025? (Local Guide)",
+    metaTitle: "Garage Door Spring Replacement Cost 2025 — | Real Gate & Garage Door",
+    metaDescription: "Garage door spring replacement costs $150–$350. Learn what affects the price and how to avoid overpaying. (818) 915-5715.",
     primaryKeyword: "how much does a garage door spring replacement cost",
     publishDate: "2025-04-01",
     readTime: "6 min read",
     category: "garage-door",
-    excerpt: "Garage door spring replacement in San Fernando Valley typically costs $150–$350. Here's exactly what you should expect to pay — and the warning signs of overcharging.",
+    excerpt: "Garage door spring replacement typically costs $150–$350. Here's exactly what you should expect to pay — and the warning signs of overcharging.",
     img: "/images/services/garage-door-repair.jpeg",
     content: `## Garage Door Spring Replacement Cost in 2025
 
 Garage door spring replacement is the most common garage door repair we perform — and unfortunately, it's also the service most prone to overcharging by less scrupulous companies. This guide gives you the real numbers so you're informed before you call anyone.
 
-### Typical Spring Replacement Cost in San Fernando Valley
+### Typical Spring Replacement Cost
 
 | Spring Type | Typical Total Cost (parts + labor) |
 |-------------|-----------------------------------|
@@ -434,14 +434,14 @@ At Real Gate & Garage Door, a spring replacement visit looks like this:
 
 Total time: 45–90 minutes for most spring replacements.
 
-Call **(818) 915-5715** for same-day spring replacement throughout the San Fernando Valley.`,
+Call **(818) 915-5715** for same-day spring replacement in our service area.`,
   },
 
   {
     slug: "garage-door-wont-close",
     title: "Garage Door Won't Close? 7 Causes & Fixes",
     metaTitle: "Garage Door Won't Close? 7 Causes & Fixes | Real Gate & Garage Door",
-    metaDescription: "Garage door won't close all the way? We cover the 7 most common causes and step-by-step fixes. SFV garage door repair experts. Call (818) 915-5715.",
+    metaDescription: "Garage door won't close all the way? We cover the 7 most common causes and step-by-step fixes. garage door repair experts. Call (818) 915-5715.",
     primaryKeyword: "garage door won't close",
     publishDate: "2025-03-05",
     readTime: "6 min read",
@@ -502,7 +502,7 @@ If none of the above applies, there may be a mechanical issue with the opener it
 
 ## When to Call a Professional
 
-If your garage door still won't close after checking the sensors, clearing obstructions, and checking the down-limit, call a professional. Real Gate & Garage Door provides same-day garage door repair throughout the San Fernando Valley.
+If your garage door still won't close after checking the sensors, clearing obstructions, and checking the down-limit, call a professional. Real Gate & Garage Door provides same-day garage door repair in our service area.
 
 **(818) 915-5715** — available 7 days a week.`,
   },
@@ -511,7 +511,7 @@ If your garage door still won't close after checking the sensors, clearing obstr
     slug: "noisy-garage-door-fix",
     title: "How to Fix a Noisy Garage Door (Step-by-Step Guide)",
     metaTitle: "How to Fix a Noisy Garage Door — Step by Step | Real Gate & Garage Door",
-    metaDescription: "Squeaky, grinding, or banging garage door? Follow our step-by-step guide to identify and fix the noise. San Fernando Valley garage door experts.",
+    metaDescription: "Squeaky, grinding, or banging garage door? Follow our step-by-step guide to identify and fix the noise. garage door experts.",
     primaryKeyword: "how to fix a noisy garage door",
     publishDate: "2025-02-20",
     readTime: "7 min read",
@@ -604,7 +604,7 @@ If you've lubricated everything, replaced the rollers, tightened all hardware, a
 - Bent track section
 - Failing opener motor
 
-Real Gate & Garage Door provides garage door tune-ups that include full lubrication, hardware inspection, roller assessment, and balance check — starting at $99 throughout the San Fernando Valley. Call **(818) 915-5715)** to schedule.`,
+Real Gate & Garage Door provides garage door tune-ups that include full lubrication, hardware inspection, roller assessment, and balance check — starting at $99 in our service area. Call **(818) 915-5715)** to schedule.`,
   },
 ];
 

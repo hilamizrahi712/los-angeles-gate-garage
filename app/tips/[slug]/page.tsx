@@ -191,10 +191,10 @@ export default async function TipsPostPage({ params }: Props) {
                 style={{ background: "var(--navy)" }}
               >
                 <h3 className="font-heading font-bold text-xl mb-2" style={{ color: "var(--text-warm)" }}>
-                  Need Professional Help in San Fernando Valley?
+                  Need Professional Help?
                 </h3>
                 <p className="text-sm mb-4" style={{ color: "rgba(237,234,228,0.7)" }}>
-                  Real Gate &amp; Garage Door provides same-day service throughout the SFV.
+                  Real Gate &amp; Garage Door provides same-day service.
                   Licensed, insured, upfront pricing.
                 </p>
                 <a href={BUSINESS.phoneHref} className="btn-primary">

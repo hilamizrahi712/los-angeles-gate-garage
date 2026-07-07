@@ -5,7 +5,7 @@ import { BUSINESS, REVIEWS } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Customer Reviews & Testimonials | Real Gate & Garage Door",
-  description: "See what San Fernando Valley homeowners say about Real Gate & Garage Door. 247+ verified 5-star Google reviews. Read real customer experiences.",
+  description: "See what homeowners say about Real Gate & Garage Door. 247+ verified 5-star Google reviews. Read real customer experiences.",
   alternates: { canonical: "/reviews" },
 };
 

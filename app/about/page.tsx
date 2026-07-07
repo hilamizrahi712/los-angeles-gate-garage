@@ -5,17 +5,17 @@ import { Phone, CheckCircle } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About Us — Real Gate & Garage Door | San Fernando Valley",
+  title: "About Us — Real Gate & Garage Door",
   description:
-    `The story behind Real Gate & Garage Door — San Fernando Valley's trusted gate and garage door repair specialists. Family-owned, ${BUSINESS.yearsInBusiness}+ years, honest pricing.`,
+    `The story behind Real Gate & Garage Door — trusted gate and garage door repair specialists. Family-owned, ${BUSINESS.yearsInBusiness}+ years, honest pricing.`,
   alternates: { canonical: "/about" },
 };
 
 const values = [
   { num: "01", title: "Repair First, Always", desc: "We default to repair over replacement. If repair is the right call, that's what we recommend — even if a new unit would mean more revenue for us." },
   { num: "02", title: "Upfront Pricing", desc: "You see the price before we start. The quote you approve is the price you pay. No surprises at the invoice stage." },
-  { num: "03", title: "Same-Day Response", desc: "We know a broken gate or garage door disrupts your day. We staff our trucks to reach most calls the same day." },
-  { num: "04", title: "Valley-Rooted", desc: "We serve the communities we live in. The Valley is our home — we treat every call like a neighbor asking for help." },
+  { num: "03", title: "Same-Day Response", desc: "We know a broken gate or garage door disrupts your day. We staff our trucks to reach most calls the same day — because waiting isn't a solution." },
+  { num: "04", title: "Community-First", desc: "We serve the neighborhoods we live in. These are our streets and our neighbors' driveways — we treat every call like someone in our own community asking for help." },
 ];
 
 const credentials = [
@@ -31,7 +31,7 @@ const credentials = [
 
 const storyChecklist = [
   "Same-day response — because your time matters",
-  "Family-owned and Valley-rooted since day one",
+  "Family-owned and locally rooted since day one",
   "We work on every brand and model — no exceptions",
   "Honest diagnosis — no upselling, ever",
   "All work backed by a written warranty",
@@ -50,8 +50,8 @@ export default function AboutPage() {
             About Real Gate &amp; <em>Garage Door</em>
           </h1>
           <p style={{ color: "rgba(237,234,228,0.75)", fontSize: "1.05rem" }}>
-            San Fernando Valley&apos;s local gate and garage door specialists —{" "}
-            {BUSINESS.yearsInBusiness}+ years of honest, reliable service.
+            Local gate and garage door specialists —{" "}
+            {BUSINESS.yearsInBusiness}+ years of honest, reliable service across greater Los Angeles.
           </p>
         </div>
       </section>
@@ -63,29 +63,32 @@ export default function AboutPage() {
             <div>
               <span className="eyebrow">Our Story</span>
               <h2 style={{ marginBottom: "1.5rem" }}>
-                Built on the Valley.{" "}
-                <em>Driven by Trust.</em>
+                Built on Trust.{" "}
+                <em>Driven by People.</em>
               </h2>
               <div style={{ color: "var(--text-mid)", lineHeight: 1.85, fontSize: "1.02rem" }}>
                 <p style={{ marginBottom: "1.25rem" }}>
-                  We didn&apos;t build Real Gate &amp; Garage Door on advertising. We built it on
-                  the referrals of neighbors telling neighbors — because when something breaks
-                  at your gate or garage door, you need someone you can actually trust to show
-                  up, fix it right, and not disappear.
+                  This business was built on a simple idea: be the kind of company you&apos;d
+                  actually want to show up when something breaks at your home. Not a voice
+                  mail. Not a three-day wait. Someone who picks up, comes out, and fixes it
+                  right the first time.
                 </p>
                 <p style={{ marginBottom: "1.25rem" }}>
-                  We started with garage doors — but as customers trusted us more, they started
-                  asking about their gates. Gate repair is where we differentiate: most competitors
-                  lead with doors. We lead with gates, because that&apos;s where our customers need
-                  the most expert help.
+                  We started with garage doors — but customers kept asking about their gates.
+                  So we went deep on gates. Most companies treat gate repair as a side service.
+                  For us, it&apos;s where we&apos;ve built our sharpest expertise, because that&apos;s where
+                  homeowners need the most help.
                 </p>
                 <p style={{ marginBottom: "1.25rem" }}>
-                  Every call we answer, every repair we make — we treat it like it&apos;s our own
-                  home. That&apos;s not a line. That&apos;s {BUSINESS.yearsInBusiness}+ years of five-star reviews.
+                  When someone calls us, they&apos;re rarely calm. Their car is stuck, they&apos;re
+                  already late, or they&apos;re worried about security overnight. We remember that
+                  behind every service call is a real person in a stressful moment — and our
+                  job is to resolve that moment quickly and honestly.
                 </p>
                 <p>
-                  The Valley is our community. These are our roads, our streets, our
-                  neighbors&apos; homes. We&apos;re not just passing through.
+                  The neighborhoods we serve are where we live too. Every five-star review
+                  we&apos;ve earned over {BUSINESS.yearsInBusiness}+ years came from someone who trusted
+                  us — and then told a neighbor.
                 </p>
               </div>
             </div>
@@ -120,15 +123,48 @@ export default function AboutPage() {
 
           {/* Photo */}
           <div
-            className="rounded-[var(--radius-lg)] overflow-hidden mb-20"
+            className="rounded-[var(--radius-lg)] overflow-hidden mb-14"
             style={{ aspectRatio: "16/6", position: "relative" }}
           >
             <Image
               src="/images/story/building.jpeg"
-              alt="Real Gate and Garage Door team serving San Fernando Valley"
+              alt="Real Gate and Garage Door team at work"
               fill
               className="object-cover"
             />
+          </div>
+
+          {/* Team quote */}
+          <div
+            className="rounded-[var(--radius-lg)] p-8 mb-20"
+            style={{ background: "var(--navy)", borderLeft: "4px solid var(--brown-warm)" }}
+          >
+            <blockquote
+              style={{
+                color: "rgba(237,234,228,0.9)",
+                fontSize: "1.08rem",
+                lineHeight: 1.85,
+                fontStyle: "italic",
+                margin: 0,
+              }}
+            >
+              &ldquo;Most people who call us are having a rough morning. Their car is trapped,
+              they&apos;re already running late, or something stopped working the night before
+              and they didn&apos;t sleep well because of it. We&apos;ve heard every version of that
+              call — and we&apos;ve learned that what people need isn&apos;t a sales pitch.
+              They need someone who picks up, shows up, and actually fixes the problem.
+              That&apos;s the whole job.&rdquo;
+            </blockquote>
+            <p
+              style={{
+                color: "var(--brown-warm)",
+                marginTop: "1.25rem",
+                fontSize: "0.9rem",
+                fontWeight: 600,
+              }}
+            >
+              — The Real Gate &amp; Garage Door Team
+            </p>
           </div>
 
           {/* Values */}
@@ -162,7 +198,7 @@ export default function AboutPage() {
 
           {/* Credentials */}
           <div
-            className="rounded-[var(--radius-lg)] p-8 mb-12"
+            className="rounded-[var(--radius-lg)] p-8 mb-14"
             style={{ background: "var(--bg-muted)", border: "1px solid var(--line)" }}
           >
             <h2 className="text-center mb-8" style={{ fontSize: "1.6rem" }}>
@@ -178,18 +214,50 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* CTA */}
-          <div className="text-center">
-            <h2 style={{ marginBottom: "0.75rem" }}>Ready to Work Together?</h2>
-            <p style={{ color: "var(--text-soft)", marginBottom: "1.75rem" }}>
-              Same-day appointments available throughout the San Fernando Valley and greater Los Angeles.
+          {/* Emotionally resonant CTA */}
+          <div
+            className="rounded-[var(--radius-lg)] p-10 text-center"
+            style={{ background: "var(--navy)" }}
+          >
+            <span className="eyebrow" style={{ color: "var(--brown-warm)" }}>
+              We&apos;re Ready Right Now
+            </span>
+            <h2
+              style={{
+                color: "var(--text-warm)",
+                marginBottom: "1rem",
+                fontSize: "1.9rem",
+                lineHeight: 1.2,
+              }}
+            >
+              Stuck Outside? Car Trapped?
+              <br />
+              <em>Call. We Answer.</em>
+            </h2>
+            <p
+              style={{
+                color: "rgba(237,234,228,0.72)",
+                maxWidth: 520,
+                margin: "0 auto 2rem",
+                fontSize: "0.97rem",
+                lineHeight: 1.75,
+              }}
+            >
+              A broken gate or garage door doesn&apos;t just inconvenience you — it can trap
+              your car, delay your whole day, or leave your home unsecured overnight.
+              We know you need this fixed now, not in three days. Call us and we&apos;ll
+              have a technician to you within hours — most days, the same morning.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href={BUSINESS.phoneHref} className="btn-primary">
-                <Phone size={16} /> Call {BUSINESS.phone}
+              <a
+                href={BUSINESS.phoneHref}
+                className="btn-primary"
+                style={{ fontSize: "1rem", padding: "0.875rem 2rem" }}
+              >
+                <Phone size={18} /> Call {BUSINESS.phone} — We Answer
               </a>
               <Link href="/contact" className="btn-secondary">
-                Get a Free Estimate
+                Request a Same-Day Estimate
               </Link>
             </div>
           </div>

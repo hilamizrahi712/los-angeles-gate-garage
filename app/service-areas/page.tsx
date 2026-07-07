@@ -5,9 +5,9 @@ import { Phone, MapPin } from "lucide-react";
 import { BUSINESS, SFV_CITIES, EXTENDED_CITIES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Service Areas — San Fernando Valley & Greater LA | Real Gate & Garage Door",
+  title: "Service Areas — Greater Los Angeles | Real Gate & Garage Door",
   description:
-    "Real Gate & Garage Door serves 29+ cities in San Fernando Valley and greater Los Angeles. Same-day gate and garage door repair near you. Call (818) 915-5715.",
+    "Real Gate & Garage Door serves 29+ cities across greater Los Angeles. Same-day gate and garage door repair near you. Call (818) 915-5715.",
   alternates: { canonical: "/service-areas" },
 };
 
@@ -22,7 +22,7 @@ export default function ServiceAreasPage() {
             Gate & Garage Door Repair — <em>Service Areas</em>
           </h1>
           <p style={{ color: "rgba(237,234,228,0.75)", fontSize: "1.05rem" }}>
-            We serve the entire San Fernando Valley and all cities within 20 miles —
+            We serve cities across greater Los Angeles —
             from Malibu to Pasadena, Beverly Hills to Simi Valley.
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function ServiceAreasPage() {
       <section style={{ background: "var(--bg-muted)", borderBottom: "1px solid var(--line)" }}>
         <div className="grid grid-cols-4" style={{ height: 200 }}>
           {[
-            { src: "/images/gallery/gate-2.jpeg", alt: "Gate repair service San Fernando Valley" },
+            { src: "/images/gallery/gate-2.jpeg", alt: "Gate repair service Los Angeles" },
             { src: "/images/services/whatsapp-photo-2.jpeg", alt: "Gate and garage door service Los Angeles" },
             { src: "/images/services/commercial-2.jpeg", alt: "Commercial garage door service near you" },
             { src: "/images/services/frezno-gate.jpeg", alt: "Custom iron gate installation" },
@@ -58,10 +58,10 @@ export default function ServiceAreasPage() {
       <section className="section-padding" style={{ background: "var(--bg-base)" }}>
         <div className="container-max">
 
-          {/* SFV Cities */}
+          {/* Primary Cities */}
           <div className="mb-14">
             <div className="flex items-center gap-3 mb-8">
-              <h2 style={{ fontSize: "1.4rem", color: "var(--navy)" }}>San Fernando Valley</h2>
+              <h2 style={{ fontSize: "1.4rem", color: "var(--navy)" }}>Primary Service Area</h2>
               <div style={{ flex: 1, height: 1, background: "var(--line)" }} />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

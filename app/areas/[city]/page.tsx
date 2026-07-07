@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Phone, CheckCircle, ArrowRight } from "lucide-react";
 import { CITIES, getCityBySlug } from "@/lib/cities-data";
 import { BUSINESS, REVIEWS } from "@/lib/constants";
+import { BRANDS } from "@/lib/brands-data";
 import ContactForm from "@/components/ContactForm";
 
 interface Props {
@@ -39,7 +40,6 @@ const cityServices = [
   { href: "/services/emergency-garage-door-repair", label: "24/7 Emergency Service" },
 ];
 
-// Non-commercial gate/property photos — expanded pool for city hero cycling (23 unique images)
 const CITY_HERO_POOL = [
   "/images/hero/hero-home.jpeg",
   "/images/services/black-iron-gate.jpeg",
@@ -66,12 +66,14 @@ const CITY_HERO_POOL = [
   "/images/services/swing-motor.jpeg",
 ];
 
-// 3-photo strip for each city page — gallery images for visual variety
 const CITY_PHOTO_STRIP = [
   { src: "/images/gallery/gate-4.jpeg", alt: "Iron gate repair and service" },
   { src: "/images/gallery/gate-5.jpeg", alt: "Gate installation and service" },
   { src: "/images/gallery/gate-6.jpeg", alt: "Custom gate repair service" },
 ];
+
+// Top brands shown on city pages
+const CITY_BRANDS = BRANDS.slice(0, 8);
 
 export default async function CityPage({ params }: Props) {
   const { city } = await params;
@@ -81,9 +83,10 @@ export default async function CityPage({ params }: Props) {
   const cityReviews = REVIEWS.filter((r) => r.city === data.name).slice(0, 2);
   const displayReviews = cityReviews.length > 0 ? cityReviews : REVIEWS.slice(0, 2);
 
-  // Unique hero per city — cycle through non-commercial pool by position in CITIES array
   const cityIndex = CITIES.findIndex((c) => c.slug === city);
   const heroImg = CITY_HERO_POOL[cityIndex % CITY_HERO_POOL.length];
+
+  const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(data.name + ", CA")}&output=embed&z=12`;
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -142,7 +145,7 @@ export default async function CityPage({ params }: Props) {
         />
         <div className="relative z-10 container-max pb-12 pt-32">
           <span className="eyebrow" style={{ color: "rgba(196,133,90,0.9)" }}>
-            San Fernando Valley · {data.name}
+            {data.name}, CA
           </span>
           <h1 style={{ color: "var(--text-warm)", marginBottom: "0.75rem" }}>
             {data.heroH1}
@@ -161,6 +164,26 @@ export default async function CityPage({ params }: Props) {
         </div>
       </section>
 
+      {/* GOLD TRUST BAR */}
+      <div style={{ background: "var(--brown)", padding: "0.65rem 1rem" }}>
+        <div className="container-max">
+          <div
+            className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-sm font-semibold"
+            style={{ color: "#fff", letterSpacing: "0.02em" }}
+          >
+            <span>✦ Serving {data.name}</span>
+            <span style={{ opacity: 0.45 }}>·</span>
+            <span>Same-Day Service</span>
+            <span style={{ opacity: 0.45 }}>·</span>
+            <span>5★ Rated</span>
+            <span style={{ opacity: 0.45 }}>·</span>
+            <span>Licensed &amp; Insured</span>
+            <span style={{ opacity: 0.45 }}>·</span>
+            <span>Free Estimates</span>
+          </div>
+        </div>
+      </div>
+
       {/* MAIN CONTENT */}
       <section className="section-padding" style={{ background: "var(--bg-base)" }}>
         <div className="container-max grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -177,7 +200,7 @@ export default async function CityPage({ params }: Props) {
               ))}
             </div>
 
-            {/* Photo strip — 3 real photos */}
+            {/* Photo strip */}
             <div className="grid grid-cols-3 gap-3">
               {CITY_PHOTO_STRIP.map((photo, i) => (
                 <div
@@ -198,7 +221,14 @@ export default async function CityPage({ params }: Props) {
 
             {/* Services */}
             <div>
-              <h2 style={{ marginBottom: "1.25rem", fontSize: "1.75rem" }}>
+              <h2
+                style={{
+                  marginBottom: "1.25rem",
+                  fontSize: "1.75rem",
+                  borderLeft: "4px solid var(--brown)",
+                  paddingLeft: "0.75rem",
+                }}
+              >
                 Services Available in {data.name}
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -219,14 +249,66 @@ export default async function CityPage({ params }: Props) {
               </div>
             </div>
 
+            {/* Brands strip */}
+            <div>
+              <h2
+                style={{
+                  marginBottom: "1rem",
+                  fontSize: "1.5rem",
+                  borderLeft: "4px solid var(--brown)",
+                  paddingLeft: "0.75rem",
+                }}
+              >
+                Brands We Service in {data.name}
+              </h2>
+              <div
+                className="rounded-[var(--radius-lg)] p-5"
+                style={{ background: "var(--bg-muted)", border: "1px solid var(--line)" }}
+              >
+                <div className="grid grid-cols-4 sm:grid-cols-4 gap-4">
+                  {CITY_BRANDS.map((brand) => (
+                    <Link
+                      key={brand.slug}
+                      href={`/brands/${brand.slug}`}
+                      className="flex items-center justify-center rounded-[var(--radius)] p-2 transition-opacity hover:opacity-70"
+                      style={{ background: "var(--bg-card)", border: "1px solid var(--line)" }}
+                      title={brand.name}
+                    >
+                      <Image
+                        src={brand.logo}
+                        alt={brand.name}
+                        width={90}
+                        height={32}
+                        style={{ objectFit: "contain", maxHeight: 32, width: "auto" }}
+                        unoptimized
+                      />
+                    </Link>
+                  ))}
+                </div>
+                <p style={{ textAlign: "center", marginTop: "0.75rem", fontSize: "0.78rem", color: "var(--stone)" }}>
+                  + all other major brands &mdash;{" "}
+                  <Link href="/brands" style={{ color: "var(--brown-warm)", textDecoration: "none" }}>
+                    see all brands →
+                  </Link>
+                </p>
+              </div>
+            </div>
+
             {/* Why Us */}
             <div>
-              <h2 style={{ marginBottom: "1.25rem", fontSize: "1.75rem" }}>
+              <h2
+                style={{
+                  marginBottom: "1.25rem",
+                  fontSize: "1.75rem",
+                  borderLeft: "4px solid var(--brown)",
+                  paddingLeft: "0.75rem",
+                }}
+              >
                 Why {data.name} Residents Choose Us
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {data.whyUs.map((item) => (
-                  <div key={item.title} className="card">
+                  <div key={item.title} className="card" style={{ borderTop: "3px solid var(--brown-warm)" }}>
                     <h3
                       className="font-heading font-semibold mb-2"
                       style={{ fontSize: "0.95rem", color: "var(--navy)" }}
@@ -241,7 +323,14 @@ export default async function CityPage({ params }: Props) {
 
             {/* Reviews */}
             <div>
-              <h2 style={{ marginBottom: "1.25rem", fontSize: "1.75rem" }}>
+              <h2
+                style={{
+                  marginBottom: "1.25rem",
+                  fontSize: "1.75rem",
+                  borderLeft: "4px solid var(--brown)",
+                  paddingLeft: "0.75rem",
+                }}
+              >
                 What Customers Say
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -265,7 +354,14 @@ export default async function CityPage({ params }: Props) {
 
             {/* FAQ */}
             <div>
-              <h2 style={{ marginBottom: "1.25rem", fontSize: "1.75rem" }}>
+              <h2
+                style={{
+                  marginBottom: "1.25rem",
+                  fontSize: "1.75rem",
+                  borderLeft: "4px solid var(--brown)",
+                  paddingLeft: "0.75rem",
+                }}
+              >
                 {data.name} — Frequently Asked Questions
               </h2>
               <div className="space-y-4">
@@ -323,7 +419,32 @@ export default async function CityPage({ params }: Props) {
                 Licensed · Bonded · Insured · 7 Days a Week
               </p>
             </div>
+
             <ContactForm />
+
+            {/* Google Map */}
+            <div
+              className="rounded-[var(--radius-lg)] overflow-hidden"
+              style={{ border: "2px solid var(--brown-warm)" }}
+            >
+              <div
+                className="px-4 py-2.5 flex items-center gap-2"
+                style={{ background: "var(--brown)", color: "#fff" }}
+              >
+                <span style={{ fontSize: "0.85rem", fontWeight: 600 }}>
+                  📍 Serving {data.name}, CA
+                </span>
+              </div>
+              <iframe
+                src={mapSrc}
+                width="100%"
+                height="220"
+                style={{ border: 0, display: "block" }}
+                loading="lazy"
+                title={`Map — ${data.name}, CA gate and garage door service`}
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
       </section>

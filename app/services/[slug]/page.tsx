@@ -62,7 +62,7 @@ export default async function ServicePage({ params }: Props) {
     serviceType: service.title,
     description: service.metaDescription,
     provider: { "@type": "LocalBusiness", name: BUSINESS.name, telephone: BUSINESS.phone },
-    areaServed: { "@type": "AdministrativeArea", name: "San Fernando Valley, CA" },
+    areaServed: { "@type": "AdministrativeArea", name: "Los Angeles County, CA" },
   };
 
   const faqSchema = {
@@ -144,6 +144,21 @@ export default async function ServicePage({ params }: Props) {
             {/* Main Column */}
             <div className="lg:col-span-2 space-y-10">
 
+              {/* Image placeholders — swap with real photos when available */}
+              <div className="grid grid-cols-2 gap-4">
+                {[1, 2].map((n) => (
+                  <div
+                    key={n}
+                    className="rounded-[var(--radius)] overflow-hidden flex items-center justify-center"
+                    style={{ aspectRatio: "4/3", background: "var(--bg-muted)", border: "2px dashed var(--line)" }}
+                  >
+                    <p style={{ color: "var(--stone)", fontSize: "0.8rem", textAlign: "center", padding: "0.5rem" }}>
+                      Photo {n} — {service.title}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
               {/* Intro */}
               <div>
                 {service.intro.split("\n\n").map((para, i) => (
@@ -195,28 +210,6 @@ export default async function ServicePage({ params }: Props) {
                     </li>
                   ))}
                 </ol>
-              </div>
-
-              {/* Pricing */}
-              <div
-                className="rounded-[var(--radius-lg)] p-6"
-                style={{ background: "var(--brown-tint)", border: "1px solid var(--line-warm)" }}
-              >
-                <h2 style={{ marginBottom: "0.75rem", fontSize: "1.3rem", color: "var(--navy)" }}>
-                  Pricing — Transparent &amp; Upfront
-                </h2>
-                <p
-                  className="font-heading font-bold mb-2"
-                  style={{ fontSize: "1.2rem", color: "var(--brown)" }}
-                >
-                  {service.pricingRange}
-                </p>
-                <p style={{ color: "var(--text-mid)", fontSize: "0.92rem", marginBottom: "0.5rem" }}>
-                  {service.pricingNote}
-                </p>
-                <p style={{ color: "var(--stone)", fontSize: "0.82rem", fontStyle: "italic" }}>
-                  Every job is different. The ranges above are typical for our area — your free estimate gives you the exact price before we start any work.
-                </p>
               </div>
 
               {/* FAQ */}
@@ -282,7 +275,7 @@ export default async function ServicePage({ params }: Props) {
               <div>
                 <h2 style={{ marginBottom: "0.75rem", fontSize: "1.75rem" }}>Service Areas</h2>
                 <p style={{ color: "var(--text-soft)", fontSize: "0.9rem", marginBottom: "1rem" }}>
-                  We provide {service.title.toLowerCase()} throughout the San Fernando Valley:
+                  We provide {service.title.toLowerCase()} across greater Los Angeles:
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {SFV_CITIES.map((c) => (

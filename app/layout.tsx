@@ -26,13 +26,13 @@ const gscVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
 export const metadata: Metadata = {
   metadataBase: new URL(BUSINESS.domain),
   title: {
-    default: `${BUSINESS.name} — Gate & Garage Door Repair San Fernando Valley`,
+    default: `${BUSINESS.name} — Gate & Garage Door Repair`,
     // Passthrough — every page title already includes "| Real Gate & Garage Door"
     template: "%s",
   },
   description:
-    "Expert gate repair and garage door repair in San Fernando Valley, CA. Same-day service, 24/7 emergency, free estimates. Call (818) 915-5715.",
-  keywords: ["gate repair San Fernando Valley", "garage door repair San Fernando Valley", "gate repair near me"],
+    "Expert gate repair and garage door repair in Los Angeles, CA. Same-day service, 24/7 emergency, free estimates. Call (818) 915-5715.",
+  keywords: ["gate repair Los Angeles", "garage door repair Los Angeles", "gate repair near me"],
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
@@ -48,13 +48,13 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: BUSINESS.name,
-  description: "Expert gate and garage door repair, installation, and 24/7 emergency service across San Fernando Valley and greater Los Angeles, CA",
+  description: "Expert gate and garage door repair, installation, and 24/7 emergency service across greater Los Angeles, CA",
   url: BUSINESS.domain,
   telephone: BUSINESS.phone,
   email: BUSINESS.email,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "San Fernando Valley",
+    addressLocality: "Los Angeles County",
     addressRegion: "CA",
     addressCountry: "US",
   },
