@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, CheckCircle, ArrowRight } from "lucide-react";
+import { Phone, MessageSquareText, CheckCircle, ArrowRight } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import BrandsMarquee from "@/components/BrandsMarquee";
 import RevealWrapper from "@/components/RevealWrapper";
 import DiagnosticWidget from "@/components/DiagnosticWidget";
+import ArchImage from "@/components/ArchImage";
+import IronDivider from "@/components/IronDivider";
+import ReviewQuote from "@/components/ReviewQuote";
+import SectionRule from "@/components/SectionRule";
 import { BUSINESS, REVIEWS, SFV_CITIES } from "@/lib/constants";
 import { BLOG_POSTS } from "@/lib/blog-data";
 
@@ -31,15 +35,16 @@ const garageDoorServices = [
   { href: "/services/garage-door-spring-repair", name: "Spring Repair", desc: "Torsion & extension — same-day replacement.", img: "/images/services/walnut-garage.jpeg" },
   { href: "/services/garage-door-opener-repair", name: "Opener Repair", desc: "LiftMaster, Genie, Chamberlain & all brands.", img: "/images/services/new-garage.jpeg" },
   { href: "/services/emergency-garage-door-repair", name: "24/7 Emergency", desc: "We answer live, arrive in 1–2 hours.", img: "/images/services/swing-2.jpeg" },
+  { href: "/services/garage-door-cable-repair", name: "Cable Repair", desc: "Snapped or frayed cables replaced same day.", img: "/images/gallery/commercial-1.jpeg" },
+  { href: "/services/garage-door-panel-repair", name: "Panel Repair", desc: "Dented or damaged panels fixed or swapped.", img: "/images/services/garage-door-repair.jpeg" },
+  { href: "/services/commercial-garage-door", name: "Commercial Doors", desc: "High-cycle doors for business properties.", img: "/images/services/commercial-3.jpeg" },
+  { href: "/services/garage-door-installation", name: "Door Installation", desc: "New doors, fully installed and balanced.", img: "/images/services/black-wood-gate.jpeg" },
 ];
 
 const storyChecklist = [
-  "Same-day response — because your time matters",
-  "Family-owned and Valley-rooted",
-  "We work on every brand and model",
   "Honest diagnosis — no upselling, ever",
   "All work backed by a written warranty",
-  "Trusted by homeowners across 25+ cities in LA",
+  "We work on every brand and model",
   "Real humans answer — no phone trees",
 ];
 
@@ -62,10 +67,7 @@ export default function HomePage() {
       />
 
       {/* ── HERO ── */}
-      <section
-        className="relative flex flex-col justify-end overflow-hidden"
-        style={{ minHeight: "100vh" }}
-      >
+      <section className="relative overflow-hidden" style={{ minHeight: "92vh" }}>
         <Image
           src="/images/hero/hero-thin-gate.jpeg"
           alt="Gate and garage door repair Los Angeles CA"
@@ -77,156 +79,102 @@ export default function HomePage() {
         <div
           className="absolute inset-0"
           style={{
-            background: "linear-gradient(to top, rgba(12,30,53,0.93) 0%, rgba(12,30,53,0.55) 45%, rgba(12,30,53,0.12) 75%, rgba(12,30,53,0.1) 100%)",
+            background: "linear-gradient(to top, rgba(12,30,53,0.93) 0%, rgba(12,30,53,0.6) 45%, rgba(12,30,53,0.45) 75%, rgba(12,30,53,0.45) 100%)",
           }}
         />
-        {/* Content — bottom left */}
-        <div className="relative z-10 container-max pb-16 pt-32">
-          <div className="max-w-2xl">
-            <span
-              className="eyebrow"
-              style={{ color: "rgba(196,133,90,0.9)" }}
-            >
-              Los Angeles, CA
-            </span>
-            <h1 style={{ color: "var(--text-warm)", lineHeight: 1.0, marginBottom: "1.25rem" }}>
-              Gate &amp; Garage Door Repair
-              That Gets It Right —{" "}
-              <em style={{ color: "#C9A84C", fontStyle: "italic" }}>The First Time.</em>
-            </h1>
-            <p
-              className="mb-8"
-              style={{ color: "rgba(237,234,228,0.8)", fontSize: "1.1rem", lineHeight: 1.7, maxWidth: "560px" }}
-            >
-              Same-day service across the entire Valley. We fix gates and garage doors
-              fast, honestly, and with a warranty.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-10">
-              <a href={BUSINESS.phoneHref} className="btn-primary text-base">
-                <Phone size={18} />
-                Call {BUSINESS.phone}
-              </a>
-              <Link
-                href="/contact"
-                className="text-base font-semibold inline-flex items-center gap-2"
+        {/* Content */}
+        <div
+          className="relative z-10 container-max flex items-center"
+          style={{ minHeight: "92vh", paddingTop: "7rem", paddingBottom: "3rem" }}
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-10 items-center w-full">
+            {/* Copy */}
+            <div className="max-w-2xl">
+              <span
+                className="eyebrow"
+                style={{ color: "rgba(196,133,90,0.9)" }}
+              >
+                Los Angeles, CA
+              </span>
+              <h1 style={{ color: "var(--text-warm)", lineHeight: 1.0, marginBottom: "1.25rem" }}>
+                Gate &amp; Garage Door Repair
+                That Gets It Right —{" "}
+                <em style={{ color: "#C9A84C", fontStyle: "italic" }}>The First Time.</em>
+              </h1>
+              <p
+                className="mb-8"
+                style={{ color: "rgba(237,234,228,0.8)", fontSize: "1.1rem", lineHeight: 1.7, maxWidth: "560px" }}
+              >
+                Same-day service across the entire Valley. We fix gates and garage doors
+                fast, honestly, and with a warranty.
+              </p>
+              <div className="flex flex-wrap gap-4 mb-10">
+                <a href={BUSINESS.phoneHref} className="btn-gold text-base">
+                  <Phone size={18} />
+                  Call {BUSINESS.phone}
+                </a>
+                <a href={BUSINESS.smsHref} className="btn-ghost text-base">
+                  <MessageSquareText size={18} />
+                  Text us a photo
+                </a>
+                <Link href="/contact" className="btn-ghost text-base">
+                  Get a Free Estimate →
+                </Link>
+              </div>
+              {/* Stats row */}
+              <div
+                className="flex flex-wrap gap-x-8 gap-y-2 pt-6 text-sm"
                 style={{
-                  background: "#C9A84C",
-                  color: "#1a1200",
-                  padding: "0.8rem 1.75rem",
-                  borderRadius: "999px",
-                  textDecoration: "none",
-                  whiteSpace: "nowrap",
+                  borderTop: "1px solid rgba(237,234,228,0.2)",
+                  color: "rgba(237,234,228,0.7)",
                 }}
               >
-                Get a Free Estimate →
-              </Link>
+                <span>✦ Same-Day Service</span>
+                <span>✦ 5-Star Rated</span>
+                <span>✦ Gates Specialist</span>
+                <span>✦ Free Estimates</span>
+              </div>
             </div>
-            {/* Stats row */}
-            <div
-              className="flex flex-wrap gap-x-8 gap-y-2 pt-6 text-sm"
-              style={{
-                borderTop: "1px solid rgba(237,234,228,0.2)",
-                color: "rgba(237,234,228,0.7)",
-              }}
-            >
-              <span>✦ Same-Day Service</span>
-              <span>✦ 5-Star Rated</span>
-              <span>✦ Gates Specialist</span>
-              <span>✦ Free Estimates</span>
+
+            {/* Compact form — desktop only, mirrors hero on mobile below */}
+            <div className="hidden lg:block">
+              <ContactForm compact />
             </div>
           </div>
         </div>
       </section>
+
+      <IronDivider />
+
+      {/* ── MOBILE FORM — directly below hero ── */}
+      <div className="lg:hidden" style={{ background: "var(--bg-muted)", padding: "2rem 1.5rem" }}>
+        <div style={{ maxWidth: 480, margin: "0 auto" }}>
+          <ContactForm compact />
+        </div>
+      </div>
+
+      {/* ── THIN TRUST BAR ── */}
+      <div style={{ background: "var(--navy)", padding: "0.65rem 1rem" }}>
+        <div className="container-max">
+          <div
+            className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-sm font-semibold"
+            style={{ color: "#fff", letterSpacing: "0.02em" }}
+          >
+            <span>CSLB {BUSINESS.license}</span>
+            <span style={{ opacity: 0.4 }}>·</span>
+            <a href={BUSINESS.googleReviewsUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#fff", textDecoration: "none" }}>
+              ★ 4.9 on Google
+            </a>
+            <span style={{ opacity: 0.4 }}>·</span>
+            <span>Same-Day Service</span>
+            <span style={{ opacity: 0.4 }}>·</span>
+            <span>{BUSINESS.yearsInBusiness}+ Years in Business</span>
+          </div>
+        </div>
+      </div>
 
       {/* ── DIAGNOSTIC WIDGET ── */}
       <DiagnosticWidget />
-
-      {/* ── TRUST BAR ── */}
-      <section style={{ background: "var(--bg-muted)", padding: "3rem 0" }}>
-        <div className="container-max">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            {[
-              { stat: "500+", label: "Gates & Doors Fixed" },
-              { stat: "Same-Day", label: "Service Available" },
-              { stat: `${BUSINESS.yearsInBusiness}+`, label: "Years in Business" },
-              { stat: "Real Person", label: "Always Answers" },
-            ].map(({ stat, label }) => (
-              <div key={label}>
-                <p
-                  className="font-heading font-bold"
-                  style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", color: "var(--navy)", lineHeight: 1.1 }}
-                >
-                  {stat}
-                </p>
-                <p
-                  style={{ fontSize: "0.78rem", textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--stone)", marginTop: "0.3rem" }}
-                >
-                  {label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── BUSINESS STORY ── */}
-      <RevealWrapper>
-        <section className="section-padding" style={{ background: "var(--bg-base)" }}>
-          <div className="container-max">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-              {/* Copy */}
-              <div>
-                <span className="eyebrow">Our Story</span>
-                <h2 style={{ marginBottom: "1.5rem" }}>
-                  Built on the Valley.{" "}
-                  <em>Driven by Trust.</em>
-                </h2>
-                <div style={{ color: "var(--text-mid)", lineHeight: 1.85, fontSize: "1.05rem" }}>
-                  <p style={{ marginBottom: "1.25rem" }}>
-                    We didn&apos;t build Real Gate &amp; Garage Door on advertising. We built it on
-                    the referrals of neighbors telling neighbors — because when something breaks at
-                    your gate or garage door, you need someone you can actually trust to show up,
-                    fix it right, and not disappear.
-                  </p>
-                  <p style={{ marginBottom: "1.25rem" }}>
-                    Every call we answer, every repair we make — we treat it like it&apos;s our own
-                    home. That&apos;s not a line. That&apos;s {BUSINESS.yearsInBusiness}+ years of five-star reviews.
-                  </p>
-                  <p>
-                    The Valley is our community. These are our roads, our streets, our neighbors&apos;
-                    homes. We&apos;re not just passing through.
-                  </p>
-                </div>
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 mt-6 font-semibold"
-                  style={{ color: "var(--brown)" }}
-                >
-                  Our Story <ArrowRight size={16} />
-                </Link>
-              </div>
-              {/* Checklist */}
-              <div
-                className="rounded-[var(--radius-lg)] p-8"
-                style={{ background: "var(--bg-card)", border: "1px solid var(--line)" }}
-              >
-                <ul className="space-y-4">
-                  {storyChecklist.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
-                      <CheckCircle
-                        size={20}
-                        className="flex-shrink-0 mt-0.5"
-                        style={{ color: "var(--brown-light)" }}
-                      />
-                      <span style={{ color: "var(--text-mid)", fontSize: "0.97rem" }}>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-      </RevealWrapper>
 
       {/* ── GATE SERVICES (60%) ── */}
       <RevealWrapper>
@@ -334,24 +282,9 @@ export default function HomePage() {
                 </Link>
               ))}
             </div>
-            <div className="flex flex-wrap gap-3">
-              {[
-                { href: "/services/garage-door-cable-repair", label: "Cable Repair" },
-                { href: "/services/garage-door-panel-repair", label: "Panel Repair" },
-                { href: "/services/commercial-garage-door", label: "Commercial Doors" },
-                { href: "/services/garage-door-installation", label: "Door Installation" },
-              ].map((l) => (
-                <Link key={l.href} href={l.href} className="btn-secondary text-sm">
-                  {l.label}
-                </Link>
-              ))}
-            </div>
           </div>
         </section>
       </RevealWrapper>
-
-      {/* ── BRAND MARQUEE ── */}
-      <BrandsMarquee />
 
       {/* ── REVIEWS — dark section ── */}
       <section className="section-padding section--dark">
@@ -369,34 +302,99 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {REVIEWS.slice(0, 3).map((r, i) => (
               <RevealWrapper key={r.name} delay={i + 1}>
-                <div className="card-dark flex flex-col gap-4 h-full">
-                  <div className="stars text-lg">★★★★★</div>
-                  <blockquote
-                    className="flex-1 leading-relaxed"
-                    style={{ color: "rgba(237,234,228,0.8)", fontSize: "0.92rem" }}
-                  >
-                    &ldquo;{r.text}&rdquo;
-                  </blockquote>
-                  <div>
-                    <p className="font-semibold text-sm" style={{ color: "var(--text-warm)" }}>
-                      {r.name}
-                    </p>
-                    <p style={{ fontSize: "0.78rem", color: "rgba(237,234,228,0.45)", marginTop: "0.15rem" }}>
-                      {r.city} · {r.service} · {r.date}
-                    </p>
-                  </div>
-                </div>
+                <ReviewQuote review={r} className="h-full" />
               </RevealWrapper>
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link href="/reviews" className="btn-ghost">
               See All {BUSINESS.reviewCount}+ Reviews →
             </Link>
+            <a
+              href={BUSINESS.googleReviewsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold"
+              style={{ color: "var(--text-warm)", textDecoration: "none" }}
+            >
+              ★ 4.9 on Google
+            </a>
           </div>
         </div>
       </section>
+
+      {/* ── CTA STRIP ── */}
+      <div style={{ background: "var(--brown)", padding: "1.75rem 0" }}>
+        <div className="container-max flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+          <p className="font-heading font-bold" style={{ fontSize: "1.15rem", color: "var(--text-warm)" }}>
+            Gate stuck? Call now — {BUSINESS.phone}
+          </p>
+          <a href={BUSINESS.phoneHref} className="btn-gold">
+            <Phone size={16} /> Call Now
+          </a>
+        </div>
+      </div>
+
+      {/* ── BUSINESS STORY ── */}
+      <RevealWrapper>
+        <section className="section-padding" style={{ background: "var(--bg-base)" }}>
+          <div className="container-max">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+              {/* Copy */}
+              <div>
+                <span className="eyebrow">Our Story</span>
+                <h2 style={{ marginBottom: "1.5rem" }}>
+                  Built on the Valley.{" "}
+                  <em>Driven by Trust.</em>
+                </h2>
+                <p style={{ color: "var(--text-mid)", lineHeight: 1.85, fontSize: "1.05rem" }}>
+                  We didn&apos;t build Real Gate &amp; Garage Door on advertising — we built it on
+                  neighbors telling neighbors. Every call, every repair, we treat like it&apos;s our
+                  own home. That&apos;s {BUSINESS.yearsInBusiness}+ years of five-star reviews, right
+                  here in the Valley.
+                </p>
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 mt-6 font-semibold"
+                  style={{ color: "var(--brown)" }}
+                >
+                  Our Story <ArrowRight size={16} />
+                </Link>
+              </div>
+              {/* Photo + Checklist */}
+              <div className="flex flex-col gap-6">
+                <ArchImage
+                  src="/images/story/building.jpeg"
+                  alt="Real Gate & Garage Door team at work"
+                  aspect="16/10"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div
+                  className="rounded-[var(--radius-lg)] p-8"
+                  style={{ background: "var(--bg-card)", border: "1px solid var(--line)" }}
+                >
+                  <ul className="space-y-4">
+                    {storyChecklist.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle
+                          size={20}
+                          className="flex-shrink-0 mt-0.5"
+                          style={{ color: "var(--brown-light)" }}
+                        />
+                        <span style={{ color: "var(--text-mid)", fontSize: "0.97rem" }}>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </RevealWrapper>
+
+      {/* ── BRAND MARQUEE ── */}
+      <BrandsMarquee />
 
       {/* ── SERVICE AREAS ── */}
       <RevealWrapper>
@@ -407,7 +405,8 @@ export default function HomePage() {
               The Entire Valley —{" "}
               <em>And Beyond.</em>
             </h2>
-            <p style={{ color: "var(--stone)", maxWidth: 520, margin: "0 auto 2.5rem" }}>
+            <SectionRule />
+            <p style={{ color: "var(--stone)", maxWidth: 520, margin: "1.25rem auto 2.5rem" }}>
               We serve cities across greater Los Angeles — from Malibu to
               Pasadena, Beverly Hills to Simi Valley.
             </p>
@@ -506,7 +505,7 @@ export default function HomePage() {
                   "Same-day appointments available",
                   "Upfront quote before any work starts",
                   "No pressure, no upselling",
-                  "Licensed CA Contractor · Bonded · Insured",
+                  `Licensed CA Contractor · Bonded · Insured · CSLB ${BUSINESS.license}`, // TODO(client): confirm real CSLB number
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3" style={{ color: "var(--text-mid)" }}>
                     <CheckCircle size={17} className="flex-shrink-0" style={{ color: "var(--success)" }} />
@@ -528,9 +527,13 @@ export default function HomePage() {
                 >
                   {BUSINESS.phone}
                 </a>
-                <p style={{ color: "rgba(237,234,228,0.6)", fontSize: "0.85rem", marginTop: "0.25rem" }}>
+                <p style={{ color: "rgba(237,234,228,0.6)", fontSize: "0.85rem", marginBottom: "1rem" }}>
                   Live answer 24/7 for emergencies
                 </p>
+                <a href={BUSINESS.smsHref} className="btn-ghost text-sm">
+                  <MessageSquareText size={16} />
+                  Text us a photo
+                </a>
               </div>
             </RevealWrapper>
             <RevealWrapper delay={1}>

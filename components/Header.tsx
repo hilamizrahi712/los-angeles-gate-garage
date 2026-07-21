@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 
@@ -37,26 +37,18 @@ const areaLinks = [
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   const toggleDropdown = (name: string) => {
     setOpenDropdown(openDropdown === name ? null : name);
   };
 
-  // Always solid light gray — no scroll-based color change
   const headerBg = "shadow-sm";
   const linkColor = "text-[var(--text-dark)]";
 
   return (
-    <>
-      {/* Emergency Banner */}
-      <div className="bg-red-700 text-white text-center py-2 px-4 text-sm font-semibold z-50 relative">
+    <div className="sticky top-0 z-40">
+      {/* Emergency Banner — part of the same sticky unit as the header, so they scroll together instead of unsticking independently */}
+      <div className="bg-red-700 text-white text-center py-2 px-4 text-sm font-semibold">
         🚨 Emergency Repair Available 24/7 — Gates &amp; Garage Doors —{" "}
         <a href={BUSINESS.phoneHref} className="underline hover:no-underline">
           {BUSINESS.phone}
@@ -65,7 +57,7 @@ export default function Header() {
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 z-40 ${headerBg}`}
+        className={headerBg}
         style={{ height: "var(--nav-h)", background: "#F5F5F5" }}
       >
         <div className="container-max flex items-center justify-between h-full gap-4">
@@ -288,6 +280,6 @@ export default function Header() {
           </div>
         )}
       </header>
-    </>
+    </div>
   );
 }

@@ -108,6 +108,7 @@ h1 em, h2 em {
 
 .section--dark h2,
 .section--dark h3 { color: var(--text-warm); }
+.section--dark h1 em { color: #C9A84C; }
 .section--dark h2 em { color: var(--brown-warm); }
 .section--dark p { color: rgba(237, 234, 228, 0.75); }
 
@@ -139,19 +140,8 @@ strong { font-weight: 600; }
 .section--dark .eyebrow::before { background: var(--brown-warm); }
 
 /* ─── Scroll Reveal ─── */
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
-}
-.reveal[data-delay="1"] { transition-delay: 0.12s; }
-.reveal[data-delay="2"] { transition-delay: 0.24s; }
-.reveal[data-delay="3"] { transition-delay: 0.36s; }
-.reveal[data-delay="4"] { transition-delay: 0.48s; }
-.reveal.is-visible { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
-}
+/* ponytail: reveal-on-scroll disabled — was leaving sections blank/faded mid-scroll */
+.reveal { opacity: 1; transform: none; }
 
 /* ─── Buttons ─── */
 .btn-primary {
@@ -173,6 +163,25 @@ strong { font-weight: 600; }
 }
 .btn-primary:hover { background: var(--brown-mid); }
 
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.75rem;
+  background: #C9A84C;
+  color: #1a1200;
+  font-family: var(--font-dm-sans, 'DM Sans', system-ui, sans-serif);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-pill);
+  transition: background 0.2s var(--ease);
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}
+.btn-gold:hover { background: #ddbc5e; }
+
 .btn-secondary {
   display: inline-flex;
   align-items: center;
@@ -191,6 +200,17 @@ strong { font-weight: 600; }
   white-space: nowrap;
 }
 .btn-secondary:hover { background: var(--navy); color: var(--text-warm); }
+
+/* btn-secondary on dark/navy backgrounds */
+.section--dark .btn-secondary {
+  color: var(--text-warm);
+  border-color: rgba(237,234,228,0.5);
+}
+.section--dark .btn-secondary:hover {
+  background: rgba(237,234,228,0.12);
+  color: var(--text-warm);
+  border-color: var(--text-warm);
+}
 
 .btn-ghost {
   display: inline-flex;

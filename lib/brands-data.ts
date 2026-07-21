@@ -1,3 +1,8 @@
+export interface BrandFAQ {
+  q: string;
+  a: string;
+}
+
 export interface BrandData {
   slug: string;
   name: string;
@@ -7,8 +12,10 @@ export interface BrandData {
   intro: string;
   services: string[];
   models: string[];
+  modelNotes: string[];
   customerInfo: string;
   whyUs: string;
+  faqs: BrandFAQ[];
   metaTitle: string;
   metaDescription: string;
 }
@@ -20,7 +27,7 @@ export const BRANDS: BrandData[] = [
     logo: "/images/brands/logo-1.png",
     type: "gate",
     tagline: "American-Built Gate Operators — Repaired Right",
-    metaTitle: "All-O-Matic Gate Repair & Service | Real Gate & Garage Door",
+    metaTitle: "All-O-Matic Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Expert All-O-Matic gate operator repair. Motors, control boards, drive gears — same-day service. Licensed technicians. Call (818) 915-5715.",
     intro: "All-O-Matic has been manufacturing gate operators in the USA since the 1970s. You'll find their units on residential driveways, apartment complexes, and commercial properties throughout Los Angeles. Their slide and swing gate operators are known for tough construction — but like any mechanical system, they need expert service when something goes wrong. We repair All-O-Matic units of all ages, including older models that many other shops won't touch.",
     services: [
@@ -40,8 +47,21 @@ export const BRANDS: BrandData[] = [
       "OH-1 / OH-2 (overhead)",
       "PCB-1 / PCB-2 control boards",
     ],
+    modelNotes: [
+      "Older slide gate workhorses — control board failure is the most common issue we see.",
+      "Common on residential driveways; drive gear wear is typical after years of daily cycling.",
+      "Reliable swing operators; limit switch drift is the usual culprit for misaligned stopping.",
+      "Less common overhead units — we still stock parts and service these regularly.",
+      "The exact board swap we perform most often on aging All-O-Matic systems.",
+    ],
     customerInfo: "All-O-Matic operators are built to last, but their control boards are a common failure point as units age. If your gate stops mid-travel, reverses unexpectedly, or doesn't respond to the remote, the board is often the culprit. Parts are still available for most models, though some early-generation units require sourcing from specialty suppliers — something we handle regularly. If your unit is very old and beyond economical repair, we'll tell you honestly and recommend a modern replacement.",
     whyUs: "We've serviced All-O-Matic operators for over a decade and stock the most common control boards and drive components. We don't guess — we diagnose. Most All-O-Matic repairs are completed same-day with parts from our truck.",
+    faqs: [
+      { q: "How do I know if my All-O-Matic gate needs a new control board?", a: "If your gate stops mid-travel, reverses unexpectedly, or ignores the remote while the motor still hums, the board is the likely cause. We confirm with a quick diagnostic." },
+      { q: "What does All-O-Matic gate repair typically cost?", a: "Most repairs run $150-$600 depending on whether it's a sensor, limit switch, or full control board replacement. You'll get an exact quote before we start." },
+      { q: "Should I repair or replace an old All-O-Matic operator?", a: "If the motor and frame are sound, repair is almost always the better value. We only recommend replacement when repair no longer makes economic sense." },
+      { q: "Can you still get parts for older All-O-Matic models?", a: "Yes, for most models. Some early-generation units need parts from specialty suppliers, which we source regularly." },
+    ],
   },
   {
     slug: "liftmaster",
@@ -49,7 +69,7 @@ export const BRANDS: BrandData[] = [
     logo: "/images/brands/logo-2.png",
     type: "both",
     tagline: "Gates & Garage Doors — LiftMaster's #1 Local Service Team",
-    metaTitle: "LiftMaster Gate & Garage Door Repair | Real Gate & Garage Door",
+    metaTitle: "LiftMaster Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "LiftMaster gate operator and garage door opener repair. Motors, boards, myQ, remotes — same-day service. Licensed & insured. Call (818) 915-5715.",
     intro: "LiftMaster is the most widely installed brand for both automatic gate operators and garage door openers in the country. Their residential and commercial-grade operators set the standard for reliability, and their myQ smart home ecosystem is the most capable on the market. When a LiftMaster unit goes down, you want a technician who knows the brand inside and out — not someone reading the manual on your driveway.",
     services: [
@@ -71,8 +91,24 @@ export const BRANDS: BrandData[] = [
       "3800 (jackshaft opener)",
       "CAPXL (commercial slide gate)",
     ],
+    modelNotes: [
+      "Our most-serviced swing gate line — control board and limit switch issues are typical.",
+      "Commercial-duty swing operator built for higher daily cycles.",
+      "Reliable slide operator; drive gear and sensor service are the usual calls.",
+      "Quiet belt-drive openers — sensor alignment and remote issues are most common.",
+      "Space-saving wall-mount units popular in tighter garages.",
+      "Side-mounted opener for garages with low headroom or high-lift doors.",
+      "Heavy-duty commercial slide operator for high-traffic properties.",
+    ],
     customerInfo: "LiftMaster and Chamberlain share the same parent company (The Chamberlain Group), which means some parts and remotes are cross-compatible. LiftMaster's myQ technology lets you open, close, and monitor your gate or garage door from your smartphone — we can set this up or troubleshoot an existing installation. If your unit is showing error codes on the wall panel, those codes tell us exactly where to look.",
     whyUs: "LiftMaster is the brand we work on most. We carry the most common boards, sensors, and drive components for LiftMaster openers and gate operators. We're fully familiar with the myQ ecosystem and can configure it correctly on the first visit.",
+    faqs: [
+      { q: "Why is my LiftMaster gate opener showing an error code?", a: "LiftMaster wall panels display specific fault codes for sensor, obstruction, and motor issues - we read the code on arrival so we know exactly what to check first." },
+      { q: "How much does LiftMaster gate or garage door repair cost?", a: "Typical repairs range $150-$700 depending on whether it's a sensor, board, or motor. Installed replacements run higher - we quote both options upfront." },
+      { q: "Should I repair or replace my LiftMaster unit?", a: "Most LiftMaster units are worth repairing - parts are widely available. We only recommend replacement when the motor or board has failed on a unit already near end of life." },
+      { q: "Can you get parts for older LiftMaster models?", a: "Yes. LiftMaster has excellent parts availability across current and older product lines, which keeps most repairs same-day." },
+      { q: "Can you set up myQ on my LiftMaster gate or garage door?", a: "Yes - myQ setup and troubleshooting is one of our most common LiftMaster calls." },
+    ],
   },
   {
     slug: "doorking",
@@ -80,7 +116,7 @@ export const BRANDS: BrandData[] = [
     logo: "/images/brands/logo-3.png",
     type: "access-control",
     tagline: "DKS Access Control & Gate Systems — Expert Service",
-    metaTitle: "DoorKing (DKS) Gate & Access Control Repair | Real Gate & Garage Door",
+    metaTitle: "DoorKing Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "DoorKing gate operator and access control system repair. Telephone entry, loop detectors, control boards — licensed technicians. Call (818) 915-5715.",
     intro: "DoorKing — known by the brand name DKS — is a leading manufacturer of gate operators and access control systems. Their telephone entry systems, vehicle loop detectors, and residential gate operators are found in HOAs, apartment complexes, commercial properties, and upscale residential gates throughout the Los Angeles area. DKS systems are professional-grade equipment that requires technicians with real access-control experience.",
     services: [
@@ -101,8 +137,22 @@ export const BRANDS: BrandData[] = [
       "8037 (loop detector)",
       "DKS Drive (residential slide gate)",
     ],
+    modelNotes: [
+      "Common HOA and apartment slide operators; motor and board repairs are typical.",
+      "Heavier-duty swing units for larger residential or light-commercial gates.",
+      "The telephone entry line we service most — connection issues are the most frequent call.",
+      "Standalone keypad access — reprogramming codes is the most common request.",
+      "Vehicle sensing loop — false triggers or no-detect issues are usually a wiring or sensitivity fix.",
+      "Newer residential slide platform with strong parts availability.",
+    ],
     customerInfo: "DoorKing systems are more complex than typical residential operators. Their telephone entry systems integrate with your property's phone lines or cellular network to allow remote gate access — these require careful programming and can be tricky to troubleshoot. If your DKS entry system has stopped calling tenants or your gate codes no longer work, that's a job for a technician who knows the DKS programming interface.",
     whyUs: "We service HOAs and property managers with DKS systems throughout the area. We understand the DKS programming environment and can configure telephone entry systems, add/remove access codes, and replace damaged components. Commercial-grade work, not residential guesswork.",
+    faqs: [
+      { q: "Why has my DoorKing telephone entry system stopped calling tenants?", a: "This is usually a phone line or cellular module issue rather than the unit itself. We diagnose the connection first before touching hardware." },
+      { q: "How much does DoorKing gate or access control repair cost?", a: "Typical repairs range $200-$800 depending on complexity - telephone entry and access control systems cost more to diagnose than a simple operator." },
+      { q: "Repair or replace an aging DoorKing system?", a: "DKS equipment is built for long service life - repair is almost always the right call unless the unit is discontinued and unsupported." },
+      { q: "Can you add or remove access codes on my DoorKing system?", a: "Yes - code and card management is a routine part of our DoorKing service calls." },
+    ],
   },
   {
     slug: "genie",
@@ -110,7 +160,7 @@ export const BRANDS: BrandData[] = [
     logo: "/images/brands/logo-4.png",
     type: "garage-door",
     tagline: "Genie Garage Door Opener Repair — Fast & Reliable",
-    metaTitle: "Genie Garage Door Opener Repair & Service | Real Gate & Garage Door",
+    metaTitle: "Genie Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Genie garage door opener repair. All models including ChainMax, StealthDrive, PowerMax, and Aladdin Connect. Same-day service. Call (818) 915-5715.",
     intro: "Genie has been manufacturing garage door openers since 1954 and remains one of the top brands in the industry. Their ChainMax, StealthDrive, and PowerMax lines cover everything from budget-friendly chain drives to quiet belt drives and smart-enabled units. When your Genie opener stops working or starts acting up, our technicians know exactly where to look.",
     services: [
@@ -131,8 +181,22 @@ export const BRANDS: BrandData[] = [
       "7155-TKV (smart opener)",
       "2128 / 3128 (commercial)",
     ],
+    modelNotes: [
+      "Budget-friendly chain drives — chain tension and sensor alignment are the usual fixes.",
+      "Quiet belt-drive units popular for attached garages near living space.",
+      "Low-maintenance screw drive — lubrication and travel adjustment cover most calls.",
+      "Older reliable workhorses still common across the Valley.",
+      "Wi-Fi enabled unit — most calls are connectivity or app-pairing issues.",
+      "Commercial-grade Genie units built for higher-cycle use.",
+    ],
     customerInfo: "Genie's Aladdin Connect module adds smartphone control to compatible openers — we can install this add-on or help you set it up if it's already installed but not working. Genie remotes use Intellicode rolling code technology for security. If your remote stops working, it usually needs reprogramming rather than replacement. Genie parts are widely available, which means same-day repairs are the norm.",
     whyUs: "We stock Genie circuit boards, drive components, and sensors for the most common models. Most Genie opener repairs are completed in a single visit. We're also familiar with Aladdin Connect troubleshooting if your smart features aren't syncing.",
+    faqs: [
+      { q: "Why won't my Genie remote open the garage door anymore?", a: "Genie remotes use Intellicode rolling code technology - most no-response issues are a reprogramming fix, not a broken remote." },
+      { q: "How much does Genie opener repair cost?", a: "Most repairs run $100-$350 for sensors, boards, or drive components. New installations are quoted separately." },
+      { q: "Repair or replace an older Genie opener?", a: "Genie parts are widely available, so repair is almost always cheaper and faster than replacement." },
+      { q: "Can you set up Aladdin Connect on my Genie opener?", a: "Yes - Aladdin Connect installation and troubleshooting is a routine part of our Genie service." },
+    ],
   },
   {
     slug: "doorbird",
@@ -140,7 +204,7 @@ export const BRANDS: BrandData[] = [
     logo: "/images/brands/logo-5.png",
     type: "access-control",
     tagline: "DoorBird Video Intercom — Installation & Gate Integration",
-    metaTitle: "DoorBird Video Intercom Installation & Gate Integration | Real Gate & Garage Door",
+    metaTitle: "DoorBird Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "DoorBird IP video intercom installation and integration with automatic gates. WiFi setup, relay wiring, app configuration. Call (818) 915-5715.",
     intro: "DoorBird is a premium IP video intercom and smart doorbell system that integrates directly with automatic gate operators via relay output. When someone presses your DoorBird, you see them on your phone, speak with them, and open the gate — from anywhere in the world. We install and integrate DoorBird devices with all major gate operator brands, handling the wiring, relay configuration, WiFi setup, and app configuration.",
     services: [
@@ -161,8 +225,22 @@ export const BRANDS: BrandData[] = [
       "D2102V (indoor station)",
       "A1101 (indoor station)",
     ],
+    modelNotes: [
+      "Simple surface-mount unit, easiest to retrofit onto existing entries.",
+      "Cleaner flush-mount install for finished entryways.",
+      "Adds keypad access alongside video intercom.",
+      "Full video intercom station for larger properties.",
+      "Indoor answering station paired with an outdoor unit.",
+      "Compact indoor station for smaller installations.",
+    ],
     customerInfo: "DoorBird devices require a solid WiFi connection at the installation point — poor signal is the most common cause of DoorBird problems. If your unit is losing connection or not ringing your phone, the issue is often network-related rather than a faulty device. DoorBird works with most gate operators via a dry-contact relay connection — this is straightforward for a gate technician but can be tricky if you try to wire it yourself.",
     whyUs: "We install and integrate DoorBird as part of complete gate system upgrades. We handle the full installation — device mounting, gate relay wiring, WiFi confirmation, and app configuration — so you leave with everything working the same day.",
+    faqs: [
+      { q: "Why isn't my DoorBird ringing my phone?", a: "Weak WiFi at the mounting point is the most common cause - we test signal strength and can add a repeater if needed." },
+      { q: "How much does DoorBird installation cost?", a: "Installation and gate integration typically runs $300-$800 depending on wiring complexity and whether relay integration is needed." },
+      { q: "Can DoorBird open my existing gate?", a: "Yes - DoorBird integrates with nearly any gate operator via a dry-contact relay, which we wire and configure." },
+      { q: "Do you support multi-unit DoorBird setups for HOAs or apartments?", a: "Yes, we regularly configure DoorBird for multi-tenant buildings with individual unit routing." },
+    ],
   },
   {
     slug: "chamberlain",
@@ -170,7 +248,7 @@ export const BRANDS: BrandData[] = [
     logo: "/images/brands/logo-6.png",
     type: "garage-door",
     tagline: "Chamberlain Garage Door Opener Repair — All Models",
-    metaTitle: "Chamberlain Garage Door Opener Repair | Real Gate & Garage Door",
+    metaTitle: "Chamberlain Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Chamberlain garage door opener repair. All models, myQ compatible. Same-day service, licensed technicians. Call (818) 915-5715.",
     intro: "Chamberlain is one of the most recognized garage door opener brands in American homes. As part of The Chamberlain Group (the same parent company as LiftMaster), Chamberlain openers share many components and feature the same myQ smart home ecosystem. They're sold primarily through home improvement retailers and are found in millions of homes. When a Chamberlain opener goes down, our technicians have the parts and knowledge to fix it same-day in most cases.",
     services: [
@@ -192,8 +270,23 @@ export const BRANDS: BrandData[] = [
       "C2452 / C2452T (built-in camera)",
       "WD832KEV (chain drive)",
     ],
+    modelNotes: [
+      "Premium quiet belt drive — sensor and remote issues are the typical calls.",
+      "WiFi-enabled belt drive with built-in camera on some units.",
+      "Reliable entry-level chain drive opener.",
+      "Higher-end belt drive with battery backup.",
+      "Side-mounted opener for low-headroom garages.",
+      "Opener with integrated camera — most calls involve app or connectivity setup.",
+      "Common big-box chain drive opener.",
+    ],
     customerInfo: "Chamberlain and LiftMaster share the myQ platform, meaning remotes, wall controls, and accessories are often cross-compatible. myQ lets you control your door from anywhere via smartphone — we can help with initial setup or diagnose why your myQ connection dropped. Most Chamberlain parts (circuit boards, sensors, remotes) are the same as LiftMaster equivalents, which means excellent parts availability.",
     whyUs: "Because Chamberlain and LiftMaster share the same platform, our deep LiftMaster experience extends directly to Chamberlain repairs. We carry cross-compatible boards and sensors, so your repair typically doesn't require a special order.",
+    faqs: [
+      { q: "Is Chamberlain the same as LiftMaster?", a: "They share a parent company and many parts, but are sold under different brand names - we service both with the same expertise." },
+      { q: "How much does Chamberlain opener repair cost?", a: "Most repairs run $100-$350, similar to LiftMaster, thanks to shared parts availability." },
+      { q: "Why did my myQ connection drop on my Chamberlain opener?", a: "Usually a WiFi or app-authentication issue rather than a hardware fault - we can typically resolve it on-site." },
+      { q: "Repair or replace an older Chamberlain opener?", a: "Because parts are shared with LiftMaster, repair is almost always available and cost-effective." },
+    ],
   },
   {
     slug: "elite",
@@ -201,7 +294,7 @@ export const BRANDS: BrandData[] = [
     logo: "/images/brands/logo-7.png",
     type: "gate",
     tagline: "Elite Gate Operator Repair — Fast, Reliable Service",
-    metaTitle: "Elite Gate Operator Repair & Service | Real Gate & Garage Door",
+    metaTitle: "Elite Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Elite gate operator repair. EL25, EL35, SL2000 and all models. Same-day service, licensed technicians. Call (818) 915-5715.",
     intro: "Elite gate operators are popular in both residential and light-commercial applications throughout the Los Angeles area. Known for solid build quality and straightforward mechanics, Elite slide and swing gate operators are a reliable choice — and when they do need service, they're generally easier to work on than some competing brands. We repair Elite operators of all models and ages.",
     services: [
@@ -221,8 +314,22 @@ export const BRANDS: BrandData[] = [
       "SW300 (swing gate)",
       "PCB control board series",
     ],
+    modelNotes: [
+      "Our most common Elite residential slide operator.",
+      "Heavier-duty version for larger or more frequently used gates.",
+      "Commercial-grade slide operator for higher-cycle properties.",
+      "Standard swing gate unit — limit switch service is the typical call.",
+      "Compact swing operator for smaller residential gates.",
+      "The board family behind most Elite control-board swaps.",
+    ],
     customerInfo: "Elite operators are generally reliable and parts are readily available. The most common service calls are for control board failure, worn drive belts, or limit switch drift (the gate starts stopping in the wrong position). If your Elite gate is stopping short or overshooting, limit switch adjustment is often all that's needed — a quick service call.",
     whyUs: "We stock Elite replacement control boards and commonly needed hardware. Most Elite repairs are completed in a single visit with same-day turnaround. If your operator is older and facing a major repair, we'll give you an honest cost-vs-replacement assessment.",
+    faqs: [
+      { q: "Why is my Elite gate stopping in the wrong position?", a: "That's almost always limit switch drift - a quick adjustment usually resolves it without a part replacement." },
+      { q: "How much does Elite gate operator repair cost?", a: "Most repairs run $150-$500 for boards, belts, or switches, with parts readily available." },
+      { q: "Repair or replace an aging Elite operator?", a: "Elite units are straightforward to service - repair is usually the right call unless the gearbox or motor has failed outright." },
+      { q: "Do you service commercial Elite operators?", a: "Yes, including the SL2000 commercial slide gate line." },
+    ],
   },
   {
     slug: "viking",
@@ -230,7 +337,7 @@ export const BRANDS: BrandData[] = [
     logo: "/images/brands/logo-8.png",
     type: "gate",
     tagline: "Viking Gate Operator Specialists — All Models Serviced",
-    metaTitle: "Viking Access Systems Gate Operator Repair | Real Gate & Garage Door",
+    metaTitle: "Viking Access Systems Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Viking Access Systems gate operator repair. All models including K-Series and Q-Series. Same-day service. Licensed technicians. Call (818) 915-5715.",
     intro: "Viking Access Systems manufactures high-quality gate operators right here in California. Their K-Series and Q-Series operators are a top choice for residential and commercial installations across LA — reliable, well-built, and backed by strong parts availability. As a California-based brand, Viking has a strong local presence, and their operators are among the most frequently installed systems we service.",
     services: [
@@ -251,8 +358,22 @@ export const BRANDS: BrandData[] = [
       "VS1000 (vertical pivot)",
       "RSLG (residential slide, low voltage)",
     ],
+    modelNotes: [
+      "Long-running residential slide platform with strong parts support.",
+      "Current-generation swing operator, smart-enabled on newer units.",
+      "Commercial slide operator for higher-traffic properties.",
+      "Heavy-duty commercial unit built for continuous use.",
+      "Vertical pivot gate operator for space-constrained entries.",
+      "Low-voltage residential slide operator, often solar-powered.",
+    ],
     customerInfo: "Viking operators are among the most reliable we service, but no system runs forever. Control board failure and worn drive components are the most common issues we see. Viking's California-based parts distribution means fast availability — most parts ship same-day from the distributor if we don't have them on the truck. Viking also offers excellent solar-powered gate operators — we service these including solar panel, battery, and charge controller.",
     whyUs: "Viking is one of the brands we work on most. We have a direct relationship with Viking's parts network and typically stock the most common boards and components. We're familiar with the full Viking lineup from older K-Series units to current Q-Series smart-enabled operators.",
+    faqs: [
+      { q: "How reliable are Viking gate operators?", a: "Very - Viking is one of the most dependable brands we service, though control boards and drive components still wear over time." },
+      { q: "How much does Viking gate repair cost?", a: "Most repairs run $150-$600, with California-based parts distribution keeping turnaround fast." },
+      { q: "Do you service solar-powered Viking gates?", a: "Yes - panel, battery, and charge controller service is a regular part of our Viking work." },
+      { q: "Repair or replace an older Viking K-Series unit?", a: "K-Series parts remain available - repair is almost always the more economical choice." },
+    ],
   },
   {
     slug: "ramset",
@@ -260,7 +381,7 @@ export const BRANDS: BrandData[] = [
     logo: "/images/brands/logo-9.png",
     type: "gate",
     tagline: "Ramset Gate Operator Repair — Made in the USA",
-    metaTitle: "Ramset Automatic Gate System Repair | Real Gate & Garage Door",
+    metaTitle: "Ramset Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Ramset gate operator repair. DC1, DC2, AC2000 and all models. Same-day service where possible. Licensed technicians. Call (818) 915-5715.",
     intro: "Ramset Automatic Gate Systems has been making American-built gate operators for decades. Their DC-powered slide and swing gate operators are known for durability and are common on mid-to-high-end residential and light-commercial properties. We repair Ramset operators across all model generations, including older units that may require part sourcing.",
     services: [
@@ -279,8 +400,21 @@ export const BRANDS: BrandData[] = [
       "SW-DC (DC swing gate operator)",
       "Ramset PCB control board series",
     ],
+    modelNotes: [
+      "Battery-backed residential slide operator — battery service is the most common call.",
+      "Heavier-duty DC slide unit for larger gates.",
+      "Commercial-grade AC operator for higher-cycle use.",
+      "Battery-backed swing gate operator.",
+      "The board family behind most Ramset control-board swaps.",
+    ],
     customerInfo: "Ramset's DC-powered operators use a battery system that provides power during outages — this battery needs periodic replacement (typically every 3–5 years). If your Ramset gate has become slow or sluggish, a failing battery is often the cause before the motor itself is diagnosed. For older Ramset units, some control boards require sourcing from specialty suppliers, which we handle.",
     whyUs: "We've worked on Ramset systems through multiple product generations. For older models where parts availability is limited, we have sourcing contacts that most shops don't. We'll give you an honest assessment of whether repair or replacement makes more economic sense for your specific unit.",
+    faqs: [
+      { q: "How often does the battery need replacing on a Ramset DC gate?", a: "Typically every 3-5 years - a failing battery is often why a Ramset gate feels slow before the motor is even the issue." },
+      { q: "How much does Ramset gate repair cost?", a: "Most repairs run $150-$600; older units needing sourced parts may cost more to diagnose." },
+      { q: "Can you still get parts for older Ramset operators?", a: "In most cases yes - for early-generation units we have sourcing contacts most shops don't." },
+      { q: "Repair or replace an aging Ramset system?", a: "We'll give you an honest cost comparison based on your specific unit's age and condition." },
+    ],
   },
   {
     slug: "linear",
@@ -288,7 +422,7 @@ export const BRANDS: BrandData[] = [
     logo: "/images/brands/logo-10.png",
     type: "both",
     tagline: "Linear Gate & Garage Door Systems — Full-Service Repair",
-    metaTitle: "Linear Gate Operator & Garage Door Opener Repair | Real Gate & Garage Door",
+    metaTitle: "Linear Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Linear gate operator and garage door opener repair. LDO50, LDCO800, and all models. Same-day service. Licensed. Call (818) 915-5715.",
     intro: "Linear makes both automatic gate operators and garage door openers, giving them a unique cross-market position. Their gate operators are popular for mid-range residential and light-commercial installations, while their garage openers offer solid performance with good smart-home integration. We service the full Linear lineup on both the gate and garage door sides.",
     services: [
@@ -309,8 +443,22 @@ export const BRANDS: BrandData[] = [
       "GD00Z (garage door Z-Wave controller)",
       "LDCO800 Pro (commercial gate)",
     ],
+    modelNotes: [
+      "Common residential slide operator — motor and board service are typical.",
+      "Versatile operator used on both swing and slide gates.",
+      "Commercial-grade slide operator for higher-traffic properties.",
+      "Linear's mainline garage door opener.",
+      "Add-on module for smart home garage door control.",
+      "Heavier-duty commercial version of the LDCO800.",
+    ],
     customerInfo: "Linear gate operators and garage openers are mid-range products with good reliability and reasonable parts availability. Their Z-Wave integration is popular with smart-home enthusiasts — if you're having trouble with Z-Wave control or home automation integration, that's something we can help configure. Linear remotes use rolling code technology and can typically be reprogrammed without replacing the unit.",
     whyUs: "We service both the gate and garage door sides of the Linear product line. Whether your Linear gate operator has stopped or your Linear garage opener needs attention, we have the experience and parts to handle it same-day in most cases.",
+    faqs: [
+      { q: "Do you service both the gate and garage door sides of Linear?", a: "Yes - we handle Linear's full lineup, gate operators and garage door openers alike." },
+      { q: "How much does Linear repair cost?", a: "Most repairs run $150-$500 depending on whether it's a gate operator or garage door opener issue." },
+      { q: "Can you fix my Linear Z-Wave smart home integration?", a: "Yes - Z-Wave and home automation troubleshooting is a routine part of our Linear service." },
+      { q: "Repair or replace an older Linear unit?", a: "Linear parts availability is solid, so repair is usually the more cost-effective option." },
+    ],
   },
   {
     slug: "eagle",
@@ -318,7 +466,7 @@ export const BRANDS: BrandData[] = [
     logo: "/images/brands/logo-11.png",
     type: "gate",
     tagline: "Eagle Gate Operator Repair — Commercial & Residential",
-    metaTitle: "Eagle Access Control Gate Operator Repair | Real Gate & Garage Door",
+    metaTitle: "Eagle Access Control Systems Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Eagle Access Control Systems gate operator repair. EE-1000, EE-4002 and all models. Same-day service. Licensed technicians. Call (818) 915-5715.",
     intro: "Eagle Access Control Systems manufactures gate operators for residential, commercial, and industrial applications. Their operators are commonly found in gated communities, parking facilities, HOA-controlled entry points, and commercial properties throughout Los Angeles. Eagle systems are professional-grade equipment built for high-cycle use — and they require a technician with real commercial gate experience.",
     services: [
@@ -338,8 +486,21 @@ export const BRANDS: BrandData[] = [
       "Eagle 2000 (swing gate operator)",
       "Eagle commercial barrier arm series",
     ],
+    modelNotes: [
+      "Our most-serviced Eagle slide operator across property types.",
+      "Built for high-cycle commercial and industrial use.",
+      "Vertical pivot operator for space-constrained commercial entries.",
+      "Standard swing gate unit for residential and light-commercial gates.",
+      "Parking and access barrier arms for commercial lots.",
+    ],
     customerInfo: "Eagle operators are built for demanding commercial environments. If you manage a property with an Eagle-controlled gate, you already know these systems require more technical expertise to service than residential operators. Common issues include control board failure from power surges, worn gearboxes from high-cycle use, and access control integration problems after system updates.",
     whyUs: "We serve commercial property managers and HOAs with Eagle gate systems. Our commercial technicians understand the full Eagle product line and have the equipment to service heavy-duty operators. We also offer maintenance contracts for commercial clients that include priority emergency response.",
+    faqs: [
+      { q: "Do you service Eagle gates for HOAs and property managers?", a: "Yes - Eagle systems are common in gated communities and commercial properties, and we offer maintenance contracts for property managers." },
+      { q: "How much does Eagle gate operator repair cost?", a: "Commercial-grade Eagle repairs typically run $250-$1,000+ depending on system complexity." },
+      { q: "What causes most Eagle gate failures?", a: "Control board failure from power surges and worn gearboxes from high-cycle use are the most common issues we see." },
+      { q: "Do you offer emergency service for commercial Eagle systems?", a: "Yes - commercial clients with maintenance contracts receive priority emergency response." },
+    ],
   },
 ];
 

@@ -20,7 +20,7 @@ export default function TipsIndexPage() {
     <>
       {/* Hero */}
       <section
-        className="py-20"
+        className="py-20 section--dark"
         style={{ background: "var(--bg-dark)", color: "var(--text-warm)" }}
       >
         <div className="container-max max-w-2xl">

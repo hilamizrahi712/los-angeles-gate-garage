@@ -26,67 +26,27 @@ export const BLOG_POSTS: BlogPost[] = [
     img: "/images/services/gate-motor.jpeg",
     content: `## Why Won't My Electric Gate Open?
 
-There's nothing more frustrating than pulling up to your driveway and finding your electric gate frozen in place. Before you call for service, run through these 8 common causes — some you can fix yourself in minutes, others need a technician.
+There's nothing more frustrating than pulling up to your driveway and finding your electric gate frozen in place. Start with the three checks below — they take five minutes and fix more gates than you'd think.
 
-### 1. Dead Remote Battery
+### Try These First — Safe to Check Right Now
 
-This is the first thing to check and the most commonly overlooked. Electric gate remotes use small batteries (often 12V A23 or CR2032 cells) that die without warning. Try the wall keypad or entry code instead. If those work fine, your remote battery is the culprit.
+✅ **Swap the remote battery.** Gate remotes run on small batteries (often 12V A23 or CR2032) that die without warning. Try the wall keypad or entry code — if that works, it's the remote.
+✅ **Check your breaker panel.** A tripped breaker cuts power to the operator instantly. Reset it once. If it trips again immediately, stop — that's an electrical fault, not a DIY fix.
+✅ **Clear the gate's path.** A trash bin, fallen branch, or debris near the photocell beam can trigger the safety sensors and freeze the gate. Clear it and try again.
 
-**Fix:** Replace the battery. If you're not sure which battery your remote uses, look on the back of the remote or check your owner's manual.
+### If That Didn't Fix It
 
-### 2. Power Outage or Tripped Breaker
+If the battery's fine, the breaker's holding, and the path is clear — the cause is almost always one of three things: **a failed control board, a burnt-out motor, or a safety sensor that's misaligned rather than just dirty.** All three need a multimeter and a trained eye to tell apart, not a guess.
 
-Electric gate operators run on power. If your home lost power during a storm or your breaker tripped, the gate won't operate electrically — but it should have a manual release.
+### The Reality
 
-**Fix:** Check your breaker panel. If the breaker serving the gate operator has tripped, reset it. If it trips again immediately, there's a more serious electrical issue — call a technician.
-
-### 3. Obstruction in the Gate's Path
-
-Modern electric gates have safety sensors that stop the gate from closing (and sometimes opening) if something is blocking the path. A fallen branch, trash bin, or even a small animal can trigger the obstruction detection.
-
-**Fix:** Clear the gate's path completely and try again. If the gate still won't move, walk the track or swing path to check for less obvious obstructions — sometimes the sensor itself is triggered by debris near the photocell beam.
-
-### 4. Faulty Safety Sensors (Photocells)
-
-Photocell sensors create an invisible beam across the gate's travel path. If the beam is blocked or the sensors are misaligned, the gate reads a constant obstruction and won't operate.
-
-**Fix:** Look at both photocell sensor units. They typically have LED indicator lights — one sender, one receiver. If the receiver light is off or flashing, the beam isn't aligned. Clean the sensor lenses with a soft cloth and realign them so they face each other directly. If still not working, the sensors may need replacement.
-
-### 5. Dead or Weak Gate Motor
-
-Gate operator motors can burn out, especially on older systems or those that have been overworked. Signs of a failing motor include: gate that moves very slowly, gate that only moves part-way, or gate that doesn't move at all but you can hear a hum or click from the operator unit.
-
-**Fix:** This requires a technician. Motor replacement for common gate operators typically costs $350–$700 installed. If the motor is still under warranty, check that first.
-
-### 6. Failed Control Board
-
-The control board (logic board) is the brain of the gate operator. It processes all signals — remote, keypad, safety sensors — and commands the motor. Control boards fail from power surges, moisture intrusion, or simply age.
-
-Signs of a bad control board: gate doesn't respond to any input, displays an error code, or operates erratically (opening when it should close, stopping mid-cycle).
-
-**Fix:** Control board replacement for most residential gate operators costs $250–$500 installed. Avoid DIY board replacement unless you're experienced with electronics and understand the high-voltage components involved.
-
-### 7. Broken or Worn Drive System
-
-Electric gates use a chain, belt, rack-and-pinion, or screw drive to move the gate. These components wear over time. A broken chain, worn rack gear, or seized drive mechanism will prevent the gate from moving even if the motor runs.
-
-Signs of a drive system failure: you can hear the motor running but the gate doesn't move, you hear grinding or clicking from the operator, or the gate moves in jerks rather than smoothly.
-
-**Fix:** Call a technician. Drive system repairs typically run $150–$400 depending on the component.
-
-### 8. Limit Switch Issues
-
-Limit switches tell the gate operator where "fully open" and "fully closed" are. If a limit switch fails or shifts out of adjustment, the gate may stop mid-travel, reverse unexpectedly, or refuse to start.
-
-**Fix:** Limit switch adjustment is a technician task. Your gate operator manual may describe the adjustment procedure, but improper adjustment can cause the gate to over-travel and hit the stops, causing more damage.
+A gate operator runs on line voltage, and the gate itself can weigh several hundred pounds — this isn't a project for a Saturday afternoon and a YouTube video. Control boards for most gate operators aren't sitting on a shelf at Home Depot; they're brand-specific, and we carry them on the truck because ordering one yourself means days without a working gate. Wiring a replacement board incorrectly can fry it the moment you power it back on, turning a $250 fix into a $700 one.
 
 ---
 
-## When to Call a Professional
+## Still Stuck?
 
-If you've checked the battery, confirmed the power is on, cleared all obstructions, and checked the sensors — and your electric gate still won't open — it's time to call a technician. Diagnosing electrical and mechanical gate failures requires proper tools and training.
-
-Real Gate & Garage Door provides same-day electric gate repair in our service area. Call **(818) 915-5715** for immediate assistance.`,
+Real Gate & Garage Door provides same-day electric gate repair in our service area. Text us a photo of your gate operator for a free diagnosis, no obligation — or call **(818) 915-5715** for immediate assistance.`,
   },
 
   {
@@ -105,6 +65,14 @@ Real Gate & Garage Door provides same-day electric gate repair in our service ar
 Pricing transparency is one of the things we hear about most from customers who had bad experiences with other companies. They got a quote over the phone, a technician showed up and found "more problems," and suddenly a $150 repair became a $600 bill.
 
 We don't operate that way. This guide lays out what gate repairs actually cost in 2025 — by specific repair type — so you can approach any service call with realistic expectations.
+
+### Before You Book a Repair — Check These First
+
+✅ **Swap the remote battery.** A dead battery gets mistaken for "the gate is broken" more than anything else — and it costs nothing to rule out.
+✅ **Reset the breaker.** If it's tripped, resetting it is free. If it trips again immediately, that's your answer: it's electrical, not mechanical.
+✅ **Clear the gate's path.** Debris near a sensor reads as an obstruction. Clearing it can save you the diagnostic fee entirely.
+
+If none of those change anything, the cause is almost always a failed circuit board, a worn drive component, or a sensor that needs realignment — and pricing depends on which one it is. Here's what each actually costs.
 
 ### Diagnostic Fee
 
@@ -187,7 +155,15 @@ Sliding gate wheels and track wear over time, causing the gate to drag or bind:
 
 The only way to get an accurate gate repair estimate is an on-site diagnostic. Photos and descriptions help, but the exact cause of a gate failure — and therefore the exact cost — can only be determined by examining the system in person.
 
-Call Real Gate & Garage Door at **(818) 915-5715** for a same-day appointment in our service area. Our $75 diagnostic fee is credited toward your repair.`,
+### The Reality
+
+Gate motors run on line voltage and gates themselves weigh hundreds of pounds under spring or motor tension — that combination is why this isn't a weekend DIY project. Circuit boards and drive components for most gate operators are brand-specific; they're not sitting on a shelf at Home Depot, which is why we carry them on the truck. And wiring a new board incorrectly can burn it out the moment you power it on, turning a $250 fix into a $700 one.
+
+---
+
+## Still Deciding?
+
+Text us a photo of your gate and its problem for a free diagnosis, no obligation. Or call Real Gate & Garage Door at **(818) 915-5715** for a same-day appointment in our service area. Our $75 diagnostic fee is credited toward your repair.`,
   },
 
   {
@@ -206,6 +182,16 @@ Call Real Gate & Garage Door at **(818) 915-5715** for a same-day appointment in
 Thinking about installing an automatic driveway gate? It's one of the best investments you can make in your home's security and curb appeal — but the price range is wide. An automatic gate can cost anywhere from $2,000 to $10,000+ depending on the gate type, material, and operator system you choose.
 
 This guide breaks down the costs honestly so you can budget accurately.
+
+### First, Make Sure You Actually Need a New Gate
+
+If your existing gate stopped working and you're pricing a replacement, check these first — a working gate is a lot cheaper than a new one:
+
+✅ **Swap the remote battery.** The most common "dead gate" cause costs nothing to rule out.
+✅ **Reset the breaker.** If it trips right back, that's a sign of a real electrical fault — still worth a repair quote before a full replacement.
+✅ **Clear the gate's path.** Debris blocking a sensor reads as a stuck gate. Clear it and retest.
+
+If that didn't fix it, the cause is almost always a failed control board, a worn drive component, or a structural issue with the gate itself — and any of those is still cheaper to repair than replace. If the structure and operator are sound, repair first.
 
 ### The Four Cost Components
 
@@ -274,7 +260,15 @@ For most homeowners, yes. An automatic gate:
 
 The key is buying quality. A cheap gate operator installed on a poor-quality gate structure will cost you more in repairs within 2–3 years than the savings on the initial purchase.
 
-**Call Real Gate & Garage Door at (818) 915-5715** for a free on-site estimate and honest recommendation for your property.`,
+### The Reality
+
+New installations aren't a weekend project: gate operators run on line voltage, permits are required in most cities, and a gate that weighs hundreds of pounds needs a properly poured footing or it will fail within a year. Parts and access-control hardware for a new system are brand-specific — not something you'll find at a hardware store — and a newly installed operator that's calibrated wrong won't just misbehave, it can burn out the board on its first real cycle, turning a routine install into an expensive callback.
+
+---
+
+## Not Sure If You Need Repair or Replacement?
+
+Text us a photo of your current gate and we'll give you a free, honest read on repair vs. replace — no obligation. Or **call Real Gate & Garage Door at (818) 915-5715** for a free on-site estimate.`,
   },
 
   {

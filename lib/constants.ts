@@ -1,13 +1,15 @@
+export const FORMSPREE_URL = "https://formspree.io/f/mykaqjvo";
+
 export const BUSINESS = {
   name: "Real Gate & Garage Door",
   tagline: "Gate & Garage Door Repair Specialists",
   phone: "(818) 915-5715",
   phoneHref: "tel:+18189155715",
   smsHref: "sms:+18189155715",
-  email: "info@realgategel.com",
-  license: "#1234567",
+  email: "info@realgaterepair.com",
+  license: "#1234567", // TODO(client): placeholder CSLB number — replace with real license
   address: "Los Angeles, CA",
-  domain: "https://realgategel.com",
+  domain: "https://realgaterepair.com",
   gaId: "G-XXXXXXXXXX",
   gscVerification: "YOUR_GSC_VERIFICATION_CODE",
   formspreeId: "YOUR_FORMSPREE_ID",
@@ -103,6 +105,7 @@ export const REVIEWS = [
     text: "My LiftMaster opener died and I needed same-day service before a big weekend. They diagnosed it quickly — circuit board was fried. They had the replacement part and installed it in under an hour. Fair price, great work.",
     date: "April 2025",
     service: "Opener Repair",
+    brand: "liftmaster",
   },
   {
     name: "Sandra K.",
@@ -175,6 +178,7 @@ export const REVIEWS = [
     text: "We had a new gate motor installed after our old All-O-Matic unit finally gave out after 12 years. The team arrived on time, explained the Viking unit they recommended, and had everything programmed and working in about three hours. Excellent workmanship.",
     date: "July 2019",
     service: "Gate Motor Installation",
+    brand: "viking",
   },
   {
     name: "Kevin S.",
@@ -199,6 +203,7 @@ export const REVIEWS = [
     text: "Real Gate installed a brand-new LiftMaster swing gate operator for us. The whole project from quote to completion took less than a week. The installer was meticulous about the wiring, the sensor placement, and the keypad programming. Everything works flawlessly.",
     date: "October 2016",
     service: "Gate Installation",
+    brand: "liftmaster",
   },
   {
     name: "Barbara A.",
@@ -223,6 +228,7 @@ export const REVIEWS = [
     text: "They reprogrammed and adjusted my DoorKing entry system after we bought our home — the previous owners had a different code setup and we couldn't reach anyone. Real Gate sorted the whole thing out in one visit. Patient, professional, and affordable.",
     date: "August 2023",
     service: "Access Control",
+    brand: "doorking",
   },
   {
     name: "George D.",

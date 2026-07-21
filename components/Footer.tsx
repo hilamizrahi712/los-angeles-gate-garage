@@ -40,7 +40,7 @@ export default function Footer() {
             <p className="footer-cta-title">Ready for Same-Day Service?</p>
             <p className="footer-cta-sub">Gates · Garage Doors · 24/7 Emergency · Free Estimates</p>
           </div>
-          <a href={BUSINESS.phoneHref} className="btn-ghost">
+          <a href={BUSINESS.phoneHref} className="btn-gold">
             <Phone size={18} />
             Call {BUSINESS.phone}
           </a>
@@ -65,6 +65,14 @@ export default function Footer() {
               <span>{BUSINESS.address}</span>
             </div>
           </div>
+          <p className="footer-tagline mt-4" style={{ lineHeight: 1.65 }}>
+            Hours: Sun–Fri 7 AM–10 PM<br />
+            Saturday: Closed · Emergency: 24/7
+          </p>
+          <p className="footer-tagline mt-2">Licensed · Bonded · Insured · CSLB {BUSINESS.license}</p>
+          <a href={BUSINESS.googleReviewsUrl} target="_blank" rel="noopener noreferrer" className="footer-link inline-block mt-2">
+            ★ Read Our Google Reviews
+          </a>
         </div>
 
         {/* Gate Services */}
@@ -115,22 +123,10 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Brands Row */}
-      <div className="footer-brands-row">
-        <div className="container-max text-center">
-          <p className="footer-brands-label">Brands We Install &amp; Service</p>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 footer-brands-list">
-            {["LiftMaster", "Genie", "Chamberlain", "Viking", "DoorKing", "Wayne Dalton", "Clopay", "All-O-Matic"].map((b) => (
-              <span key={b}>{b}</span>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Bottom Bar */}
       <div className="footer-bottom">
         <div className="container-max flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>© {new Date().getFullYear()} {BUSINESS.name}. All rights reserved. · Licensed · Bonded · Insured</span>
+          <span>© {new Date().getFullYear()} {BUSINESS.name}. All rights reserved. · Licensed · Bonded · Insured · CSLB {BUSINESS.license}</span>
           <div className="flex gap-4">
             <Link href="/privacy-policy" className="footer-link">Privacy Policy</Link>
             <Link href="/sitemap.xml" className="footer-link">Sitemap</Link>

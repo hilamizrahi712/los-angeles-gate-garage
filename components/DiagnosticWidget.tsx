@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Phone, ArrowRight, RotateCcw } from "lucide-react";
-import { BUSINESS } from "@/lib/constants";
+import { Phone, ArrowRight, RotateCcw, Send } from "lucide-react";
+import { BUSINESS, FORMSPREE_URL } from "@/lib/constants";
 
 const QUESTIONS = [
   {
@@ -109,6 +109,9 @@ export default function DiagnosticWidget() {
   const [answers, setAnswers] = useState<string[]>([]);
   const [pendingIdx, setPendingIdx] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
+  const [leadPhone, setLeadPhone] = useState("");
+  const [leadSending, setLeadSending] = useState(false);
+  const [leadSent, setLeadSent] = useState(false);
 
   const handleOption = (text: string, idx: number) => {
     if (pendingIdx !== null) return;
@@ -130,9 +133,32 @@ export default function DiagnosticWidget() {
     setAnswers([]);
     setPendingIdx(null);
     setShowResult(false);
+    setLeadPhone("");
+    setLeadSent(false);
   };
 
   const diag = showResult ? getDiagnosis(answers) : null;
+
+  const handleLeadSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!leadPhone.trim() || leadSending) return;
+    setLeadSending(true);
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          phone: leadPhone,
+          diagnosis: diag?.title,
+          answers: answers.join(" | "),
+          _subject: "New diagnostic widget lead",
+        }),
+      });
+      if (res.ok) setLeadSent(true);
+    } finally {
+      setLeadSending(false);
+    }
+  };
 
   return (
     <section className="section-padding" style={{ background: "var(--bg-muted)" }}>
@@ -199,6 +225,35 @@ export default function DiagnosticWidget() {
                   <span key={i} className="diag-answer-chip">{a}</span>
                 ))}
               </div>
+
+              {/* Phone capture */}
+              {leadSent ? (
+                <p className="diag-result-cta-line" style={{ marginBottom: "1.25rem" }}>
+                  Got it — we&apos;ll call you within 30 minutes.
+                </p>
+              ) : (
+                <form onSubmit={handleLeadSubmit} style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: "1.25rem" }}>
+                  <input
+                    type="tel"
+                    required
+                    placeholder="Your phone number"
+                    value={leadPhone}
+                    onChange={(e) => setLeadPhone(e.target.value)}
+                    style={{
+                      flex: "1 1 200px",
+                      border: "1px solid var(--line-strong)",
+                      borderRadius: "var(--radius)",
+                      padding: "0.65rem 0.875rem",
+                      fontSize: "0.9rem",
+                      fontFamily: "inherit",
+                    }}
+                  />
+                  <button type="submit" disabled={leadSending} className="btn-primary" style={{ flexShrink: 0 }}>
+                    <Send size={15} />
+                    {leadSending ? "Sending…" : "Send My Diagnosis"}
+                  </button>
+                </form>
+              )}
 
               {/* Action buttons */}
               <div className="diag-result-actions">

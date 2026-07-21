@@ -2,10 +2,32 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, CheckCircle, ArrowRight, Clock, Shield, Star } from "lucide-react";
+import { Phone, CheckCircle, ArrowRight, Clock, Shield, Star, AlertCircle } from "lucide-react";
 import { SERVICES, getServiceBySlug } from "@/lib/services-data";
-import { BUSINESS, SFV_CITIES } from "@/lib/constants";
+import { BUSINESS, SFV_CITIES, REVIEWS } from "@/lib/constants";
 import ContactForm from "@/components/ContactForm";
+import ArchImage from "@/components/ArchImage";
+import ReviewQuote from "@/components/ReviewQuote";
+
+// Best-matching review per service, picked by service type
+const MATCHED_REVIEW: Record<string, string> = {
+  "gate-repair": "Sandra K.",
+  "automatic-gate-repair": "Maria G.",
+  "driveway-gate-repair": "George D.",
+  "electric-gate-repair": "Angela H.",
+  "gate-opener-repair": "Kevin S.",
+  "iron-gate-repair": "Robert T.",
+  "commercial-gate-repair": "Nancy V.",
+  "gate-installation": "Jennifer L.",
+  "garage-door-repair": "Renee O.",
+  "garage-door-spring-repair": "David R.",
+  "garage-door-opener-repair": "Carlos M.",
+  "garage-door-cable-repair": "Patricia W.",
+  "garage-door-panel-repair": "James P.",
+  "emergency-garage-door-repair": "Steven L.",
+  "commercial-garage-door": "Renee O.",
+  "garage-door-installation": "Barbara A.",
+};
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -54,6 +76,7 @@ export default async function ServicePage({ params }: Props) {
 
   const related = SERVICES.filter((s) => service.relatedSlugs.includes(s.slug));
   const heroImg = SERVICE_IMAGES[slug] ?? "/images/services/black-iron-gate.jpeg";
+  const matchedReview = REVIEWS.find((r) => r.name === MATCHED_REVIEW[slug]);
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -125,7 +148,7 @@ export default async function ServicePage({ params }: Props) {
               {service.heroSubtitle}
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href={BUSINESS.phoneHref} className="btn-primary">
+              <a href={BUSINESS.phoneHref} className="btn-gold">
                 <Phone size={16} /> Call {BUSINESS.phone}
               </a>
               <Link href="/contact" className="btn-ghost">
@@ -136,6 +159,15 @@ export default async function ServicePage({ params }: Props) {
         </div>
       </section>
 
+      {/* PRICE & TIME BOX */}
+      <div style={{ background: "var(--brown)", padding: "0.85rem 1rem" }}>
+        <div className="container-max text-center">
+          <p className="font-semibold" style={{ color: "var(--text-warm)", fontSize: "0.95rem" }}>
+            {service.pricingRange} · {service.isInstallation ? "Free on-site quote" : "Fixed same-day"}
+          </p>
+        </div>
+      </div>
+
       {/* MAIN CONTENT */}
       <section className="section-padding" style={{ background: "var(--bg-base)" }}>
         <div className="container-max">
@@ -143,21 +175,6 @@ export default async function ServicePage({ params }: Props) {
 
             {/* Main Column */}
             <div className="lg:col-span-2 space-y-10">
-
-              {/* Image placeholders — swap with real photos when available */}
-              <div className="grid grid-cols-2 gap-4">
-                {[1, 2].map((n) => (
-                  <div
-                    key={n}
-                    className="rounded-[var(--radius)] overflow-hidden flex items-center justify-center"
-                    style={{ aspectRatio: "4/3", background: "var(--bg-muted)", border: "2px dashed var(--line)" }}
-                  >
-                    <p style={{ color: "var(--stone)", fontSize: "0.8rem", textAlign: "center", padding: "0.5rem" }}>
-                      Photo {n} — {service.title}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               {/* Intro */}
               <div>
@@ -167,6 +184,32 @@ export default async function ServicePage({ params }: Props) {
                   </p>
                 ))}
               </div>
+
+              {/* Symptoms */}
+              <div
+                className="rounded-[var(--radius-lg)] p-6"
+                style={{ background: "var(--bg-card)", border: "1px solid var(--line)" }}
+              >
+                <h2 style={{ marginBottom: "1rem", fontSize: "1.4rem" }}>
+                  Sound <em>Familiar?</em>
+                </h2>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
+                  {service.symptoms.map((s) => (
+                    <li key={s} className="flex items-start gap-2.5">
+                      <AlertCircle size={16} className="flex-shrink-0 mt-0.5" style={{ color: "var(--brown-warm)" }} />
+                      <span style={{ color: "var(--text-mid)", fontSize: "0.92rem" }}>{s}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Photo */}
+              <ArchImage
+                src={heroImg}
+                alt={`${service.title} in Los Angeles`}
+                aspect="16/9"
+                sizes="(max-width: 1024px) 100vw, 66vw"
+              />
 
               {/* Features */}
               <div>
@@ -193,6 +236,9 @@ export default async function ServicePage({ params }: Props) {
                   ))}
                 </div>
               </div>
+
+              {/* Matched Review */}
+              {matchedReview && <ReviewQuote review={matchedReview} />}
 
               {/* How It Works */}
               <div>
@@ -298,7 +344,7 @@ export default async function ServicePage({ params }: Props) {
             </div>
 
             {/* Sidebar */}
-            <div className="space-y-6">
+            <div className="space-y-6 lg:sticky lg:self-start" style={{ top: "7rem" }}>
               {/* Same-Day CTA box */}
               <div
                 className="rounded-[var(--radius-lg)] overflow-hidden"
@@ -317,7 +363,7 @@ export default async function ServicePage({ params }: Props) {
                   <p style={{ color: "rgba(237,234,228,0.65)", fontSize: "0.82rem", marginBottom: "1rem" }}>
                     Call now — we confirm your appointment immediately.
                   </p>
-                  <a href={BUSINESS.phoneHref} className="btn-primary w-full justify-center">
+                  <a href={BUSINESS.phoneHref} className="btn-gold w-full justify-center">
                     <Phone size={16} /> {BUSINESS.phone}
                   </a>
                 </div>

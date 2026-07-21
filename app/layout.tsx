@@ -20,7 +20,7 @@ const dmSans = DM_Sans({
 });
 
 // TODO: Set NEXT_PUBLIC_GSC_VERIFICATION in Cloudflare Pages → Settings → Environment Variables
-// once realgategel.com is connected and verified in Google Search Console.
+// once realgaterepair.com is connected and verified in Google Search Console.
 const gscVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
 
 export const metadata: Metadata = {
@@ -68,9 +68,9 @@ const localBusinessSchema = {
   ],
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    opens: "00:00",
-    closes: "23:59",
+    dayOfWeek: ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"],
+    opens: "07:00",
+    closes: "22:00",
   },
   priceRange: "$$",
 };

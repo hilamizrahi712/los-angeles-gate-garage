@@ -17,6 +17,7 @@ export interface ServiceData {
   howItWorks: string[];
   pricingRange: string;
   pricingNote: string;
+  symptoms: string[];
   faqs: ServiceFAQ[];
   relatedSlugs: string[];
   isInstallation: boolean;
@@ -27,10 +28,10 @@ export const SERVICES: ServiceData[] = [
   {
     slug: "gate-repair",
     title: "Gate Repair",
-    metaTitle: "Gate Repair — Same Day | Real Gate & Garage Door",
+    metaTitle: "Gate Repair Los Angeles CA — Same-Day Service | Real Gate & Garage Door",
     metaDescription: "Expert gate repair. Same-day service for broken gates, gate motors, hinges, sensors & more. Licensed & insured. Call (818) 915-5715.",
     primaryKeyword: "gate repair near me",
-    heroH1: "Gate Repair — Same-Day Service",
+    heroH1: "Gate Repair in Los Angeles — Same-Day Service",
     heroSubtitle: "From broken motors to bent tracks, our certified technicians fix all types of gates fast. Most repairs completed same day.",
     heroImg: "/images/services/gate-repair.jpg",
     isInstallation: false,
@@ -56,6 +57,13 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     ],
     pricingRange: "$150–$400 for most gate repairs",
     pricingNote: "Motor replacement: $300–$600 | Sensor repair: $80–$150 | Hinge/roller replacement: $100–$250 | Chain/belt repair: $150–$350",
+    symptoms: [
+      "Gate won't open or close all the way",
+      "Gate makes grinding or screeching noises",
+      "Remote or keypad stopped responding",
+      "Gate is dragging or scraping the ground",
+      "Gate reverses or stops mid-cycle",
+    ],
     faqs: [
       { q: "How fast can you get here for a gate repair?", a: "For most locations, we can have a technician on-site same day. Emergency calls are handled within 1–2 hours." },
       { q: "My gate is stuck open — is it a security risk?", a: "Yes. A gate stuck open is a serious security vulnerability. Call us immediately for same-day emergency gate repair." },
@@ -69,10 +77,10 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "automatic-gate-repair",
     title: "Automatic Gate Repair",
-    metaTitle: "Automatic Gate Repair — Fast & Reliable | Real Gate & Garage Door",
+    metaTitle: "Automatic Gate Repair Los Angeles CA — Fast & Reliable | Real Gate & Garage Door",
     metaDescription: "Automatic gate not opening? Our technicians fix gate operators, sensors, remotes & circuit boards. Same-day service. Call (818) 915-5715.",
     primaryKeyword: "automatic gate repair near me",
-    heroH1: "Automatic Gate Repair",
+    heroH1: "Automatic Gate Repair in Los Angeles",
     heroSubtitle: "Your automatic gate is supposed to make life easier. When it stops working, we get it running again — usually the same day.",
     heroImg: "/images/services/automatic-gate.jpg",
     isInstallation: false,
@@ -98,6 +106,13 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     ],
     pricingRange: "$200–$600 for most automatic gate repairs",
     pricingNote: "Control board replacement: $250–$500 | Operator motor: $300–$700 | Sensor replacement: $80–$180 | Remote reprogramming: $60–$100",
+    symptoms: [
+      "Gate doesn't respond to the remote or keypad",
+      "Gate opens but won't close (or vice versa)",
+      "Gate moves slowly or hesitates mid-cycle",
+      "Motor hums but the gate doesn't move",
+      "Gate stopped working after a power outage",
+    ],
     faqs: [
       { q: "Why won't my automatic gate open with the remote?", a: "Common causes include dead batteries in the remote, a bad receiver board in the operator, or a power issue. Our technician will diagnose it in minutes." },
       { q: "My gate opens but won't close — what's wrong?", a: "Usually a sensor issue — a photocell or safety loop is triggered and won't let the gate close. We'll check and clear the obstruction or replace the sensor." },
@@ -111,10 +126,10 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "driveway-gate-repair",
     title: "Driveway Gate Repair",
-    metaTitle: "Driveway Gate Repair | Real Gate & Garage Door",
+    metaTitle: "Driveway Gate Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Driveway gate repair throughout. Swing gates, sliding gates, openers & more. Same-day service available. Licensed & insured. (818) 915-5715.",
     primaryKeyword: "driveway gate repair",
-    heroH1: "Driveway Gate Repair",
+    heroH1: "Driveway Gate Repair in Los Angeles",
     heroSubtitle: "Is your driveway gate dragging, misaligned, or refusing to open? We diagnose and repair all driveway gate issues — fast.",
     heroImg: "/images/services/driveway-gate.jpg",
     isInstallation: false,
@@ -140,6 +155,13 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     ],
     pricingRange: "$150–$500 for most driveway gate repairs",
     pricingNote: "Hinge replacement: $100–$250 | Wheel/roller repair: $120–$280 | Track realignment: $100–$200 | Gate operator: $300–$700",
+    symptoms: [
+      "Gate drags or scrapes the ground",
+      "Swing gate hinges are sagging",
+      "Sliding gate wheels or track are damaged",
+      "Opener motor won't engage",
+      "Gate looks fine but won't stay aligned",
+    ],
     faqs: [
       { q: "My driveway gate is scraping the ground — what causes this?", a: "Usually sagging hinges (swing gates) or worn/broken drive wheels (sliding gates). Both are repairable and we see this frequently." },
       { q: "Can you repair old iron driveway gates?", a: "Yes. We repair iron gate frames, hinges, and posts, and can replace or upgrade your gate operator to modernize the system." },
@@ -152,10 +174,10 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "electric-gate-repair",
     title: "Electric Gate Repair",
-    metaTitle: "Electric Gate Repair | Real Gate & Garage Door",
+    metaTitle: "Electric Gate Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Electric gate repair. Motor failure, control board, wiring, sensors — we fix it all same day. Licensed technicians. (818) 915-5715.",
     primaryKeyword: "electric gate repair",
-    heroH1: "Electric Gate Repair",
+    heroH1: "Electric Gate Repair in Los Angeles",
     heroSubtitle: "Electric gate not responding? We diagnose and repair all electric gate systems — motors, wiring, control boards, and sensors.",
     heroImg: "/images/services/gate-repair.jpg",
     isInstallation: false,
@@ -181,6 +203,13 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     ],
     pricingRange: "$150–$600 for most electric gate repairs",
     pricingNote: "Wiring repair: $100–$200 | Control board: $250–$500 | Motor replacement: $350–$700 | Sensor/receiver: $80–$180",
+    symptoms: [
+      "Gate doesn't respond to remote or keypad",
+      "Gate runs in one direction only",
+      "Gate stops mid-cycle for no reason",
+      "Gate works sometimes, not others",
+      "Gate trips the breaker when running",
+    ],
     faqs: [
       { q: "My electric gate works randomly — sometimes it opens, sometimes it doesn't. What's wrong?", a: "Intermittent faults often point to a loose wire connection, failing control board, or marginal power supply. Our diagnostics will identify the exact cause." },
       { q: "Can you repair solar-powered electric gates?", a: "Yes. We service solar gate systems including panel cleaning, battery replacement, charge controller repair, and operator service." },
@@ -192,10 +221,10 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "gate-opener-repair",
     title: "Gate Opener Repair",
-    metaTitle: "Gate Opener Repair — LiftMaster & All Brands | Real Gate & Garage Door",
+    metaTitle: "Gate Opener Repair Los Angeles CA — LiftMaster & All Brands | Real Gate & Garage Door",
     metaDescription: "Gate opener repair. LiftMaster, Viking, All-O-Matic, DoorKing & all brands. Same-day service. Licensed. Call (818) 915-5715.",
     primaryKeyword: "gate opener repair",
-    heroH1: "Gate Opener Repair — All Brands, Same Day",
+    heroH1: "Gate Opener Repair in Los Angeles — All Brands, Same Day",
     heroSubtitle: "Your gate opener is the engine of your system. When it fails, we repair or replace it fast with parts on our truck.",
     heroImg: "/images/services/gate-opener-repair.jpg",
     isInstallation: false,
@@ -221,6 +250,13 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     ],
     pricingRange: "$200–$700 for gate opener repair or replacement",
     pricingNote: "Circuit board repair: $250–$500 | Drive gear replacement: $150–$300 | Motor replacement: $350–$700 | Complete operator: $600–$1,400 installed",
+    symptoms: [
+      "Opener clicks but the gate doesn't move",
+      "Opener runs constantly or won't shut off",
+      "Gate opens partway then stops",
+      "Opener makes grinding or clicking noises",
+      "Opener is over 10 years old and failing often",
+    ],
     faqs: [
       { q: "How do I know if my gate opener needs repair or replacement?", a: "If the opener is under 10 years old and the motor is intact, repair is usually the right call. Our technician will give you an honest recommendation based on what they find — not on maximizing the sale." },
       { q: "What gate opener brands do you repair?", a: "LiftMaster, Viking, FAAC, All-O-Matic, Elite, Linear, DoorKing, Ramset, and many others. If your brand isn't listed, call us." },
@@ -233,10 +269,10 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "iron-gate-repair",
     title: "Iron Gate Repair",
-    metaTitle: "Iron & Wrought Iron Gate Repair | Real Gate & Garage Door",
+    metaTitle: "Iron & Wrought Iron Gate Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Iron and wrought iron gate repair. Rust, welding, hinges, panels — same-day service. Licensed & insured. Call (818) 915-5715.",
     primaryKeyword: "iron gate repair",
-    heroH1: "Iron & Wrought Iron Gate Repair",
+    heroH1: "Iron & Wrought Iron Gate Repair in Los Angeles",
     heroSubtitle: "From rust and corrosion to structural damage and broken hinges, we restore iron gates to full function and appearance.",
     heroImg: "/images/services/iron-gate.jpg",
     isInstallation: false,
@@ -262,6 +298,13 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     ],
     pricingRange: "$100–$600 for iron gate repair",
     pricingNote: "Hinge replacement: $100–$250 | Rust repair & treatment: $150–$400 | Welding repair: $200–$500 | Roller/track work: $120–$300",
+    symptoms: [
+      "Visible rust or corrosion on the frame",
+      "Gate sags or drags on one side",
+      "Hinges are worn, bent, or squeaking",
+      "Welds or joints are cracking",
+      "Paint or finish is peeling and metal is exposed",
+    ],
     faqs: [
       { q: "Can rusted iron gates be repaired, or do they need to be replaced?", a: "Surface and moderate rust is absolutely repairable. We treat the rust, stop its spread, and restore the surface. Only severe structural rust that has compromised the metal's integrity warrants replacement." },
       { q: "My iron gate is sagging on one side — is that fixable?", a: "Yes. Sagging usually means a worn or damaged hinge, a sunken post, or a bent frame component. All of these are repairable without replacing the full gate." },
@@ -273,10 +316,10 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "commercial-gate-repair",
     title: "Commercial Gate Repair",
-    metaTitle: "Commercial Gate Repair | Real Gate & Garage Door",
+    metaTitle: "Commercial Gate Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Commercial gate repair. Parking gates, security gates, high-cycle operators — fast response, licensed. Call (818) 915-5715.",
     primaryKeyword: "commercial gate repair",
-    heroH1: "Commercial Gate Repair",
+    heroH1: "Commercial Gate Repair in Los Angeles",
     heroSubtitle: "Downtime on a commercial gate costs you money and security. We provide priority same-day service for businesses in our area.",
     heroImg: "/images/services/commercial-gate.jpg",
     isInstallation: false,
@@ -302,6 +345,13 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     ],
     pricingRange: "$250–$1,000+ for commercial gate repairs",
     pricingNote: "Pricing varies significantly by gate type, operator brand, and complexity. Commercial clients receive a detailed written estimate before work begins.",
+    symptoms: [
+      "Gate cycles slower than usual under daily traffic",
+      "Access control (keypad/card reader) isn't triggering the gate",
+      "Gate doesn't fully close, leaving a security gap",
+      "Barrier arm won't raise or lower",
+      "Frequent breakdowns under heavy daily use",
+    ],
     faqs: [
       { q: "Do you service commercial properties after hours?", a: "Yes. We provide 24/7 emergency service for commercial clients. After-hours rates apply for calls between 8 PM and 7 AM." },
       { q: "Can you repair parking lot barrier arms?", a: "Yes. We repair and replace all major parking barrier arm brands including FAAC, BFT, DoorKing, and others." },
@@ -313,10 +363,10 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
   {
     slug: "gate-installation",
     title: "Gate Installation",
-    metaTitle: "Gate Installation | Real Gate & Garage Door",
+    metaTitle: "Gate Installation Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Professional gate installation. Automatic, driveway, iron, and security gates. Free estimates. Licensed & insured. (818) 915-5715.",
     primaryKeyword: "gate installation near me",
-    heroH1: "Gate Installation",
+    heroH1: "Gate Installation in Los Angeles",
     heroSubtitle: "Ready for a new gate? We'll help you choose the right system and install it to last.",
     heroImg: "/images/services/gate-installation.jpg",
     isInstallation: true,
@@ -342,6 +392,13 @@ Link back: If you're experiencing problems with your current gate, visit our [Ga
     ],
     pricingRange: "$2,000–$8,000 for most gate installations",
     pricingNote: "Automatic swing gate: $2,000–$5,000 | Automatic sliding gate: $2,500–$6,000 | Iron gate with operator: $3,000–$8,000+ | Pricing varies by material, size, and operator brand.",
+    symptoms: [
+      "Your gate breaks down every few months",
+      "Repairs keep costing more than they're worth",
+      "Gate no longer matches your property's security needs",
+      "You're renovating the driveway or entrance",
+      "No existing gate — starting from scratch",
+    ],
     faqs: [
       { q: "How long does gate installation take?", a: "A typical residential automatic gate installation takes 1–2 days depending on the gate type, concrete work required, and operator complexity." },
       { q: "Do I need a permit for a new gate?", a: "Generally yes. Permit requirements vary by city within our service area. We handle the permit process for all our installations." },
@@ -353,10 +410,10 @@ Link back: If you're experiencing problems with your current gate, visit our [Ga
   {
     slug: "garage-door-repair",
     title: "Garage Door Repair",
-    metaTitle: "Garage Door Repair | Real Gate & Garage Door",
+    metaTitle: "Garage Door Repair Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Expert garage door repair. Springs, openers, cables, panels — same-day service. Licensed & insured. Call (818) 915-5715.",
     primaryKeyword: "garage door repair",
-    heroH1: "Garage Door Repair",
+    heroH1: "Garage Door Repair in Los Angeles",
     heroSubtitle: "From broken springs to jammed tracks, our licensed technicians fix garage doors fast — usually same day.",
     heroImg: "/images/hero/hero-garage-door.jpg",
     isInstallation: false,
@@ -382,6 +439,13 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     ],
     pricingRange: "$100–$400 for most garage door repairs",
     pricingNote: "Spring replacement: $150–$350 | Cable repair: $100–$200 | Opener repair: $100–$250 | Roller replacement: $80–$180 | Track adjustment: $80–$150",
+    symptoms: [
+      "Door won't open or close all the way",
+      "Loud bang followed by the door not moving",
+      "Door is off-track or crooked",
+      "Opener runs but the door doesn't move",
+      "Door is unusually heavy to lift manually",
+    ],
     faqs: [
       { q: "How quickly can you get to me for a garage door repair?", a: "Same-day service is available in our service area. For emergencies, we aim to arrive within 1–2 hours." },
       { q: "Is it safe to operate my garage door if a spring is broken?", a: "No. A garage door with a broken spring is dangerous and can fall unexpectedly. Don't use the door until the spring is replaced." },
@@ -394,10 +458,10 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
   {
     slug: "garage-door-spring-repair",
     title: "Garage Door Spring Repair",
-    metaTitle: "Garage Door Spring Repair & Replacement | Real Gate & Garage Door",
+    metaTitle: "Garage Door Spring Repair & Replacement Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Broken garage door spring? We replace torsion and extension springs same day. Upfront pricing. Licensed. Call (818) 915-5715.",
     primaryKeyword: "garage door spring replacement",
-    heroH1: "Garage Door Spring Repair & Replacement",
+    heroH1: "Garage Door Spring Repair & Replacement in Los Angeles",
     heroSubtitle: "Broken spring? We carry springs for virtually every garage door on the truck — most replacements done in under 90 minutes.",
     heroImg: "/images/services/garage-door-spring-repair.jpg",
     isInstallation: false,
@@ -423,6 +487,13 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     ],
     pricingRange: "$150–$350 for most spring replacements",
     pricingNote: "Single torsion spring: $150–$250 | Double torsion springs: $220–$350 | Extension spring (per spring): $80–$150 | Premium high-cycle springs available at a slight upcharge and last 3× longer.",
+    symptoms: [
+      "Loud bang from the garage followed by a stuck door",
+      "Door feels extremely heavy to lift",
+      "Door opens a few inches then stops",
+      "Visible gap in the coiled spring above the door",
+      "Door slams shut instead of closing smoothly",
+    ],
     faqs: [
       { q: "How long do garage door springs last?", a: "Standard springs are rated for 10,000 cycles (about 7–10 years of average use). High-cycle springs rated at 30,000 cycles are available and cost modestly more — a worthwhile upgrade." },
       { q: "Can I replace a garage door spring myself?", a: "We strongly advise against it. Torsion springs store massive amounts of energy and can cause serious injury if mishandled. Leave spring replacement to licensed technicians." },
@@ -436,10 +507,10 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
   {
     slug: "garage-door-opener-repair",
     title: "Garage Door Opener Repair",
-    metaTitle: "Garage Door Opener Repair — LiftMaster, Genie & More | Real Gate & Garage Door",
+    metaTitle: "Garage Door Opener Repair Los Angeles CA — LiftMaster, Genie & More | Real Gate & Garage Door",
     metaDescription: "Garage door opener repair. LiftMaster, Genie, Chamberlain, Craftsman — all brands. Same-day service. Call (818) 915-5715.",
     primaryKeyword: "garage door opener repair",
-    heroH1: "Garage Door Opener Repair — All Brands",
+    heroH1: "Garage Door Opener Repair in Los Angeles — All Brands",
     heroSubtitle: "Is your garage door opener refusing to work? We diagnose and repair all major brands — LiftMaster, Genie, Chamberlain, Craftsman — same day.",
     heroImg: "/images/services/garage-door-opener-repair.jpg",
     isInstallation: false,
@@ -465,6 +536,13 @@ Sometimes repair isn't enough — if your opener is beyond fixing, we'll give yo
     ],
     pricingRange: "$100–$350 for most opener repairs",
     pricingNote: "Sensor alignment: $60–$100 | Circuit board: $150–$300 | Motor replacement: $200–$350 | New opener installed: $250–$500 (parts + labor)",
+    symptoms: [
+      "Remote doesn't respond but wall button works",
+      "Opener runs but the door doesn't move",
+      "Door reverses before touching the floor",
+      "Opener makes noise but nothing happens",
+      "Lights on opener blink with no door movement",
+    ],
     faqs: [
       { q: "Why does my garage door opener run but the door doesn't move?", a: "Likely a broken spring (most common cause) or a disconnected door-to-opener connection. Our technician will identify which immediately." },
       { q: "My opener works with the wall button but not the remote — why?", a: "The remote signal isn't reaching the opener. Check the remote battery first. If that's fine, it may be the remote itself or the receiver board inside the opener." },
@@ -477,10 +555,10 @@ Sometimes repair isn't enough — if your opener is beyond fixing, we'll give yo
   {
     slug: "garage-door-cable-repair",
     title: "Garage Door Cable Repair",
-    metaTitle: "Garage Door Cable Repair & Replacement | Real Gate & Garage Door",
+    metaTitle: "Garage Door Cable Repair & Replacement Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Garage door cable snapped? We repair and replace broken cables same day. Licensed & insured. Call (818) 915-5715.",
     primaryKeyword: "garage door cable repair",
-    heroH1: "Garage Door Cable Repair",
+    heroH1: "Garage Door Cable Repair in Los Angeles",
     heroSubtitle: "A snapped garage door cable can cause the door to drop suddenly. Don't risk it — call for same-day cable repair.",
     heroImg: "/images/services/garage-door-repair.jpg",
     isInstallation: false,
@@ -506,6 +584,13 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     ],
     pricingRange: "$100–$250 for most cable repairs",
     pricingNote: "Cable replacement (pair): $100–$200 | Cable + drum replacement: $150–$280 | Off-track realignment included in cable repair when applicable.",
+    symptoms: [
+      "Door hangs crooked on one side",
+      "Frayed or visibly snapped cable",
+      "Door dropped suddenly when opening or closing",
+      "Door came off its track",
+      "Loose cable dangling near the bottom roller",
+    ],
     faqs: [
       { q: "Can I operate my garage door with a broken cable?", a: "No. Operating a door with a broken cable is dangerous. The door can drop suddenly or go further off-track, causing injury or more damage." },
       { q: "Why do garage door cables snap?", a: "Cables weaken over years of use. Rust, fraying from misaligned drums, or the shock of a spring break are the most common causes." },
@@ -517,10 +602,10 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
   {
     slug: "garage-door-panel-repair",
     title: "Garage Door Panel Repair",
-    metaTitle: "Garage Door Panel Repair & Replacement | Real Gate & Garage Door",
+    metaTitle: "Garage Door Panel Repair & Replacement Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Dented or damaged garage door panel? We repair and replace panels. Matching panels available. (818) 915-5715.",
     primaryKeyword: "garage door panel repair",
-    heroH1: "Garage Door Panel Repair & Replacement",
+    heroH1: "Garage Door Panel Repair & Replacement in Los Angeles",
     heroSubtitle: "Dented or cracked panel making your garage door look bad? We repair and replace panels — matching your door's style and color.",
     heroImg: "/images/services/garage-door-repair.jpg",
     isInstallation: false,
@@ -546,6 +631,13 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     ],
     pricingRange: "$150–$400 per panel",
     pricingNote: "Pricing varies by panel size, material (steel, aluminum, wood), and availability of matching sections from manufacturer.",
+    symptoms: [
+      "Visible dent from a vehicle or object impact",
+      "Cracked or warped section",
+      "Gap between panels when the door is closed",
+      "Door struggles to open smoothly after impact",
+      "Rust or water damage on a lower panel",
+    ],
     faqs: [
       { q: "Can a dented garage door panel be repaired without replacement?", a: "Small to moderate dents on steel panels can sometimes be repaired with specialized dent tools. Larger impacts, cracks, or warped panels typically need replacement." },
       { q: "What if my door model is discontinued and matching panels aren't available?", a: "We'll present your options honestly: a close-match panel, a mixed set that looks similar, or a full door replacement if the mismatch would be too visible." },
@@ -557,10 +649,10 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
   {
     slug: "emergency-garage-door-repair",
     title: "Emergency Garage Door Repair",
-    metaTitle: "Emergency Garage Door Repair — 24/7 Same Day | Real Gate & Garage Door",
+    metaTitle: "Emergency Garage Door Repair Los Angeles CA — 24/7 Same Day | Real Gate & Garage Door",
     metaDescription: "24/7 emergency garage door repair. Stuck door, broken spring, snapped cable — we respond in 1-2 hours. (818) 915-5715.",
     primaryKeyword: "emergency garage door repair",
-    heroH1: "24/7 Emergency Garage Door Repair",
+    heroH1: "24/7 Emergency Garage Door Repair in Los Angeles",
     heroSubtitle: "Garage door stuck? Emergency situation? Call now — we dispatch a technician within the hour.",
     heroImg: "/images/hero/hero-emergency.jpg",
     isInstallation: false,
@@ -589,6 +681,13 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     ],
     pricingRange: "Standard repair rates + after-hours fee for calls outside 7 AM–8 PM",
     pricingNote: "After-hours fee: $75–$125 applied to calls between 8 PM and 7 AM. You'll be informed before dispatch.",
+    symptoms: [
+      "Door stuck open — security risk",
+      "Car trapped inside the garage",
+      "Door came off track after an impact",
+      "Cable or spring snapped without warning",
+      "Door won't respond to opener or manual release",
+    ],
     faqs: [
       { q: "Is your 24/7 emergency line actually answered by a person?", a: "Yes. When you call (818) 915-5715 after hours, a live dispatcher answers. No voicemail for emergency calls." },
       { q: "How fast can you reach me in an emergency?", a: "Our target for emergency calls is 1–2 hours. In most locations, we achieve this consistently." },
@@ -601,10 +700,10 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
   {
     slug: "commercial-garage-door",
     title: "Commercial Garage Door Repair",
-    metaTitle: "Commercial Garage Door Repair & Installation | Real Gate & Garage Door",
+    metaTitle: "Commercial Garage Door Repair & Installation Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "Commercial garage door repair. Roll-up doors, sectional doors, high-cycle systems — same-day service. (818) 915-5715.",
     primaryKeyword: "commercial garage door repair",
-    heroH1: "Commercial Garage Door Repair",
+    heroH1: "Commercial Garage Door Repair in Los Angeles",
     heroSubtitle: "Commercial doors work harder. When they fail, downtime costs you money. We prioritize commercial repair calls.",
     heroImg: "/images/services/commercial-garage-door.jpg",
     isInstallation: false,
@@ -632,6 +731,13 @@ Sometimes repair isn't enough — if your commercial door is beyond fixing, we'l
     ],
     pricingRange: "$200–$1,500+ for commercial door repairs",
     pricingNote: "Commercial spring replacement: $300–$600 | Commercial operator repair: $350–$800 | Roll-up door service: $200–$500. Contact us for commercial maintenance contract pricing.",
+    symptoms: [
+      "Door doesn't fully seal, letting in outside air",
+      "Slower cycle times under daily delivery traffic",
+      "Door won't stay open during loading",
+      "Commercial opener straining or overheating",
+      "Frequent breakdowns disrupting operations",
+    ],
     faqs: [
       { q: "Do you service roll-up steel doors?", a: "Yes. We service and repair rolling steel doors including spring, barrel, slat, and motor replacement." },
       { q: "Can you service our fire-rated commercial doors?", a: "Yes. We inspect, repair, and certify fire-rated door compliance — an important safety and insurance requirement." },
@@ -643,10 +749,10 @@ Sometimes repair isn't enough — if your commercial door is beyond fixing, we'l
   {
     slug: "garage-door-installation",
     title: "Garage Door Installation",
-    metaTitle: "Garage Door Installation | Real Gate & Garage Door",
+    metaTitle: "Garage Door Installation Los Angeles CA | Real Gate & Garage Door",
     metaDescription: "New garage door installation. All brands, all styles, free estimates. Licensed & insured. Call (818) 915-5715.",
     primaryKeyword: "garage door installation",
-    heroH1: "Garage Door Installation",
+    heroH1: "Garage Door Installation in Los Angeles",
     heroSubtitle: "Ready for a new garage door? We install all brands and styles — steel, wood, aluminum, glass — with a warranty on every installation.",
     heroImg: "/images/services/garage-door-installation.jpg",
     isInstallation: true,
@@ -672,6 +778,13 @@ Considering a new door? If your current door can be repaired at a reasonable cos
     ],
     pricingRange: "$800–$2,500 for most residential garage door installations",
     pricingNote: "Basic steel door + install: $800–$1,200 | Insulated steel door + install: $1,000–$1,600 | Wood carriage house + install: $1,500–$2,500 | Opener upgrade (add-on): $250–$500",
+    symptoms: [
+      "Door is decades old and breaking down often",
+      "Repairs keep piling up and no longer make sense",
+      "Storm, impact, or fire damage beyond repair",
+      "Renovating and want a style or material upgrade",
+      "Poor insulation driving up energy costs",
+    ],
     faqs: [
       { q: "How long does garage door installation take?", a: "Most residential garage door installations are completed in 3–5 hours, including removing the old door." },
       { q: "Can you reuse my existing opener with a new door?", a: "In most cases, yes. We evaluate compatibility with your new door's weight and size and advise if an upgrade is needed." },

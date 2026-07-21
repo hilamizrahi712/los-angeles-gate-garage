@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, CheckCircle } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
+import SectionRule from "@/components/SectionRule";
 
 export const metadata: Metadata = {
   title: "About Us — Real Gate & Garage Door",
@@ -216,7 +217,7 @@ export default function AboutPage() {
 
           {/* Emotionally resonant CTA */}
           <div
-            className="rounded-[var(--radius-lg)] p-10 text-center"
+            className="section--dark rounded-[var(--radius-lg)] p-10 text-center"
             style={{ background: "var(--navy)" }}
           >
             <span className="eyebrow" style={{ color: "var(--brown-warm)" }}>
@@ -234,11 +235,12 @@ export default function AboutPage() {
               <br />
               <em>Call. We Answer.</em>
             </h2>
+            <SectionRule />
             <p
               style={{
                 color: "rgba(237,234,228,0.72)",
                 maxWidth: 520,
-                margin: "0 auto 2rem",
+                margin: "1.25rem auto 2rem",
                 fontSize: "0.97rem",
                 lineHeight: 1.75,
               }}
@@ -251,7 +253,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href={BUSINESS.phoneHref}
-                className="btn-primary"
+                className="btn-gold"
                 style={{ fontSize: "1rem", padding: "0.875rem 2rem" }}
               >
                 <Phone size={18} /> Call {BUSINESS.phone} — We Answer

@@ -2,7 +2,8 @@
 
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { Send, CheckCircle } from "lucide-react";
+import { Send } from "lucide-react";
+import { FORMSPREE_URL } from "@/lib/constants";
 
 interface FormData {
   name: string;
@@ -12,13 +13,17 @@ interface FormData {
   _honeypot: string;
 }
 
-const FORMSPREE_URL = "https://formspree.io/f/mykaqjvo";
-
 const wrapStyle: React.CSSProperties = {
   background: "var(--navy)",
   borderRadius: "50% 50% 0 0 / 50px 50px 0 0",
   padding: "2.75rem 1.75rem 2rem",
   overflow: "hidden",
+};
+
+const compactWrapStyle: React.CSSProperties = {
+  background: "var(--navy)",
+  borderRadius: "var(--radius-lg)",
+  padding: "1.75rem",
 };
 
 const inputStyle: React.CSSProperties = {
@@ -44,9 +49,9 @@ const labelStyle: React.CSSProperties = {
   fontFamily: "inherit",
 };
 
-export default function ContactForm({ className = "" }: { className?: string }) {
-  const [submitted, setSubmitted] = useState(false);
+export default function ContactForm({ className = "", compact = false }: { className?: string; compact?: boolean }) {
   const [error, setError] = useState("");
+  const [showDetails, setShowDetails] = useState(false);
   const {
     register,
     handleSubmit,
@@ -69,7 +74,7 @@ export default function ContactForm({ className = "" }: { className?: string }) 
         }),
       });
       if (res.ok) {
-        setSubmitted(true);
+        window.location.href = "/thank-you";
       } else {
         const body = await res.json().catch(() => ({}));
         setError(body?.error ?? "Submission failed. Please call us directly.");
@@ -79,38 +84,19 @@ export default function ContactForm({ className = "" }: { className?: string }) 
     }
   };
 
-  if (submitted) {
-    return (
-      <div className={`flex flex-col items-center text-center gap-4 ${className}`} style={{ ...wrapStyle, paddingTop: "3rem", paddingBottom: "3rem" }}>
-        <CheckCircle size={44} style={{ color: "var(--brown-warm)" }} />
-        <h3 className="font-heading font-bold" style={{ fontSize: "1.3rem", color: "var(--text-warm)" }}>
-          Request Received!
-        </h3>
-        <p style={{ color: "rgba(237,234,228,0.7)", maxWidth: 280, fontSize: "0.92rem" }}>
-          We&apos;ll call you back within 30 minutes during business hours. For emergencies,
-          call{" "}
-          <a href="tel:+18189155715" style={{ color: "var(--brown-warm)", fontWeight: 600 }}>
-            (818) 915-5715
-          </a>
-          .
-        </p>
-      </div>
-    );
-  }
-
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className={`space-y-4 ${className}`}
-      style={wrapStyle}
+      style={compact ? compactWrapStyle : wrapStyle}
       noValidate
     >
       <div className="mb-2">
         <h3 className="font-heading font-bold" style={{ fontSize: "1.15rem", color: "var(--text-warm)", marginBottom: "0.2rem" }}>
-          Request a Free Estimate
+          {compact ? "Get a Free Estimate" : "Request a Free Estimate"}
         </h3>
         <p style={{ fontSize: "0.82rem", color: "rgba(237,234,228,0.55)" }}>
-          We call back within 30 minutes during business hours.
+          {compact ? "We call back in 30 min." : "We call back within 30 minutes during business hours."}
         </p>
       </div>
 
@@ -144,31 +130,52 @@ export default function ContactForm({ className = "" }: { className?: string }) 
         {errors.phone && <p style={{ color: "#f87171", fontSize: "0.75rem", marginTop: "0.2rem" }}>{errors.phone.message}</p>}
       </div>
 
-      {/* Address */}
-      <div>
-        <label style={labelStyle}>Property Address</label>
-        <input
-          type="text"
-          placeholder="123 Main St, Los Angeles, CA"
-          style={inputStyle}
-          {...register("address")}
-        />
-      </div>
+      {!compact && (
+        <>
+          <button
+            type="button"
+            onClick={() => setShowDetails((v) => !v)}
+            style={{
+              background: "none",
+              border: "none",
+              padding: 0,
+              color: "var(--brown-warm)",
+              fontSize: "0.8rem",
+              fontWeight: 600,
+              cursor: "pointer",
+              fontFamily: "inherit",
+            }}
+          >
+            {showDetails ? "− Hide details" : "+ Add details (optional)"}
+          </button>
 
-      {/* Problem Description */}
-      <div>
-        <label style={labelStyle}>Problem Description *</label>
-        <textarea
-          rows={4}
-          placeholder="e.g. My electric gate stopped opening this morning…"
-          style={{ ...inputStyle, resize: "none", borderColor: errors.problem ? "#f87171" : "rgba(255,255,255,0.2)" }}
-          {...register("problem", {
-            required: "Please describe your problem",
-            minLength: { value: 10, message: "Please add a bit more detail" },
-          })}
-        />
-        {errors.problem && <p style={{ color: "#f87171", fontSize: "0.75rem", marginTop: "0.2rem" }}>{errors.problem.message}</p>}
-      </div>
+          {showDetails && (
+            <>
+              {/* Address */}
+              <div>
+                <label style={labelStyle}>Property Address</label>
+                <input
+                  type="text"
+                  placeholder="123 Main St, Los Angeles, CA"
+                  style={inputStyle}
+                  {...register("address")}
+                />
+              </div>
+
+              {/* Problem Description */}
+              <div>
+                <label style={labelStyle}>Problem Description</label>
+                <textarea
+                  rows={4}
+                  placeholder="e.g. My electric gate stopped opening this morning…"
+                  style={{ ...inputStyle, resize: "none" }}
+                  {...register("problem")}
+                />
+              </div>
+            </>
+          )}
+        </>
+      )}
 
       {error && (
         <p className="rounded p-3 text-sm" style={{ color: "#f87171", background: "rgba(248,113,113,0.12)", border: "1px solid rgba(248,113,113,0.25)" }}>
@@ -196,9 +203,11 @@ export default function ContactForm({ className = "" }: { className?: string }) 
         {isSubmitting ? "Sending…" : "Get My Free Estimate"}
       </button>
 
-      <p style={{ fontSize: "0.73rem", color: "rgba(237,234,228,0.35)", textAlign: "center" }}>
-        We respect your privacy. No spam, ever.
-      </p>
+      {!compact && (
+        <p style={{ fontSize: "0.73rem", color: "rgba(237,234,228,0.35)", textAlign: "center" }}>
+          We respect your privacy. No spam, ever.
+        </p>
+      )}
     </form>
   );
 }

@@ -115,8 +115,8 @@ export default function ContactPage() {
                       Hours
                     </p>
                     <div style={{ color: "var(--text-mid)", fontSize: "0.9rem", lineHeight: 1.7 }}>
-                      <p>Mon–Fri: 7:00 AM – 7:00 PM</p>
-                      <p>Sat–Sun: 8:00 AM – 5:00 PM</p>
+                      <p>Sun–Fri: 7:00 AM – 10:00 PM</p>
+                      <p>Saturday: Closed</p>
                       <p style={{ color: "var(--error)", fontWeight: 600 }}>Emergency line: 24/7</p>
                     </div>
                   </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Phone, Calendar, Clock, ArrowLeft } from "lucide-react";
+import { Phone, MessageSquareText, Calendar, Clock, ArrowLeft } from "lucide-react";
 import { BLOG_POSTS, getBlogPostBySlug } from "@/lib/blog-data";
 import { BUSINESS } from "@/lib/constants";
 import ContactForm from "@/components/ContactForm";
@@ -197,9 +197,14 @@ export default async function TipsPostPage({ params }: Props) {
                   Real Gate &amp; Garage Door provides same-day service.
                   Licensed, insured, upfront pricing.
                 </p>
-                <a href={BUSINESS.phoneHref} className="btn-primary">
-                  <Phone size={16} /> Call {BUSINESS.phone}
-                </a>
+                <div className="flex flex-wrap gap-3">
+                  <a href={BUSINESS.phoneHref} className="btn-gold">
+                    <Phone size={16} /> Call {BUSINESS.phone}
+                  </a>
+                  <a href={BUSINESS.smsHref} className="btn-ghost">
+                    <MessageSquareText size={16} /> Text us a photo — free diagnosis
+                  </a>
+                </div>
               </div>
             </article>
 
