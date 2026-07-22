@@ -20,7 +20,7 @@ export const CITIES: CityData[] = [
     heroH1: "Gate & Garage Door Repair in Woodland Hills, CA",
     heroSubtitle: "Woodland Hills' trusted local repair specialists — same-day service, upfront pricing, licensed and insured.",
     extraKeywords: ["garage door repair Woodland Hills CA", "gate installation Woodland Hills", "electric gate repair Woodland Hills", "driveway gate repair Woodland Hills", "garage door spring repair Woodland Hills", "gate opener repair Woodland Hills"],
-    intro: `Woodland Hills homeowners know the value of a well-maintained property — and a functioning gate or garage door is central to that. Tucked into the western end of the with its tree-lined streets, estate-style homes, and hillside properties, Woodland Hills has a strong demand for both automatic gate repair and garage door service. Real Gate & Garage Door has been serving Woodland Hills residents for over a decade.
+    intro: `Woodland Hills homeowners know the value of a well-maintained property — and a functioning gate or garage door is central to that. Tucked into the western end of the San Fernando Valley, with its tree-lined streets, estate-style homes, and hillside properties, Woodland Hills has a strong demand for both automatic gate repair and garage door service. Real Gate & Garage Door has been serving Woodland Hills residents for over a decade.
 
 The larger properties in Woodland Hills — particularly near Ventura Boulevard and the hillside communities above it — often feature custom driveway gates and double-car garages. These systems see daily use and require skilled maintenance. Our technicians are familiar with the common brands and systems installed in Woodland Hills neighborhoods and can usually diagnose and repair your door or gate in a single visit.
 
@@ -44,7 +44,7 @@ We cover all of Woodland Hills including the neighborhoods near Calabasas border
     heroH1: "Gate & Garage Door Repair in Sherman Oaks, CA",
     heroSubtitle: "Serving Sherman Oaks homeowners with honest, same-day gate and garage door repair.",
     extraKeywords: ["garage door repair Sherman Oaks CA", "gate repair Sherman Oaks", "electric gate repair Sherman Oaks", "driveway gate repair Sherman Oaks", "garage door spring repair Sherman Oaks", "gate opener repair Sherman Oaks"],
-    intro: `Sherman Oaks is one of the Our local most established neighborhoods — a dense mix of mid-century homes, modern renovations, and tree-lined streets that run from the flats up into the hillside communities above Mulholland. Gate and garage door systems here range from simple single-car residential openers to sophisticated iron driveway gates on hillside properties. Real Gate & Garage Door serves all of it.
+    intro: `Sherman Oaks is one of the San Fernando Valley's most established neighborhoods — a dense mix of mid-century homes, modern renovations, and tree-lined streets that run from the flats up into the hillside communities above Mulholland. Gate and garage door systems here range from simple single-car residential openers to sophisticated iron driveway gates on hillside properties. Real Gate & Garage Door serves all of it.
 
 Sherman Oaks residents tend to be busy professionals and families who need their home systems to work reliably. When a spring breaks or a gate motor fails, they want fast, honest service — not a runaround. Our Sherman Oaks customers know us for showing up on time, explaining exactly what's wrong before we touch anything, and pricing the work fairly.
 
@@ -67,7 +67,7 @@ We cover all of Sherman Oaks including the neighborhoods near Ventura Blvd, the 
     heroH1: "Gate & Garage Door Repair in Encino, CA",
     heroSubtitle: "Encino's trusted gate and garage door specialists. Automatic gate repair, spring replacement, and more — same day.",
     extraKeywords: ["garage door repair Encino CA", "automatic gate installation Encino", "electric gate repair Encino", "driveway gate repair Encino", "garage door spring repair Encino", "gate opener repair Encino"],
-    intro: `Encino is known for its upscale residential neighborhoods, tree-lined streets, and some of the Our local most beautiful estates. Properties here frequently feature custom automatic driveway gates, iron gate systems, and multi-car garages with high-end openers. Real Gate & Garage Door has been the area's go-to repair service for Encino homeowners who demand quality work.
+    intro: `Encino is known for its upscale residential neighborhoods, tree-lined streets, and some of the Valley's most beautiful estates. Properties here frequently feature custom automatic driveway gates, iron gate systems, and multi-car garages with high-end openers. Real Gate & Garage Door has been the area's go-to repair service for Encino homeowners who demand quality work.
 
 Automatic gate repair is one of our most common service calls in Encino. The custom iron and aluminum gates common on Encino estate properties require skilled technicians who understand gate operators at a deeper level than a basic handyman. Our techs are trained and certified on all major gate operator systems.
 
@@ -117,7 +117,7 @@ We cover all of Calabasas including The Oaks at Calabasas, Hidden Hills adjacent
     heroH1: "Gate & Garage Door Repair in Tarzana, CA",
     heroSubtitle: "Tarzana residents trust us for fast, honest gate and garage door repair — same day, every day.",
     extraKeywords: ["garage door repair Tarzana CA", "gate repair Tarzana", "electric gate repair Tarzana", "driveway gate repair Tarzana", "garage door spring repair Tarzana", "gate opener repair Tarzana"],
-    intro: `Tarzana sits between Woodland Hills and Encino in the heart of the, featuring a mix of suburban homes, cul-de-sacs, and some hillside properties. It's a community where residents are active and homes are well-maintained. Gate and garage door issues here range from simple opener malfunctions on older ranch homes to full gate system failures on newer residential builds.
+    intro: `Tarzana sits between Woodland Hills and Encino in the heart of the San Fernando Valley, featuring a mix of suburban homes, cul-de-sacs, and some hillside properties. It's a community where residents are active and homes are well-maintained. Gate and garage door issues here range from simple opener malfunctions on older ranch homes to full gate system failures on newer residential builds.
 
 Real Gate & Garage Door serves Tarzana with the same same-day service and upfront pricing we provide across our service area. Our Tarzana customers appreciate that we call ahead, arrive on time, and fix the problem without unnecessary upselling.
 
@@ -140,7 +140,7 @@ We cover all of Tarzana including the areas near Reseda Boulevard, Ventura Boule
     heroH1: "Gate & Garage Door Repair in Chatsworth, CA",
     heroSubtitle: "Chatsworth's local gate and garage door repair experts — fast response, fair prices, licensed.",
     extraKeywords: ["garage door repair Chatsworth CA", "garage door spring repair Chatsworth", "electric gate repair Chatsworth", "driveway gate repair Chatsworth", "gate opener repair Chatsworth"],
-    intro: `Chatsworth is a large, spread-out community at the western edge of the, known for its equestrian properties, ranch-style homes, large lots, and the iconic rock formations of the Santa Susana Pass. Gate systems here often serve larger properties with long driveways, equestrian access gates, and security gates for ranches and acreage.
+    intro: `Chatsworth is a large, spread-out community at the western edge of the San Fernando Valley, known for its equestrian properties, ranch-style homes, large lots, and the iconic rock formations of the Santa Susana Pass. Gate systems here often serve larger properties with long driveways, equestrian access gates, and security gates for ranches and acreage.
 
 Real Gate & Garage Door serves Chatsworth with a deep understanding of the unique gate and garage door requirements of larger properties. Larger driveways mean larger gates, heavier operators, and more complex access control needs. Our commercial-grade service capabilities translate well to the larger residential properties common in Chatsworth.
 
@@ -163,7 +163,7 @@ We cover all of Chatsworth including the area near the 118 Freeway, Box Canyon, 
     heroH1: "Gate & Garage Door Repair in Van Nuys, CA",
     heroSubtitle: "Van Nuys residents count on us for fast, honest garage door and gate repair — at fair prices.",
     extraKeywords: ["garage door repair Van Nuys CA", "garage door service Van Nuys", "gate repair Van Nuys", "electric gate repair Van Nuys", "driveway gate repair Van Nuys", "garage door spring repair Van Nuys", "gate opener repair Van Nuys"],
-    intro: `Van Nuys is one of the Our local most populated communities — a mix of residential neighborhoods, small businesses, and apartment complexes that stretch across the central Valley. Gate and garage door service here covers everything from simple residential opener repairs to commercial roll-up door service for the area's many small businesses.
+    intro: `Van Nuys is one of the San Fernando Valley's most populated communities — a mix of residential neighborhoods, small businesses, and apartment complexes that stretch across the central Valley. Gate and garage door service here covers everything from simple residential opener repairs to commercial roll-up door service for the area's many small businesses.
 
 Real Gate & Garage Door has been serving Van Nuys for years. We understand the community and price our services fairly. Whether you need a broken spring replaced on your Sepulveda apartment's parking gate or your personal garage door fixed before work on a Monday morning, we get there fast and fix it right.
 
@@ -232,7 +232,7 @@ We cover all of Northridge including the CSUN area, neighborhoods near the 118 a
     heroH1: "Gate & Garage Door Repair in North Hollywood, CA",
     heroSubtitle: "North Hollywood's trusted repair service for gates, garage doors, openers, and more.",
     extraKeywords: ["garage door repair North Hollywood CA", "gate repair North Hollywood", "electric gate repair North Hollywood", "driveway gate repair North Hollywood", "garage door spring repair North Hollywood", "gate opener repair North Hollywood"],
-    intro: `North Hollywood — NoHo — is one of the Our local most vibrant and fast-changing communities, home to the NoHo Arts District, a booming residential market, and a diverse mix of single-family homes, condos, and multi-unit properties. Gate and garage door service here spans from simple opener repairs on bungalows to access control gate systems for apartment complexes.
+    intro: `North Hollywood — NoHo — is one of the San Fernando Valley's most vibrant and fast-changing communities, home to the NoHo Arts District, a booming residential market, and a diverse mix of single-family homes, condos, and multi-unit properties. Gate and garage door service here spans from simple opener repairs on bungalows to access control gate systems for apartment complexes.
 
 Real Gate & Garage Door has been serving North Hollywood residents for years. The community's density and active renovation market mean we frequently work on older garage systems being upgraded as well as brand-new installations on recently renovated properties.
 
@@ -255,7 +255,7 @@ We cover all of North Hollywood including the NoHo Arts District, neighborhoods 
     heroH1: "Gate & Garage Door Repair in Studio City, CA",
     heroSubtitle: "Studio City's trusted local repair team for automatic gates, garage door springs, openers, and more.",
     extraKeywords: ["garage door repair Studio City CA", "gate repair Studio City", "electric gate repair Studio City", "driveway gate repair Studio City", "garage door spring repair Studio City", "gate opener repair Studio City"],
-    intro: `Studio City sits at the base of the Hollywood Hills, with winding canyon roads, beautiful hillside homes, and some of the Our local most desirable real estate. Properties here often feature custom iron or aluminum driveway gates, high-end garage door systems, and sophisticated access control setups. Real Gate & Garage Door has served Studio City's demanding homeowners for years.
+    intro: `Studio City sits at the base of the Hollywood Hills, with winding canyon roads, beautiful hillside homes, and some of the Valley's most desirable real estate. Properties here often feature custom iron or aluminum driveway gates, high-end garage door systems, and sophisticated access control setups. Real Gate & Garage Door has served Studio City's demanding homeowners for years.
 
 The hillside properties in Studio City present unique challenges: gates must handle slopes, curved driveways, and hillside soil movement that can affect post stability. Our technicians are experienced in the specific requirements of hillside gate installation and repair.
 
@@ -278,7 +278,7 @@ We cover all of Studio City including the hills above Mulholland, Fryman Road, C
     heroH1: "Gate & Garage Door Repair in Burbank, CA",
     heroSubtitle: "Burbank homeowners and businesses rely on us for fast, professional gate and garage door repair.",
     extraKeywords: ["garage door repair Burbank CA", "gate repair Burbank", "emergency garage door repair Burbank", "electric gate repair Burbank", "driveway gate repair Burbank", "garage door spring repair Burbank", "gate opener repair Burbank"],
-    intro: `Burbank is the eastern gateway to the — home to major entertainment studios, thriving businesses, and tight-knit residential neighborhoods that include everything from 1940s bungalows to newer construction near the Verdugo Hills. Gate and garage door service in Burbank runs the gamut from residential garage door spring repairs to commercial roll-up door service for the city's studios and production facilities.
+    intro: `Burbank is the eastern gateway to the San Fernando Valley — home to major entertainment studios, thriving businesses, and tight-knit residential neighborhoods that include everything from 1940s bungalows to newer construction near the Verdugo Hills. Gate and garage door service in Burbank runs the gamut from residential garage door spring repairs to commercial roll-up door service for the city's studios and production facilities.
 
 Real Gate & Garage Door serves both residential and commercial Burbank clients. We understand the high expectations of Burbank homeowners who maintain their properties with care, and the urgency that commercial clients — where a broken loading bay door means downtime — place on fast repair.
 
@@ -312,7 +312,7 @@ Whether you're in Montrose, Adams Hill, Sparr Heights, Verdugo Woodlands, or cen
       { title: "Fast & Fair", desc: "Same-day response with upfront pricing — Glendale residents get the same service as our core area." },
     ],
     faq: [
-      { q: "Do you serve Glendale even though it's east of the?", a: "Yes. We extend our service area to include Glendale and Burbank as part of our greater coverage." },
+      { q: "Do you serve Glendale even though it's east of the San Fernando Valley?", a: "Yes. We extend our service area to include Glendale and Burbank as part of our greater coverage." },
       { q: "What types of garage doors do you repair in Glendale?", a: "All types — sectional, roll-up, tilt-up, carriage house. All brands. Residential and commercial." },
     ],
   },
