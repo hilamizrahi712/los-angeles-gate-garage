@@ -120,7 +120,7 @@ export default function BrandsMarquee() {
       </div>
 
       <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
-        <Link href="/brands" className="btn-secondary" style={{ display: "inline-flex" }}>
+        <Link href="/brands/liftmaster" className="btn-secondary" style={{ display: "inline-flex" }}>
           View All Brands We Service
         </Link>
       </div>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { BUSINESS, SFV_CITIES } from "@/lib/constants";
+import { BUSINESS, SFV_CITIES, EXTENDED_CITIES } from "@/lib/constants";
 
 const gateServiceLinks = [
   { href: "/services/gate-repair", label: "Gate Repair" },
@@ -118,7 +118,7 @@ export default function Footer() {
             ))}
           </ul>
           <Link href="/service-areas" className="footer-more-link">
-            + 15 more cities →
+            + {EXTENDED_CITIES.length} more cities →
           </Link>
         </div>
       </div>

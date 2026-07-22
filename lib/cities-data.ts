@@ -349,7 +349,7 @@ We cover all of Canoga Park including the neighborhoods near the 101 Freeway, Sh
     heroH1: "Gate & Garage Door Repair in Los Angeles, CA",
     heroSubtitle: "Serving greater Los Angeles with same-day gate and garage door repair — honest pricing, licensed technicians.",
     extraKeywords: ["gate repair Los Angeles CA", "garage door repair Los Angeles", "automatic gate repair LA", "electric gate repair Los Angeles", "driveway gate repair Los Angeles", "garage door spring repair Los Angeles", "gate opener repair Los Angeles"],
-    intro: `Los Angeles is home to some of the most diverse gate and garage door systems in the country — from mid-century homes in the flats with aging carriage doors to modern hillside estates with sophisticated automatic gate systems. Real Gate & Garage Door serves greater Los Angeles with the same level of care and speed we bring to every Valley call.
+    intro: `Los Angeles is home to some of the most diverse gate and garage door systems in the country — from mid-century homes in the flats with aging carriage doors to modern hillside estates with sophisticated automatic gate systems. Real Gate & Garage Door serves greater Los Angeles with the same level of care and speed we bring to every call across Southern California.
 
 Whether your garage door spring snapped in Bel Air, your automatic gate motor stopped responding in Hancock Park, or you need emergency garage door service after an accident in West LA — we cover it all. Our technicians are familiar with the unique systems found across LA's varied neighborhoods and can diagnose most problems in a single visit.
 
@@ -1100,6 +1100,111 @@ We cover all of Lancaster including Quartz Hill, the communities near the Air Fo
     faq: [
       { q: "Why do springs break more often in Lancaster and Palmdale?", a: "The Antelope Valley's extreme temperature range — from below freezing in winter to over 100°F in summer — causes torsion springs to cycle through more thermal stress than coastal areas, shortening their lifespan significantly." },
       { q: "Can you fix my gate or garage door in Lancaster the same day?", a: "Yes. Same-day service is available throughout Lancaster and the surrounding Antelope Valley." },
+    ],
+  },
+  {
+    slug: "glendora",
+    name: "Glendora",
+    metaTitle: "Gate & Garage Door Repair Glendora CA | Real Gate & Garage Door",
+    metaDescription: "Expert gate and garage door repair in Glendora, CA. Same-day service, all brands, licensed & insured. Call (818) 915-5715.",
+    heroH1: "Gate & Garage Door Repair in Glendora, CA",
+    heroSubtitle: "Glendora's trusted gate and garage door specialists — same-day service, honest pricing, all brands.",
+    extraKeywords: ["gate repair Glendora CA", "garage door repair Glendora", "foothill gate repair Glendora", "electric gate repair Glendora", "driveway gate repair Glendora", "garage door spring repair Glendora", "gate opener repair Glendora"],
+    intro: `Glendora sits against the San Gabriel foothills, where hillside properties and citrus-era homes mix with newer construction climbing toward the mountains. Gate and garage door systems here range from simple single-car openers in the flats to custom driveway gates on the larger foothill lots near Glendora Mountain Road.
+
+Real Gate & Garage Door serves all of Glendora, from the historic Village downtown to the newer neighborhoods on the east side. Same-day service is available for most calls, and our technicians carry parts for all major gate and garage door brands.`,
+    whyUs: [
+      { title: "Foothill Property Experience", desc: "We're familiar with the custom gates common on Glendora's hillside lots." },
+      { title: "Same-Day Response", desc: "Most Glendora repair calls are scheduled and completed the same day." },
+      { title: "Honest Pricing", desc: "Upfront quotes before any work starts — no surprises." },
+    ],
+    faq: [
+      { q: "Do you serve the hillside properties near Glendora Mountain Road?", a: "Yes. We service gate and garage door systems throughout Glendora, including the hillside and foothill properties." },
+      { q: "How fast can you get to Glendora for a repair?", a: "Same-day service is standard for most Glendora calls." },
+    ],
+  },
+  {
+    slug: "bakersfield",
+    name: "Bakersfield",
+    metaTitle: "Gate & Garage Door Repair Bakersfield CA | Real Gate & Garage Door",
+    metaDescription: "Gate and garage door repair in Bakersfield, CA. Heat-tested parts, same-day service, all brands. Call (818) 915-5715.",
+    heroH1: "Gate & Garage Door Repair in Bakersfield, CA",
+    heroSubtitle: "Bakersfield's gate and garage door specialists — built for the Central Valley heat, same-day service.",
+    extraKeywords: ["gate repair Bakersfield CA", "garage door repair Bakersfield", "Central Valley gate repair", "electric gate repair Bakersfield", "driveway gate repair Bakersfield", "garage door spring repair Bakersfield", "gate opener repair Bakersfield"],
+    intro: `Bakersfield's long, hot summers are hard on gate and garage door hardware — dry heat cracks lubricant, warps metal tracks, and stresses opener circuit boards faster than in coastal cities. Real Gate & Garage Door services all of Bakersfield with technicians who understand the Central Valley climate and stock parts rated for it.
+
+We cover Bakersfield's residential neighborhoods and growing suburban developments alike, from simple garage door tune-ups to full automatic gate installations. Same-day service is available for most calls, with upfront pricing before any work begins.`,
+    whyUs: [
+      { title: "Central Valley Heat Knowledge", desc: "We know how Bakersfield's dry heat affects gate and garage door systems and stock parts built for it." },
+      { title: "Same-Day Service", desc: "Most Bakersfield repair calls are handled the same day you call." },
+      { title: "All Major Brands", desc: "LiftMaster, Genie, Chamberlain, Viking, and more — all serviced and repaired." },
+    ],
+    faq: [
+      { q: "Does Bakersfield's heat really affect garage door springs?", a: "Yes. Extreme heat accelerates wear on springs and dries out lubrication faster, which is why we recommend more frequent tune-ups in the Central Valley." },
+      { q: "Do you offer same-day service in Bakersfield?", a: "Yes, for most repair calls." },
+    ],
+  },
+  {
+    slug: "orange-county",
+    name: "Orange County",
+    metaTitle: "Gate & Garage Door Repair Orange County CA | Real Gate & Garage Door",
+    metaDescription: "Gate and garage door repair across Orange County — Anaheim, Irvine, Fullerton, Huntington Beach & more. Same-day service. Call (818) 915-5715.",
+    heroH1: "Gate & Garage Door Repair Across Orange County, CA",
+    heroSubtitle: "Serving Anaheim, Irvine, Fullerton, Huntington Beach, Newport Beach, and every Orange County community in between.",
+    extraKeywords: ["gate repair Orange County CA", "garage door repair Orange County", "OC gate repair", "electric gate repair Orange County", "driveway gate repair Orange County", "garage door spring repair Orange County", "gate opener repair Orange County"],
+    intro: `From the master-planned communities of Irvine to the beach cities along the coast, Orange County covers a wide range of gate and garage door systems — HOA-controlled entry gates, custom estate gates in Newport Beach and Anaheim Hills, and everyday residential garage doors throughout Fullerton, Orange, and Huntington Beach. Real Gate & Garage Door provides same-day service across the county.
+
+We work with the gated-community access systems common in OC's planned developments as well as standalone residential gates and garage doors, carrying parts for all major brands so most repairs are completed in a single visit.`,
+    whyUs: [
+      { title: "Countywide Coverage", desc: "From Anaheim to Newport Beach, Irvine to Fullerton — we cover all of Orange County." },
+      { title: "HOA & Gated Community Experience", desc: "We work regularly with HOAs and property managers on gated-community access systems." },
+      { title: "Same-Day Service", desc: "Most Orange County repair calls are scheduled and completed the same day." },
+    ],
+    faq: [
+      { q: "What Orange County cities do you serve?", a: "We cover all of Orange County including Anaheim, Irvine, Fullerton, Huntington Beach, Newport Beach, and Orange." },
+      { q: "Do you work with HOAs on gated-community entry systems?", a: "Yes. We regularly service HOA and property-manager-controlled gate systems throughout Orange County." },
+    ],
+  },
+  {
+    slug: "ventura-county",
+    name: "Ventura County",
+    metaTitle: "Gate & Garage Door Repair Ventura County CA | Real Gate & Garage Door",
+    metaDescription: "Gate and garage door repair across Ventura County — Ventura, Oxnard, Camarillo, Thousand Oaks & more. Same-day service. Call (818) 915-5715.",
+    heroH1: "Gate & Garage Door Repair Across Ventura County, CA",
+    heroSubtitle: "Serving Ventura, Oxnard, Camarillo, Thousand Oaks, Simi Valley, and every Ventura County community in between.",
+    extraKeywords: ["gate repair Ventura County CA", "garage door repair Ventura County", "coastal gate repair Ventura County", "electric gate repair Ventura County", "driveway gate repair Ventura County", "garage door spring repair Ventura County", "gate opener repair Ventura County"],
+    intro: `Ventura County stretches from the coastal salt air of Ventura and Oxnard to the inland communities of Camarillo, Thousand Oaks, and Simi Valley — each with different demands on gate and garage door hardware. Coastal properties fight corrosion; inland properties fight heat and dust. Real Gate & Garage Door services all of it, with technicians who know the difference.
+
+We handle everything from automatic driveway gates on Camarillo and Thousand Oaks estates to everyday garage door repair in Oxnard and Ventura neighborhoods, with same-day service and parts stocked for all major brands.`,
+    whyUs: [
+      { title: "Coastal & Inland Experience", desc: "We stock corrosion-resistant hardware for coastal properties and heat-rated parts for inland communities." },
+      { title: "Countywide Coverage", desc: "From Ventura and Oxnard to Camarillo, Thousand Oaks, and Simi Valley." },
+      { title: "Same-Day Service", desc: "Most Ventura County repair calls are handled the same day." },
+    ],
+    faq: [
+      { q: "What Ventura County cities do you serve?", a: "We cover all of Ventura County including Ventura, Oxnard, Camarillo, Thousand Oaks, and Simi Valley." },
+      { q: "Do coastal properties need different gate hardware?", a: "Yes. Salt air accelerates corrosion, so we recommend and stock corrosion-resistant hardware for coastal Ventura County properties." },
+    ],
+  },
+  {
+    slug: "hacienda-heights",
+    name: "Hacienda Heights",
+    metaTitle: "Gate & Garage Door Repair Hacienda Heights CA | Real Gate & Garage Door",
+    metaDescription: "Expert gate and garage door repair in Hacienda Heights, CA. Same-day service, all brands, licensed & insured. Call (818) 915-5715.",
+    heroH1: "Gate & Garage Door Repair in Hacienda Heights, CA",
+    heroSubtitle: "Hacienda Heights' trusted gate and garage door specialists — same-day service, honest pricing.",
+    extraKeywords: ["gate repair Hacienda Heights CA", "garage door repair Hacienda Heights", "San Gabriel Valley gate repair", "electric gate repair Hacienda Heights", "driveway gate repair Hacienda Heights", "garage door spring repair Hacienda Heights", "gate opener repair Hacienda Heights"],
+    intro: `Hacienda Heights' hillside streets and larger residential lots in the San Gabriel Valley mean a mix of standard garage door openers and custom driveway gates on the community's bigger properties. Real Gate & Garage Door provides same-day gate and garage door repair throughout Hacienda Heights.
+
+Our technicians carry parts for all major brands and are familiar with the hillside driveway conditions common in the area, from steep approach gates to multi-car garage setups.`,
+    whyUs: [
+      { title: "Hillside Property Experience", desc: "We're familiar with the driveway gate setups common on Hacienda Heights' hillside lots." },
+      { title: "Same-Day Response", desc: "Most Hacienda Heights repair calls are scheduled and completed the same day." },
+      { title: "All Major Brands", desc: "LiftMaster, Genie, Chamberlain, Viking, and more — all serviced and repaired." },
+    ],
+    faq: [
+      { q: "Do you serve the hillside streets in Hacienda Heights?", a: "Yes. We service gate and garage door systems throughout Hacienda Heights, including hillside properties." },
+      { q: "Can you fix my garage door opener in Hacienda Heights today?", a: "In most cases, yes — same-day service is standard." },
     ],
   },
 ];

@@ -69,6 +69,11 @@ export const EXTENDED_CITIES = [
   { name: "Huntington Beach", slug: "huntington-beach" },
   { name: "Newport Beach", slug: "newport-beach" },
   { name: "Lancaster", slug: "lancaster" },
+  { name: "Glendora", slug: "glendora" },
+  { name: "Bakersfield", slug: "bakersfield" },
+  { name: "Orange County", slug: "orange-county" },
+  { name: "Ventura County", slug: "ventura-county" },
+  { name: "Hacienda Heights", slug: "hacienda-heights" },
 ];
 
 export const ALL_CITIES = [...SFV_CITIES, ...EXTENDED_CITIES];

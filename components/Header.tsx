@@ -24,6 +24,20 @@ const garageDoorLinks = [
   { href: "/services/commercial-garage-door", label: "Commercial Doors" },
 ];
 
+const brandLinks = [
+  { href: "/brands/liftmaster", label: "LiftMaster" },
+  { href: "/brands/all-o-matic", label: "All-O-Matic" },
+  { href: "/brands/elite", label: "Elite" },
+  { href: "/brands/ramset", label: "Ramset" },
+  { href: "/brands/doorking", label: "DoorKing" },
+  { href: "/brands/viking", label: "Viking" },
+  { href: "/brands/genie", label: "Genie" },
+  { href: "/brands/chamberlain", label: "Chamberlain" },
+  { href: "/brands/linear", label: "Linear" },
+  { href: "/brands/eagle", label: "Eagle" },
+  { href: "/brands/doorbird", label: "DoorBird" },
+];
+
 const areaLinks = [
   { href: "/areas/woodland-hills", label: "Woodland Hills" },
   { href: "/areas/sherman-oaks", label: "Sherman Oaks" },
@@ -146,7 +160,30 @@ export default function Header() {
               </div>
             </div>
 
-            <Link href="/brands" className="hover:opacity-70 transition-opacity py-2">Brands</Link>
+            {/* Brands */}
+            <div className="relative group">
+              <button className="flex items-center gap-1 py-2 hover:opacity-70 transition-opacity">
+                Brands <ChevronDown size={14} />
+              </button>
+              <div
+                className="absolute top-full left-0 rounded-[var(--radius-lg)] py-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50"
+                style={{ background: "var(--bg-card)", boxShadow: "0 8px 32px rgba(11,28,46,0.14)", border: "1px solid var(--line)" }}
+              >
+                {brandLinks.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    className="block px-4 py-2.5 text-sm font-medium transition-colors"
+                    style={{ color: "var(--text-mid)" }}
+                    onMouseEnter={e => (e.currentTarget.style.color = "var(--brown)")}
+                    onMouseLeave={e => (e.currentTarget.style.color = "var(--text-mid)")}
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             <Link href="/tips" className="hover:opacity-70 transition-opacity py-2">Tips</Link>
             <Link href="/about" className="hover:opacity-70 transition-opacity py-2">About</Link>
             <Link href="/contact" className="hover:opacity-70 transition-opacity py-2">Contact</Link>
@@ -260,8 +297,30 @@ export default function Header() {
                 </div>
               )}
 
+              <button
+                className="w-full flex items-center justify-between py-3 border-b font-semibold text-sm"
+                style={{ borderColor: "var(--line)", color: "var(--text-dark)" }}
+                onClick={() => toggleDropdown("mob-brands")}
+              >
+                Brands <ChevronDown size={16} className={openDropdown === "mob-brands" ? "rotate-180" : ""} />
+              </button>
+              {openDropdown === "mob-brands" && (
+                <div className="pl-4 pb-2">
+                  {brandLinks.map((l) => (
+                    <Link
+                      key={l.href}
+                      href={l.href}
+                      className="block py-2 text-sm"
+                      style={{ color: "var(--text-soft)" }}
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+
               {[
-                { href: "/brands", label: "Brands" },
                 { href: "/tips", label: "Tips" },
                 { href: "/about", label: "About" },
                 { href: "/contact", label: "Contact" },

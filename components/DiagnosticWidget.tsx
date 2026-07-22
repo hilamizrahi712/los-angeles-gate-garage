@@ -97,7 +97,7 @@ function getDiagnosis(answers: string[]): Diagnosis {
 
   const result = map[problem] ?? {
     title: "Service Recommended",
-    message: `Based on your answers, your ${device} needs a professional inspection. Our technicians diagnose most issues in under 30 minutes and carry parts for same-day repairs across the Valley.`,
+    message: `Based on your answers, your ${device} needs a professional inspection. Our technicians diagnose most issues in under 30 minutes and carry parts for same-day repairs across Los Angeles & Southern California.`,
     cta: "Call us or request a free estimate — we'll have you sorted today.",
   };
 

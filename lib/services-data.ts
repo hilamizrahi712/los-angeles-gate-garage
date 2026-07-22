@@ -35,15 +35,9 @@ export const SERVICES: ServiceData[] = [
     heroSubtitle: "From broken motors to bent tracks, our certified technicians fix all types of gates fast. Most repairs completed same day.",
     heroImg: "/images/services/gate-repair.jpg",
     isInstallation: false,
-    intro: `When your gate stops working, every hour it's down is a security risk and a frustration. At Real Gate & Garage Door, we specialize in gate repair in our service area — and we respond fast. Most of our gate repair calls are handled same-day, with technicians arriving fully stocked with the parts needed for the most common repairs.
+    intro: `When your gate stops working, every hour it's down is a security risk. We specialize in gate repair across Los Angeles, with most calls handled same-day — technicians arrive stocked with parts for the most common repairs, working on all gate types and major brands including LiftMaster, Viking, All-O-Matic, DoorKing, and Elite.
 
-Gates fail for many reasons: worn motors, broken chains, damaged rollers, misaligned sensors, or corrosion on hinges and tracks. Whatever the cause, our technicians are trained to diagnose quickly and fix it right the first time. We work on all gate types — sliding gates, swing gates, driveway gates, iron gates — and all major brands including LiftMaster, Viking, All-O-Matic, DoorKing, Elite, and more.
-
-We believe in upfront pricing. You'll get a clear quote before we touch anything. No surprise charges, no upsells you don't need. If repair isn't the right call — if your gate is truly beyond fixing — we'll give you an honest assessment and a fair quote for a replacement. But most of the time, a skilled repair is all it takes, and it costs a fraction of a new gate.
-
-Our gate repair service covers everything from simple adjustments to complex motor replacements. Residential or commercial, manual or automatic — we fix it.
-
-Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+You'll get a clear quote before we touch anything — no surprise charges. If a gate is truly beyond repair, we'll say so and quote a fair replacement instead.`,
     features: [
       { icon: "⚡", title: "Same-Day Response", desc: "Most gate repairs scheduled and completed the same day you call." },
       { icon: "🔧", title: "All Gate Types", desc: "Sliding, swing, driveway, iron, wood, aluminum — we repair them all." },
@@ -84,15 +78,9 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     heroSubtitle: "Your automatic gate is supposed to make life easier. When it stops working, we get it running again — usually the same day.",
     heroImg: "/images/services/automatic-gate.jpg",
     isInstallation: false,
-    intro: `Automatic gates add security and convenience to any home or business — until they stop working. An automatic gate that won't open leaves you locked out; one that won't close leaves you exposed. Real Gate & Garage Door provides expert automatic gate repair in our service area, with same-day service available for most calls.
+    intro: `An automatic gate that won't open leaves you locked out; one that won't close leaves you exposed. We provide automatic gate repair across Los Angeles, with same-day service for most calls — carrying circuit boards, drive gears, limit switches, and sensors on the truck for one-visit repairs.
 
-Automatic gate failures have many causes: faulty gate operators (motors), damaged control boards, bad sensors, worn drive systems (chain, belt, or rack), or dead batteries and bad wiring. Our technicians are trained to work on all major automatic gate systems and diagnose the root cause quickly.
-
-We carry the most common replacement parts on our trucks — gate operator circuit boards, drive gears, limit switches, photocell sensors, remote receivers, and more. This means we can often complete your automatic gate repair in a single visit rather than ordering parts and making a return trip.
-
-Whether your automatic gate swings, slides, or folds, whether it runs on AC or solar power, our team has the tools and experience to fix it properly. We serve all of the including Woodland Hills, Encino, Sherman Oaks, Calabasas, and surrounding cities.
-
-Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+Whether your gate swings, slides, or folds, runs on AC or solar, we have the tools and experience to fix it right the first time.`,
     features: [
       { icon: "⚙️", title: "Operator Specialists", desc: "We repair all gate operators including LiftMaster, Viking, FAAC, All-O-Matic, and Elite." },
       { icon: "📡", title: "Sensor & Remote Repair", desc: "Fix or replace photocell sensors, loop detectors, keypads, and remote systems." },
@@ -133,15 +121,9 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     heroSubtitle: "Is your driveway gate dragging, misaligned, or refusing to open? We diagnose and repair all driveway gate issues — fast.",
     heroImg: "/images/services/driveway-gate.jpg",
     isInstallation: false,
-    intro: `A broken driveway gate is more than an inconvenience — it's a daily obstacle and a security gap. Real Gate & Garage Door repairs driveway gates of all types in our service area: sliding, swing, bi-fold, cantilever, and everything in between.
+    intro: `A broken driveway gate is a daily obstacle and a security gap. We repair driveway gates of every type — sliding, swing, bi-fold, cantilever — across Los Angeles, inspecting the full structure first so we fix the root cause, not just the symptom.
 
-Driveway gates face constant stress from weather, vehicle exhaust, soil movement, and daily cycling. Common driveway gate problems we see include: gates that drag on the ground, swing gates with sagging hinges, sliding gates with broken wheels or warped tracks, opener motors that have burned out, and control boards that fail after years of use.
-
-Our technicians arrive at your property fully equipped. We inspect the gate structure first — checking for underlying damage that could cause a new operator to fail prematurely — then address the root cause rather than just patching the symptom. You'll receive a clear, itemized quote before we start any work.
-
-We repair all major driveway gate brands and work with iron, aluminum, wood, and composite materials. If your driveway gate is old but structurally sound, we can often retrofit it with a new, more reliable operator and extend its life significantly.
-
-Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+We work with iron, aluminum, wood, and composite gates and can retrofit an old but sound gate with a newer, more reliable operator.`,
     features: [
       { icon: "🏡", title: "All Gate Types", desc: "Swing, sliding, cantilever, bi-fold — we repair every driveway gate style." },
       { icon: "🔩", title: "Structure & Mechanics", desc: "We fix the gate itself — hinges, tracks, wheels, posts — not just the opener." },
@@ -181,15 +163,9 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     heroSubtitle: "Electric gate not responding? We diagnose and repair all electric gate systems — motors, wiring, control boards, and sensors.",
     heroImg: "/images/services/gate-repair.jpg",
     isInstallation: false,
-    intro: `Electric gates give your property the ultimate combination of security and convenience. When an electrical fault stops your gate from working, you need a technician who understands both the mechanical and electrical sides of the system. Real Gate & Garage Door provides expert electric gate repair in our service area.
+    intro: `Electric gate faults can hide anywhere in the chain — power supply, transformer, control board, motor, wiring, or sensors. We use professional diagnostic equipment to pinpoint the fault fast instead of swapping parts at random.
 
-Electric gate faults are often harder to diagnose than mechanical ones because the failure can be anywhere in the chain: the power supply, transformer, control board, motor, wiring harness, sensors, or remote system. Our technicians use professional diagnostic equipment to pinpoint the fault quickly rather than swapping parts at random.
-
-Common electric gate problems we repair include: gate that doesn't respond to remote or keypad, gate that runs in one direction only, gate that stops mid-cycle, intermittent operation (works sometimes, not others), gate that moves slowly or makes grinding noises, and gate that triggers the breaker.
-
-We work with all major electric gate operator brands including LiftMaster, Viking, FAAC, All-O-Matic, Elite, Linear, and DoorKing. Whether your gate is residential or commercial, single-phase or three-phase, we have the expertise to repair it correctly.
-
-Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+We service all major electric gate brands — LiftMaster, Viking, FAAC, All-O-Matic, Elite, Linear, DoorKing — residential or commercial, single- or three-phase.`,
     features: [
       { icon: "🔌", title: "Electrical Diagnostics", desc: "We trace faults to the source — no guesswork, no part-swapping trials." },
       { icon: "🔋", title: "All Power Systems", desc: "Standard 110V/220V, solar-powered, and battery backup systems." },
@@ -228,15 +204,9 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     heroSubtitle: "Your gate opener is the engine of your system. When it fails, we repair or replace it fast with parts on our truck.",
     heroImg: "/images/services/gate-opener-repair.jpg",
     isInstallation: false,
-    intro: `The gate opener — also called a gate operator or gate motor — is the heart of your automatic gate system. When it fails, the whole gate system fails. Real Gate & Garage Door specializes in gate opener repair in our service area, with same-day service and a full inventory of common replacement parts.
+    intro: `The gate opener is the engine of your system — when it fails, the whole gate fails. We repair and replace gate openers across Los Angeles with same-day service and a full inventory of common parts: circuit boards, drive gears, clutch assemblies, and motors.
 
-Gate openers fail for various reasons: motor burnout from overuse or power surges, worn drive gears, failed circuit boards, broken limit switches, or simply the end of their service life after years of reliable operation. Our technicians are trained and certified on all major gate opener brands and models.
-
-We service and repair LiftMaster, Viking, FAAC, All-O-Matic, Elite, Linear, DoorKing, and many more brands. We carry circuit boards, drive gears, clutch assemblies, limit switches, and motor assemblies for the most common models — which means we can often repair your opener in a single visit.
-
-Before recommending replacement, we always explore whether repair is viable. A circuit board replacement is typically $250–$500 — far less than a complete new operator. We give you an honest recommendation based on the age and condition of your opener, not on what makes us the most money.
-
-Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+Before recommending replacement, we always check whether repair is viable — a board swap is typically far cheaper than a new operator, and we'll tell you honestly which makes sense for your unit.`,
     features: [
       { icon: "🔧", title: "All Major Brands", desc: "LiftMaster, Viking, FAAC, All-O-Matic, Elite, Linear, DoorKing, Ramset." },
       { icon: "📦", title: "Parts on the Truck", desc: "We stock common boards, gears, and motors — one-visit repairs are our standard." },
@@ -276,15 +246,9 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     heroSubtitle: "From rust and corrosion to structural damage and broken hinges, we restore iron gates to full function and appearance.",
     heroImg: "/images/services/iron-gate.jpg",
     isInstallation: false,
-    intro: `Iron and wrought iron gates are built to last a lifetime — but they're not immune to the elements. Rust, corrosion, impact damage, sagging hinges, and worn welds are common issues that, left unaddressed, can turn a minor fix into a costly replacement. Real Gate & Garage Door provides expert iron gate repair in our service area.
+    intro: `Iron and wrought iron gates are built to last, but rust, impact damage, and worn welds can turn a minor fix into a costly replacement if ignored. We handle rust treatment, structural welding, hinge replacement, and track repair for sliding iron gates across Los Angeles.
 
-Our technicians are trained in iron gate assessment and repair. We handle rust treatment and spot welding for structural repairs, hinge replacement (including custom fabrication when original parts are discontinued), track and roller repair for sliding iron gates, gate operator upgrades for manual iron gates being converted to automatic, and cosmetic refinishing to restore the gate's appearance.
-
-Our local climate — with its hot summers, occasional heavy rains, and coastal marine air in some neighborhoods — creates ideal conditions for iron corrosion if gates aren't properly maintained. We recommend treating any rust as soon as it appears, before it penetrates the metal's structural layer.
-
-Many iron gates in our service area are decades old and worth preserving. A skilled repair is almost always cheaper than a new custom iron gate, and a restored original often looks better than a replacement. We'll give you an honest opinion on whether repair or replacement makes more sense for your specific gate.
-
-Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+Many iron gates here are decades old and worth preserving — a skilled repair is almost always cheaper than a new custom gate, and we'll give you an honest read on which makes sense for yours.`,
     features: [
       { icon: "🏛️", title: "Structural Repairs", desc: "Welding, rust treatment, post repair, and section replacement for damaged iron gates." },
       { icon: "⚙️", title: "Hardware Replacement", desc: "Hinges, latches, rollers, wheels, and track repairs for all iron gate styles." },
@@ -323,15 +287,9 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     heroSubtitle: "Downtime on a commercial gate costs you money and security. We provide priority same-day service for businesses in our area.",
     heroImg: "/images/services/commercial-gate.jpg",
     isInstallation: false,
-    intro: `A broken commercial gate is more than an inconvenience — it's a security breach, a liability issue, and a disruption to your operations. Real Gate & Garage Door provides priority commercial gate repair in our service area, with fast response times and technicians equipped for high-cycle commercial gate systems.
+    intro: `A broken commercial gate is a security breach and a liability. We provide priority commercial gate repair across Los Angeles — sliding security gates, swing arms, barrier arms, vertical lifts — for delivery traffic and 24/7 operation demands.
 
-Commercial gates operate far more frequently than residential gates and are subject to heavier use — delivery trucks, employee traffic, and 24/7 operation in many cases. This puts unique demands on the gate operator, drive system, and structural components. Our commercial gate technicians are trained specifically for this environment.
-
-We repair all types of commercial gates: sliding security gates, swing arm gates, barrier arms (parking gates), vertical lift gates, and high-speed roll-up gates. We service all major commercial gate operators including LiftMaster, Viking, FAAC, All-O-Matic, DoorKing, and Ramset, as well as access control systems that integrate with the gate.
-
-For property managers, HOAs, and business owners, we offer maintenance contracts that include scheduled service visits, priority response, and parts discounts. Preventive maintenance dramatically reduces emergency repairs and extends the life of your gate system.
-
-Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+We service LiftMaster, Viking, FAAC, All-O-Matic, DoorKing, and Ramset commercial operators, plus access control integration, and offer maintenance contracts for property managers and HOAs.`,
     features: [
       { icon: "🏭", title: "Commercial-Grade Repairs", desc: "High-cycle operators, heavy-duty drive systems, and commercial-grade hardware." },
       { icon: "⚡", title: "Priority Response", desc: "Commercial clients receive priority scheduling — we understand every hour counts." },
@@ -370,15 +328,9 @@ Sometimes repair isn't enough — if your gate is beyond fixing, we'll give you 
     heroSubtitle: "Ready for a new gate? We'll help you choose the right system and install it to last.",
     heroImg: "/images/services/gate-installation.jpg",
     isInstallation: true,
-    intro: `Thinking about adding a new gate or replacing an old one? Real Gate & Garage Door installs driveway gates, automatic gates, iron gates, and commercial security gates in our service area. We help you choose the right gate type, material, and operator for your property and budget.
+    intro: `Thinking about a new gate? We install driveway, automatic, iron, and commercial security gates across Los Angeles, starting with a free on-site assessment of your driveway, security goals, and budget.
 
-Our installation process starts with a free on-site assessment. We evaluate your driveway width, slope, and surface, discuss your security and aesthetic goals, and recommend options in your price range. We work with iron, aluminum, wood, and vinyl gate materials, and we partner with leading manufacturers for automatic gate operators.
-
-Gate installation typically requires a permit for new installations. We handle the permit coordination and ensure all work meets California building codes and your HOA requirements where applicable.
-
-Not sure if you need repair or a new gate? If your existing gate can be repaired reliably at a reasonable cost, we'll tell you so — honestly. We don't push installations when repair is the better choice.
-
-Link back: If you're experiencing problems with your current gate, visit our [Gate Repair](/services/gate-repair) page — repair is almost always faster and more affordable.`,
+We handle permit coordination and work with iron, aluminum, wood, and vinyl. If your current gate can be repaired reliably instead, we'll tell you honestly — repair is almost always faster and cheaper.`,
     features: [
       { icon: "📐", title: "Free Site Assessment", desc: "We evaluate your property and recommend the right gate type, material, and operator." },
       { icon: "📋", title: "Permit Handling", desc: "We coordinate permits for new gate installations cities." },
@@ -417,15 +369,9 @@ Link back: If you're experiencing problems with your current gate, visit our [Ga
     heroSubtitle: "From broken springs to jammed tracks, our licensed technicians fix garage doors fast — usually same day.",
     heroImg: "/images/hero/hero-garage-door.jpg",
     isInstallation: false,
-    intro: `A broken garage door is a major inconvenience and a security risk. Real Gate & Garage Door provides expert garage door repair in our service area, with same-day service available for most repairs. Our technicians arrive fully stocked with the parts needed for the most common issues.
+    intro: `A broken garage door is a security risk and a major inconvenience. We repair all garage door brands and opener systems across Los Angeles — springs, cables, panels, tracks — with technicians stocked for same-day fixes.
 
-Garage doors fail for many reasons: torsion or extension spring breakage (the most common cause), cable snapping, opener motor failure, sensor misalignment, panel damage from impact, track bending, or roller wear. Whatever the cause, our technicians diagnose quickly and give you an upfront price before touching anything.
-
-We repair all garage door brands: Clopay, Wayne Dalton, Amarr, Overhead Door, and others. We service all major opener brands: LiftMaster, Genie, Chamberlain, Craftsman, and more. Whether your door is a single-car or double-car, sectional or one-piece, residential or commercial, we have the experience to fix it right.
-
-Upfront pricing means you'll never be surprised. Our technician will explain what's wrong, what it costs to fix, and what happens if you don't fix it — and then let you decide. Most repairs are completed the same day.
-
-Sometimes repair isn't enough — if your garage door is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+You'll get an upfront price before we start, and we'll always tell you honestly if repair no longer makes sense versus replacement.`,
     features: [
       { icon: "⚡", title: "Same-Day Repairs", desc: "Most garage door repairs completed same day with parts from our stocked truck." },
       { icon: "🔧", title: "All Door Types", desc: "Sectional, roll-up, one-piece, single, double — all brands, all styles." },
@@ -465,15 +411,9 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     heroSubtitle: "Broken spring? We carry springs for virtually every garage door on the truck — most replacements done in under 90 minutes.",
     heroImg: "/images/services/garage-door-spring-repair.jpg",
     isInstallation: false,
-    intro: `A broken garage door spring is the most common garage door failure we see — and the most dangerous to ignore. When a spring breaks, the garage door becomes extremely heavy and nearly impossible to lift manually. Operating a door with a broken spring risks serious injury and can damage the opener. Call us for same-day spring replacement.
+    intro: `A broken garage door spring is the most common failure we see — and the most dangerous to ignore. We carry torsion and extension springs in a full range of sizes and tension ratings for same-day replacement.
 
-Garage doors use either torsion springs (mounted horizontally above the door) or extension springs (mounted along the side tracks). Torsion springs are more common on modern doors and last longer; extension springs are found on older doors. Our technicians carry both types in a wide range of sizes and tension ratings.
-
-We don't just swap the broken spring — we inspect the entire spring system and balance the door. An improperly balanced door puts strain on the opener motor and can cause it to fail prematurely. We test the door's balance and adjust spring tension to spec before considering the job complete.
-
-When we replace a spring, we always recommend replacing both springs if you have a two-spring torsion system. If one spring broke, the other is likely near the end of its life as well. Replacing both now saves you a second service call in the near future.
-
-Sometimes repair isn't enough — if your garage door is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+We don't just swap the spring — we balance the door and test it to spec, and recommend replacing both springs on a dual-spring system since the second is usually close behind.`,
     features: [
       { icon: "🌀", title: "Torsion & Extension Springs", desc: "We carry both types in a full range of sizes, tension ratings, and wire gauges." },
       { icon: "⚖️", title: "Door Balancing", desc: "We balance the door after spring replacement — critical for opener longevity." },
@@ -514,15 +454,9 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     heroSubtitle: "Is your garage door opener refusing to work? We diagnose and repair all major brands — LiftMaster, Genie, Chamberlain, Craftsman — same day.",
     heroImg: "/images/services/garage-door-opener-repair.jpg",
     isInstallation: false,
-    intro: `A garage door opener that won't respond is more than inconvenient — it can leave your car trapped or your home exposed. Real Gate & Garage Door repairs all major garage door opener brands in our service area, with same-day service and parts stocked on our trucks.
+    intro: `A garage door opener that won't respond can trap your car or expose your home. We repair LiftMaster, Genie, Chamberlain, Craftsman, and other major brands across Los Angeles, diagnosing the actual cause before recommending any fix.
 
-Garage door opener problems range from simple (dead remote batteries, misaligned safety sensors) to complex (circuit board failure, motor burnout, drive gear wear). Our technicians diagnose the root cause before recommending any repair or replacement — because sometimes the fix is a $5 battery, not a $300 motor.
-
-We service and repair LiftMaster, Genie, Chamberlain, Craftsman, Sears, Marantec, and other opener brands. For older openers that are no longer serviceable or have become unsafe (pre-UL 325 compliance), we recommend replacement and can install a new unit same-day in most cases.
-
-If you're upgrading, we install WiFi-enabled smart openers from LiftMaster (myQ technology) that let you control and monitor your garage door from your smartphone — ideal for the tech-savvy homeowner who wants complete control.
-
-Sometimes repair isn't enough — if your opener is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+For openers too old or unsafe to service, we install new units same-day, including WiFi-enabled smart openers with smartphone control.`,
     features: [
       { icon: "📱", title: "Smart Opener Installs", desc: "LiftMaster myQ, Genie Aladdin Connect — smartphone control from anywhere." },
       { icon: "⚙️", title: "All Drive Types", desc: "Chain drive, belt drive, screw drive, and direct drive openers." },
@@ -562,15 +496,9 @@ Sometimes repair isn't enough — if your opener is beyond fixing, we'll give yo
     heroSubtitle: "A snapped garage door cable can cause the door to drop suddenly. Don't risk it — call for same-day cable repair.",
     heroImg: "/images/services/garage-door-repair.jpg",
     isInstallation: false,
-    intro: `Garage door cables work in conjunction with the springs to safely control the door as it opens and closes. When a cable snaps or becomes frayed, the door can become dangerous — dropping suddenly, going off-track, or becoming impossible to operate. Real Gate & Garage Door provides fast, same-day garage door cable repair in our service area.
+    intro: `A snapped or frayed garage door cable can drop the door suddenly or send it off-track. We provide fast, same-day cable repair across Los Angeles, replacing cables in matched pairs and inspecting the drums they wrap around.
 
-Cables snap for several reasons: corrosion from moisture, fraying due to age and repeated bending, or failing suddenly when a spring breaks and the cable is forced to handle the full door weight. When a cable snaps on one side, the door often goes off-track, creating additional damage.
-
-Our technicians carry replacement cables for a wide range of door sizes and weights. We replace cables in matched pairs — if one cable fails, the other is typically at the same stage of wear. We also inspect the cable drums, which the cables wrap around, and replace them if worn.
-
-After cable replacement, we inspect the entire door system: springs, rollers, hinges, and tracks. A cable failure often indicates other components are also under stress. A complete checkup ensures you won't be calling us again in a few weeks for a related problem.
-
-Sometimes repair isn't enough — if your garage door is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+After every cable repair we check the full system — springs, rollers, hinges, and tracks — since a cable failure often signals stress elsewhere.`,
     features: [
       { icon: "🔩", title: "Same-Day Cable Replacement", desc: "Most cable repairs completed same day with parts from our truck." },
       { icon: "🔍", title: "Full System Inspection", desc: "We inspect springs, drums, rollers, and tracks after every cable repair." },
@@ -609,15 +537,9 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     heroSubtitle: "Dented or cracked panel making your garage door look bad? We repair and replace panels — matching your door's style and color.",
     heroImg: "/images/services/garage-door-repair.jpg",
     isInstallation: false,
-    intro: `Dented, cracked, or warped garage door panels are more than an eyesore. Structural panel damage can affect the door's balance, cause gaps that reduce insulation, and put stress on the surrounding sections. Real Gate & Garage Door repairs and replaces garage door panels in our service area.
+    intro: `Dented, cracked, or warped panels affect your door's balance and insulation — usually from a vehicle impact. We repair and replace panels across Los Angeles, matching your door's existing style and color whenever possible.
 
-Most panel damage comes from vehicle impacts — backing into the door accidentally is more common than you might think. Minor dents can sometimes be repaired without replacement using dent-pulling techniques. Moderate to severe damage typically requires panel replacement to restore proper alignment and function.
-
-When replacing a panel, matching the existing door is the goal. We work with all major garage door manufacturers — Clopay, Wayne Dalton, Amarr, Overhead Door, Raynor — to source matching panels when available. For older doors where matching panels are discontinued, we'll present you with options including partial or full door replacement.
-
-In addition to panels, we also repair and replace garage door tracks, rollers, hinges, and weatherstripping as part of the panel repair process. A complete repair addresses all components affected by the impact.
-
-Sometimes repair isn't enough — if your garage door is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+For discontinued panels, we'll walk you through honest options: a close match, a mixed set, or full door replacement if the mismatch would be too visible.`,
     features: [
       { icon: "🪟", title: "Panel Matching", desc: "We source matching panels from all major manufacturers — Clopay, Wayne Dalton, Amarr." },
       { icon: "🔧", title: "Dent Repair", desc: "Minor dents repaired in-place without panel replacement when possible." },
@@ -657,17 +579,9 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     heroImg: "/images/hero/hero-emergency.jpg",
     isInstallation: false,
     isEmergency: true,
-    intro: `Garage door emergencies don't follow business hours. A door stuck in the open position at midnight is a security crisis. A door that traps your car inside when you need to leave for work is a real emergency. Real Gate & Garage Door provides 24/7 emergency garage door repair in our service area — with a goal of reaching you within 1–2 hours of your call.
+    intro: `Garage door emergencies don't wait for business hours. We provide 24/7 emergency garage door repair across Los Angeles, aiming to reach you within 1-2 hours — and you'll reach a live person, not voicemail.
 
-Emergency calls are dispatched as priority. When you call our emergency line at (818) 915-5715, you reach a live person — not voicemail. They'll take your information, dispatch the nearest available technician, and give you an accurate ETA.
-
-The most common garage door emergencies we handle: broken torsion springs (door can't open), snapped cables (door dropped or went off-track), door stuck open (security risk — we treat these as urgent), opener failure (door won't respond at all), door off track (bounced off the track after a hit or cable failure), and storm or vehicle damage.
-
-Our emergency trucks are stocked with common springs, cables, and opener parts. Most emergency repairs are resolved in the same visit — we don't leave you with a temporary fix and promise to come back.
-
-After-hours service is available seven days a week, including holidays. Emergency service rates apply for calls outside normal business hours (7 AM – 8 PM), and you'll be told the rate before the technician is dispatched.
-
-Sometimes repair isn't enough — if your garage door is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+Our emergency trucks stock common springs, cables, and opener parts, so most calls are resolved in a single visit.`,
     features: [
       { icon: "🚨", title: "24/7 Response", desc: "Emergency line staffed around the clock — you reach a live person, not voicemail." },
       { icon: "⚡", title: "1–2 Hour Arrival", desc: "Emergency technicians dispatched immediately, goal of arriving within 1–2 hours." },
@@ -707,17 +621,9 @@ Sometimes repair isn't enough — if your garage door is beyond fixing, we'll gi
     heroSubtitle: "Commercial doors work harder. When they fail, downtime costs you money. We prioritize commercial repair calls.",
     heroImg: "/images/services/commercial-garage-door.jpg",
     isInstallation: false,
-    intro: `Commercial garage doors handle far more daily cycles than residential doors — and when they fail, the impact on your operations can be immediate. Real Gate & Garage Door provides priority commercial garage door repair in our service area, with technicians equipped for high-cycle commercial door systems.
+    intro: `Commercial doors cycle far more than residential ones, and downtime costs you money. We provide priority commercial garage door repair across Los Angeles for sectional, roll-up, fire-rated, and high-speed doors.
 
-We repair all types of commercial garage doors: sectional commercial doors, rolling steel doors (roll-up), fire-rated doors, high-speed doors, and dock leveler systems. We service all major commercial door brands including Wayne Dalton, Clopay, Overhead Door, Cornell, and Cookson.
-
-Commercial springs are heavier gauge and higher cycle than residential springs. Commercial openers are commercial-duty units rated for continuous operation. Our commercial technicians carry the right parts for these systems — not residential parts that will fail quickly under commercial use.
-
-We also offer commercial maintenance programs that include scheduled service visits, priority response times, lubricant and adjustment service, and detailed service reports. Proactive maintenance prevents the emergency breakdowns that cost businesses the most.
-
-For warehouse and industrial facilities, we maintain service agreements that include same-day emergency response and 24/7 availability.
-
-Sometimes repair isn't enough — if your commercial door is beyond fixing, we'll give you an honest assessment and a fair quote for a new one.`,
+Our technicians carry commercial-grade springs and parts — not residential substitutes — and we offer maintenance contracts with scheduled visits and priority emergency response.`,
     features: [
       { icon: "🏢", title: "Commercial-Grade Parts", desc: "Heavy-gauge springs, commercial operators, and industrial hardware — not residential substitutes." },
       { icon: "⚡", title: "Priority Scheduling", desc: "Commercial repair calls are given scheduling priority over residential calls." },
@@ -756,15 +662,9 @@ Sometimes repair isn't enough — if your commercial door is beyond fixing, we'l
     heroSubtitle: "Ready for a new garage door? We install all brands and styles — steel, wood, aluminum, glass — with a warranty on every installation.",
     heroImg: "/images/services/garage-door-installation.jpg",
     isInstallation: true,
-    intro: `Sometimes a garage door can't be repaired — it's too old, too damaged, or simply worn out. When that time comes, Real Gate & Garage Door installs high-quality replacement garage doors in our service area. We carry doors from Clopay, Wayne Dalton, Amarr, and Overhead Door — a full range of styles, materials, and price points.
+    intro: `When a garage door is too old or damaged to repair, we install high-quality replacements across Los Angeles — Clopay, Wayne Dalton, Amarr, Overhead Door — in a full range of styles, materials, and price points.
 
-Our installation process starts with a free in-home estimate. We measure your opening, discuss your style preferences (raised panel, carriage house, contemporary), material options (steel, wood, wood-composite, aluminum, glass), and insulation requirements. We'll help you make the best choice for your budget and your home's curb appeal.
-
-We also evaluate your existing opener. If it's in good shape, we'll reuse it with your new door. If it's outdated or incompatible, we'll recommend an upgrade. We install LiftMaster, Genie, and Chamberlain openers and can add smartphone control (myQ, Aladdin Connect) to any new installation.
-
-All installations come with a workmanship warranty and manufacturer warranty on the door and hardware. We dispose of your old door and clean up completely before we leave.
-
-Considering a new door? If your current door can be repaired at a reasonable cost, we'll tell you honestly. Visit our [Garage Door Repair](/services/garage-door-repair) page first — repair is almost always cheaper and faster than replacement.`,
+We evaluate your existing opener and reuse it when possible, and every installation comes with a workmanship warranty. If repair is still the better option for your door, we'll tell you honestly.`,
     features: [
       { icon: "🎨", title: "All Styles & Materials", desc: "Steel, wood, aluminum, glass — raised panel, carriage house, contemporary, and more." },
       { icon: "🔧", title: "Opener Included", desc: "We assess and replace or reuse your existing opener as part of every installation." },

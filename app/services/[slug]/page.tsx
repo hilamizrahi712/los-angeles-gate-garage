@@ -53,11 +53,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const SERVICE_IMAGES: Record<string, string> = {
   "gate-repair":                  "/images/services/iron-gate-1.jpeg",
   "automatic-gate-repair":        "/images/services/motor-wood.jpeg",
-  "driveway-gate-repair":         "/images/services/gated-community.jpeg",
-  "electric-gate-repair":         "/images/services/iron-gold-gate.jpeg",
-  "gate-opener-repair":           "/images/services/swing-motor.jpeg",
+  "driveway-gate-repair":         "/images/gallery/driveway-swing-gate-spanish-villa.jpeg",
+  "electric-gate-repair":         "/images/gallery/modern-black-slat-gate.jpeg",
+  "gate-opener-repair":           "/images/gallery/slat-swing-gate-opener.jpeg",
   "iron-gate-repair":             "/images/services/estate-gate.jpeg",
-  "commercial-gate-repair":       "/images/services/commercial-gate.jpeg",
+  "commercial-gate-repair":       "/images/gallery/iron-gate-community-entrance.jpeg",
   "gate-installation":            "/images/gallery/gate-3.jpeg",
   "garage-door-repair":           "/images/services/white-garage.jpeg",
   "garage-door-spring-repair":    "/images/services/walnut-garage.jpeg",
@@ -207,7 +207,7 @@ export default async function ServicePage({ params }: Props) {
               <ArchImage
                 src={heroImg}
                 alt={`${service.title} in Los Angeles`}
-                aspect="16/9"
+                aspect="4/5"
                 sizes="(max-width: 1024px) 100vw, 66vw"
               />
 

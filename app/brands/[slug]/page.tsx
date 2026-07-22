@@ -31,17 +31,32 @@ export async function generateMetadata({
 }
 
 const BRAND_IMAGES: Record<string, { hero: string; photo: string }> = {
-  "all-o-matic":  { hero: "/images/services/iron-black-gate.jpeg",    photo: "/images/services/gate-motor.jpeg" },
-  "liftmaster":   { hero: "/images/services/garage-door-repair.jpeg", photo: "/images/services/gate-view.jpeg" },
+  "all-o-matic":  { hero: "/images/brands/all-o-matic/all-o-matic-hero.jpeg", photo: "/images/brands/all-o-matic/all-o-matic-1.jpeg" },
+  "liftmaster":   { hero: "/images/brands/liftmaster/liftmaster-hero.jpeg",   photo: "/images/brands/liftmaster/liftmaster-1.jpeg" },
   "doorking":     { hero: "/images/services/commercial-gate.jpeg",     photo: "/images/gallery/commercial-1.jpeg" },
   "genie":        { hero: "/images/services/new-garage.jpeg",          photo: "/images/services/walnut-garage.jpeg" },
   "doorbird":     { hero: "/images/services/commercial-3.jpeg",        photo: "/images/gallery/outside-1.jpeg" },
   "chamberlain":  { hero: "/images/services/white-garage.jpeg",        photo: "/images/services/wood-garage.jpeg" },
-  "elite":        { hero: "/images/services/swing-1.jpeg",             photo: "/images/services/swing-2.jpeg" },
+  "elite":        { hero: "/images/brands/elite/elite-hero.jpeg",      photo: "/images/brands/elite/elite-1.jpeg" },
   "viking":       { hero: "/images/services/estate-gate.jpeg",         photo: "/images/services/iron-gold-gate.jpeg" },
   "ramset":       { hero: "/images/services/iron-gate-1.jpeg",         photo: "/images/services/long-iron-gate.jpeg" },
   "linear":       { hero: "/images/services/malibu-gate.jpeg",         photo: "/images/services/motor-wood.jpeg" },
   "eagle":        { hero: "/images/services/gated-community.jpeg",     photo: "/images/gallery/commercial-1.jpeg" },
+};
+
+// Extra jobsite photos for the 3 brands with a real photo gallery — rendered as an "Our Work" grid
+const BRAND_GALLERY: Record<string, string[]> = {
+  "liftmaster": [
+    "/images/brands/liftmaster/liftmaster-2.jpeg",
+    "/images/brands/liftmaster/liftmaster-3.jpeg",
+    "/images/brands/liftmaster/liftmaster-4.jpeg",
+  ],
+  "all-o-matic": [
+    "/images/brands/all-o-matic/all-o-matic-2.jpeg",
+    "/images/brands/all-o-matic/all-o-matic-3.jpeg",
+    "/images/brands/all-o-matic/all-o-matic-4.jpeg",
+    "/images/brands/all-o-matic/all-o-matic-5.jpeg",
+  ],
 };
 
 // Price/time and relevant service links by brand category — reuses the same ranges quoted on the service pages
@@ -97,6 +112,7 @@ export default async function BrandPage({
     photo: "/images/services/gate-motor.jpeg",
   };
   const typeInfo = TYPE_INFO[brand.type];
+  const gallery = BRAND_GALLERY[brand.slug];
   const matchedReview = REVIEWS.find((r) => r.brand === brand.slug);
   const whyUsShort = brand.whyUs.split(". ")[0] + ".";
   const topCities = SFV_CITIES.slice(0, 6);
@@ -116,8 +132,7 @@ export default async function BrandPage({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: BUSINESS.domain },
-      { "@type": "ListItem", position: 2, name: "Brands", item: `${BUSINESS.domain}/brands` },
-      { "@type": "ListItem", position: 3, name: brand.name, item: `${BUSINESS.domain}/brands/${brand.slug}` },
+      { "@type": "ListItem", position: 2, name: brand.name, item: `${BUSINESS.domain}/brands/${brand.slug}` },
     ],
   };
 
@@ -295,13 +310,41 @@ export default async function BrandPage({
                 </div>
               </div>
 
-              {/* Photo */}
-              <ArchImage
-                src={images.photo}
-                alt={`${brand.name} repair and installation work by Real Gate & Garage Door`}
-                aspect="16/9"
-                sizes="(max-width: 1024px) 100vw, 66vw"
-              />
+              {/* Photo / Gallery */}
+              {gallery ? (
+                <div>
+                  <h2
+                    className="font-heading font-bold"
+                    style={{ fontSize: "1.25rem", color: "var(--navy)", marginBottom: "1rem", borderLeft: "4px solid var(--brown)", paddingLeft: "0.75rem" }}
+                  >
+                    Our {brand.name} Work
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <ArchImage
+                      src={images.photo}
+                      alt={`${brand.name} repair and installation work by Real Gate & Garage Door`}
+                      aspect="3/4"
+                      sizes="(max-width: 1024px) 100vw, 33vw"
+                    />
+                    {gallery.map((src) => (
+                      <ArchImage
+                        key={src}
+                        src={src}
+                        alt={`${brand.name} installation by Real Gate & Garage Door`}
+                        aspect="3/4"
+                        sizes="(max-width: 1024px) 100vw, 33vw"
+                      />
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <ArchImage
+                  src={images.photo}
+                  alt={`${brand.name} repair and installation work by Real Gate & Garage Door`}
+                  aspect="4/5"
+                  sizes="(max-width: 1024px) 100vw, 66vw"
+                />
+              )}
 
               {/* Common Models */}
               <div>

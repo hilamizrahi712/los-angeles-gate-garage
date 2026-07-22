@@ -11,6 +11,7 @@ import IronDivider from "@/components/IronDivider";
 import ReviewQuote from "@/components/ReviewQuote";
 import SectionRule from "@/components/SectionRule";
 import { BUSINESS, REVIEWS, SFV_CITIES } from "@/lib/constants";
+import { CITIES } from "@/lib/cities-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
 
 export const metadata: Metadata = {
@@ -105,8 +106,8 @@ export default function HomePage() {
                 className="mb-8"
                 style={{ color: "rgba(237,234,228,0.8)", fontSize: "1.1rem", lineHeight: 1.7, maxWidth: "560px" }}
               >
-                Same-day service across the entire Valley. We fix gates and garage doors
-                fast, honestly, and with a warranty.
+                Same-day service across Los Angeles &amp; Southern California. We fix gates and
+                garage doors fast, honestly, and with a warranty.
               </p>
               <div className="flex flex-wrap gap-4 mb-10">
                 <a href={BUSINESS.phoneHref} className="btn-gold text-base">
@@ -173,9 +174,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── DIAGNOSTIC WIDGET ── */}
-      <DiagnosticWidget />
-
       {/* ── GATE SERVICES (60%) ── */}
       <RevealWrapper>
         <section className="section-padding section--muted">
@@ -213,7 +211,7 @@ export default function HomePage() {
                   }}
                   data-delay={String((i % 4) + 1)}
                 >
-                  <div style={{ aspectRatio: "16/9", position: "relative", overflow: "hidden" }}>
+                  <div style={{ aspectRatio: "16/9", position: "relative", overflow: "hidden", borderRadius: "50% 50% 0 0 / 42% 42% 0 0", border: "2px solid var(--brown-warm)", borderBottom: "none" }}>
                     <Image
                       src={s.img}
                       alt={s.name}
@@ -261,7 +259,7 @@ export default function HomePage() {
                     boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
                   }}
                 >
-                  <div style={{ aspectRatio: "4/3", position: "relative", overflow: "hidden" }}>
+                  <div style={{ aspectRatio: "4/3", position: "relative", overflow: "hidden", borderRadius: "50% 50% 0 0 / 42% 42% 0 0", border: "2px solid var(--brown-warm)", borderBottom: "none" }}>
                     <Image
                       src={s.img}
                       alt={s.name}
@@ -286,6 +284,9 @@ export default function HomePage() {
         </section>
       </RevealWrapper>
 
+      {/* ── DIAGNOSTIC WIDGET ── */}
+      <DiagnosticWidget />
+
       {/* ── REVIEWS — dark section ── */}
       <section className="section-padding section--dark">
         <div className="container-max">
@@ -293,7 +294,7 @@ export default function HomePage() {
             <div className="mb-12">
               <span className="eyebrow">Client Reviews</span>
               <h2 style={{ color: "#ffffff" }}>
-                What Valley Homeowners{" "}
+                What LA Homeowners{" "}
                 <em style={{ color: "var(--brown-warm)" }}>Say About Us</em>
               </h2>
             </div>
@@ -345,14 +346,14 @@ export default function HomePage() {
               <div>
                 <span className="eyebrow">Our Story</span>
                 <h2 style={{ marginBottom: "1.5rem" }}>
-                  Built on the Valley.{" "}
+                  LA-Rooted.{" "}
                   <em>Driven by Trust.</em>
                 </h2>
                 <p style={{ color: "var(--text-mid)", lineHeight: 1.85, fontSize: "1.05rem" }}>
                   We didn&apos;t build Real Gate &amp; Garage Door on advertising — we built it on
                   neighbors telling neighbors. Every call, every repair, we treat like it&apos;s our
-                  own home. That&apos;s {BUSINESS.yearsInBusiness}+ years of five-star reviews, right
-                  here in the Valley.
+                  own home. That&apos;s {BUSINESS.yearsInBusiness}+ years of five-star reviews, from the
+                  Valley to the coast.
                 </p>
                 <Link
                   href="/about"
@@ -367,7 +368,7 @@ export default function HomePage() {
                 <ArchImage
                   src="/images/story/building.jpeg"
                   alt="Real Gate & Garage Door team at work"
-                  aspect="16/10"
+                  aspect="4/5"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div
@@ -402,13 +403,13 @@ export default function HomePage() {
           <div className="container-max text-center">
             <span className="eyebrow">Where We Work</span>
             <h2 style={{ marginBottom: "0.75rem" }}>
-              The Entire Valley —{" "}
-              <em>And Beyond.</em>
+              Los Angeles &amp;{" "}
+              <em>Southern California.</em>
             </h2>
             <SectionRule />
             <p style={{ color: "var(--stone)", maxWidth: 520, margin: "1.25rem auto 2.5rem" }}>
-              We serve cities across greater Los Angeles — from Malibu to
-              Pasadena, Beverly Hills to Simi Valley.
+              We serve cities across Los Angeles &amp; Southern California — from Malibu to
+              Long Beach, Santa Barbara to Orange County.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               {SFV_CITIES.map((c) => (
@@ -428,7 +429,7 @@ export default function HomePage() {
               ))}
             </div>
             <Link href="/service-areas" className="inline-flex items-center gap-1 mt-6 text-sm font-semibold" style={{ color: "var(--brown)" }}>
-              View all 29 service areas <ArrowRight size={14} />
+              View all {CITIES.length} service areas <ArrowRight size={14} />
             </Link>
           </div>
         </section>

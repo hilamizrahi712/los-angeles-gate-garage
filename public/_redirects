@@ -1,2 +1,3 @@
 /blog /tips 301
 /blog/* /tips/:splat 301
+/brands / 301

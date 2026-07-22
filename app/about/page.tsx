@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Phone, CheckCircle } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 import SectionRule from "@/components/SectionRule";
+import ArchImage from "@/components/ArchImage";
 
 export const metadata: Metadata = {
   title: "About Us — Real Gate & Garage Door",
@@ -28,6 +29,17 @@ const credentials = [
   "Google 5-Star Rated",
   "CSLB Verified",
   "Background-Checked Technicians",
+];
+
+const workGallery = [
+  { src: "/images/gallery/driveway-swing-gate-spanish-villa.jpeg", alt: "Driveway swing gate repair" },
+  { src: "/images/gallery/modern-black-slat-gate.jpeg", alt: "Modern slat gate installation" },
+  { src: "/images/brands/liftmaster/liftmaster-2.jpeg", alt: "LiftMaster gate operator installation" },
+  { src: "/images/brands/all-o-matic/all-o-matic-3.jpeg", alt: "All-O-Matic sliding gate installation" },
+  { src: "/images/gallery/iron-gate-community-entrance.jpeg", alt: "Iron community entrance gate" },
+  { src: "/images/brands/elite/elite-1.jpeg", alt: "Elite gate operator installation" },
+  { src: "/images/gallery/gate-1.jpeg", alt: "Gate repair and service" },
+  { src: "/images/gallery/slat-swing-gate-opener.jpeg", alt: "Swing gate opener installation" },
 ];
 
 const storyChecklist = [
@@ -193,6 +205,26 @@ export default function AboutPage() {
                     {v.desc}
                   </p>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Our Work */}
+          <div className="mb-20">
+            <div className="text-center mb-10">
+              <span className="eyebrow">Our Work</span>
+              <h2>Real Gates. Real Installs.</h2>
+              <SectionRule />
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
+              {workGallery.map((photo) => (
+                <ArchImage
+                  key={photo.src}
+                  src={photo.src}
+                  alt={photo.alt}
+                  aspect="3/4"
+                  sizes="(max-width: 640px) 50vw, 25vw"
+                />
               ))}
             </div>
           </div>

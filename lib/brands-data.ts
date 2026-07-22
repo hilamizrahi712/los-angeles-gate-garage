@@ -185,7 +185,7 @@ export const BRANDS: BrandData[] = [
       "Budget-friendly chain drives — chain tension and sensor alignment are the usual fixes.",
       "Quiet belt-drive units popular for attached garages near living space.",
       "Low-maintenance screw drive — lubrication and travel adjustment cover most calls.",
-      "Older reliable workhorses still common across the Valley.",
+      "Older reliable workhorses still common across Los Angeles & Southern California.",
       "Wi-Fi enabled unit — most calls are connectivity or app-pairing issues.",
       "Commercial-grade Genie units built for higher-cycle use.",
     ],

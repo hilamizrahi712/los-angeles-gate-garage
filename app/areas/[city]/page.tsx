@@ -251,7 +251,7 @@ export default async function CityPage({ params }: Props) {
                   key={i}
                   src={photo.src}
                   alt={`${photo.alt} in ${data.name}`}
-                  aspect="4/3"
+                  aspect="3/4"
                   sizes="(max-width: 768px) 33vw, 20vw"
                 />
               ))}
@@ -298,7 +298,7 @@ export default async function CityPage({ params }: Props) {
                     className="card flex flex-col overflow-hidden transition-all hover:shadow-md"
                     style={{ textDecoration: "none", padding: 0 }}
                   >
-                    <div className="relative" style={{ height: 100 }}>
+                    <div className="relative" style={{ height: 100, overflow: "hidden", borderRadius: "50% 50% 0 0 / 42% 42% 0 0", border: "2px solid var(--brown-warm)", borderBottom: "none" }}>
                       <Image
                         src={s.img}
                         alt={`${s.label} in ${data.name}`}
@@ -341,7 +341,7 @@ export default async function CityPage({ params }: Props) {
                     className="card flex flex-col overflow-hidden transition-all hover:shadow-md"
                     style={{ textDecoration: "none", padding: 0 }}
                   >
-                    <div className="relative" style={{ height: 100 }}>
+                    <div className="relative" style={{ height: 100, overflow: "hidden", borderRadius: "50% 50% 0 0 / 42% 42% 0 0", border: "2px solid var(--brown-warm)", borderBottom: "none" }}>
                       <Image
                         src={s.img}
                         alt={`${s.label} in ${data.name}`}
