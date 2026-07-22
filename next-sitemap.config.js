@@ -1,10 +1,10 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: "https://realgaterepair.com",
+  outDir: "./out",
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [{ userAgent: "*", allow: "/" }],
-    additionalSitemaps: ["https://realgaterepair.com/sitemap.xml"],
   },
   changefreq: "weekly",
   priority: 0.7,
