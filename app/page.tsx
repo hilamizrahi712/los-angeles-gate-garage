@@ -6,6 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import BrandsMarquee from "@/components/BrandsMarquee";
 import RevealWrapper from "@/components/RevealWrapper";
 import DiagnosticWidget from "@/components/DiagnosticWidget";
+import ServiceGridReveal from "@/components/ServiceGridReveal";
 import ArchImage from "@/components/ArchImage";
 import IronDivider from "@/components/IronDivider";
 import ReviewQuote from "@/components/ReviewQuote";
@@ -21,25 +22,29 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-const gateServices = [
+const gatePrimary = [
   { href: "/services/gate-repair", name: "Gate Repair", desc: "Fast, honest diagnosis. No upselling. Fixed the first time.", img: "/images/services/black-iron-gate.jpeg" },
+  { href: "/services/gate-installation", name: "New Installation", desc: "New gate systems, fully installed and programmed.", img: "/images/services/slat-gate-installation.jpeg" },
+  { href: "/services/emergency-gate-repair", name: "Emergency Gate Repair", desc: "Stuck open or shut? We're there in 1–2 hours.", img: "/images/services/swing-motor.jpeg" },
+  { href: "/services/gate-opener-repair", name: "Gate Opener Repair", desc: "LiftMaster, Viking, DoorKing, All-O-Matic, and more.", img: "/images/services/outside-gate.jpeg" },
+];
+
+const gateRest = [
   { href: "/services/automatic-gate-repair", name: "Automatic Gate Repair", desc: "Every make, every brand. Motor, controller, sensors.", img: "/images/services/gate-motor.jpeg" },
   { href: "/services/driveway-gate-repair", name: "Driveway Gate Repair", desc: "Sliding, swing, and ornamental. Same-day response.", img: "/images/services/swing-1.jpeg" },
   { href: "/services/electric-gate-repair", name: "Electric Gate Repair", desc: "Wiring, boards, remotes. We trace the fault and fix it.", img: "/images/services/iron-black-gate.jpeg" },
-  { href: "/services/gate-opener-repair", name: "Gate Opener Repair", desc: "LiftMaster, Viking, DoorKing, All-O-Matic, and more.", img: "/images/services/outside-gate.jpeg" },
   { href: "/services/iron-gate-repair", name: "Iron Gate Repair", desc: "Structural, hinges, welds, finishes — fully restored.", img: "/images/services/grey-iron-gate.jpeg" },
-  { href: "/services/gate-installation", name: "Gate Installation", desc: "New gate systems, fully installed and programmed.", img: "/images/gallery/gate-3.jpeg" },
 ];
 
-const garageDoorServices = [
-  { href: "/services/garage-door-repair", name: "Garage Door Repair", desc: "Complete repair for all door problems.", img: "/images/services/white-garage.jpeg" },
+const garagePrimary = [
+  { href: "/services/garage-door-repair", name: "Garage Door Repair", desc: "Complete repair for all door problems.", img: "/images/services/garage-door-repair.jpeg" },
   { href: "/services/garage-door-spring-repair", name: "Spring Repair", desc: "Torsion & extension — same-day replacement.", img: "/images/services/walnut-garage.jpeg" },
+];
+
+const garageRest = [
   { href: "/services/garage-door-opener-repair", name: "Opener Repair", desc: "LiftMaster, Genie, Chamberlain & all brands.", img: "/images/services/new-garage.jpeg" },
-  { href: "/services/emergency-garage-door-repair", name: "24/7 Emergency", desc: "We answer live, arrive in 1–2 hours.", img: "/images/services/swing-2.jpeg" },
-  { href: "/services/garage-door-cable-repair", name: "Cable Repair", desc: "Snapped or frayed cables replaced same day.", img: "/images/gallery/commercial-1.jpeg" },
-  { href: "/services/garage-door-panel-repair", name: "Panel Repair", desc: "Dented or damaged panels fixed or swapped.", img: "/images/services/garage-door-repair.jpeg" },
-  { href: "/services/commercial-garage-door", name: "Commercial Doors", desc: "High-cycle doors for business properties.", img: "/images/services/commercial-3.jpeg" },
-  { href: "/services/garage-door-installation", name: "Door Installation", desc: "New doors, fully installed and balanced.", img: "/images/services/black-wood-gate.jpeg" },
+  { href: "/services/garage-door-cable-repair", name: "Cable Repair", desc: "Snapped or frayed cables replaced same day.", img: "/images/services/white-garage.jpeg" },
+  { href: "/services/garage-door-installation", name: "Door Installation", desc: "New doors, fully installed and balanced.", img: "/images/services/wood-garage.jpeg" },
 ];
 
 const storyChecklist = [
@@ -118,9 +123,6 @@ export default function HomePage() {
                   <MessageSquareText size={18} />
                   Text us a photo
                 </a>
-                <Link href="/contact" className="btn-ghost text-base">
-                  Get a Free Estimate →
-                </Link>
               </div>
               {/* Stats row */}
               <div
@@ -161,15 +163,13 @@ export default function HomePage() {
             className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-sm font-semibold"
             style={{ color: "#fff", letterSpacing: "0.02em" }}
           >
-            <span>CSLB {BUSINESS.license}</span>
+            <span>Licensed &amp; Insured</span>
             <span style={{ opacity: 0.4 }}>·</span>
             <a href={BUSINESS.googleReviewsUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#fff", textDecoration: "none" }}>
               ★ 4.9 on Google
             </a>
             <span style={{ opacity: 0.4 }}>·</span>
             <span>Same-Day Service</span>
-            <span style={{ opacity: 0.4 }}>·</span>
-            <span>{BUSINESS.yearsInBusiness}+ Years in Business</span>
           </div>
         </div>
       </div>
@@ -197,46 +197,88 @@ export default function HomePage() {
               Gate Services
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
-              {gateServices.map((s, i) => (
-                <Link
-                  key={s.href}
-                  href={s.href}
-                  className="group flex flex-col transition-all duration-200 overflow-hidden"
-                  style={{
-                    textDecoration: "none",
-                    background: "var(--bg-card)",
-                    border: "1px solid var(--line)",
-                    borderRadius: "var(--radius-lg)",
-                    boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
-                  }}
-                  data-delay={String((i % 4) + 1)}
-                >
-                  <div style={{ aspectRatio: "16/9", position: "relative", overflow: "hidden", borderRadius: "50% 50% 0 0 / 42% 42% 0 0", border: "2px solid var(--brown-warm)", borderBottom: "none" }}>
-                    <Image
-                      src={s.img}
-                      alt={s.name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  </div>
-                  <div className="p-4 flex flex-col gap-2 flex-1">
-                    <h3
-                      className="font-heading font-semibold"
-                      style={{ fontSize: "1rem", color: "var(--navy)" }}
-                    >
-                      {s.name}
-                    </h3>
-                    <p style={{ color: "var(--text-soft)", fontSize: "0.88rem", flexGrow: 1 }}>{s.desc}</p>
-                    <span
-                      className="inline-flex items-center gap-1 font-semibold text-sm mt-1"
-                      style={{ color: "var(--brown)" }}
-                    >
-                      Learn More <ArrowRight size={13} />
-                    </span>
-                  </div>
-                </Link>
-              ))}
+              <ServiceGridReveal
+                primary={gatePrimary.map((s, i) => (
+                  <Link
+                    key={s.href}
+                    href={s.href}
+                    className="group flex flex-col transition-all duration-200 overflow-hidden"
+                    style={{
+                      textDecoration: "none",
+                      background: "var(--bg-card)",
+                      border: "1px solid var(--line)",
+                      borderRadius: "var(--radius-lg)",
+                      boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
+                    }}
+                    data-delay={String((i % 4) + 1)}
+                  >
+                    <div style={{ aspectRatio: "16/9", position: "relative", overflow: "hidden", borderRadius: "12px 12px 0 0" }}>
+                      <Image
+                        src={s.img}
+                        alt={s.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                    <div className="p-4 flex flex-col gap-2 flex-1">
+                      <h3
+                        className="font-heading font-semibold"
+                        style={{ fontSize: "1rem", color: "var(--navy)" }}
+                      >
+                        {s.name}
+                      </h3>
+                      <p style={{ color: "var(--text-soft)", fontSize: "0.88rem", flexGrow: 1 }}>{s.desc}</p>
+                      <span
+                        className="inline-flex items-center gap-1 font-semibold text-sm mt-1"
+                        style={{ color: "var(--brown)" }}
+                      >
+                        Learn More <ArrowRight size={13} />
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+                rest={gateRest.map((s, i) => (
+                  <Link
+                    key={s.href}
+                    href={s.href}
+                    className="group flex flex-col transition-all duration-200 overflow-hidden"
+                    style={{
+                      textDecoration: "none",
+                      background: "var(--bg-card)",
+                      border: "1px solid var(--line)",
+                      borderRadius: "var(--radius-lg)",
+                      boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
+                    }}
+                    data-delay={String((i % 4) + 1)}
+                  >
+                    <div style={{ aspectRatio: "16/9", position: "relative", overflow: "hidden", borderRadius: "12px 12px 0 0" }}>
+                      <Image
+                        src={s.img}
+                        alt={s.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    </div>
+                    <div className="p-4 flex flex-col gap-2 flex-1">
+                      <h3
+                        className="font-heading font-semibold"
+                        style={{ fontSize: "1rem", color: "var(--navy)" }}
+                      >
+                        {s.name}
+                      </h3>
+                      <p style={{ color: "var(--text-soft)", fontSize: "0.88rem", flexGrow: 1 }}>{s.desc}</p>
+                      <span
+                        className="inline-flex items-center gap-1 font-semibold text-sm mt-1"
+                        style={{ color: "var(--brown)" }}
+                      >
+                        Learn More <ArrowRight size={13} />
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              />
             </div>
             {/* Garage Door section */}
             <p
@@ -245,44 +287,83 @@ export default function HomePage() {
             >
               Garage Door Services
             </p>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
-              {garageDoorServices.map((s) => (
-                <Link
-                  key={s.href}
-                  href={s.href}
-                  className="group flex flex-col overflow-hidden transition-all duration-200"
-                  style={{
-                    textDecoration: "none",
-                    background: "var(--bg-card)",
-                    border: "1px solid var(--line)",
-                    borderRadius: "var(--radius-lg)",
-                    boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
-                  }}
-                >
-                  <div style={{ aspectRatio: "4/3", position: "relative", overflow: "hidden", borderRadius: "50% 50% 0 0 / 42% 42% 0 0", border: "2px solid var(--brown-warm)", borderBottom: "none" }}>
-                    <Image
-                      src={s.img}
-                      alt={s.name}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 640px) 50vw, 25vw"
-                    />
-                  </div>
-                  <div className="p-3 text-center">
-                    <h3
-                      className="font-heading font-semibold"
-                      style={{ fontSize: "0.88rem", color: "var(--navy)" }}
-                    >
-                      {s.name}
-                    </h3>
-                    <p style={{ color: "var(--text-soft)", fontSize: "0.78rem", marginTop: "0.2rem" }}>{s.desc}</p>
-                  </div>
-                </Link>
-              ))}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-5">
+              <ServiceGridReveal
+                mobileOnly
+                primary={garagePrimary.map((s) => (
+                  <Link
+                    key={s.href}
+                    href={s.href}
+                    className="group flex flex-col overflow-hidden transition-all duration-200"
+                    style={{
+                      textDecoration: "none",
+                      background: "var(--bg-card)",
+                      border: "1px solid var(--line)",
+                      borderRadius: "var(--radius-lg)",
+                      boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
+                    }}
+                  >
+                    <div style={{ aspectRatio: "4/3", position: "relative", overflow: "hidden", borderRadius: "12px 12px 0 0" }}>
+                      <Image
+                        src={s.img}
+                        alt={s.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 640px) 50vw, 25vw"
+                      />
+                    </div>
+                    <div className="p-3 text-center">
+                      <h3
+                        className="font-heading font-semibold"
+                        style={{ fontSize: "0.88rem", color: "var(--navy)" }}
+                      >
+                        {s.name}
+                      </h3>
+                      <p style={{ color: "var(--text-soft)", fontSize: "0.78rem", marginTop: "0.2rem" }}>{s.desc}</p>
+                    </div>
+                  </Link>
+                ))}
+                rest={garageRest.map((s) => (
+                  <Link
+                    key={s.href}
+                    href={s.href}
+                    className="group flex flex-col overflow-hidden transition-all duration-200"
+                    style={{
+                      textDecoration: "none",
+                      background: "var(--bg-card)",
+                      border: "1px solid var(--line)",
+                      borderRadius: "var(--radius-lg)",
+                      boxShadow: "0 2px 16px rgba(0,0,0,0.05)",
+                    }}
+                  >
+                    <div style={{ aspectRatio: "4/3", position: "relative", overflow: "hidden", borderRadius: "12px 12px 0 0" }}>
+                      <Image
+                        src={s.img}
+                        alt={s.name}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 640px) 50vw, 25vw"
+                      />
+                    </div>
+                    <div className="p-3 text-center">
+                      <h3
+                        className="font-heading font-semibold"
+                        style={{ fontSize: "0.88rem", color: "var(--navy)" }}
+                      >
+                        {s.name}
+                      </h3>
+                      <p style={{ color: "var(--text-soft)", fontSize: "0.78rem", marginTop: "0.2rem" }}>{s.desc}</p>
+                    </div>
+                  </Link>
+                ))}
+              />
             </div>
           </div>
         </section>
       </RevealWrapper>
+
+      {/* ── BRAND MARQUEE ── */}
+      <BrandsMarquee />
 
       {/* ── DIAGNOSTIC WIDGET ── */}
       <DiagnosticWidget />
@@ -393,9 +474,6 @@ export default function HomePage() {
           </div>
         </section>
       </RevealWrapper>
-
-      {/* ── BRAND MARQUEE ── */}
-      <BrandsMarquee />
 
       {/* ── SERVICE AREAS ── */}
       <RevealWrapper>

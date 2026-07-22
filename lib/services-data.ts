@@ -319,6 +319,49 @@ We service LiftMaster, Viking, FAAC, All-O-Matic, DoorKing, and Ramset commercia
   },
 
   {
+    slug: "emergency-gate-repair",
+    title: "Emergency Gate Repair",
+    metaTitle: "Emergency Gate Repair Los Angeles CA — 24/7 Same Day | Real Gate & Garage Door",
+    metaDescription: "Gate stuck open or won't close? 24/7 emergency gate repair. We respond in 1-2 hours. Call (818) 915-5715.",
+    primaryKeyword: "emergency gate repair",
+    heroH1: "24/7 Emergency Gate Repair in Los Angeles",
+    heroSubtitle: "Gate stuck open or won't close? That's a security risk. Call now — we dispatch a technician within 1–2 hours.",
+    heroImg: "/images/services/emergency-gate.jpg",
+    isInstallation: false,
+    isEmergency: true,
+    intro: `A gate stuck open is an open invitation. A gate stuck shut can trap a car inside. We provide 24/7 emergency gate repair across Los Angeles, aiming to reach you within 1-2 hours — and you'll reach a live person, not voicemail.
+
+Our emergency trucks stock the most common motors, boards, and sensors, so most emergency calls are resolved in a single visit.`,
+    features: [
+      { icon: "🚨", title: "24/7 Response", desc: "Emergency line staffed around the clock — you reach a live person, not voicemail." },
+      { icon: "⚡", title: "1–2 Hour Arrival", desc: "Emergency technicians dispatched immediately, goal of arriving within 1–2 hours." },
+      { icon: "🔧", title: "Parts on Board", desc: "Emergency trucks stocked for same-visit resolution — no 'we'll come back with the part.'" },
+    ],
+    howItWorks: [
+      "Call (818) 915-5715 — our emergency line is answered live, 24/7.",
+      "Describe the situation — we'll give you safety instructions and an ETA.",
+      "Technician arrives fully equipped for the most common gate emergencies.",
+      "Gate secured or fully repaired, with a follow-up visit scheduled if a part needs ordering.",
+    ],
+    pricingRange: "Standard repair rates + after-hours fee for calls outside 7 AM–8 PM",
+    pricingNote: "After-hours fee: $75–$125 applied to calls between 8 PM and 7 AM. You'll be informed before dispatch.",
+    symptoms: [
+      "Gate stuck open — security risk",
+      "Gate stuck closed — car trapped inside or out",
+      "Gate came off its track or hinges after an impact",
+      "Motor smoking, sparking, or making grinding noises",
+      "Gate won't respond to remote, keypad, or manual release",
+    ],
+    faqs: [
+      { q: "Is your 24/7 emergency line actually answered by a person?", a: "Yes. When you call (818) 915-5715 after hours, a live dispatcher answers. No voicemail for emergency calls." },
+      { q: "How fast can you reach me in a gate emergency?", a: "Our target for emergency calls is 1–2 hours. In most locations, we achieve this consistently." },
+      { q: "My gate is stuck open overnight — is that a real emergency?", a: "Absolutely. A gate stuck open is a serious security risk. Call our emergency line immediately." },
+      { q: "Do you charge extra for after-hours emergency calls?", a: "Yes — an after-hours fee of $75–$125 applies for calls outside 7 AM–8 PM. You'll be quoted this before we dispatch." },
+    ],
+    relatedSlugs: ["gate-repair", "automatic-gate-repair", "gate-opener-repair"],
+  },
+
+  {
     slug: "gate-installation",
     title: "Gate Installation",
     metaTitle: "Gate Installation Los Angeles CA | Real Gate & Garage Door",

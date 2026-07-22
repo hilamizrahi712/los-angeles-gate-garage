@@ -8,6 +8,7 @@ import { BUSINESS, SFV_CITIES, REVIEWS } from "@/lib/constants";
 import ContactForm from "@/components/ContactForm";
 import ArchImage from "@/components/ArchImage";
 import ReviewQuote from "@/components/ReviewQuote";
+import BrandsMarquee from "@/components/BrandsMarquee";
 
 // Best-matching review per service, picked by service type
 const MATCHED_REVIEW: Record<string, string> = {
@@ -58,7 +59,8 @@ const SERVICE_IMAGES: Record<string, string> = {
   "gate-opener-repair":           "/images/gallery/slat-swing-gate-opener.jpeg",
   "iron-gate-repair":             "/images/services/estate-gate.jpeg",
   "commercial-gate-repair":       "/images/gallery/iron-gate-community-entrance.jpeg",
-  "gate-installation":            "/images/gallery/gate-3.jpeg",
+  "emergency-gate-repair":        "/images/services/gate-motor.jpeg",
+  "gate-installation":            "/images/services/slat-gate-installation.jpeg",
   "garage-door-repair":           "/images/services/white-garage.jpeg",
   "garage-door-spring-repair":    "/images/services/walnut-garage.jpeg",
   "garage-door-opener-repair":    "/images/services/new-garage.jpeg",
@@ -391,6 +393,9 @@ export default async function ServicePage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* BRANDS WE SERVICE */}
+      <BrandsMarquee />
     </>
   );
 }

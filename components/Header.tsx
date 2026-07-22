@@ -13,6 +13,7 @@ const gateLinks = [
   { href: "/services/gate-opener-repair", label: "Gate Opener Repair" },
   { href: "/services/iron-gate-repair", label: "Iron Gate Repair" },
   { href: "/services/commercial-gate-repair", label: "Commercial Gate Repair" },
+  { href: "/services/emergency-gate-repair", label: "Emergency Gate Repair" },
 ];
 
 const garageDoorLinks = [

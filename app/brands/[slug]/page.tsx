@@ -319,12 +319,12 @@ export default async function BrandPage({
                   >
                     Our {brand.name} Work
                   </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-3 gap-3">
                     <ArchImage
                       src={images.photo}
                       alt={`${brand.name} repair and installation work by Real Gate & Garage Door`}
                       aspect="3/4"
-                      sizes="(max-width: 1024px) 100vw, 33vw"
+                      sizes="(max-width: 768px) 33vw, 20vw"
                     />
                     {gallery.map((src) => (
                       <ArchImage
@@ -332,7 +332,7 @@ export default async function BrandPage({
                         src={src}
                         alt={`${brand.name} installation by Real Gate & Garage Door`}
                         aspect="3/4"
-                        sizes="(max-width: 1024px) 100vw, 33vw"
+                        sizes="(max-width: 768px) 33vw, 20vw"
                       />
                     ))}
                   </div>

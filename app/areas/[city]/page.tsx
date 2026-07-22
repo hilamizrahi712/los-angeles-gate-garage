@@ -228,7 +228,137 @@ export default async function CityPage({ params }: Props) {
         </div>
       </div>
 
-      {/* MAIN CONTENT */}
+      {/* SERVICES */}
+      <section className="section-padding" style={{ background: "var(--bg-base)" }}>
+        <div className="container-max space-y-10">
+
+          {/* Gate Services — with images */}
+          <div>
+            <h2
+              style={{
+                marginBottom: "0.5rem",
+                fontSize: "1.75rem",
+                borderLeft: "4px solid var(--brown)",
+                paddingLeft: "0.75rem",
+              }}
+            >
+              Gate Repair in {data.name}
+            </h2>
+            <p style={{ color: "var(--text-soft)", fontSize: "0.92rem", marginBottom: "1.25rem", paddingLeft: "0.75rem" }}>
+              Sliding, swing, and automatic gates — motors, sensors, hinges, and tracks fixed same-day for {data.name} homes and businesses.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {gateCityServices.map((s) => (
+                <Link
+                  key={s.href}
+                  href={s.href}
+                  className="card flex flex-col overflow-hidden transition-all hover:shadow-md"
+                  style={{ textDecoration: "none", padding: 0 }}
+                >
+                  <div className="relative" style={{ height: 100, overflow: "hidden", borderRadius: "12px 12px 0 0" }}>
+                    <Image
+                      src={s.img}
+                      alt={`${s.label} in ${data.name}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                    />
+                  </div>
+                  <div className="px-3 py-2.5 flex items-center gap-2">
+                    <span className="font-semibold text-xs" style={{ color: "var(--navy)", flex: 1, lineHeight: 1.3 }}>
+                      {s.label}
+                    </span>
+                    <ArrowRight size={12} style={{ color: "var(--stone-light)", flexShrink: 0 }} />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Garage Door Services — with images */}
+          <div>
+            <h2
+              style={{
+                marginBottom: "0.5rem",
+                fontSize: "1.75rem",
+                borderLeft: "4px solid var(--brown)",
+                paddingLeft: "0.75rem",
+              }}
+            >
+              Garage Door Repair in {data.name}
+            </h2>
+            <p style={{ color: "var(--text-soft)", fontSize: "0.92rem", marginBottom: "1.25rem", paddingLeft: "0.75rem" }}>
+              Springs, cables, openers, and emergencies — parts on the truck for one-visit repairs across {data.name}.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {garageCityServices.map((s) => (
+                <Link
+                  key={s.href}
+                  href={s.href}
+                  className="card flex flex-col overflow-hidden transition-all hover:shadow-md"
+                  style={{ textDecoration: "none", padding: 0 }}
+                >
+                  <div className="relative" style={{ height: 100, overflow: "hidden", borderRadius: "12px 12px 0 0" }}>
+                    <Image
+                      src={s.img}
+                      alt={`${s.label} in ${data.name}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                    />
+                  </div>
+                  <div className="px-3 py-2.5 flex items-center gap-2">
+                    <span className="font-semibold text-xs" style={{ color: "var(--navy)", flex: 1, lineHeight: 1.3 }}>
+                      {s.label}
+                    </span>
+                    <ArrowRight size={12} style={{ color: "var(--stone-light)", flexShrink: 0 }} />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Inline CTA */}
+          <div
+            className="flex flex-wrap items-center justify-between gap-4 rounded-[var(--radius-lg)] px-5 py-4"
+            style={{ background: "var(--bg-card)", border: "1px solid var(--line)" }}
+          >
+            <div>
+              <p className="font-semibold" style={{ color: "var(--navy)", marginBottom: "0.15rem" }}>
+                Need same-day service in {data.name}?
+              </p>
+              <p style={{ fontSize: "0.82rem", color: "var(--stone)" }}>
+                We respond within 30 minutes during business hours.
+              </p>
+            </div>
+            <a href={BUSINESS.phoneHref} className="btn-primary" style={{ flexShrink: 0 }}>
+              <Phone size={15} /> Call Now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* BRANDS */}
+      <BrandsMarquee />
+
+      {/* PHOTOS */}
+      <section className="section-padding" style={{ background: "var(--bg-muted)" }}>
+        <div className="container-max">
+          <div className="grid grid-cols-3 gap-3">
+            {photoStrip.map((photo, i) => (
+              <ArchImage
+                key={i}
+                src={photo.src}
+                alt={`${photo.alt} in ${data.name}`}
+                aspect="3/4"
+                sizes="(max-width: 768px) 33vw, 20vw"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TEXT + everything else */}
       <section className="section-padding" style={{ background: "var(--bg-base)" }}>
         <div className="container-max grid grid-cols-1 lg:grid-cols-3 gap-10">
 
@@ -242,123 +372,6 @@ export default async function CityPage({ params }: Props) {
                   {para}
                 </p>
               ))}
-            </div>
-
-            {/* Photo strip */}
-            <div className="grid grid-cols-3 gap-3">
-              {photoStrip.map((photo, i) => (
-                <ArchImage
-                  key={i}
-                  src={photo.src}
-                  alt={`${photo.alt} in ${data.name}`}
-                  aspect="3/4"
-                  sizes="(max-width: 768px) 33vw, 20vw"
-                />
-              ))}
-            </div>
-
-            {/* Inline CTA */}
-            <div
-              className="flex flex-wrap items-center justify-between gap-4 rounded-[var(--radius-lg)] px-5 py-4"
-              style={{ background: "var(--bg-card)", border: "1px solid var(--line)" }}
-            >
-              <div>
-                <p className="font-semibold" style={{ color: "var(--navy)", marginBottom: "0.15rem" }}>
-                  Need same-day service in {data.name}?
-                </p>
-                <p style={{ fontSize: "0.82rem", color: "var(--stone)" }}>
-                  We respond within 30 minutes during business hours.
-                </p>
-              </div>
-              <a href={BUSINESS.phoneHref} className="btn-primary" style={{ flexShrink: 0 }}>
-                <Phone size={15} /> Call Now
-              </a>
-            </div>
-
-            {/* Gate Services — with images */}
-            <div>
-              <h2
-                style={{
-                  marginBottom: "0.5rem",
-                  fontSize: "1.75rem",
-                  borderLeft: "4px solid var(--brown)",
-                  paddingLeft: "0.75rem",
-                }}
-              >
-                Gate Repair in {data.name}
-              </h2>
-              <p style={{ color: "var(--text-soft)", fontSize: "0.92rem", marginBottom: "1.25rem", paddingLeft: "0.75rem" }}>
-                Sliding, swing, and automatic gates — motors, sensors, hinges, and tracks fixed same-day for {data.name} homes and businesses.
-              </p>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {gateCityServices.map((s) => (
-                  <Link
-                    key={s.href}
-                    href={s.href}
-                    className="card flex flex-col overflow-hidden transition-all hover:shadow-md"
-                    style={{ textDecoration: "none", padding: 0 }}
-                  >
-                    <div className="relative" style={{ height: 100, overflow: "hidden", borderRadius: "50% 50% 0 0 / 42% 42% 0 0", border: "2px solid var(--brown-warm)", borderBottom: "none" }}>
-                      <Image
-                        src={s.img}
-                        alt={`${s.label} in ${data.name}`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 50vw, 25vw"
-                      />
-                    </div>
-                    <div className="px-3 py-2.5 flex items-center gap-2">
-                      <span className="font-semibold text-xs" style={{ color: "var(--navy)", flex: 1, lineHeight: 1.3 }}>
-                        {s.label}
-                      </span>
-                      <ArrowRight size={12} style={{ color: "var(--stone-light)", flexShrink: 0 }} />
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Garage Door Services — with images */}
-            <div>
-              <h2
-                style={{
-                  marginBottom: "0.5rem",
-                  fontSize: "1.75rem",
-                  borderLeft: "4px solid var(--brown)",
-                  paddingLeft: "0.75rem",
-                }}
-              >
-                Garage Door Repair in {data.name}
-              </h2>
-              <p style={{ color: "var(--text-soft)", fontSize: "0.92rem", marginBottom: "1.25rem", paddingLeft: "0.75rem" }}>
-                Springs, cables, openers, and emergencies — parts on the truck for one-visit repairs across {data.name}.
-              </p>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {garageCityServices.map((s) => (
-                  <Link
-                    key={s.href}
-                    href={s.href}
-                    className="card flex flex-col overflow-hidden transition-all hover:shadow-md"
-                    style={{ textDecoration: "none", padding: 0 }}
-                  >
-                    <div className="relative" style={{ height: 100, overflow: "hidden", borderRadius: "50% 50% 0 0 / 42% 42% 0 0", border: "2px solid var(--brown-warm)", borderBottom: "none" }}>
-                      <Image
-                        src={s.img}
-                        alt={`${s.label} in ${data.name}`}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 50vw, 25vw"
-                      />
-                    </div>
-                    <div className="px-3 py-2.5 flex items-center gap-2">
-                      <span className="font-semibold text-xs" style={{ color: "var(--navy)", flex: 1, lineHeight: 1.3 }}>
-                        {s.label}
-                      </span>
-                      <ArrowRight size={12} style={{ color: "var(--stone-light)", flexShrink: 0 }} />
-                    </div>
-                  </Link>
-                ))}
-              </div>
             </div>
 
             {/* Why Us */}
@@ -549,15 +562,17 @@ export default async function CityPage({ params }: Props) {
                   📍 Serving {data.name}, CA
                 </span>
               </div>
-              <iframe
-                src={mapSrc}
-                width="100%"
-                height="200"
-                style={{ border: 0, display: "block" }}
-                loading="lazy"
-                title={`Map — ${data.name}, CA gate and garage door service`}
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+              <div style={{ background: "var(--bg-muted)", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
+                <iframe
+                  src={mapSrc}
+                  width="100%"
+                  height="220"
+                  style={{ border: 0, display: "block" }}
+                  loading="lazy"
+                  title={`Map — ${data.name}, CA gate and garage door service`}
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
               {/* Business card below map */}
               <div
                 className="px-4 py-3 flex items-center justify-between gap-3"
@@ -582,9 +597,6 @@ export default async function CityPage({ params }: Props) {
           </div>
         </div>
       </section>
-
-      {/* BRANDS MARQUEE — full width */}
-      <BrandsMarquee />
     </>
   );
 }

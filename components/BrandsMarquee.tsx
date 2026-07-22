@@ -87,36 +87,36 @@ export default function BrandsMarquee() {
         <span className="eyebrow">Brands We Service</span>
         <h2>Every Major Manufacturer. <em>Every Model.</em></h2>
         <p>We work on them all — from LiftMaster to Viking, Genie to DoorKing.</p>
-        <div style={{ display: "flex", gap: "0.5rem", justifyContent: "center", marginTop: "1rem" }}>
-          <button onClick={() => nudge(-1)} aria-label="Previous brands" style={arrowBtn}>
-            <ChevronLeft size={18} />
-          </button>
-          <button onClick={() => nudge(1)} aria-label="Next brands" style={arrowBtn}>
-            <ChevronRight size={18} />
-          </button>
-        </div>
       </div>
 
-      <div className="brands-marquee-wrap" aria-hidden="true">
-        <div className="brands-marquee-track" ref={trackRef}>
-          {items.map((brand, i) => (
-            <div
-              key={i}
-              style={{ flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}
-            >
-              <Link href={`/brands/${brand.slug}`} tabIndex={-1} style={{ display: "flex", alignItems: "center" }}>
-                <Image
-                  src={brand.logo}
-                  alt={brand.name}
-                  width={120}
-                  height={44}
-                  style={{ objectFit: "contain", height: 44, width: "auto", maxWidth: 120 }}
-                  unoptimized
-                />
-              </Link>
-            </div>
-          ))}
+      <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", padding: "0 1.5rem" }}>
+        <button onClick={() => nudge(-1)} aria-label="Previous brands" style={arrowBtn}>
+          <ChevronLeft size={18} />
+        </button>
+        <div className="brands-marquee-wrap" style={{ flex: 1 }} aria-hidden="true">
+          <div className="brands-marquee-track" ref={trackRef}>
+            {items.map((brand, i) => (
+              <div
+                key={i}
+                style={{ flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}
+              >
+                <Link href={`/brands/${brand.slug}`} tabIndex={-1} style={{ display: "flex", alignItems: "center" }}>
+                  <Image
+                    src={brand.logo}
+                    alt={brand.name}
+                    width={120}
+                    height={44}
+                    style={{ objectFit: "contain", height: 44, width: "auto", maxWidth: 120 }}
+                    unoptimized
+                  />
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
+        <button onClick={() => nudge(1)} aria-label="Next brands" style={arrowBtn}>
+          <ChevronRight size={18} />
+        </button>
       </div>
 
       <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
