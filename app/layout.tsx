@@ -19,9 +19,11 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-// TODO: Set NEXT_PUBLIC_GSC_VERIFICATION in Cloudflare Pages → Settings → Environment Variables
-// once realgaterepair.com is connected and verified in Google Search Console.
+// Set NEXT_PUBLIC_GSC_VERIFICATION / NEXT_PUBLIC_GA_ID in Cloudflare Pages → Settings →
+// Environment Variables. See .env.example / README for details.
 const gscVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
+const gaEnabled = !!gaId && !gaId.startsWith("G-XXX");
 
 export const metadata: Metadata = {
   metadataBase: new URL(BUSINESS.domain),
@@ -38,6 +40,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: BUSINESS.name,
+    url: "/",
     images: [{ url: "/images/og/og-default.jpg", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
@@ -85,12 +88,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${BUSINESS.gaId}`} />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${BUSINESS.gaId}');`,
-          }}
-        />
+        {gaEnabled && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${gaId}');`,
+              }}
+            />
+          </>
+        )}
       </head>
       <body className="flex flex-col min-h-screen pb-14 lg:pb-0">
         <Header />

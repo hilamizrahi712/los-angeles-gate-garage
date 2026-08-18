@@ -21,13 +21,10 @@ const values = [
 ];
 
 const credentials = [
-  "CA Licensed Contractor",
   "Fully Bonded",
   "General Liability Insurance",
   "Workers Compensation",
-  "BBB Accredited",
   "Google 5-Star Rated",
-  "CSLB Verified",
   "Background-Checked Technicians",
 ];
 

@@ -17,6 +17,7 @@ const garageDoorLinks = [
   { href: "/services/garage-door-spring-repair", label: "Spring Repair" },
   { href: "/services/garage-door-opener-repair", label: "Opener Repair" },
   { href: "/services/garage-door-cable-repair", label: "Cable Repair" },
+  { href: "/services/garage-door-panel-repair", label: "Panel Repair" },
   { href: "/services/emergency-garage-door-repair", label: "Emergency Service" },
   { href: "/services/commercial-garage-door", label: "Commercial Doors" },
   { href: "/services/garage-door-installation", label: "Door Installation" },
@@ -69,7 +70,7 @@ export default function Footer() {
             Hours: Sun–Fri 7 AM–10 PM<br />
             Saturday: Closed · Emergency: 24/7
           </p>
-          <p className="footer-tagline mt-2">Licensed · Bonded · Insured</p>
+          <p className="footer-tagline mt-2">Bonded &amp; Insured</p>
           <a href={BUSINESS.googleReviewsUrl} target="_blank" rel="noopener noreferrer" className="footer-link inline-block mt-2">
             ★ Read Our Google Reviews
           </a>
@@ -126,7 +127,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="footer-bottom">
         <div className="container-max flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>© {new Date().getFullYear()} {BUSINESS.name}. All rights reserved. · Licensed · Bonded · Insured</span>
+          <span>© {new Date().getFullYear()} {BUSINESS.name}. All rights reserved. · Bonded &amp; Insured</span>
           <div className="flex gap-4">
             <Link href="/privacy-policy" className="footer-link">Privacy Policy</Link>
             <Link href="/sitemap.xml" className="footer-link">Sitemap</Link>

@@ -28,7 +28,7 @@ export const BRANDS: BrandData[] = [
     type: "gate",
     tagline: "American-Built Gate Operators — Repaired Right",
     metaTitle: "All-O-Matic Repair Los Angeles CA | Real Gate & Garage Door",
-    metaDescription: "Expert All-O-Matic gate operator repair. Motors, control boards, drive gears — same-day service. Licensed technicians. Call (818) 915-5715.",
+    metaDescription: "Expert All-O-Matic gate operator repair. Motors, control boards, drive gears — same-day service. Insured technicians. Call (818) 915-5715.",
     intro: "All-O-Matic has been manufacturing gate operators in the USA since the 1970s. You'll find their units on residential driveways, apartment complexes, and commercial properties throughout Los Angeles. Their slide and swing gate operators are known for tough construction — but like any mechanical system, they need expert service when something goes wrong. We repair All-O-Matic units of all ages, including older models that many other shops won't touch.",
     services: [
       "Gate motor repair and replacement",
@@ -70,7 +70,7 @@ export const BRANDS: BrandData[] = [
     type: "both",
     tagline: "Gates & Garage Doors — LiftMaster's #1 Local Service Team",
     metaTitle: "LiftMaster Repair Los Angeles CA | Real Gate & Garage Door",
-    metaDescription: "LiftMaster gate operator and garage door opener repair. Motors, boards, myQ, remotes — same-day service. Licensed & insured. Call (818) 915-5715.",
+    metaDescription: "LiftMaster gate operator and garage door opener repair. Motors, boards, myQ, remotes — same-day service. Bonded & insured. Call (818) 915-5715.",
     intro: "LiftMaster is the most widely installed brand for both automatic gate operators and garage door openers in the country. Their residential and commercial-grade operators set the standard for reliability, and their myQ smart home ecosystem is the most capable on the market. When a LiftMaster unit goes down, you want a technician who knows the brand inside and out — not someone reading the manual on your driveway.",
     services: [
       "Gate operator repair (LA400, LA500, CSW200, SL3000 series)",
@@ -117,7 +117,7 @@ export const BRANDS: BrandData[] = [
     type: "access-control",
     tagline: "DKS Access Control & Gate Systems — Expert Service",
     metaTitle: "DoorKing Repair Los Angeles CA | Real Gate & Garage Door",
-    metaDescription: "DoorKing gate operator and access control system repair. Telephone entry, loop detectors, control boards — licensed technicians. Call (818) 915-5715.",
+    metaDescription: "DoorKing gate operator and access control system repair. Telephone entry, loop detectors, control boards — insured technicians. Call (818) 915-5715.",
     intro: "DoorKing — known by the brand name DKS — is a leading manufacturer of gate operators and access control systems. Their telephone entry systems, vehicle loop detectors, and residential gate operators are found in HOAs, apartment complexes, commercial properties, and upscale residential gates throughout the Los Angeles area. DKS systems are professional-grade equipment that requires technicians with real access-control experience.",
     services: [
       "DKS gate operator repair and replacement",
@@ -249,7 +249,7 @@ export const BRANDS: BrandData[] = [
     type: "garage-door",
     tagline: "Chamberlain Garage Door Opener Repair — All Models",
     metaTitle: "Chamberlain Repair Los Angeles CA | Real Gate & Garage Door",
-    metaDescription: "Chamberlain garage door opener repair. All models, myQ compatible. Same-day service, licensed technicians. Call (818) 915-5715.",
+    metaDescription: "Chamberlain garage door opener repair. All models, myQ compatible. Same-day service, insured technicians. Call (818) 915-5715.",
     intro: "Chamberlain is one of the most recognized garage door opener brands in American homes. As part of The Chamberlain Group (the same parent company as LiftMaster), Chamberlain openers share many components and feature the same myQ smart home ecosystem. They're sold primarily through home improvement retailers and are found in millions of homes. When a Chamberlain opener goes down, our technicians have the parts and knowledge to fix it same-day in most cases.",
     services: [
       "Opener motor and circuit board repair",
@@ -295,7 +295,7 @@ export const BRANDS: BrandData[] = [
     type: "gate",
     tagline: "Elite Gate Operator Repair — Fast, Reliable Service",
     metaTitle: "Elite Repair Los Angeles CA | Real Gate & Garage Door",
-    metaDescription: "Elite gate operator repair. EL25, EL35, SL2000 and all models. Same-day service, licensed technicians. Call (818) 915-5715.",
+    metaDescription: "Elite gate operator repair. EL25, EL35, SL2000 and all models. Same-day service, insured technicians. Call (818) 915-5715.",
     intro: "Elite gate operators are popular in both residential and light-commercial applications throughout the Los Angeles area. Known for solid build quality and straightforward mechanics, Elite slide and swing gate operators are a reliable choice — and when they do need service, they're generally easier to work on than some competing brands. We repair Elite operators of all models and ages.",
     services: [
       "Operator motor and gearbox repair",
@@ -338,7 +338,7 @@ export const BRANDS: BrandData[] = [
     type: "gate",
     tagline: "Viking Gate Operator Specialists — All Models Serviced",
     metaTitle: "Viking Access Systems Repair Los Angeles CA | Real Gate & Garage Door",
-    metaDescription: "Viking Access Systems gate operator repair. All models including K-Series and Q-Series. Same-day service. Licensed technicians. Call (818) 915-5715.",
+    metaDescription: "Viking Access Systems gate operator repair. All models including K-Series and Q-Series. Same-day service. Insured technicians. Call (818) 915-5715.",
     intro: "Viking Access Systems manufactures high-quality gate operators right here in California. Their K-Series and Q-Series operators are a top choice for residential and commercial installations across LA — reliable, well-built, and backed by strong parts availability. As a California-based brand, Viking has a strong local presence, and their operators are among the most frequently installed systems we service.",
     services: [
       "Gate operator motor and gearbox repair",
@@ -382,7 +382,7 @@ export const BRANDS: BrandData[] = [
     type: "gate",
     tagline: "Ramset Gate Operator Repair — Made in the USA",
     metaTitle: "Ramset Repair Los Angeles CA | Real Gate & Garage Door",
-    metaDescription: "Ramset gate operator repair. DC1, DC2, AC2000 and all models. Same-day service where possible. Licensed technicians. Call (818) 915-5715.",
+    metaDescription: "Ramset gate operator repair. DC1, DC2, AC2000 and all models. Same-day service where possible. Insured technicians. Call (818) 915-5715.",
     intro: "Ramset Automatic Gate Systems has been making American-built gate operators for decades. Their DC-powered slide and swing gate operators are known for durability and are common on mid-to-high-end residential and light-commercial properties. We repair Ramset operators across all model generations, including older units that may require part sourcing.",
     services: [
       "DC and AC motor repair and replacement",
@@ -423,7 +423,7 @@ export const BRANDS: BrandData[] = [
     type: "both",
     tagline: "Linear Gate & Garage Door Systems — Full-Service Repair",
     metaTitle: "Linear Repair Los Angeles CA | Real Gate & Garage Door",
-    metaDescription: "Linear gate operator and garage door opener repair. LDO50, LDCO800, and all models. Same-day service. Licensed. Call (818) 915-5715.",
+    metaDescription: "Linear gate operator and garage door opener repair. LDO50, LDCO800, and all models. Same-day service. Fully insured. Call (818) 915-5715.",
     intro: "Linear makes both automatic gate operators and garage door openers, giving them a unique cross-market position. Their gate operators are popular for mid-range residential and light-commercial installations, while their garage openers offer solid performance with good smart-home integration. We service the full Linear lineup on both the gate and garage door sides.",
     services: [
       "Gate operator motor and board repair",
@@ -467,7 +467,7 @@ export const BRANDS: BrandData[] = [
     type: "gate",
     tagline: "Eagle Gate Operator Repair — Commercial & Residential",
     metaTitle: "Eagle Access Control Systems Repair Los Angeles CA | Real Gate & Garage Door",
-    metaDescription: "Eagle Access Control Systems gate operator repair. EE-1000, EE-4002 and all models. Same-day service. Licensed technicians. Call (818) 915-5715.",
+    metaDescription: "Eagle Access Control Systems gate operator repair. EE-1000, EE-4002 and all models. Same-day service. Insured technicians. Call (818) 915-5715.",
     intro: "Eagle Access Control Systems manufactures gate operators for residential, commercial, and industrial applications. Their operators are commonly found in gated communities, parking facilities, HOA-controlled entry points, and commercial properties throughout Los Angeles. Eagle systems are professional-grade equipment built for high-cycle use — and they require a technician with real commercial gate experience.",
     services: [
       "Operator motor and gearbox repair",

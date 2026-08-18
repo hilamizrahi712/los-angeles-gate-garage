@@ -5,7 +5,7 @@ import { Phone, MapPin } from "lucide-react";
 import { BUSINESS, ALL_CITIES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Service Areas — Los Angeles & Southern California | Real Gate & Garage Door",
+  title: "Service Areas — LA & SoCal Cities | Real Gate & Garage Door",
   description:
     `Real Gate & Garage Door serves ${ALL_CITIES.length}+ cities across Los Angeles & Southern California. Same-day gate and garage door repair near you. Call (818) 915-5715.`,
   alternates: { canonical: "/service-areas" },

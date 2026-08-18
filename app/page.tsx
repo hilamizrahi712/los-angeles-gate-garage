@@ -44,6 +44,7 @@ const garagePrimary = [
 const garageRest = [
   { href: "/services/garage-door-opener-repair", name: "Opener Repair", desc: "LiftMaster, Genie, Chamberlain & all brands.", img: "/images/services/new-garage.jpeg" },
   { href: "/services/garage-door-cable-repair", name: "Cable Repair", desc: "Snapped or frayed cables replaced same day.", img: "/images/services/white-garage.jpeg" },
+  { href: "/services/garage-door-panel-repair", name: "Panel Repair", desc: "Dented or damaged panels replaced same day.", img: "/images/services/wood-garage.jpeg" },
   { href: "/services/garage-door-installation", name: "Door Installation", desc: "New doors, fully installed and balanced.", img: "/images/services/wood-garage.jpeg" },
 ];
 
@@ -163,7 +164,7 @@ export default function HomePage() {
             className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-sm font-semibold"
             style={{ color: "#fff", letterSpacing: "0.02em" }}
           >
-            <span>Licensed &amp; Insured</span>
+            <span>Bonded &amp; Insured</span>
             <span style={{ opacity: 0.4 }}>·</span>
             <a href={BUSINESS.googleReviewsUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#fff", textDecoration: "none" }}>
               ★ 4.9 on Google
@@ -584,7 +585,7 @@ export default function HomePage() {
                   "Same-day appointments available",
                   "Upfront quote before any work starts",
                   "No pressure, no upselling",
-                  "Licensed CA Contractor · Bonded · Insured",
+                  "Bonded & Insured",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3" style={{ color: "var(--text-mid)" }}>
                     <CheckCircle size={17} className="flex-shrink-0" style={{ color: "var(--success)" }} />

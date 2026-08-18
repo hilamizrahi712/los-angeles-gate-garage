@@ -10,6 +10,7 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   img?: string;
+  updatedAt?: string;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -20,6 +21,7 @@ export const BLOG_POSTS: BlogPost[] = [
     metaDescription: "Electric gate won't open? We cover the 8 most common causes and what to do — from dead remote batteries to failed gate motors. gate experts.",
     primaryKeyword: "electric gate not opening",
     publishDate: "2025-04-15",
+    updatedAt: "2025-04-15",
     readTime: "6 min read",
     category: "gate",
     excerpt: "Your electric gate won't open and you don't know why. Here are the 8 most common causes — and what to do about each one.",
@@ -51,20 +53,21 @@ Real Gate & Garage Door provides same-day electric gate repair in our service ar
 
   {
     slug: "gate-repair-cost",
-    title: "How Much Does Gate Repair Cost in 2025? (Local Pricing Guide)",
-    metaTitle: "How Much Does Gate Repair Cost in 2025? | Real Gate & Garage Door",
-    metaDescription: "Transparent gate repair pricing for homeowners. Learn what gate motor, sensor, hinge, and chain repairs actually cost in 2025.",
+    title: "How Much Does Gate Repair Cost in 2026? (Local Pricing Guide)",
+    metaTitle: "How Much Does Gate Repair Cost in 2026? | Real Gate & Garage Door",
+    metaDescription: "Transparent gate repair pricing for homeowners. Learn what gate motor, sensor, hinge, and chain repairs actually cost in 2026.",
     primaryKeyword: "gate repair cost",
     publishDate: "2025-03-20",
+    updatedAt: "2026-08-19",
     readTime: "7 min read",
     category: "gate",
-    excerpt: "Gate repair costs range from $80 to $700+ depending on the problem. Here's what each type of repair actually costs in 2025.",
+    excerpt: "Gate repair costs range from $80 to $700+ depending on the problem. Here's what each type of repair actually costs in 2026.",
     img: "/images/services/iron-black-gate.jpeg",
-    content: `## Gate Repair Cost in 2025 Price Guide
+    content: `## Gate Repair Cost in 2026 Price Guide
 
 Pricing transparency is one of the things we hear about most from customers who had bad experiences with other companies. They got a quote over the phone, a technician showed up and found "more problems," and suddenly a $150 repair became a $600 bill.
 
-We don't operate that way. This guide lays out what gate repairs actually cost in 2025 — by specific repair type — so you can approach any service call with realistic expectations.
+We don't operate that way. This guide lays out what gate repairs actually cost in 2026 — by specific repair type — so you can approach any service call with realistic expectations.
 
 ### Before You Book a Repair — Check These First
 
@@ -168,16 +171,17 @@ Text us a photo of your gate and its problem for a free diagnosis, no obligation
 
   {
     slug: "automatic-gate-installation-cost",
-    title: "How Much Does Automatic Gate Installation Cost? (2025 Guide)",
-    metaTitle: "Automatic Gate Installation Cost 2025 — Guide | Real Gate & Garage Door",
+    title: "How Much Does Automatic Gate Installation Cost? (2026 Guide)",
+    metaTitle: "Automatic Gate Installation Cost 2026 — Guide | Real Gate & Garage Door",
     metaDescription: "How much does automatic gate installation cost? We break down pricing for swing gates, sliding gates, and operators for homeowners.",
     primaryKeyword: "automatic gate installation cost",
     publishDate: "2025-02-10",
+    updatedAt: "2026-08-19",
     readTime: "8 min read",
     category: "gate",
     excerpt: "Automatic gate installation costs $2,000–$8,000 depending on gate type, material, and operator. Here's the full breakdown.",
     img: "/images/gallery/gate-1.jpeg",
-    content: `## Automatic Gate Installation Cost in 2025
+    content: `## Automatic Gate Installation Cost in 2026
 
 Thinking about installing an automatic driveway gate? It's one of the best investments you can make in your home's security and curb appeal — but the price range is wide. An automatic gate can cost anywhere from $2,000 to $10,000+ depending on the gate type, material, and operator system you choose.
 
@@ -278,6 +282,7 @@ Text us a photo of your current gate and we'll give you a free, honest read on r
     metaDescription: "Automatic gates last 10–20+ years with proper maintenance. Learn the signs that your gate needs repair vs. replacement — from gate experts.",
     primaryKeyword: "gate repair vs replace",
     publishDate: "2025-01-15",
+    updatedAt: "2025-01-15",
     readTime: "5 min read",
     category: "gate",
     excerpt: "A well-maintained automatic gate can last 15–20+ years. Here's how to tell when repair is the right call and when it's time for a replacement.",
@@ -354,16 +359,17 @@ Call **(818) 915-5715** for a same-day diagnostic in our service area.`,
 
   {
     slug: "garage-door-spring-repair-cost",
-    title: "How Much Does Garage Door Spring Repair Cost in 2025? (Local Guide)",
-    metaTitle: "Garage Door Spring Replacement Cost 2025 — | Real Gate & Garage Door",
+    title: "How Much Does Garage Door Spring Repair Cost in 2026? (Local Guide)",
+    metaTitle: "Garage Door Spring Replacement Cost 2026 — | Real Gate & Garage Door",
     metaDescription: "Garage door spring replacement costs $150–$350. Learn what affects the price and how to avoid overpaying. (818) 915-5715.",
     primaryKeyword: "how much does a garage door spring replacement cost",
     publishDate: "2025-04-01",
+    updatedAt: "2026-08-19",
     readTime: "6 min read",
     category: "garage-door",
     excerpt: "Garage door spring replacement typically costs $150–$350. Here's exactly what you should expect to pay — and the warning signs of overcharging.",
     img: "/images/services/garage-door-repair.jpeg",
-    content: `## Garage Door Spring Replacement Cost in 2025
+    content: `## Garage Door Spring Replacement Cost in 2026
 
 Garage door spring replacement is the most common garage door repair we perform — and unfortunately, it's also the service most prone to overcharging by less scrupulous companies. This guide gives you the real numbers so you're informed before you call anyone.
 
@@ -407,7 +413,7 @@ These prices include the spring(s), labor, and door balancing. A diagnostic fee 
 
 We get this question often, and our honest answer is: no, please don't.
 
-Torsion springs store enormous potential energy under tension. A spring that fails during DIY replacement can cause severe injury — we've seen broken wrists, lacerations, and worse from amateur spring replacement attempts. This is a job for a licensed technician with the right tools.
+Torsion springs store enormous potential energy under tension. A spring that fails during DIY replacement can cause severe injury — we've seen broken wrists, lacerations, and worse from amateur spring replacement attempts. This is a job for an insured technician with the right tools.
 
 Extension springs, while less dangerous than torsion springs, also store significant energy and can injure someone if mishandled.
 
@@ -438,6 +444,7 @@ Call **(818) 915-5715** for same-day spring replacement in our service area.`,
     metaDescription: "Garage door won't close all the way? We cover the 7 most common causes and step-by-step fixes. garage door repair experts. Call (818) 915-5715.",
     primaryKeyword: "garage door won't close",
     publishDate: "2025-03-05",
+    updatedAt: "2025-03-05",
     readTime: "6 min read",
     category: "garage-door",
     excerpt: "A garage door that won't close is a security risk. Here are the 7 most common causes — and what you can do about each one.",
@@ -508,6 +515,7 @@ If your garage door still won't close after checking the sensors, clearing obstr
     metaDescription: "Squeaky, grinding, or banging garage door? Follow our step-by-step guide to identify and fix the noise. garage door experts.",
     primaryKeyword: "how to fix a noisy garage door",
     publishDate: "2025-02-20",
+    updatedAt: "2025-02-20",
     readTime: "7 min read",
     category: "garage-door",
     excerpt: "A noisy garage door is usually a maintenance issue, not a breakdown. Here's how to identify the source of the noise and fix it — step by step.",

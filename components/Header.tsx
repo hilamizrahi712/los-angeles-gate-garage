@@ -21,6 +21,7 @@ const garageDoorLinks = [
   { href: "/services/garage-door-spring-repair", label: "Spring Repair" },
   { href: "/services/garage-door-opener-repair", label: "Opener Repair" },
   { href: "/services/garage-door-cable-repair", label: "Cable Repair" },
+  { href: "/services/garage-door-panel-repair", label: "Panel Repair" },
   { href: "/services/emergency-garage-door-repair", label: "Emergency Service" },
   { href: "/services/commercial-garage-door", label: "Commercial Doors" },
 ];

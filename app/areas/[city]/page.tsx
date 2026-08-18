@@ -24,12 +24,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { city } = await params;
   const data = getCityBySlug(city);
   if (!data) return {};
+  const url = `/areas/${city}`;
+  const ogImage = { url: "/images/og/og-default.jpg", width: 1200, height: 630 };
   return {
     title: data.metaTitle,
     description: data.metaDescription,
-    alternates: { canonical: `/areas/${city}` },
-    openGraph: { title: data.metaTitle, description: data.metaDescription },
-    keywords: data.extraKeywords,
+    alternates: { canonical: url },
+    openGraph: { title: data.metaTitle, description: data.metaDescription, url, images: [ogImage] },
+    twitter: { card: "summary_large_image", images: [ogImage.url] },
   };
 }
 
@@ -221,7 +223,7 @@ export default async function CityPage({ params }: Props) {
             <span style={{ opacity: 0.5 }}>·</span>
             <span>5★ Rated</span>
             <span style={{ opacity: 0.5 }}>·</span>
-            <span>Licensed &amp; Insured</span>
+            <span>Bonded &amp; Insured</span>
             <span style={{ opacity: 0.5 }}>·</span>
             <span>Free Estimates</span>
           </div>
@@ -540,7 +542,7 @@ export default async function CityPage({ params }: Props) {
                 <Phone size={16} /> {BUSINESS.phone}
               </a>
               <p style={{ fontSize: "0.78rem", color: "rgba(237,234,228,0.5)", marginTop: "0.75rem" }}>
-                Licensed · Bonded · Insured · Sun–Fri 7AM–10PM
+                Bonded &amp; Insured · Sun–Fri 7AM–10PM
               </p>
             </div>
 
@@ -583,7 +585,7 @@ export default async function CityPage({ params }: Props) {
                     Real Gate &amp; Garage Door
                   </p>
                   <p style={{ fontSize: "0.72rem", color: "var(--stone)", marginTop: "0.2rem" }}>
-                    ★★★★★ 5-Star Rated · Licensed &amp; Insured
+                    ★★★★★ 5-Star Rated · Bonded &amp; Insured
                   </p>
                 </div>
                 <a

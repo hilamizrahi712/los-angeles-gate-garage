@@ -29,6 +29,16 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Environment Variables
+
+See `.env.example`. `NEXT_PUBLIC_GA_ID` and `NEXT_PUBLIC_GSC_VERIFICATION` are optional —
+when unset, the GA4 tag and GSC verification meta tag are simply omitted from the build.
+
+To set the real values for production: Cloudflare Pages dashboard → the `realgaterepair.com`
+project → **Settings → Environment Variables** → add `NEXT_PUBLIC_GA_ID` (and
+`NEXT_PUBLIC_GSC_VERIFICATION` once the domain is verified in Search Console) for the
+Production environment, then redeploy.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.

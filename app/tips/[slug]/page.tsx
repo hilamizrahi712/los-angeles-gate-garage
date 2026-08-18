@@ -18,12 +18,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPostBySlug(slug);
   if (!post) return {};
+  const url = `/tips/${slug}`;
+  const ogImage = { url: "/images/og/og-default.jpg", width: 1200, height: 630 };
   return {
     title: post.metaTitle,
     description: post.metaDescription,
-    alternates: { canonical: `/tips/${slug}` },
-    openGraph: { title: post.metaTitle, description: post.metaDescription, type: "article" },
+    alternates: { canonical: url },
+    openGraph: { title: post.metaTitle, description: post.metaDescription, type: "article", url, images: [ogImage] },
+    twitter: { card: "summary_large_image", images: [ogImage.url] },
   };
+}
+
+function formatMonthYear(dateStr: string): string {
+  const [year, month] = dateStr.split("-").map(Number);
+  return new Date(year, month - 1, 1).toLocaleDateString("en-US", { month: "long", year: "numeric" });
 }
 
 function parseBold(text: string): React.ReactNode {
@@ -131,6 +139,7 @@ export default async function TipsPostPage({ params }: Props) {
     headline: post.title,
     description: post.metaDescription,
     datePublished: post.publishDate,
+    dateModified: post.updatedAt ?? post.publishDate,
     publisher: { "@type": "Organization", name: BUSINESS.name },
     author: { "@type": "Organization", name: BUSINESS.name },
   };
@@ -170,10 +179,15 @@ export default async function TipsPostPage({ params }: Props) {
             </span>
           </div>
           <h1
-            style={{ color: "var(--navy)", marginBottom: "0.75rem" }}
+            style={{ color: "var(--navy)", marginBottom: "0.5rem" }}
           >
             {post.title}
           </h1>
+          {post.updatedAt && (
+            <p className="text-xs" style={{ color: "var(--stone-light)", marginBottom: "0.75rem" }}>
+              Last updated: {formatMonthYear(post.updatedAt)}
+            </p>
+          )}
           <p style={{ color: "var(--text-soft)", fontSize: "1.05rem" }}>{post.excerpt}</p>
         </div>
       </section>
@@ -195,7 +209,7 @@ export default async function TipsPostPage({ params }: Props) {
                 </h3>
                 <p className="text-sm mb-4" style={{ color: "rgba(237,234,228,0.7)" }}>
                   Real Gate &amp; Garage Door provides same-day service.
-                  Licensed, insured, upfront pricing.
+                  Bonded, insured, upfront pricing.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a href={BUSINESS.phoneHref} className="btn-gold">

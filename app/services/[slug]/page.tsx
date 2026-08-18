@@ -42,11 +42,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = getServiceBySlug(slug);
   if (!service) return {};
+  const url = `/services/${slug}`;
+  const ogImage = { url: "/images/og/og-default.jpg", width: 1200, height: 630 };
   return {
     title: service.metaTitle,
     description: service.metaDescription,
-    alternates: { canonical: `/services/${slug}` },
-    openGraph: { title: service.metaTitle, description: service.metaDescription },
+    alternates: { canonical: url },
+    openGraph: { title: service.metaTitle, description: service.metaDescription, url, images: [ogImage] },
+    twitter: { card: "summary_large_image", images: [ogImage.url] },
   };
 }
 
@@ -375,7 +378,7 @@ export default async function ServicePage({ params }: Props) {
                 >
                   <div className="space-y-2.5">
                     {[
-                      { Icon: Shield, label: "Licensed, Bonded & Insured" },
+                      { Icon: Shield, label: "Bonded & Insured" },
                       { Icon: Clock, label: "7 Days a Week, Including Holidays" },
                       { Icon: Star, label: "Upfront Pricing — No Surprises" },
                     ].map(({ Icon, label }) => (

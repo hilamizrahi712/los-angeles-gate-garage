@@ -23,10 +23,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const brand = getBrandBySlug(slug);
   if (!brand) return {};
+  const url = `/brands/${brand.slug}`;
+  const ogImage = { url: "/images/og/og-default.jpg", width: 1200, height: 630 };
   return {
     title: brand.metaTitle,
     description: brand.metaDescription,
-    alternates: { canonical: `/brands/${brand.slug}` },
+    alternates: { canonical: url },
+    openGraph: { title: brand.metaTitle, description: brand.metaDescription, url, images: [ogImage] },
+    twitter: { card: "summary_large_image", images: [ogImage.url] },
   };
 }
 
@@ -219,7 +223,7 @@ export default async function BrandPage({
             <span style={{ opacity: 0.45 }}>·</span>
             <span>5★ Rated</span>
             <span style={{ opacity: 0.45 }}>·</span>
-            <span>Licensed &amp; Insured</span>
+            <span>Bonded &amp; Insured</span>
             <span style={{ opacity: 0.45 }}>·</span>
             <span>Free Estimates</span>
           </div>
@@ -476,7 +480,7 @@ export default async function BrandPage({
                   <Phone size={16} /> {BUSINESS.phone}
                 </a>
                 <p style={{ fontSize: "0.78rem", color: "rgba(237,234,228,0.5)", marginTop: "0.75rem" }}>
-                  Licensed · Bonded · Insured · Sun–Fri 7AM–10PM
+                  Bonded &amp; Insured · Sun–Fri 7AM–10PM
                 </p>
               </div>
 
