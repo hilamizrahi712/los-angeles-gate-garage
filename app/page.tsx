@@ -584,7 +584,7 @@ export default function HomePage() {
                   "Same-day appointments available",
                   "Upfront quote before any work starts",
                   "No pressure, no upselling",
-                  `Licensed CA Contractor · Bonded · Insured · CSLB ${BUSINESS.license}`, // TODO(client): confirm real CSLB number
+                  "Licensed CA Contractor · Bonded · Insured",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3" style={{ color: "var(--text-mid)" }}>
                     <CheckCircle size={17} className="flex-shrink-0" style={{ color: "var(--success)" }} />

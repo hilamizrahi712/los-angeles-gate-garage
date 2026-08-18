@@ -39,9 +39,9 @@ Name files as: `ba-01-before.jpg` / `ba-01-after.jpg`, `ba-02-before.jpg` / `ba-
 - `truck-02.jpg` — Additional vehicle
 
 ## /logos/
-- `logo.svg` — Main company logo (SVG preferred)
-- `logo-white.svg` — White version for dark backgrounds
-- `logo-icon.svg` — Icon/favicon
+- `logo-name-white.png` — Main company logo (horizontal wordmark, no icon)
+- `logo-name-white-square.png` — Stacked wordmark for square placements
+- NOTE: the old gate-arch icon mark has been retired. Do not reintroduce it.
 - `cslb-badge.png` — CA Contractor License badge
 - `bbb-badge.png` — BBB badge
 - `google-reviews-badge.png` — Google 5-star badge

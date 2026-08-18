@@ -7,7 +7,6 @@ export const BUSINESS = {
   phoneHref: "tel:+18189155715",
   smsHref: "sms:+18189155715",
   email: "info@realgaterepair.com",
-  license: "#1234567", // TODO(client): placeholder CSLB number — replace with real license
   address: "Los Angeles, CA",
   domain: "https://realgaterepair.com",
   gaId: "G-XXXXXXXXXX",
