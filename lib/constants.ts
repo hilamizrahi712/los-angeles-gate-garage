@@ -95,7 +95,7 @@ export const REVIEWS = [
     name: "Jennifer L.",
     city: "Encino",
     stars: 5,
-    text: "I got 3 quotes for a new driveway gate installation. Real Gate & Garage Door was not the cheapest, but they were the only ones who took time to explain every option, show me their license, and give me a written estimate. Three months later the gate still works perfectly.",
+    text: "I got 3 quotes for a new driveway gate installation. Real Gate & Garage Door was not the cheapest, but they were the only ones who took time to explain every option, walk me through exactly what the job involved, and give me a written estimate. Three months later the gate still works perfectly.",
     date: "January 2025",
     service: "Gate Installation",
   },
