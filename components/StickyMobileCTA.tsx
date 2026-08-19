@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Phone, MessageSquare, ClipboardList } from "lucide-react";
+import { Phone, MessageSquareText, ClipboardList } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 
 export default function StickyMobileCTA() {
   return (
     <div
-      className="lg:hidden fixed bottom-0 left-0 right-0 z-40 grid grid-cols-2"
+      className="lg:hidden fixed bottom-0 left-0 right-0 z-40 grid grid-cols-3"
       style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
       <a
@@ -17,6 +17,14 @@ export default function StickyMobileCTA() {
       >
         <Phone size={20} />
         <span className="text-xs font-semibold">Call Now</span>
+      </a>
+      <a
+        href={BUSINESS.smsHref}
+        className="flex flex-col items-center justify-center py-3 gap-1"
+        style={{ background: "var(--brown-warm)", color: "var(--text-warm)" }}
+      >
+        <MessageSquareText size={20} />
+        <span className="text-xs font-semibold">Text Us</span>
       </a>
       <Link
         href="/contact"

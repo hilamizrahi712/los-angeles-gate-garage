@@ -9,6 +9,7 @@ import ContactForm from "@/components/ContactForm";
 import ArchImage from "@/components/ArchImage";
 import ReviewQuote from "@/components/ReviewQuote";
 import BrandsMarquee from "@/components/BrandsMarquee";
+import TextUsCTA from "@/components/TextUsCTA";
 
 // Best-matching review per service, picked by service type
 const MATCHED_REVIEW: Record<string, string> = {
@@ -64,23 +65,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // Map service slugs to real uploaded images — each service gets a unique photo
 const SERVICE_IMAGES: Record<string, string> = {
-  "gate-repair":                  "/images/services/iron-gate-1.jpeg",
-  "automatic-gate-repair":        "/images/services/motor-wood.jpeg",
-  "driveway-gate-repair":         "/images/gallery/driveway-swing-gate-spanish-villa.jpeg",
-  "electric-gate-repair":         "/images/gallery/modern-black-slat-gate.jpeg",
-  "gate-opener-repair":           "/images/gallery/slat-swing-gate-opener.jpeg",
-  "iron-gate-repair":             "/images/services/estate-gate.jpeg",
-  "commercial-gate-repair":       "/images/gallery/iron-gate-community-entrance.jpeg",
-  "emergency-gate-repair":        "/images/services/gate-motor.jpeg",
-  "gate-installation":            "/images/services/slat-gate-installation.jpeg",
-  "garage-door-repair":           "/images/services/white-garage.jpeg",
-  "garage-door-spring-repair":    "/images/services/walnut-garage.jpeg",
-  "garage-door-opener-repair":    "/images/services/new-garage.jpeg",
-  "garage-door-cable-repair":     "/images/gallery/commercial-1.jpeg",
-  "garage-door-panel-repair":     "/images/services/garage-door-repair.jpeg",
-  "emergency-garage-door-repair": "/images/services/whatsapp-photo-1.jpeg",
-  "commercial-garage-door":       "/images/services/commercial-3.jpeg",
-  "garage-door-installation":     "/images/services/black-wood-gate.jpeg",
+  "gate-repair":                  "/images/services/iron-gate-1.webp",
+  "automatic-gate-repair":        "/images/services/gate-motor.webp",
+  "driveway-gate-repair":         "/images/gallery/driveway-swing-gate-spanish-villa.webp",
+  "electric-gate-repair":         "/images/gallery/modern-black-slat-gate.webp",
+  "gate-opener-repair":           "/images/gallery/slat-swing-gate-opener.webp",
+  "iron-gate-repair":             "/images/services/estate-gate.webp",
+  "commercial-gate-repair":       "/images/gallery/iron-gate-community-entrance.webp",
+  "emergency-gate-repair":        "/images/services/gate-motor.webp",
+  "gate-installation":            "/images/brands/all-o-matic/all-o-matic-2.webp",
+  "garage-door-repair":           "/images/services/white-garage.webp",
+  "garage-door-spring-repair":    "/images/services/walnut-garage.webp",
+  "garage-door-opener-repair":    "/images/services/garage-door-repair.webp",
+  "garage-door-cable-repair":     "/images/gallery/commercial-1.webp",
+  "garage-door-panel-repair":     "/images/services/garage-door-repair.webp",
+  "emergency-garage-door-repair": "/images/services/whatsapp-photo-1.webp",
+  "commercial-garage-door":       "/images/services/commercial-3.webp",
+  "garage-door-installation":     "/images/gallery/outside-1.webp",
 };
 
 export default async function ServicePage({ params }: Props) {
@@ -89,7 +90,7 @@ export default async function ServicePage({ params }: Props) {
   if (!service) notFound();
 
   const related = SERVICES.filter((s) => service.relatedSlugs.includes(s.slug));
-  const heroImg = SERVICE_IMAGES[slug] ?? "/images/services/black-iron-gate.jpeg";
+  const heroImg = SERVICE_IMAGES[slug] ?? "/images/gallery/gate-1.webp";
   const matchedReview = REVIEWS.find((r) => r.name === MATCHED_REVIEW[slug]);
 
   const priceRange = parsePriceRange(service.pricingRange);
@@ -162,6 +163,7 @@ export default async function ServicePage({ params }: Props) {
           fill
           className="object-cover"
           priority
+          fetchPriority="high"
         />
         <div
           className="absolute inset-0"
@@ -192,6 +194,7 @@ export default async function ServicePage({ params }: Props) {
               <a href={BUSINESS.phoneHref} className="btn-gold">
                 <Phone size={16} /> Call {BUSINESS.phone}
               </a>
+              <TextUsCTA className="btn-ghost" />
               <Link href="/contact" className="btn-ghost">
                 Get Free Estimate
               </Link>
@@ -407,6 +410,7 @@ export default async function ServicePage({ params }: Props) {
                   <a href={BUSINESS.phoneHref} className="btn-gold w-full justify-center">
                     <Phone size={16} /> {BUSINESS.phone}
                   </a>
+                  <TextUsCTA className="btn-secondary w-full justify-center mt-2" label="Text Us a Photo" />
                 </div>
                 <div
                   className="p-4"

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, ArrowRight } from "lucide-react";
 import { CITIES, getCityBySlug } from "@/lib/cities-data";
+import { SERVICES } from "@/lib/services-data";
 import { BUSINESS, REVIEWS, ORG_ID } from "@/lib/constants";
 import ContactForm from "@/components/ContactForm";
 import BrandsMarquee from "@/components/BrandsMarquee";
@@ -11,6 +12,7 @@ import ArchImage from "@/components/ArchImage";
 import IronDivider from "@/components/IronDivider";
 import ReviewQuote from "@/components/ReviewQuote";
 import SectionRule from "@/components/SectionRule";
+import TextUsCTA from "@/components/TextUsCTA";
 
 interface Props {
   params: Promise<{ city: string }>;
@@ -36,60 +38,60 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const gateCityServices = [
-  { href: "/services/gate-repair",               label: "Gate Repair",            img: "/images/services/black-iron-gate.jpeg" },
-  { href: "/services/automatic-gate-repair",     label: "Automatic Gate Repair",  img: "/images/services/gate-motor.jpeg" },
-  { href: "/services/electric-gate-repair",      label: "Electric Gate Repair",   img: "/images/services/swing-motor.jpeg" },
-  { href: "/services/iron-gate-repair",          label: "Iron Gate Repair",       img: "/images/services/iron-black-gate.jpeg" },
+  { href: "/services/gate-repair",               label: "Gate Repair",            img: "/images/gallery/gate-1.webp" },
+  { href: "/services/automatic-gate-repair",     label: "Automatic Gate Repair",  img: "/images/services/gate-motor.webp" },
+  { href: "/services/electric-gate-repair",      label: "Electric Gate Repair",   img: "/images/services/swing-motor.webp" },
+  { href: "/services/iron-gate-repair",          label: "Iron Gate Repair",       img: "/images/gallery/gate-4.webp" },
 ];
 
 const garageCityServices = [
-  { href: "/services/garage-door-repair",        label: "Garage Door Repair",     img: "/images/services/garage-door-repair.jpeg" },
-  { href: "/services/garage-door-spring-repair", label: "Spring Repair",          img: "/images/services/whatsapp-photo-1.jpeg" },
-  { href: "/services/garage-door-opener-repair", label: "Opener Repair",          img: "/images/services/motor-wood.jpeg" },
-  { href: "/services/emergency-garage-door-repair", label: "24/7 Emergency",      img: "/images/hero/hero-gate.jpeg" },
+  { href: "/services/garage-door-repair",        label: "Garage Door Repair",     img: "/images/services/garage-door-repair.webp" },
+  { href: "/services/garage-door-spring-repair", label: "Spring Repair",          img: "/images/services/whatsapp-photo-1.webp" },
+  { href: "/services/garage-door-opener-repair", label: "Opener Repair",          img: "/images/services/gate-motor.webp" },
+  { href: "/services/emergency-garage-door-repair", label: "24/7 Emergency",      img: "/images/hero/hero-gate.webp" },
 ];
 
 const CITY_HERO_POOL = [
-  "/images/hero/hero-home.jpeg",
-  "/images/services/swing-1.jpeg",
-  "/images/services/grey-iron-gate.jpeg",
-  "/images/services/wood-gate.jpeg",
-  "/images/services/swing-2.jpeg",
-  "/images/services/outside-gate.jpeg",
-  "/images/story/building.jpeg",
-  "/images/services/gate-view.jpeg",
-  "/images/services/gated-community.jpeg",
-  "/images/services/iron-gate-1.jpeg",
-  "/images/services/iron-gold-gate.jpeg",
-  "/images/services/estate-gate.jpeg",
-  "/images/services/malibu-gate.jpeg",
-  "/images/services/long-iron-gate.jpeg",
-  "/images/services/frezno-gate.jpeg",
-  "/images/services/short-gate.jpeg",
-  "/images/services/black-wood-gate.jpeg",
+  "/images/hero/hero-home.webp",
+  "/images/gallery/gate-5.webp",
+  "/images/gallery/gate-3.webp",
+  "/images/gallery/gate-2.webp",
+  "/images/gallery/gate-6.webp",
+  "/images/gallery/outside-1.webp",
+  "/images/story/building.webp",
+  "/images/services/gate-view.webp",
+  "/images/services/gated-community.webp",
+  "/images/services/iron-gate-1.webp",
+  "/images/services/iron-gold-gate.webp",
+  "/images/services/estate-gate.webp",
+  "/images/services/malibu-gate.webp",
+  "/images/services/long-iron-gate.webp",
+  "/images/services/frezno-gate.webp",
+  "/images/services/short-gate.webp",
+  "/images/gallery/outside-1.webp",
 ];
 
 // Rotating sets so nearby cities on the list don't all show the same three photos
 const CITY_PHOTO_STRIPS = [
   [
-    { src: "/images/gallery/gate-4.jpeg", alt: "Iron gate repair and service" },
-    { src: "/images/gallery/gate-5.jpeg", alt: "Gate installation and service" },
-    { src: "/images/gallery/gate-6.jpeg", alt: "Custom gate repair service" },
+    { src: "/images/gallery/gate-4.webp", alt: "Iron gate repair and service" },
+    { src: "/images/gallery/gate-5.webp", alt: "Gate installation and service" },
+    { src: "/images/gallery/gate-6.webp", alt: "Custom gate repair service" },
   ],
   [
-    { src: "/images/gallery/gate-1.jpeg", alt: "Sliding gate repair and service" },
-    { src: "/images/gallery/gate-2.jpeg", alt: "Driveway gate repair and service" },
-    { src: "/images/gallery/gate-3.jpeg", alt: "New gate installation" },
+    { src: "/images/gallery/gate-1.webp", alt: "Sliding gate repair and service" },
+    { src: "/images/gallery/gate-2.webp", alt: "Driveway gate repair and service" },
+    { src: "/images/gallery/gate-3.webp", alt: "New gate installation" },
   ],
   [
-    { src: "/images/gallery/commercial-1.jpeg", alt: "Commercial gate service" },
-    { src: "/images/gallery/outside-1.jpeg", alt: "Gate repair on-site" },
-    { src: "/images/services/iron-wood-gate.jpeg", alt: "Iron and wood gate repair" },
+    { src: "/images/gallery/commercial-1.webp", alt: "Commercial gate service" },
+    { src: "/images/gallery/outside-1.webp", alt: "Gate repair on-site" },
+    { src: "/images/services/iron-wood-gate.webp", alt: "Iron and wood gate repair" },
   ],
   [
-    { src: "/images/services/new-garage.jpeg", alt: "Garage door opener repair" },
-    { src: "/images/services/wood-garage.jpeg", alt: "Wood garage door repair" },
-    { src: "/images/services/whatsapp-photo-2.jpeg", alt: "Garage door service" },
+    { src: "/images/services/garage-door-repair.webp", alt: "Garage door opener repair" },
+    { src: "/images/services/wood-garage.webp", alt: "Wood garage door repair" },
+    { src: "/images/services/whatsapp-photo-2.webp", alt: "Garage door service" },
   ],
 ];
 
@@ -98,16 +100,29 @@ export default async function CityPage({ params }: Props) {
   const data = getCityBySlug(city);
   if (!data) notFound();
 
-  const cityReviews = REVIEWS.filter((r) => r.city === data.name);
-  const displayReviews = [
-    ...cityReviews,
-    ...REVIEWS.filter((r) => r.city !== data.name),
-  ].slice(0, 3);
+  // Real reviews for this city first; if there aren't 3, fill in with reviews from
+  // its actual geographic neighbors (never a relabeled or arbitrary city) — and if
+  // none of those have reviews either, the section is simply hidden below.
+  const displayReviews = REVIEWS.filter((r) => r.city === data.name);
+  for (const nearbySlug of data.nearby) {
+    if (displayReviews.length >= 3) break;
+    const nearbyCity = CITIES.find((c) => c.slug === nearbySlug);
+    if (!nearbyCity) continue;
+    for (const r of REVIEWS.filter((rev) => rev.city === nearbyCity.name)) {
+      if (displayReviews.length >= 3) break;
+      if (!displayReviews.includes(r)) displayReviews.push(r);
+    }
+  }
 
   const cityIndex = CITIES.findIndex((c) => c.slug === city);
   const heroImg = CITY_HERO_POOL[cityIndex % CITY_HERO_POOL.length];
   const photoStrip = CITY_PHOTO_STRIPS[cityIndex % CITY_PHOTO_STRIPS.length];
-  const nearbyCities = Array.from({ length: 4 }, (_, i) => CITIES[(cityIndex + i + 1) % CITIES.length]);
+
+  // Real geographic adjacencies only — never padded with distant cities.
+  // Below 3 entries, the Nearby Areas module is hidden entirely (see render below).
+  const nearbyCities = data.nearby
+    .map((slug) => CITIES.find((c) => c.slug === slug))
+    .filter((c): c is (typeof CITIES)[number] => Boolean(c));
 
   const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(data.name + ", CA")}&output=embed&z=12`;
 
@@ -155,6 +170,7 @@ export default async function CityPage({ params }: Props) {
           fill
           className="object-cover"
           priority
+          fetchPriority="high"
         />
         <div
           className="absolute inset-0"
@@ -179,6 +195,7 @@ export default async function CityPage({ params }: Props) {
                 <a href={BUSINESS.phoneHref} className="btn-gold">
                   <Phone size={16} /> Call {BUSINESS.phone}
                 </a>
+                <TextUsCTA className="btn-ghost" />
                 <Link href="/contact" className="btn-ghost">
                   Get Free Estimate
                 </Link>
@@ -211,7 +228,7 @@ export default async function CityPage({ params }: Props) {
           >
             <span>✦ Serving {data.name}</span>
             <span style={{ opacity: 0.5 }}>·</span>
-            <span>Arrival in 30–45 min to {data.name}</span>
+            <span>{data.arrivalTime} to {data.name}</span>
             <span style={{ opacity: 0.5 }}>·</span>
             <span>Same-Day Service</span>
             <span style={{ opacity: 0.5 }}>·</span>
@@ -327,9 +344,12 @@ export default async function CityPage({ params }: Props) {
                 We respond within 30 minutes during business hours.
               </p>
             </div>
-            <a href={BUSINESS.phoneHref} className="btn-primary" style={{ flexShrink: 0 }}>
-              <Phone size={15} /> Call Now
-            </a>
+            <div className="flex flex-wrap gap-3" style={{ flexShrink: 0 }}>
+              <a href={BUSINESS.phoneHref} className="btn-primary">
+                <Phone size={15} /> Call Now
+              </a>
+              <TextUsCTA className="btn-secondary" />
+            </div>
           </div>
         </div>
       </section>
@@ -401,39 +421,42 @@ export default async function CityPage({ params }: Props) {
                 <a href={BUSINESS.phoneHref} className="btn-primary">
                   <Phone size={16} /> Call {BUSINESS.phone}
                 </a>
+                <TextUsCTA className="btn-secondary" />
                 <Link href="/contact" className="btn-secondary">
                   Request Free Estimate
                 </Link>
               </div>
             </div>
 
-            {/* Reviews */}
-            <div>
-              <h2
-                style={{
-                  marginBottom: "1.25rem",
-                  fontSize: "1.75rem",
-                  borderLeft: "4px solid var(--brown)",
-                  paddingLeft: "0.75rem",
-                }}
-              >
-                What Customers Say
-              </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {displayReviews.map((r, i) => (
-                  <ReviewQuote key={i} review={r} className="h-full" />
-                ))}
-              </div>
-              <div className="mt-5 text-center">
-                <Link
-                  href="/reviews"
-                  className="btn-secondary text-sm"
-                  style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem" }}
+            {/* Reviews — hidden if neither this city nor its real neighbors have one */}
+            {displayReviews.length > 0 && (
+              <div>
+                <h2
+                  style={{
+                    marginBottom: "1.25rem",
+                    fontSize: "1.75rem",
+                    borderLeft: "4px solid var(--brown)",
+                    paddingLeft: "0.75rem",
+                  }}
                 >
-                  View All Customer Reviews <ArrowRight size={14} />
-                </Link>
+                  What Customers Say
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {displayReviews.map((r, i) => (
+                    <ReviewQuote key={i} review={r} className="h-full" />
+                  ))}
+                </div>
+                <div className="mt-5 text-center">
+                  <Link
+                    href="/reviews"
+                    className="btn-secondary text-sm"
+                    style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem" }}
+                  >
+                    View All Customer Reviews <ArrowRight size={14} />
+                  </Link>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* FAQ */}
             <div>
@@ -466,36 +489,68 @@ export default async function CityPage({ params }: Props) {
               </div>
             </div>
 
-            {/* Nearby Areas */}
-            <div>
-              <h2
-                style={{
-                  marginBottom: "1rem",
-                  fontSize: "1.4rem",
-                  borderLeft: "4px solid var(--brown)",
-                  paddingLeft: "0.75rem",
-                }}
-              >
-                Nearby Areas We Serve
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {nearbyCities.map((c) => (
-                  <Link
-                    key={c.slug}
-                    href={`/areas/${c.slug}`}
-                    className="px-3 py-1.5 rounded-full text-sm transition-colors"
-                    style={{
-                      background: "var(--bg-muted)",
-                      color: "var(--text-mid)",
-                      border: "1px solid var(--line)",
-                      textDecoration: "none",
-                    }}
-                  >
-                    {c.name}
-                  </Link>
-                ))}
+            {/* Nearby Areas — hidden when there are fewer than 3 real neighbors */}
+            {nearbyCities.length >= 3 ? (
+              <div>
+                <h2
+                  style={{
+                    marginBottom: "1rem",
+                    fontSize: "1.4rem",
+                    borderLeft: "4px solid var(--brown)",
+                    paddingLeft: "0.75rem",
+                  }}
+                >
+                  Nearby Areas We Serve
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {nearbyCities.map((c) => (
+                    <Link
+                      key={c.slug}
+                      href={`/areas/${c.slug}`}
+                      className="px-3 py-1.5 rounded-full text-sm transition-colors"
+                      style={{
+                        background: "var(--bg-muted)",
+                        color: "var(--text-mid)",
+                        border: "1px solid var(--line)",
+                        textDecoration: "none",
+                      }}
+                    >
+                      {c.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
+            ) : (
+              <div>
+                <h2
+                  style={{
+                    marginBottom: "1rem",
+                    fontSize: "1.4rem",
+                    borderLeft: "4px solid var(--brown)",
+                    paddingLeft: "0.75rem",
+                  }}
+                >
+                  All Our Services
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {SERVICES.map((s) => (
+                    <Link
+                      key={s.slug}
+                      href={`/services/${s.slug}`}
+                      className="px-3 py-1.5 rounded-full text-sm transition-colors"
+                      style={{
+                        background: "var(--bg-muted)",
+                        color: "var(--text-mid)",
+                        border: "1px solid var(--line)",
+                        textDecoration: "none",
+                      }}
+                    >
+                      {s.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Bottom CTA */}
             <div
@@ -513,6 +568,7 @@ export default async function CityPage({ params }: Props) {
                 <a href={BUSINESS.phoneHref} className="btn-gold">
                   <Phone size={16} /> Call {BUSINESS.phone}
                 </a>
+                <TextUsCTA className="btn-secondary" />
                 <Link href="/contact" className="btn-secondary">
                   Get Free Estimate
                 </Link>
@@ -535,13 +591,14 @@ export default async function CityPage({ params }: Props) {
               <a href={BUSINESS.phoneHref} className="btn-gold w-full justify-center">
                 <Phone size={16} /> {BUSINESS.phone}
               </a>
+              <TextUsCTA className="btn-secondary w-full justify-center mt-2" label="Text Us a Photo" />
               <p style={{ fontSize: "0.78rem", color: "rgba(237,234,228,0.5)", marginTop: "0.75rem" }}>
                 Bonded &amp; Insured · Sun–Fri 7AM–10PM
               </p>
             </div>
 
             <p className="text-center font-heading font-bold" style={{ color: "#C9A84C", fontSize: "1.05rem" }}>
-              Free Estimate in {data.name}
+              Get a Free Estimate in {data.name}
             </p>
             <ContactForm />
 

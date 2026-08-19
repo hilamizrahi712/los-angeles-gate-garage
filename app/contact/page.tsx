@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 import ContactForm from "@/components/ContactForm";
+import TextUsCTA from "@/components/TextUsCTA";
 
 export const metadata: Metadata = {
   title: "Contact Us — Free Estimate | Real Gate & Garage Door",
@@ -56,6 +57,7 @@ export default function ContactPage() {
                     <p style={{ fontSize: "0.82rem", color: "var(--stone)", marginTop: "0.2rem" }}>
                       Emergency line answered 24/7
                     </p>
+                    <TextUsCTA className="btn-secondary text-sm mt-2" />
                   </div>
                 </div>
 

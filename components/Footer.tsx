@@ -1,6 +1,17 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { BUSINESS, SFV_CITIES, EXTENDED_CITIES } from "@/lib/constants";
+import { BUSINESS, SFV_CITIES, EXTENDED_CITIES, ALL_CITIES } from "@/lib/constants";
+
+// Highest sitemap-priority cities (see next-sitemap.config.js AREA_TIER_1/2) get the
+// weakest internal linking otherwise — this block exists specifically to fix that.
+const TOP_SERVICE_AREA_SLUGS = [
+  // Tier 1 — every one of these must appear
+  "fresno", "bakersfield", "lancaster", "palmdale", "oxnard", "ventura-county", "santa-barbara",
+  // Tier 2
+  "santa-clarita", "glendora", "hacienda-heights", "torrance", "manhattan-beach", "long-beach", "orange-county",
+  // Recognizable anchors to round out the 16
+  "los-angeles", "beverly-hills",
+];
 
 const gateServiceLinks = [
   { href: "/services/gate-repair", label: "Gate Repair" },
@@ -121,6 +132,27 @@ export default function Footer() {
           <Link href="/service-areas" className="footer-more-link">
             + {EXTENDED_CITIES.length} more cities →
           </Link>
+        </div>
+      </div>
+
+      {/* Top Service Areas — extra internal links for the highest-priority, least-linked city pages */}
+      <div className="footer-top-areas" style={{ borderTop: "1px solid rgba(237,234,228,0.1)" }}>
+        <div className="container-max py-8">
+          <p className="footer-col-heading mb-3">Top Service Areas</p>
+          <div className="flex flex-wrap gap-x-4 gap-y-2">
+            {TOP_SERVICE_AREA_SLUGS.map((slug, i) => {
+              const c = ALL_CITIES.find((city) => city.slug === slug);
+              if (!c) return null;
+              return (
+                <span key={slug} className="flex items-center">
+                  <Link href={`/areas/${slug}`} className="footer-link text-sm">{c.name}</Link>
+                  {i < TOP_SERVICE_AREA_SLUGS.length - 1 && (
+                    <span className="ml-4" style={{ opacity: 0.25 }}>·</span>
+                  )}
+                </span>
+              );
+            })}
+          </div>
         </div>
       </div>
 
