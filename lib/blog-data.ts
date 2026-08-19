@@ -11,6 +11,8 @@ export interface BlogPost {
   content: string;
   img?: string;
   updatedAt?: string;
+  pricingDisclaimer?: string;
+  faq?: { q: string; a: string }[];
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -63,11 +65,20 @@ Real Gate & Garage Door provides same-day electric gate repair in our service ar
     category: "gate",
     excerpt: "Gate repair costs range from $80 to $700+ depending on the problem. Here's what each type of repair actually costs in 2026.",
     img: "/images/gallery/gate-4.webp",
+    pricingDisclaimer: "These are typical Southern California market ranges based on common job types, not our quotes. Every job is different — call or text us a photo for a free estimate on yours.",
+    faq: [
+      { q: "What makes gate repair expensive?", a: "The cost of gate repair is driven mainly by which component failed. A sensor or hinge repair is inexpensive because it's mostly labor, while a motor or circuit board replacement costs more because the parts themselves are expensive and often brand-specific." },
+      { q: "Should I repair my gate or replace it?", a: "Repair is almost always the better value if the gate structure itself is sound. A new operator or control board installed on a solid gate typically costs a fraction of full replacement, and replacement only makes sense once the structure itself has failed." },
+      { q: "How much does a gate motor cost?", a: "A replacement gate motor typically runs $350–$700 for a residential unit including installation, with commercial-grade operators running higher. The exact cost depends on the gate's weight and the operator's duty-cycle rating." },
+      { q: "What does an emergency gate repair call typically cost?", a: "After-hours emergency service typically adds $75–$125 to the base repair cost across the industry. That surcharge covers same-day or after-hours dispatch — it isn't a different repair, just faster access to it." },
+      { q: "Are gate repair estimates free?", a: "Most companies, including ours, don't charge for a written estimate. A diagnostic or service-call fee — typically $65–$95 industry-wide — usually applies once a technician is dispatched to actually assess the problem, and that fee is commonly credited toward the repair." },
+      { q: "How long does gate repair take?", a: "Most single-issue gate repairs — a sensor, hinge, or roller — take 30–90 minutes once the technician is on-site. A full motor or circuit board replacement typically takes 2–3 hours." },
+    ],
     content: `## Gate Repair Cost in 2026 Price Guide
 
-Pricing transparency is one of the things we hear about most from customers who had bad experiences with other companies. They got a quote over the phone, a technician showed up and found "more problems," and suddenly a $150 repair became a $600 bill.
+Gate repair in Southern California typically costs $80 to $700, depending on what's actually broken. Sensor and hinge repairs sit at the low end of that range; motor and circuit board replacement sit at the high end.
 
-We don't operate that way. This guide lays out what gate repairs actually cost in 2026 — by specific repair type — so you can approach any service call with realistic expectations.
+Pricing transparency is one of the things we hear about most from customers who've had bad experiences elsewhere — a quote over the phone, a technician who "finds more problems" on-site, and a bill that's suddenly triple the original estimate. This guide breaks down typical Southern California market ranges by repair type so you know what to expect before anyone shows up.
 
 ### Before You Book a Repair — Check These First
 
@@ -75,68 +86,66 @@ We don't operate that way. This guide lays out what gate repairs actually cost i
 ✅ **Reset the breaker.** If it's tripped, resetting it is free. If it trips again immediately, that's your answer: it's electrical, not mechanical.
 ✅ **Clear the gate's path.** Debris near a sensor reads as an obstruction. Clearing it can save you the diagnostic fee entirely.
 
-If none of those change anything, the cause is almost always a failed circuit board, a worn drive component, or a sensor that needs realignment — and pricing depends on which one it is. Here's what each actually costs.
+If none of those change anything, the cause is almost always a failed circuit board, a worn drive component, or a sensor that needs realignment — and cost depends on which one it is. Here's what each typically runs.
 
-### Diagnostic Fee
+### Diagnostic / Service Call Fee
 
-Most reputable gate repair companies charge a service or diagnostic fee to visit your property and assess the problem. In the, this typically runs **$65–$95** and is usually credited toward the repair if you proceed.
-
-*At Real Gate & Garage Door, our diagnostic fee is $75, credited in full toward any repair we complete.*
+Most Southern California gate repair companies charge a service or diagnostic fee to visit your property and assess the problem, typically $65–$95, usually credited toward the repair if you move forward with the work.
 
 ### Gate Motor / Operator Repair: $200–$700
 
-The gate motor (operator) is the most expensive component to repair. Costs vary by what's wrong:
+The gate motor (operator) is the most expensive component to repair. Cost varies by what's wrong:
 
-| Repair Type | Typical Cost |
-|-------------|-------------|
-| Circuit board replacement | $250–$500 |
-| Motor replacement (residential) | $350–$700 |
-| Drive gear replacement | $150–$300 |
-| Limit switch adjustment/replacement | $80–$150 |
-| Complete operator replacement (installed) | $600–$1,400 |
+| Job Type | Typical Market Range | What Drives the Number |
+|-------------|-------------|-------------|
+| Circuit board replacement | $250–$500 | Board cost varies significantly by brand; some are proprietary and harder to source |
+| Motor replacement (residential) | $350–$700 | Motor size and whether the operator brand is still in production |
+| Drive gear replacement | $150–$300 | Gear material and whether the housing has to be opened |
+| Limit switch adjustment/replacement | $80–$150 | Usually a quick adjustment; replacement costs more if the switch itself failed |
+| Complete operator replacement (installed) | $600–$1,400 | Full unit cost plus labor to remove the old operator and program the new one |
 
 ### Gate Sensor Repair: $80–$180
 
 Safety sensor issues — misaligned photocells, failed loop detectors, or bad receivers — are one of the more affordable repairs:
 
-| Repair Type | Typical Cost |
-|-------------|-------------|
-| Photocell alignment | $60–$100 |
-| Photocell replacement (pair) | $100–$180 |
-| Remote receiver replacement | $80–$160 |
-| Remote programming | $60–$100 |
+| Job Type | Typical Market Range | What Drives the Number |
+|-------------|-------------|-------------|
+| Photocell alignment | $60–$100 | Usually a labor-only adjustment, no parts needed |
+| Photocell replacement (pair) | $100–$180 | Sensors are typically replaced in matched pairs |
+| Remote receiver replacement | $80–$160 | Depends on whether the receiver is integrated into the control board |
+| Remote programming | $60–$100 | Labor only; more remotes or a lost master remote adds time |
 
 ### Hinge & Structural Repair: $100–$350
 
 Swing gate hinges take enormous strain and eventually wear or break:
 
-| Repair Type | Typical Cost |
-|-------------|-------------|
-| Single hinge replacement | $80–$200 |
-| Double hinge replacement | $150–$350 |
-| Post repair (loose or tilted) | $200–$500 |
-| Gate frame welding repair | $200–$500 |
+| Job Type | Typical Market Range | What Drives the Number |
+|-------------|-------------|-------------|
+| Single hinge replacement | $80–$200 | Hinge size and whether it's a standard or heavy-duty gate |
+| Double hinge replacement | $150–$350 | Two hinges plus realignment of the gate panel |
+| Post repair (loose or tilted) | $200–$500 | Whether the post needs re-setting in concrete or full replacement |
+| Gate frame welding repair | $200–$500 | Extent of the crack or break and the metal type (steel vs. wrought iron) |
 
 ### Chain / Drive System Repair: $150–$400
 
 For sliding gates that run on a chain or rack:
 
-| Repair Type | Typical Cost |
-|-------------|-------------|
-| Chain replacement | $150–$300 |
-| Rack replacement (per section) | $120–$250 |
-| Drive wheel replacement | $100–$200 |
-| Track repair/realignment | $100–$250 |
+| Job Type | Typical Market Range | What Drives the Number |
+|-------------|-------------|-------------|
+| Chain replacement | $150–$300 | Chain length and gate weight |
+| Rack replacement (per section) | $120–$250 | Number of sections needed and material match |
+| Drive wheel replacement | $100–$200 | Wheel material and load rating |
+| Track repair/realignment | $100–$250 | Whether the track needs adjustment only or a section replaced |
 
 ### Roller & Track Repair: $120–$280
 
 Sliding gate wheels and track wear over time, causing the gate to drag or bind:
 
-| Repair Type | Typical Cost |
-|-------------|-------------|
-| Wheel/roller replacement | $120–$250 |
-| Track realignment | $100–$200 |
-| Track section replacement | $150–$350 |
+| Job Type | Typical Market Range | What Drives the Number |
+|-------------|-------------|-------------|
+| Wheel/roller replacement | $120–$250 | Roller size and load capacity for the gate's weight |
+| Track realignment | $100–$200 | Labor only in most cases |
+| Track section replacement | $150–$350 | Length of track needed and surface prep |
 
 ---
 
@@ -150,23 +159,23 @@ Sliding gate wheels and track wear over time, causing the gate to drag or bind:
 
 **Access and travel:** Remote properties may incur a travel surcharge.
 
-**Emergency calls:** After-hours emergency service typically adds $75–$125 to the repair cost.
+**Timing:** After-hours emergency service typically adds $75–$125 to the base repair cost across the industry.
 
 ---
 
 ## How to Get an Accurate Estimate
 
-The only way to get an accurate gate repair estimate is an on-site diagnostic. Photos and descriptions help, but the exact cause of a gate failure — and therefore the exact cost — can only be determined by examining the system in person.
+The only way to get an accurate gate repair estimate is an on-site diagnostic. Photos and descriptions help, but the exact cause of a gate failure — and therefore the exact cost — can only be determined by examining the system in person. We don't quote a price over the phone, and every job gets a written, on-site estimate before any work begins.
 
 ### The Reality
 
-Gate motors run on line voltage and gates themselves weigh hundreds of pounds under spring or motor tension — that combination is why this isn't a weekend DIY project. Circuit boards and drive components for most gate operators are brand-specific; they're not sitting on a shelf at Home Depot, which is why we carry them on the truck. And wiring a new board incorrectly can burn it out the moment you power it on, turning a $250 fix into a $700 one.
+Gate motors run on line voltage and gates themselves weigh hundreds of pounds under spring or motor tension — that combination is why this isn't a weekend DIY project. Circuit boards and drive components for most gate operators are brand-specific; they're not sitting on a shelf at Home Depot, which is why we carry them on the truck. And wiring a new board incorrectly can burn it out the moment you power it on, turning a moderate repair into a much larger one.
 
 ---
 
 ## Still Deciding?
 
-Text us a photo of your gate and its problem for a free diagnosis, no obligation. Or call Real Gate & Garage Door at **(818) 915-5715** for a same-day appointment in our service area. Our $75 diagnostic fee is credited toward your repair.`,
+Text us a photo of your gate and its problem for a free diagnosis, no obligation. Or call Real Gate & Garage Door at **(818) 915-5715** for a same-day appointment in our service area. Every estimate is free and given in writing before we start.`,
   },
 
   {
@@ -181,11 +190,20 @@ Text us a photo of your gate and its problem for a free diagnosis, no obligation
     category: "gate",
     excerpt: "Automatic gate installation costs $2,000–$8,000 depending on gate type, material, and operator. Here's the full breakdown.",
     img: "/images/gallery/gate-1.webp",
+    pricingDisclaimer: "These are typical Southern California market ranges based on common job types, not our quotes. Every job is different — call or text us a photo for a free estimate on yours.",
+    faq: [
+      { q: "What makes automatic gate installation expensive?", a: "The biggest cost drivers for automatic gate installation are the gate material and the operator grade. Custom ornamental iron with a commercial-grade operator costs several times more than a basic aluminum gate with a standard residential operator, with labor, electrical, and concrete work adding a smaller but consistent amount on top." },
+      { q: "Should I repair my existing gate or install a new one?", a: "Repair is almost always cheaper than replacement if the gate structure and posts are still sound. A new operator or motor installed on an existing structurally sound gate typically costs a fraction of a full new installation, so we always check the existing structure before recommending replacement." },
+      { q: "How much does a gate operator cost as part of installation?", a: "A residential gate operator typically costs $600–$1,800 installed depending on the brand and duty rating, while commercial-grade operators built for heavier gates or higher daily cycle counts run $1,500–$3,000 or more." },
+      { q: "What does emergency or rush installation typically cost?", a: "Automatic gate installation is a scheduled project rather than an emergency service, so most companies don't charge a rush premium the way they would for an emergency repair call. The main driver of timeline is material lead time, not urgency fees." },
+      { q: "Are gate installation estimates free?", a: "Most companies, including ours, provide a free written estimate for a new gate installation, since accurate pricing requires seeing the driveway, existing structure, and access to power in person before quoting a system." },
+      { q: "How long does automatic gate installation take?", a: "A standard single swing-gate installation typically takes one to two days once materials are on-site, while custom ornamental gates or commercial systems can take longer due to fabrication lead time and additional electrical or concrete work." },
+    ],
     content: `## Automatic Gate Installation Cost in 2026
 
-Thinking about installing an automatic driveway gate? It's one of the best investments you can make in your home's security and curb appeal — but the price range is wide. An automatic gate can cost anywhere from $2,000 to $10,000+ depending on the gate type, material, and operator system you choose.
+Automatic gate installation in Southern California typically costs $2,000 to $10,000+, depending on gate material, size, and operator type. Most single swing-gate installations with a standard residential operator fall between $2,000 and $5,000; custom iron gates with commercial-grade operators can exceed $10,000.
 
-This guide breaks down the costs honestly so you can budget accurately.
+It's one of the best investments you can make in a home's security and curb appeal, but the price range is wide — this guide breaks down what drives it so you can budget accurately.
 
 ### First, Make Sure You Actually Need a New Gate
 
@@ -208,13 +226,13 @@ Every automatic gate installation has four cost components:
 
 ### Gate Material Costs
 
-| Gate Material | Cost Range (materials only) |
-|---------------|---------------------------|
-| Aluminum tube frame | $500–$2,000 |
-| Wrought iron / steel | $1,000–$4,000+ |
-| Wood (cedar, redwood) | $800–$3,000 |
-| Vinyl / composite | $600–$2,500 |
-| Custom ornamental iron | $2,000–$8,000+ |
+| Job Type | Typical Market Range (materials only) | What Drives the Number |
+|---------------|---------------------------|---------------------------|
+| Aluminum tube frame | $500–$2,000 | Gate width and whether it's a stock or custom-cut frame |
+| Wrought iron / steel | $1,000–$4,000+ | Metal weight, ornamental detail, and custom fabrication |
+| Wood (cedar, redwood) | $800–$3,000 | Wood grade and amount of custom millwork |
+| Vinyl / composite | $600–$2,500 | Panel style and gate width |
+| Custom ornamental iron | $2,000–$8,000+ | Design complexity, hand-forged detail, and finish |
 
 Iron and custom ornamental gates cost the most but last the longest and add the most curb appeal. Aluminum is a cost-effective, rust-free alternative.
 
@@ -222,34 +240,33 @@ Iron and custom ornamental gates cost the most but last the longest and add the 
 
 Gate operators range from basic residential units to commercial-grade systems:
 
-| Operator Type | Cost Range (installed) |
-|---------------|----------------------|
-| Basic residential swing (LiftMaster, Elite) | $600–$1,200 |
-| Mid-range residential swing/slide (Viking, FAAC) | $900–$1,800 |
-| Commercial-grade operator | $1,500–$3,000+ |
-| Solar-powered system (add-on) | $400–$800 additional |
+| Job Type | Typical Market Range (installed) | What Drives the Number |
+|---------------|----------------------|----------------------|
+| Basic residential swing (LiftMaster, Elite) | $600–$1,200 | Motor size relative to gate weight |
+| Mid-range residential swing/slide (Viking, FAAC) | $900–$1,800 | Higher-duty motor and additional programming |
+| Commercial-grade operator | $1,500–$3,000+ | Built for heavier gates and higher daily cycle counts |
+| Solar-powered system (add-on) | $400–$800 additional | Panel size and battery backup capacity |
 
 ### Complete Installed System Cost
 
-Here's what you'll pay all-in for a typical residential automatic gate installation:
+Here's what a typical residential automatic gate installation runs all-in:
 
-| Gate System | Total Installed Cost |
-|-------------|---------------------|
-| Single swing gate, aluminum, basic operator | $2,000–$3,500 |
-| Double swing gate, aluminum, standard operator | $3,000–$5,000 |
-| Single sliding gate, steel, standard operator | $2,500–$4,500 |
-| Single swing gate, iron, premium operator | $4,000–$7,000 |
-| Double swing gate, custom iron, commercial operator | $6,000–$12,000+ |
+| Job Type | Typical Market Range (total installed) | What Drives the Number |
+|-------------|---------------------|---------------------|
+| Single swing gate, aluminum, basic operator | $2,000–$3,500 | Lightest common configuration; minimal structural work |
+| Double swing gate, aluminum, standard operator | $3,000–$5,000 | Two gate panels and a second operator or sync kit |
+| Single sliding gate, steel, standard operator | $2,500–$4,500 | Track and post work in addition to the gate itself |
+| Single swing gate, iron, premium operator | $4,000–$7,000 | Heavier gate requires a higher-duty operator |
+| Double swing gate, custom iron, commercial operator | $6,000–$12,000+ | Custom fabrication plus a commercial-grade operator built for daily heavy use |
 
 ### Additional Costs to Budget For
 
-**Permit:** Automatic gate installations typically require a permit cities. Budget $150–$500 for permit fees (we handle the application).
-
-**Electrical:** If there's no 110V outlet near the gate location, an electrician will need to run power. Budget $300–$800 for a simple circuit extension.
-
-**Concrete work:** New gate posts require a concrete footing. If the existing driveway needs to be cut, add $200–$500.
-
-**Access control:** A basic keypad pad or remote is included in most installations. An intercom system (with video) adds $300–$800. Smartphone app integration (LiftMaster myQ, etc.) typically costs $100–$200 extra.
+| Job Type | Typical Market Range | What Drives the Number |
+|-------------|---------------------|---------------------|
+| Permit fees | $150–$500 | Varies by city; we handle the application |
+| Electrical (new circuit run) | $300–$800 | Distance from the nearest power source |
+| Concrete footing / driveway cut | $200–$500 | Whether existing concrete needs to be cut and repoured |
+| Access control upgrade (intercom, app integration) | $100–$800 | Video vs. audio-only, and whether smartphone app integration is included |
 
 ---
 
@@ -262,7 +279,7 @@ For most homeowners, yes. An automatic gate:
 - Eliminates the daily inconvenience of a manual gate
 - Can qualify for a home insurance discount in some cases
 
-The key is buying quality. A cheap gate operator installed on a poor-quality gate structure will cost you more in repairs within 2–3 years than the savings on the initial purchase.
+The key is buying quality. A cheap gate operator installed on a poor-quality gate structure will cost more in repairs within 2–3 years than it saved on the initial purchase.
 
 ### The Reality
 

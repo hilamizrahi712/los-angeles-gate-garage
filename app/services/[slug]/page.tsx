@@ -63,6 +63,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+// Cost-guide articles relevant to specific services — general SoCal market ranges,
+// not our quotes (see the disclaimer on each guide).
+const RELATED_GUIDES: Record<string, { slug: string; label: string }> = {
+  "gate-repair": { slug: "gate-repair-cost", label: "How Much Does Gate Repair Cost?" },
+  "automatic-gate-repair": { slug: "gate-repair-cost", label: "How Much Does Gate Repair Cost?" },
+  "gate-opener-repair": { slug: "gate-repair-cost", label: "How Much Does Gate Repair Cost?" },
+  "gate-installation": { slug: "automatic-gate-installation-cost", label: "How Much Does Automatic Gate Installation Cost?" },
+};
+
 // Map service slugs to real uploaded images — each service gets a unique photo
 const SERVICE_IMAGES: Record<string, string> = {
   "gate-repair":                  "/images/services/iron-gate-1.webp",
@@ -90,6 +99,7 @@ export default async function ServicePage({ params }: Props) {
   if (!service) notFound();
 
   const related = SERVICES.filter((s) => service.relatedSlugs.includes(s.slug));
+  const relatedGuide = RELATED_GUIDES[slug];
   const heroImg = SERVICE_IMAGES[slug] ?? "/images/gallery/gate-1.webp";
   const matchedReview = REVIEWS.find((r) => r.name === MATCHED_REVIEW[slug]);
 
@@ -327,6 +337,21 @@ export default async function ServicePage({ params }: Props) {
                   ))}
                 </div>
               </div>
+
+              {/* Cost Guide */}
+              {relatedGuide && (
+                <div
+                  className="rounded-[var(--radius-lg)] p-5 flex flex-wrap items-center justify-between gap-4"
+                  style={{ background: "var(--bg-card)", border: "1px solid var(--line)" }}
+                >
+                  <p style={{ color: "var(--text-mid)", fontSize: "0.95rem" }}>
+                    Wondering what this typically costs? See our SoCal market-rate guide.
+                  </p>
+                  <Link href={`/tips/${relatedGuide.slug}`} className="btn-secondary text-sm" style={{ flexShrink: 0 }}>
+                    {relatedGuide.label}
+                  </Link>
+                </div>
+              )}
 
               {/* Related Services */}
               {related.length > 0 && (

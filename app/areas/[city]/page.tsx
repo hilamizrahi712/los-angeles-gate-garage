@@ -600,6 +600,16 @@ export default async function CityPage({ params }: Props) {
             <p className="text-center font-heading font-bold" style={{ color: "#C9A84C", fontSize: "1.05rem" }}>
               Get a Free Estimate in {data.name}
             </p>
+            <p className="text-center" style={{ fontSize: "0.8rem", color: "var(--stone)" }}>
+              Curious what things typically run? See our SoCal market-rate guides:{" "}
+              <Link href="/tips/gate-repair-cost" style={{ color: "var(--brown-warm)", textDecoration: "underline" }}>
+                gate repair cost
+              </Link>{" "}
+              ·{" "}
+              <Link href="/tips/automatic-gate-installation-cost" style={{ color: "var(--brown-warm)", textDecoration: "underline" }}>
+                gate installation cost
+              </Link>
+            </p>
             <ContactForm />
 
             {/* Google Map + business card */}

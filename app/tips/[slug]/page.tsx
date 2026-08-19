@@ -144,12 +144,31 @@ export default async function TipsPostPage({ params }: Props) {
     author: { "@id": ORG_ID },
   };
 
+  // Article schema only — deliberately no Offer/PriceSpecification. Any $ figures in
+  // this content are general market ranges, not our quotes, and schema shouldn't
+  // imply otherwise.
+  const faqSchema = post.faq && {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: post.faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       {/* Header */}
       <section className="py-12" style={{ background: "var(--bg-muted)", borderBottom: "1px solid var(--line)" }}>
@@ -197,7 +216,46 @@ export default async function TipsPostPage({ params }: Props) {
         <div className="container-max">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <article className="lg:col-span-2 max-w-none">
+              {post.pricingDisclaimer && (
+                <div
+                  className="rounded-[var(--radius-lg)] px-5 py-4 mb-8"
+                  style={{ background: "rgba(201,168,76,0.12)", border: "1px solid rgba(201,168,76,0.4)" }}
+                >
+                  <p className="font-semibold text-sm" style={{ color: "var(--navy)" }}>
+                    {post.pricingDisclaimer}
+                  </p>
+                </div>
+              )}
               {renderContent(post.content)}
+
+              {/* FAQ */}
+              {post.faq && post.faq.length > 0 && (
+                <div className="mt-10">
+                  <h2
+                    className="font-heading font-bold mt-2 mb-4"
+                    style={{ color: "var(--navy)", fontSize: "clamp(1.4rem, 2.5vw, 1.9rem)" }}
+                  >
+                    Frequently Asked Questions
+                  </h2>
+                  <div className="space-y-4">
+                    {post.faq.map((f, i) => (
+                      <div
+                        key={i}
+                        className="rounded-[var(--radius-lg)] p-5"
+                        style={{ border: "1px solid var(--line)", background: "var(--bg-card)" }}
+                      >
+                        <h3
+                          className="font-heading font-semibold mb-2"
+                          style={{ fontSize: "1rem", color: "var(--navy)" }}
+                        >
+                          {f.q}
+                        </h3>
+                        <p style={{ color: "var(--text-soft)", fontSize: "0.92rem" }}>{f.a}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* In-content CTA */}
               <div
