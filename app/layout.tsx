@@ -58,7 +58,7 @@ const localBusinessSchema = {
   telephone: BUSINESS.phone,
   email: BUSINESS.email,
   image: `${BUSINESS.domain}/images/og/og-default.jpg`,
-  logo: `${BUSINESS.domain}/images/logos/logo-name-white-square.png`,
+  logo: `${BUSINESS.domain}/images/logos/logo-name-white-square.webp`,
   foundingDate: String(new Date().getFullYear() - Number(BUSINESS.yearsInBusiness)),
   address: {
     "@type": "PostalAddress",

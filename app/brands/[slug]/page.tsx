@@ -35,31 +35,31 @@ export async function generateMetadata({
 }
 
 const BRAND_IMAGES: Record<string, { hero: string; photo: string }> = {
-  "all-o-matic":  { hero: "/images/brands/all-o-matic/all-o-matic-hero.jpeg", photo: "/images/brands/all-o-matic/all-o-matic-1.jpeg" },
-  "liftmaster":   { hero: "/images/brands/liftmaster/liftmaster-hero.jpeg",   photo: "/images/brands/liftmaster/liftmaster-1.jpeg" },
-  "doorking":     { hero: "/images/services/commercial-gate.jpeg",     photo: "/images/gallery/commercial-1.jpeg" },
-  "genie":        { hero: "/images/services/new-garage.jpeg",          photo: "/images/services/walnut-garage.jpeg" },
-  "doorbird":     { hero: "/images/services/commercial-3.jpeg",        photo: "/images/gallery/outside-1.jpeg" },
-  "chamberlain":  { hero: "/images/services/white-garage.jpeg",        photo: "/images/services/wood-garage.jpeg" },
-  "elite":        { hero: "/images/brands/elite/elite-hero.jpeg",      photo: "/images/brands/elite/elite-1.jpeg" },
-  "viking":       { hero: "/images/services/estate-gate.jpeg",         photo: "/images/services/iron-gold-gate.jpeg" },
-  "ramset":       { hero: "/images/services/iron-gate-1.jpeg",         photo: "/images/services/long-iron-gate.jpeg" },
-  "linear":       { hero: "/images/services/malibu-gate.jpeg",         photo: "/images/services/motor-wood.jpeg" },
-  "eagle":        { hero: "/images/services/gated-community.jpeg",     photo: "/images/gallery/commercial-1.jpeg" },
+  "all-o-matic":  { hero: "/images/brands/all-o-matic/all-o-matic-hero.webp", photo: "/images/brands/all-o-matic/all-o-matic-1.webp" },
+  "liftmaster":   { hero: "/images/brands/liftmaster/liftmaster-hero.webp",   photo: "/images/brands/liftmaster/liftmaster-1.webp" },
+  "doorking":     { hero: "/images/gallery/commercial-1.webp",     photo: "/images/gallery/commercial-1.webp" },
+  "genie":        { hero: "/images/services/garage-door-repair.webp",          photo: "/images/services/walnut-garage.webp" },
+  "doorbird":     { hero: "/images/services/commercial-3.webp",        photo: "/images/gallery/outside-1.webp" },
+  "chamberlain":  { hero: "/images/services/white-garage.webp",        photo: "/images/services/wood-garage.webp" },
+  "elite":        { hero: "/images/brands/elite/elite-hero.webp",      photo: "/images/brands/elite/elite-1.webp" },
+  "viking":       { hero: "/images/services/estate-gate.webp",         photo: "/images/services/iron-gold-gate.webp" },
+  "ramset":       { hero: "/images/services/iron-gate-1.webp",         photo: "/images/services/long-iron-gate.webp" },
+  "linear":       { hero: "/images/services/malibu-gate.webp",         photo: "/images/services/gate-motor.webp" },
+  "eagle":        { hero: "/images/services/gated-community.webp",     photo: "/images/gallery/commercial-1.webp" },
 };
 
 // Extra jobsite photos for the 3 brands with a real photo gallery — rendered as an "Our Work" grid
 const BRAND_GALLERY: Record<string, string[]> = {
   "liftmaster": [
-    "/images/brands/liftmaster/liftmaster-2.jpeg",
-    "/images/brands/liftmaster/liftmaster-3.jpeg",
-    "/images/brands/liftmaster/liftmaster-4.jpeg",
+    "/images/brands/liftmaster/liftmaster-2.webp",
+    "/images/brands/liftmaster/liftmaster-3.webp",
+    "/images/brands/liftmaster/liftmaster-4.webp",
   ],
   "all-o-matic": [
-    "/images/brands/all-o-matic/all-o-matic-2.jpeg",
-    "/images/brands/all-o-matic/all-o-matic-3.jpeg",
-    "/images/brands/all-o-matic/all-o-matic-4.jpeg",
-    "/images/brands/all-o-matic/all-o-matic-5.jpeg",
+    "/images/brands/all-o-matic/all-o-matic-2.webp",
+    "/images/brands/all-o-matic/all-o-matic-2.webp",
+    "/images/brands/all-o-matic/all-o-matic-4.webp",
+    "/images/brands/all-o-matic/all-o-matic-5.webp",
   ],
 };
 
@@ -112,8 +112,8 @@ export default async function BrandPage({
   if (!brand) notFound();
 
   const images = BRAND_IMAGES[brand.slug] ?? {
-    hero: "/images/hero/hero-gate.jpeg",
-    photo: "/images/services/gate-motor.jpeg",
+    hero: "/images/hero/hero-gate.webp",
+    photo: "/images/services/gate-motor.webp",
   };
   const typeInfo = TYPE_INFO[brand.type];
   const gallery = BRAND_GALLERY[brand.slug];
@@ -164,6 +164,7 @@ export default async function BrandPage({
           fill
           className="object-cover"
           priority
+          fetchPriority="high"
         />
         <div
           className="absolute inset-0"

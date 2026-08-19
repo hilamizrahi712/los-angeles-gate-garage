@@ -56,12 +56,12 @@ export default function ServiceAreasPage() {
       <section style={{ background: "var(--bg-muted)", borderBottom: "1px solid var(--line)" }}>
         <div className="grid grid-cols-4" style={{ height: 200 }}>
           {[
-            { src: "/images/gallery/gate-2.jpeg", alt: "Gate repair service Los Angeles" },
-            { src: "/images/services/whatsapp-photo-2.jpeg", alt: "Gate and garage door service Los Angeles" },
-            { src: "/images/services/commercial-2.jpeg", alt: "Commercial garage door service near you" },
-            { src: "/images/services/frezno-gate.jpeg", alt: "Custom iron gate installation" },
+            { src: "/images/gallery/gate-2.webp", alt: "Gate repair service Los Angeles" },
+            { src: "/images/services/whatsapp-photo-2.webp", alt: "Gate and garage door service Los Angeles" },
+            { src: "/images/services/commercial-2.webp", alt: "Commercial garage door service near you" },
+            { src: "/images/services/frezno-gate.webp", alt: "Custom iron gate installation" },
           ].map((photo, i) => (
-            <div key={i} style={{ position: "relative", overflow: "hidden" }}>
+            <div key={i} style={{ position: "relative", overflow: "hidden", height: 200 }}>
               <Image
                 src={photo.src}
                 alt={photo.alt}

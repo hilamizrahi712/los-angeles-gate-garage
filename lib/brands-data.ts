@@ -24,7 +24,7 @@ export const BRANDS: BrandData[] = [
   {
     slug: "all-o-matic",
     name: "All-O-Matic",
-    logo: "/images/brands/logo-1.png",
+    logo: "/images/brands/logo-1.webp",
     type: "gate",
     tagline: "American-Built Gate Operators — Repaired Right",
     metaTitle: "All-O-Matic Repair Los Angeles CA | Real Gate & Garage Door",
@@ -66,7 +66,7 @@ export const BRANDS: BrandData[] = [
   {
     slug: "liftmaster",
     name: "LiftMaster",
-    logo: "/images/brands/logo-2.png",
+    logo: "/images/brands/logo-2.webp",
     type: "both",
     tagline: "Gates & Garage Doors — LiftMaster's #1 Local Service Team",
     metaTitle: "LiftMaster Repair Los Angeles CA | Real Gate & Garage Door",
@@ -113,7 +113,7 @@ export const BRANDS: BrandData[] = [
   {
     slug: "doorking",
     name: "DoorKing",
-    logo: "/images/brands/logo-3.png",
+    logo: "/images/brands/logo-3.webp",
     type: "access-control",
     tagline: "DKS Access Control & Gate Systems — Expert Service",
     metaTitle: "DoorKing Repair Los Angeles CA | Real Gate & Garage Door",
@@ -157,7 +157,7 @@ export const BRANDS: BrandData[] = [
   {
     slug: "genie",
     name: "Genie",
-    logo: "/images/brands/logo-4.png",
+    logo: "/images/brands/logo-4.webp",
     type: "garage-door",
     tagline: "Genie Garage Door Opener Repair — Fast & Reliable",
     metaTitle: "Genie Repair Los Angeles CA | Real Gate & Garage Door",
@@ -201,7 +201,7 @@ export const BRANDS: BrandData[] = [
   {
     slug: "doorbird",
     name: "DoorBird",
-    logo: "/images/brands/logo-5.png",
+    logo: "/images/brands/logo-5.webp",
     type: "access-control",
     tagline: "DoorBird Video Intercom — Installation & Gate Integration",
     metaTitle: "DoorBird Repair Los Angeles CA | Real Gate & Garage Door",
@@ -245,7 +245,7 @@ export const BRANDS: BrandData[] = [
   {
     slug: "chamberlain",
     name: "Chamberlain",
-    logo: "/images/brands/logo-6.png",
+    logo: "/images/brands/logo-6.webp",
     type: "garage-door",
     tagline: "Chamberlain Garage Door Opener Repair — All Models",
     metaTitle: "Chamberlain Repair Los Angeles CA | Real Gate & Garage Door",
@@ -291,7 +291,7 @@ export const BRANDS: BrandData[] = [
   {
     slug: "elite",
     name: "Elite",
-    logo: "/images/brands/logo-7.png",
+    logo: "/images/brands/logo-7.webp",
     type: "gate",
     tagline: "Elite Gate Operator Repair — Fast, Reliable Service",
     metaTitle: "Elite Repair Los Angeles CA | Real Gate & Garage Door",
@@ -334,7 +334,7 @@ export const BRANDS: BrandData[] = [
   {
     slug: "viking",
     name: "Viking Access Systems",
-    logo: "/images/brands/logo-8.png",
+    logo: "/images/brands/logo-8.webp",
     type: "gate",
     tagline: "Viking Gate Operator Specialists — All Models Serviced",
     metaTitle: "Viking Access Systems Repair Los Angeles CA | Real Gate & Garage Door",
@@ -378,7 +378,7 @@ export const BRANDS: BrandData[] = [
   {
     slug: "ramset",
     name: "Ramset",
-    logo: "/images/brands/logo-9.png",
+    logo: "/images/brands/logo-9.webp",
     type: "gate",
     tagline: "Ramset Gate Operator Repair — Made in the USA",
     metaTitle: "Ramset Repair Los Angeles CA | Real Gate & Garage Door",
@@ -419,7 +419,7 @@ export const BRANDS: BrandData[] = [
   {
     slug: "linear",
     name: "Linear",
-    logo: "/images/brands/logo-10.png",
+    logo: "/images/brands/logo-10.webp",
     type: "both",
     tagline: "Linear Gate & Garage Door Systems — Full-Service Repair",
     metaTitle: "Linear Repair Los Angeles CA | Real Gate & Garage Door",
@@ -463,7 +463,7 @@ export const BRANDS: BrandData[] = [
   {
     slug: "eagle",
     name: "Eagle Access Control Systems",
-    logo: "/images/brands/logo-11.png",
+    logo: "/images/brands/logo-11.webp",
     type: "gate",
     tagline: "Eagle Gate Operator Repair — Commercial & Residential",
     metaTitle: "Eagle Access Control Systems Repair Los Angeles CA | Real Gate & Garage Door",

@@ -25,7 +25,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 min read",
     category: "gate",
     excerpt: "Your electric gate won't open and you don't know why. Here are the 8 most common causes — and what to do about each one.",
-    img: "/images/services/gate-motor.jpeg",
+    img: "/images/services/gate-motor.webp",
     content: `## Why Won't My Electric Gate Open?
 
 There's nothing more frustrating than pulling up to your driveway and finding your electric gate frozen in place. Start with the three checks below — they take five minutes and fix more gates than you'd think.
@@ -62,7 +62,7 @@ Real Gate & Garage Door provides same-day electric gate repair in our service ar
     readTime: "7 min read",
     category: "gate",
     excerpt: "Gate repair costs range from $80 to $700+ depending on the problem. Here's what each type of repair actually costs in 2026.",
-    img: "/images/services/iron-black-gate.jpeg",
+    img: "/images/gallery/gate-4.webp",
     content: `## Gate Repair Cost in 2026 Price Guide
 
 Pricing transparency is one of the things we hear about most from customers who had bad experiences with other companies. They got a quote over the phone, a technician showed up and found "more problems," and suddenly a $150 repair became a $600 bill.
@@ -180,7 +180,7 @@ Text us a photo of your gate and its problem for a free diagnosis, no obligation
     readTime: "8 min read",
     category: "gate",
     excerpt: "Automatic gate installation costs $2,000–$8,000 depending on gate type, material, and operator. Here's the full breakdown.",
-    img: "/images/gallery/gate-1.jpeg",
+    img: "/images/gallery/gate-1.webp",
     content: `## Automatic Gate Installation Cost in 2026
 
 Thinking about installing an automatic driveway gate? It's one of the best investments you can make in your home's security and curb appeal — but the price range is wide. An automatic gate can cost anywhere from $2,000 to $10,000+ depending on the gate type, material, and operator system you choose.
@@ -286,7 +286,7 @@ Text us a photo of your current gate and we'll give you a free, honest read on r
     readTime: "5 min read",
     category: "gate",
     excerpt: "A well-maintained automatic gate can last 15–20+ years. Here's how to tell when repair is the right call and when it's time for a replacement.",
-    img: "/images/services/long-iron-gate.jpeg",
+    img: "/images/services/long-iron-gate.webp",
     content: `## How Long Do Automatic Gates Last?
 
 A quality automatic gate system has two distinct lifespans to think about: the gate structure itself and the gate operator (motor and control system).
@@ -368,7 +368,7 @@ Call **(818) 915-5715** for a same-day diagnostic in our service area.`,
     readTime: "6 min read",
     category: "garage-door",
     excerpt: "Garage door spring replacement typically costs $150–$350. Here's exactly what you should expect to pay — and the warning signs of overcharging.",
-    img: "/images/services/garage-door-repair.jpeg",
+    img: "/images/services/garage-door-repair.webp",
     content: `## Garage Door Spring Replacement Cost in 2026
 
 Garage door spring replacement is the most common garage door repair we perform — and unfortunately, it's also the service most prone to overcharging by less scrupulous companies. This guide gives you the real numbers so you're informed before you call anyone.
@@ -448,7 +448,7 @@ Call **(818) 915-5715** for same-day spring replacement in our service area.`,
     readTime: "6 min read",
     category: "garage-door",
     excerpt: "A garage door that won't close is a security risk. Here are the 7 most common causes — and what you can do about each one.",
-    img: "/images/gallery/outside-1.jpeg",
+    img: "/images/gallery/outside-1.webp",
     content: `## Garage Door Won't Close — 7 Common Causes and Fixes
 
 A garage door that refuses to close is more than frustrating — it's a security risk and, in hot weather, an energy efficiency problem. Before you call for service, work through these seven common causes. Several can be fixed in minutes without a technician.
@@ -519,7 +519,7 @@ If your garage door still won't close after checking the sensors, clearing obstr
     readTime: "7 min read",
     category: "garage-door",
     excerpt: "A noisy garage door is usually a maintenance issue, not a breakdown. Here's how to identify the source of the noise and fix it — step by step.",
-    img: "/images/services/wood-garage.jpeg",
+    img: "/images/services/wood-garage.webp",
     content: `## How to Fix a Noisy Garage Door
 
 A garage door that squeaks, grinds, rattles, or bangs every time it opens or closes is more than annoying — it's often a sign that components are wearing and need attention. The good news is that most noisy garage door issues are maintenance problems you can address yourself. Here's how to diagnose and fix the most common garage door noises.

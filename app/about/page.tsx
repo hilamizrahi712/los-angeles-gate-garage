@@ -29,14 +29,14 @@ const credentials = [
 ];
 
 const workGallery = [
-  { src: "/images/gallery/driveway-swing-gate-spanish-villa.jpeg", alt: "Driveway swing gate repair" },
-  { src: "/images/gallery/modern-black-slat-gate.jpeg", alt: "Modern slat gate installation" },
-  { src: "/images/brands/liftmaster/liftmaster-2.jpeg", alt: "LiftMaster gate operator installation" },
-  { src: "/images/brands/all-o-matic/all-o-matic-3.jpeg", alt: "All-O-Matic sliding gate installation" },
-  { src: "/images/gallery/iron-gate-community-entrance.jpeg", alt: "Iron community entrance gate" },
-  { src: "/images/brands/elite/elite-1.jpeg", alt: "Elite gate operator installation" },
-  { src: "/images/gallery/gate-1.jpeg", alt: "Gate repair and service" },
-  { src: "/images/gallery/slat-swing-gate-opener.jpeg", alt: "Swing gate opener installation" },
+  { src: "/images/gallery/driveway-swing-gate-spanish-villa.webp", alt: "Driveway swing gate repair" },
+  { src: "/images/gallery/modern-black-slat-gate.webp", alt: "Modern slat gate installation" },
+  { src: "/images/brands/liftmaster/liftmaster-2.webp", alt: "LiftMaster gate operator installation" },
+  { src: "/images/brands/all-o-matic/all-o-matic-2.webp", alt: "All-O-Matic sliding gate installation" },
+  { src: "/images/gallery/iron-gate-community-entrance.webp", alt: "Iron community entrance gate" },
+  { src: "/images/brands/elite/elite-1.webp", alt: "Elite gate operator installation" },
+  { src: "/images/gallery/gate-1.webp", alt: "Gate repair and service" },
+  { src: "/images/gallery/slat-swing-gate-opener.webp", alt: "Swing gate opener installation" },
 ];
 
 const storyChecklist = [
@@ -137,7 +137,7 @@ export default function AboutPage() {
             style={{ aspectRatio: "16/6", position: "relative" }}
           >
             <Image
-              src="/images/story/building.jpeg"
+              src="/images/story/building.webp"
               alt="Real Gate and Garage Door team at work"
               fill
               className="object-cover"

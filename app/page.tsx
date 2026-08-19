@@ -23,29 +23,29 @@ export const metadata: Metadata = {
 };
 
 const gatePrimary = [
-  { href: "/services/gate-repair", name: "Gate Repair", desc: "Fast, honest diagnosis. No upselling. Fixed the first time.", img: "/images/services/black-iron-gate.jpeg" },
-  { href: "/services/gate-installation", name: "New Installation", desc: "New gate systems, fully installed and programmed.", img: "/images/services/slat-gate-installation.jpeg" },
-  { href: "/services/emergency-gate-repair", name: "Emergency Gate Repair", desc: "Stuck open or shut? We're there in 1–2 hours.", img: "/images/services/swing-motor.jpeg" },
-  { href: "/services/gate-opener-repair", name: "Gate Opener Repair", desc: "LiftMaster, Viking, DoorKing, All-O-Matic, and more.", img: "/images/services/outside-gate.jpeg" },
+  { href: "/services/gate-repair", name: "Gate Repair", desc: "Fast, honest diagnosis. No upselling. Fixed the first time.", img: "/images/gallery/gate-1.webp" },
+  { href: "/services/gate-installation", name: "New Installation", desc: "New gate systems, fully installed and programmed.", img: "/images/brands/all-o-matic/all-o-matic-2.webp" },
+  { href: "/services/emergency-gate-repair", name: "Emergency Gate Repair", desc: "Stuck open or shut? We're there in 1–2 hours.", img: "/images/services/swing-motor.webp" },
+  { href: "/services/gate-opener-repair", name: "Gate Opener Repair", desc: "LiftMaster, Viking, DoorKing, All-O-Matic, and more.", img: "/images/gallery/outside-1.webp" },
 ];
 
 const gateRest = [
-  { href: "/services/automatic-gate-repair", name: "Automatic Gate Repair", desc: "Every make, every brand. Motor, controller, sensors.", img: "/images/services/gate-motor.jpeg" },
-  { href: "/services/driveway-gate-repair", name: "Driveway Gate Repair", desc: "Sliding, swing, and ornamental. Same-day response.", img: "/images/services/swing-1.jpeg" },
-  { href: "/services/electric-gate-repair", name: "Electric Gate Repair", desc: "Wiring, boards, remotes. We trace the fault and fix it.", img: "/images/services/iron-black-gate.jpeg" },
-  { href: "/services/iron-gate-repair", name: "Iron Gate Repair", desc: "Structural, hinges, welds, finishes — fully restored.", img: "/images/services/grey-iron-gate.jpeg" },
+  { href: "/services/automatic-gate-repair", name: "Automatic Gate Repair", desc: "Every make, every brand. Motor, controller, sensors.", img: "/images/services/gate-motor.webp" },
+  { href: "/services/driveway-gate-repair", name: "Driveway Gate Repair", desc: "Sliding, swing, and ornamental. Same-day response.", img: "/images/gallery/gate-5.webp" },
+  { href: "/services/electric-gate-repair", name: "Electric Gate Repair", desc: "Wiring, boards, remotes. We trace the fault and fix it.", img: "/images/gallery/gate-4.webp" },
+  { href: "/services/iron-gate-repair", name: "Iron Gate Repair", desc: "Structural, hinges, welds, finishes — fully restored.", img: "/images/gallery/gate-3.webp" },
 ];
 
 const garagePrimary = [
-  { href: "/services/garage-door-repair", name: "Garage Door Repair", desc: "Complete repair for all door problems.", img: "/images/services/garage-door-repair.jpeg" },
-  { href: "/services/garage-door-spring-repair", name: "Spring Repair", desc: "Torsion & extension — same-day replacement.", img: "/images/services/walnut-garage.jpeg" },
+  { href: "/services/garage-door-repair", name: "Garage Door Repair", desc: "Complete repair for all door problems.", img: "/images/services/garage-door-repair.webp" },
+  { href: "/services/garage-door-spring-repair", name: "Spring Repair", desc: "Torsion & extension — same-day replacement.", img: "/images/services/walnut-garage.webp" },
 ];
 
 const garageRest = [
-  { href: "/services/garage-door-opener-repair", name: "Opener Repair", desc: "LiftMaster, Genie, Chamberlain & all brands.", img: "/images/services/new-garage.jpeg" },
-  { href: "/services/garage-door-cable-repair", name: "Cable Repair", desc: "Snapped or frayed cables replaced same day.", img: "/images/services/white-garage.jpeg" },
-  { href: "/services/garage-door-panel-repair", name: "Panel Repair", desc: "Dented or damaged panels replaced same day.", img: "/images/services/wood-garage.jpeg" },
-  { href: "/services/garage-door-installation", name: "Door Installation", desc: "New doors, fully installed and balanced.", img: "/images/services/wood-garage.jpeg" },
+  { href: "/services/garage-door-opener-repair", name: "Opener Repair", desc: "LiftMaster, Genie, Chamberlain & all brands.", img: "/images/services/garage-door-repair.webp" },
+  { href: "/services/garage-door-cable-repair", name: "Cable Repair", desc: "Snapped or frayed cables replaced same day.", img: "/images/services/white-garage.webp" },
+  { href: "/services/garage-door-panel-repair", name: "Panel Repair", desc: "Dented or damaged panels replaced same day.", img: "/images/services/wood-garage.webp" },
+  { href: "/services/garage-door-installation", name: "Door Installation", desc: "New doors, fully installed and balanced.", img: "/images/services/wood-garage.webp" },
 ];
 
 const storyChecklist = [
@@ -76,11 +76,12 @@ export default function HomePage() {
       {/* ── HERO ── */}
       <section className="relative overflow-hidden" style={{ minHeight: "92vh" }}>
         <Image
-          src="/images/hero/hero-thin-gate.jpeg"
+          src="/images/hero/hero-thin-gate.webp"
           alt="Gate and garage door repair Los Angeles CA"
           fill
           className="object-cover"
           priority
+          fetchPriority="high"
         />
         {/* Scrim — bottom-heavy so content is readable, top shows the photo */}
         <div
@@ -448,7 +449,7 @@ export default function HomePage() {
               {/* Photo + Checklist */}
               <div className="flex flex-col gap-6">
                 <ArchImage
-                  src="/images/story/building.jpeg"
+                  src="/images/story/building.webp"
                   alt="Real Gate & Garage Door team at work"
                   aspect="4/5"
                   sizes="(max-width: 1024px) 100vw, 50vw"

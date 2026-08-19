@@ -537,7 +537,7 @@ For openers too old or unsafe to service, we install new units same-day, includi
     primaryKeyword: "garage door cable repair",
     heroH1: "Garage Door Cable Repair in Los Angeles",
     heroSubtitle: "A snapped garage door cable can cause the door to drop suddenly. Don't risk it — call for same-day cable repair.",
-    heroImg: "/images/services/garage-door-repair.jpg",
+    heroImg: "/images/services/garage-door-repair.webp",
     isInstallation: false,
     intro: `A snapped or frayed garage door cable can drop the door suddenly or send it off-track. We provide fast, same-day cable repair across Los Angeles, replacing cables in matched pairs and inspecting the drums they wrap around.
 
@@ -578,7 +578,7 @@ After every cable repair we check the full system — springs, rollers, hinges, 
     primaryKeyword: "garage door panel repair",
     heroH1: "Garage Door Panel Repair & Replacement in Los Angeles",
     heroSubtitle: "Dented or cracked panel making your garage door look bad? We repair and replace panels — matching your door's style and color.",
-    heroImg: "/images/services/garage-door-repair.jpg",
+    heroImg: "/images/services/garage-door-repair.webp",
     isInstallation: false,
     intro: `Dented, cracked, or warped panels affect your door's balance and insulation — usually from a vehicle impact. We repair and replace panels across Los Angeles, matching your door's existing style and color whenever possible.
 
