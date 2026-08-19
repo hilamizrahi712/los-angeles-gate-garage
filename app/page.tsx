@@ -11,7 +11,7 @@ import ArchImage from "@/components/ArchImage";
 import IronDivider from "@/components/IronDivider";
 import ReviewQuote from "@/components/ReviewQuote";
 import SectionRule from "@/components/SectionRule";
-import { BUSINESS, REVIEWS, SFV_CITIES } from "@/lib/constants";
+import { BUSINESS, REVIEWS, SFV_CITIES, ORG_ID } from "@/lib/constants";
 import { CITIES } from "@/lib/cities-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
 
@@ -59,7 +59,7 @@ const homepageSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "Gate Repair & Garage Door Repair",
-  provider: { "@type": "LocalBusiness", name: BUSINESS.name },
+  provider: { "@id": ORG_ID },
   areaServed: { "@type": "AdministrativeArea", name: "Los Angeles County, CA" },
 };
 

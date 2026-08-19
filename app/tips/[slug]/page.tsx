@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Phone, MessageSquareText, Calendar, Clock, ArrowLeft } from "lucide-react";
 import { BLOG_POSTS, getBlogPostBySlug } from "@/lib/blog-data";
-import { BUSINESS } from "@/lib/constants";
+import { BUSINESS, ORG_ID } from "@/lib/constants";
 import ContactForm from "@/components/ContactForm";
 
 interface Props {
@@ -140,8 +140,8 @@ export default async function TipsPostPage({ params }: Props) {
     description: post.metaDescription,
     datePublished: post.publishDate,
     dateModified: post.updatedAt ?? post.publishDate,
-    publisher: { "@type": "Organization", name: BUSINESS.name },
-    author: { "@type": "Organization", name: BUSINESS.name },
+    publisher: { "@id": ORG_ID },
+    author: { "@id": ORG_ID },
   };
 
   return (

@@ -14,6 +14,11 @@ export const BUSINESS = {
   yearsInBusiness: "12",
 };
 
+// Stable entity ID for the LocalBusiness JSON-LD in app/layout.tsx. Every other
+// schema block on the site should reference this via provider: { "@id": ORG_ID }
+// instead of repeating a full LocalBusiness object.
+export const ORG_ID = `${BUSINESS.domain}/#organization`;
+
 export const SFV_CITIES = [
   { name: "Woodland Hills", slug: "woodland-hills" },
   { name: "Sherman Oaks", slug: "sherman-oaks" },

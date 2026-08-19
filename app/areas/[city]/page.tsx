@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, ArrowRight } from "lucide-react";
 import { CITIES, getCityBySlug } from "@/lib/cities-data";
-import { BUSINESS, REVIEWS } from "@/lib/constants";
+import { BUSINESS, REVIEWS, ORG_ID } from "@/lib/constants";
 import ContactForm from "@/components/ContactForm";
 import BrandsMarquee from "@/components/BrandsMarquee";
 import ArchImage from "@/components/ArchImage";
@@ -111,19 +111,13 @@ export default async function CityPage({ params }: Props) {
 
   const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(data.name + ", CA")}&output=embed&z=12`;
 
-  const localBusinessSchema = {
+  const cityServiceSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: BUSINESS.name,
+    "@type": "Service",
+    name: `Gate & Garage Door Repair — ${data.name}, CA`,
     description: data.metaDescription,
     url: `${BUSINESS.domain}/areas/${city}`,
-    telephone: BUSINESS.phone,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: data.name,
-      addressRegion: "CA",
-      addressCountry: "US",
-    },
+    provider: { "@id": ORG_ID },
     areaServed: { "@type": "City", name: data.name },
   };
 
@@ -149,7 +143,7 @@ export default async function CityPage({ params }: Props) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(cityServiceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 

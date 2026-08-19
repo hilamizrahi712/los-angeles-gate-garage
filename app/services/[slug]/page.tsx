@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, CheckCircle, ArrowRight, Clock, Shield, Star, AlertCircle } from "lucide-react";
 import { SERVICES, getServiceBySlug } from "@/lib/services-data";
-import { BUSINESS, SFV_CITIES, REVIEWS } from "@/lib/constants";
+import { BUSINESS, SFV_CITIES, REVIEWS, ORG_ID } from "@/lib/constants";
 import ContactForm from "@/components/ContactForm";
 import ArchImage from "@/components/ArchImage";
 import ReviewQuote from "@/components/ReviewQuote";
@@ -32,6 +32,15 @@ const MATCHED_REVIEW: Record<string, string> = {
 
 interface Props {
   params: Promise<{ slug: string }>;
+}
+
+// Extracts a numeric $min–$max from copy like "$150–$400 for most gate repairs".
+// Returns null for ranges with no real numbers (e.g. "Standard repair rates +
+// after-hours fee") — never invent a price for those.
+function parsePriceRange(pricingRange: string): { min: number; max: number } | null {
+  const match = pricingRange.match(/\$([\d,]+)\s*[–-]\s*\$?([\d,]+)/);
+  if (!match) return null;
+  return { min: Number(match[1].replace(/,/g, "")), max: Number(match[2].replace(/,/g, "")) };
 }
 
 export async function generateStaticParams() {
@@ -83,14 +92,41 @@ export default async function ServicePage({ params }: Props) {
   const heroImg = SERVICE_IMAGES[slug] ?? "/images/services/black-iron-gate.jpeg";
   const matchedReview = REVIEWS.find((r) => r.name === MATCHED_REVIEW[slug]);
 
+  const priceRange = parsePriceRange(service.pricingRange);
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: service.title,
     serviceType: service.title,
     description: service.metaDescription,
-    provider: { "@type": "LocalBusiness", name: BUSINESS.name, telephone: BUSINESS.phone },
+    provider: { "@id": ORG_ID },
     areaServed: { "@type": "AdministrativeArea", name: "Los Angeles County, CA" },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `${service.title} — Related Services`,
+      itemListElement: related.map((s) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: s.title,
+          url: `${BUSINESS.domain}/services/${s.slug}`,
+        },
+      })),
+    },
+    ...(priceRange
+      ? {
+          offers: {
+            "@type": "Offer",
+            priceSpecification: {
+              "@type": "PriceSpecification",
+              minPrice: priceRange.min,
+              maxPrice: priceRange.max,
+              priceCurrency: "USD",
+            },
+          },
+        }
+      : {}),
   };
 
   const faqSchema = {

@@ -4,7 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
-import { BUSINESS } from "@/lib/constants";
+import { BUSINESS, ALL_CITIES, ORG_ID } from "@/lib/constants";
+import { BRANDS } from "@/lib/brands-data";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -50,11 +51,15 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": ORG_ID,
   name: BUSINESS.name,
   description: "Expert gate and garage door repair, installation, and 24/7 emergency service across greater Los Angeles, CA",
   url: BUSINESS.domain,
   telephone: BUSINESS.phone,
   email: BUSINESS.email,
+  image: `${BUSINESS.domain}/images/og/og-default.jpg`,
+  logo: `${BUSINESS.domain}/images/logos/logo-name-white-square.png`,
+  foundingDate: String(new Date().getFullYear() - Number(BUSINESS.yearsInBusiness)),
   address: {
     "@type": "PostalAddress",
     addressLocality: "Los Angeles County",
@@ -62,12 +67,13 @@ const localBusinessSchema = {
     addressCountry: "US",
   },
   geo: { "@type": "GeoCoordinates", latitude: 34.1975, longitude: -118.4937 },
-  areaServed: [
-    "Woodland Hills", "Sherman Oaks", "Encino", "Calabasas", "Tarzana",
-    "Chatsworth", "Van Nuys", "Reseda", "Northridge", "North Hollywood",
-    "Studio City", "Burbank", "Glendale", "Canoga Park",
-    "Los Angeles", "Beverly Hills", "West Hollywood", "Santa Monica",
-    "Malibu", "Pasadena", "Culver City", "Silver Lake", "Thousand Oaks", "Simi Valley",
+  areaServed: ALL_CITIES.map((c) => ({ "@type": "City", name: c.name })),
+  knowsAbout: [
+    ...BRANDS.map((b) => b.name),
+    "Automatic gate operators",
+    "Torsion springs",
+    "Access control systems",
+    "UL 325 compliance",
   ],
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
@@ -76,6 +82,16 @@ const localBusinessSchema = {
     closes: "22:00",
   },
   priceRange: "$$",
+  // TODO(client): fill in verified profile URLs. This is the single most important
+  // field for AI-engine entity resolution (ChatGPT Search, Perplexity, AI Overviews) —
+  // exactly one URL per platform, in this order:
+  // 1. Google Business Profile URL
+  // 2. Yelp business page URL
+  // 3. Bing Places business page URL
+  // 4. Apple Maps business listing URL
+  // 5. BBB profile URL
+  // 6. Facebook Page URL
+  sameAs: [],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

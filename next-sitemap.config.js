@@ -37,7 +37,17 @@ module.exports = {
   outDir: "./out",
   generateRobotsTxt: true,
   robotsTxtOptions: {
-    policies: [{ userAgent: "*", allow: "/" }],
+    // The wildcard policy already allows every crawler, AI included. These entries
+    // are listed explicitly so the intent to allow AI-engine crawling is documented
+    // in the file itself, not just implied by the absence of a disallow rule.
+    policies: [
+      { userAgent: "*", allow: "/" },
+      { userAgent: "GPTBot", allow: "/" },
+      { userAgent: "ClaudeBot", allow: "/" },
+      { userAgent: "PerplexityBot", allow: "/" },
+      { userAgent: "CCBot", allow: "/" },
+      { userAgent: "Google-Extended", allow: "/" },
+    ],
   },
   changefreq: "weekly",
   priority: 0.7,

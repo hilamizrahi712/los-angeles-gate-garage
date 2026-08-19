@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Phone, ExternalLink } from "lucide-react";
-import { BUSINESS, REVIEWS } from "@/lib/constants";
+import { BUSINESS, REVIEWS, ORG_ID } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Customer Reviews & Testimonials | Real Gate & Garage Door",
@@ -9,10 +9,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/reviews" },
 };
 
+// Same @id as the LocalBusiness in app/layout.tsx — this attaches aggregateRating
+// to that same entity node rather than declaring a second, separate business.
 const reviewsPageSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: BUSINESS.name,
+  "@id": ORG_ID,
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5",

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, CheckCircle, ChevronRight, AlertCircle, ArrowRight } from "lucide-react";
 import { BRANDS, getBrandBySlug } from "@/lib/brands-data";
-import { BUSINESS, REVIEWS, SFV_CITIES } from "@/lib/constants";
+import { BUSINESS, REVIEWS, SFV_CITIES, ORG_ID } from "@/lib/constants";
 import ContactForm from "@/components/ContactForm";
 import ArchImage from "@/components/ArchImage";
 import IronDivider from "@/components/IronDivider";
@@ -127,7 +127,7 @@ export default async function BrandPage({
     name: `${brand.name} Repair`,
     serviceType: `${brand.name} Repair`,
     description: brand.metaDescription,
-    provider: { "@type": "LocalBusiness", name: BUSINESS.name, telephone: BUSINESS.phone },
+    provider: { "@id": ORG_ID },
     areaServed: { "@type": "AdministrativeArea", name: "Los Angeles County, CA" },
   };
 
