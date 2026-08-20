@@ -82,16 +82,15 @@ const localBusinessSchema = {
     closes: "22:00",
   },
   priceRange: "$$",
-  // TODO(client): fill in verified profile URLs. This is the single most important
-  // field for AI-engine entity resolution (ChatGPT Search, Perplexity, AI Overviews) —
-  // exactly one URL per platform, in this order:
-  // 1. Google Business Profile URL
+  // TODO(client): Google Business Profile is verified and linked below. Still need,
+  // in this order — this is the single most important field for AI-engine entity
+  // resolution (ChatGPT Search, Perplexity, AI Overviews):
   // 2. Yelp business page URL
   // 3. Bing Places business page URL
-  // 4. Apple Maps business listing URL
+  // 4. Apple Business Connect listing URL
   // 5. BBB profile URL
   // 6. Facebook Page URL
-  sameAs: [],
+  sameAs: [BUSINESS.googleProfileUrl],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

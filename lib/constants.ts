@@ -9,8 +9,8 @@ export const BUSINESS = {
   email: "info@realgaterepair.com",
   address: "Los Angeles, CA",
   domain: "https://realgaterepair.com",
-  googleReviewsUrl: "https://g.page/real-gate-garage-door/review",
-  reviewCount: "247",
+  googleProfileUrl: "https://maps.google.com/?cid=3188147376414865796",
+  googleReviewUrl: "https://g.page/r/CYQ5zbYlkz4sEAE/review",
   yearsInBusiness: "12",
 };
 

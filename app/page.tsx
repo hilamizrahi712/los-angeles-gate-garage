@@ -167,10 +167,6 @@ export default function HomePage() {
           >
             <span>Bonded &amp; Insured</span>
             <span style={{ opacity: 0.4 }}>·</span>
-            <a href={BUSINESS.googleReviewsUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#fff", textDecoration: "none" }}>
-              ★ 4.9 on Google
-            </a>
-            <span style={{ opacity: 0.4 }}>·</span>
             <span>Same-Day Service</span>
           </div>
         </div>
@@ -393,17 +389,8 @@ export default function HomePage() {
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link href="/reviews" className="btn-ghost">
-              See All {BUSINESS.reviewCount}+ Reviews →
+              See All Reviews →
             </Link>
-            <a
-              href={BUSINESS.googleReviewsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold"
-              style={{ color: "var(--text-warm)", textDecoration: "none" }}
-            >
-              ★ 4.9 on Google
-            </a>
           </div>
         </div>
       </section>

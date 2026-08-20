@@ -24,7 +24,7 @@ const credentials = [
   "Fully Bonded",
   "General Liability Insurance",
   "Workers Compensation",
-  "Google 5-Star Rated",
+  "5-Star Customer Rated",
   "Background-Checked Technicians",
 ];
 

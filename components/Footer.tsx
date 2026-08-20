@@ -82,8 +82,8 @@ export default function Footer() {
             Saturday: Closed · Emergency: 24/7
           </p>
           <p className="footer-tagline mt-2">Bonded &amp; Insured</p>
-          <a href={BUSINESS.googleReviewsUrl} target="_blank" rel="noopener noreferrer" className="footer-link inline-block mt-2">
-            ★ Read Our Google Reviews
+          <a href={BUSINESS.googleReviewUrl} target="_blank" rel="noopener noreferrer" className="footer-link inline-block mt-2">
+            ★ Leave Us a Review
           </a>
         </div>
 
