@@ -124,7 +124,9 @@ export default async function CityPage({ params }: Props) {
     .map((slug) => CITIES.find((c) => c.slug === slug))
     .filter((c): c is (typeof CITIES)[number] => Boolean(c));
 
-  const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(data.name + ", CA")}&output=embed&z=12`;
+  // Query by business name + city, not just the city, so the embed actually resolves
+  // to our verified Google Business Profile instead of a generic point on the map.
+  const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(`${BUSINESS.name}, ${data.name}, CA`)}&output=embed&z=12`;
 
   const cityServiceSchema = {
     "@context": "https://schema.org",

@@ -498,6 +498,21 @@ export default function HomePage() {
             <Link href="/service-areas" className="inline-flex items-center gap-1 mt-6 text-sm font-semibold" style={{ color: "var(--brown)" }}>
               View all {CITIES.length} service areas <ArrowRight size={14} />
             </Link>
+
+            <div
+              className="rounded-[var(--radius-lg)] overflow-hidden mt-8 mx-auto"
+              style={{ border: "2px solid var(--brown-warm)", maxWidth: 720 }}
+            >
+              <iframe
+                src={`https://maps.google.com/maps?q=${encodeURIComponent(`${BUSINESS.name}, Los Angeles, CA`)}&output=embed&z=10`}
+                width="100%"
+                height="320"
+                style={{ border: 0, display: "block" }}
+                loading="lazy"
+                title={`Map — ${BUSINESS.name} service area`}
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </section>
       </RevealWrapper>
